@@ -1,11 +1,7 @@
 import {
-    SafeAreaView,
     StyleSheet,
-    ScrollView,
     View,
     Text,
-    StatusBar,
-    FlatList,
     TouchableOpacity,
     TextInput, Image
 } from 'react-native';

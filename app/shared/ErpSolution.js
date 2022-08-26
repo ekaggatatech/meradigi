@@ -1,16 +1,16 @@
-import { View, Text, Image ,ScrollView, Button} from 'react-native'
+import { View, Text, Image, Button,ScrollView} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
-const WebDev = () => {
+const ErpSolution = () => {
   return (
     <ScrollView>
       <View style={ServicesStyles.container}>
         <View >
-          <Image style={ServicesStyles.webDevImage} source={require("../assets/webdev.jpg")}/>
+          <Image style={ServicesStyles.webDevImage} source={require("../assets/erpsolution.jpg")}/>
         </View>
         <View style={ServicesStyles.hedingButton}>
-          <Text style={ServicesStyles.webText}>Web Development</Text>
+          <Text style={ServicesStyles.webText}>ERP Solution</Text>
           <Button
                 title="Book A Call"
             />
@@ -48,4 +48,4 @@ const WebDev = () => {
   )
 }
 
-export default WebDev
+export default ErpSolution
