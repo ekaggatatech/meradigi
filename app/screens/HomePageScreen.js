@@ -7,7 +7,7 @@ import {
 import SearchBar from '../shared/SearchBar'
 import HomeServices from '../shared/HomeServices';
 
-const HomePageScreen = () => {
+const HomePageScreen = ({navigation}) => {
 
 const [value,setValue]=useState()
 function updateSearch(value){
@@ -33,7 +33,7 @@ function updateSearch(value){
           <Button
               style={styles.serviceButton}
               title="Talk To Us"
-              //onPress={() => navigation.navigate('Home')}
+              onPress={() => navigation.navigate('Talk To Us')}
           />
         </View>
         <HomeServices/>

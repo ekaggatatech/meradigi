@@ -1,5 +1,5 @@
 import React from 'react';
-import { View} from 'react-native';
+//import { View} from 'react-native';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import HomePageScreen from './app/screens/HomePageScreen';
 import WebDev from './app/shared/WebDev';
@@ -11,6 +11,8 @@ import ContentMarketing from './app/shared/ContentMarketing';
 import GraphicDesign from './app/shared/GraphicDesign';
 import CelebrityMarketing from './app/shared/CelebrityInfluencerMarketing';
 import RadioAdvertisement from './app/shared/RadioAdvertisement';
+import TalktousModal from './app/screens/TalktousModal';
+import Tabs from './app/screens/navigations/Tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -21,7 +23,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator initialRouteName='Welcome'>
           <Stack.Screen name='Welcome' component={WelcomeScreen}/>
-          <Stack.Screen name='Home' component={HomePageScreen}/>
+          <Stack.Screen name='Home' component={Tabs} options={{ headerShown: false }}/>
           <Stack.Screen name='Web Development' component={WebDev}/>
           <Stack.Screen name='Digital Marketing' component={DigitalMarketing}/>
           <Stack.Screen name='ERP Solution' component={ErpSolution}/>
@@ -31,8 +33,9 @@ const App = () => {
           <Stack.Screen name='Graphic Designing' component={GraphicDesign}/>
           <Stack.Screen name='Celebrity/Influencer Marketing' component={CelebrityMarketing}/>
           <Stack.Screen name='Radio Advertisement' component={RadioAdvertisement}/>
+          <Stack.Screen name='Talk To Us' component={TalktousModal}/>
         </Stack.Navigator>
-      </NavigationContainer>   
+      </NavigationContainer>
   );
 };
 
