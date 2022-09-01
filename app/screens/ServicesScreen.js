@@ -41,7 +41,7 @@ const ServicesScreen = () => {
       </View>
     </View>
     <View style={ServicesStyles.container}>
-    <Text style={ServicesStyles.webText}>Digital Marketing</Text>
+    <Text style={ServicesStyles.webText}> -- Digital Marketing</Text>
         <View >
           <Image style={ServicesStyles.webDevImage} source={require("../assets/digitalMarketing.jpg")}/>
         </View>
@@ -76,7 +76,7 @@ const ServicesScreen = () => {
         </View>
       </View>
       <View style={ServicesStyles.container}>
-      <Text style={ServicesStyles.webText}>ERP Solution</Text>
+      <Text style={ServicesStyles.webText}> -- ERP Solution</Text>
 
         <View >
           <Image style={ServicesStyles.webDevImage} source={require("../assets/erpsolution.jpg")}/>
