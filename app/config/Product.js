@@ -12,7 +12,7 @@ const navigation = useNavigation();
           <View style={styles.viewimages}>
             <Image 
               style={styles.imageStyle} 
-              source={{uri:services.product.serviceImage}}/>
+              source={{uri:services.product.source}}/>
             <Text 
               style={styles.nameText} 
               onPress={() => navigation.navigate(services.product.name)}

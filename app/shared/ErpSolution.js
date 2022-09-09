@@ -5,46 +5,48 @@ import ServicesStyles from '../config/services.styles'
 const ErpSolution = () => {
   return (
     <ScrollView>
-      <View style={ServicesStyles.container}>
-        <View >
-          <Image style={ServicesStyles.webDevImage} source={require("../assets/erpsolution.jpg")}/>
-        </View>
-        <View style={ServicesStyles.hedingButton}>
-          <Text style={ServicesStyles.webText}>ERP Solution</Text>
-          <Button
-                title="Book A Call"
-            />
-        </View>
-        <View>
-          <Text style={ServicesStyles.webinfoText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            </Text>
-        </View>
-        <View style={ServicesStyles.exploreButton}>
-          <Button
-            title='Explore More'/>
+    <View style={ServicesStyles.container}>
+      <View >
+        <Image style={ServicesStyles.webDevImage} source={require("../assets/erpsolution.jpg")}/>
+      </View>
+      <View style={ServicesStyles.hedingButton}>
+        <View style={ServicesStyles.line}/>
+        <Text style={ServicesStyles.webText}>ERP Solution</Text>
+        <View  style={ServicesStyles.chooseBtn}>
+          <Text style={ServicesStyles.chooseBtntext} 
+          onPress={() => navigation.navigate('ERP Solution')}>Choose a Plan</Text>
         </View>
       </View>
-    </ScrollView>
+      <View>
+        <Text style={ServicesStyles.webinfoText}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to make a type specimen book.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to make a type specimen book.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to make a type specimen book.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to make a type specimen book.
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+          Lorem Ipsum has been the industry's standard dummy 
+          text ever since the 1500s, when an unknown printer 
+          took a galley of type and scrambled it to make a type specimen book.
+          </Text>
+      </View>
+        <View style={ServicesStyles.exploreBtn}>
+            <Text style={ServicesStyles.exploreBtntext} 
+            >Explore More</Text>
+        </View>
+    </View>
+  </ScrollView>
   )
 }
 

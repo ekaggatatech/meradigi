@@ -11,12 +11,33 @@ export default StyleSheet.create({
         resizeMode:'cover',
         
       },
+      line:{
+        width:25,
+        height:2,
+        backgroundColor:'#00d4ff',
+        marginBottom:5,
+        marginRight:3,
+        marginTop:25
+
+      },
       webText:{
         fontSize: 18,
-        fontWeight: '600',
-        textAlign:'left',
-        margin:10,
-        paddingRight:70
+        fontWeight: 'bold',
+        paddingRight:70,
+        marginTop:15
+      },
+      chooseBtn:{
+        width:135,
+        height:50,
+        backgroundColor:'#00d4ff',
+        justifyContent:"center",
+        alignItems:'center',
+        borderRadius:30
+      },
+      chooseBtntext:{
+        color:'white',
+        fontSize:15,
+        fontWeight:'bold'
       },
       hedingButton:{
         flexDirection:'row',
@@ -30,8 +51,21 @@ export default StyleSheet.create({
         marginRight:10,
         fontSize: 14,
       },
-      exploreButton:{
-        marginTop:30
+      exploreBtn:{
+        margin:30,
+        width:150,
+        height:50,
+        backgroundColor:'black',
+        justifyContent:"center",
+        alignItems:'center',
+        alignSelf:'center',
+        borderRadius:15
+
+      },
+      exploreBtntext:{
+        fontSize: 18,
+        fontWeight: 'bold',
+        color:'white'
       }
     
     });

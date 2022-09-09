@@ -2,7 +2,8 @@ import { View, Text, Image ,ScrollView, Button} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
-const WebDev = () => {
+
+const WebDev = ({navigation}) => {
   return (
     <ScrollView>
       <View style={ServicesStyles.container}>
@@ -10,10 +11,12 @@ const WebDev = () => {
           <Image style={ServicesStyles.webDevImage} source={require("../assets/webdev.jpg")}/>
         </View>
         <View style={ServicesStyles.hedingButton}>
+          <View style={ServicesStyles.line}/>
           <Text style={ServicesStyles.webText}>Web Development</Text>
-          <Button
-                title="Book A Call"
-            />
+          <View  style={ServicesStyles.chooseBtn}>
+            <Text style={ServicesStyles.chooseBtntext} 
+            onPress={() => navigation.navigate('Web Designing Package')}>Choose a Plan</Text>
+          </View>
         </View>
         <View>
           <Text style={ServicesStyles.webinfoText}>
@@ -39,10 +42,10 @@ const WebDev = () => {
             took a galley of type and scrambled it to make a type specimen book.
             </Text>
         </View>
-        <View style={ServicesStyles.exploreButton}>
-          <Button
-            title='Explore More'/>
-        </View>
+          <View style={ServicesStyles.exploreBtn}>
+              <Text style={ServicesStyles.exploreBtntext} 
+              >Explore More</Text>
+          </View>
       </View>
     </ScrollView>
   )

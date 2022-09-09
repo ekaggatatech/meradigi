@@ -10,10 +10,12 @@ const DigitalMarketing = () => {
           <Image style={ServicesStyles.webDevImage} source={require("../assets/digitalMarketing.jpg")}/>
         </View>
         <View style={ServicesStyles.hedingButton}>
+          <View style={ServicesStyles.line}/>
           <Text style={ServicesStyles.webText}>Digital Marketing</Text>
-          <Button
-                title="Book A Call"
-            />
+          <View  style={ServicesStyles.chooseBtn}>
+            <Text style={ServicesStyles.chooseBtntext} 
+            onPress={() => navigation.navigate('Digital Marketing')}>Choose a Plan</Text>
+          </View>
         </View>
         <View>
           <Text style={ServicesStyles.webinfoText}>
@@ -39,10 +41,10 @@ const DigitalMarketing = () => {
             took a galley of type and scrambled it to make a type specimen book.
             </Text>
         </View>
-        <View style={ServicesStyles.exploreButton}>
-          <Button
-            title='Explore More'/>
-        </View>
+          <View style={ServicesStyles.exploreBtn}>
+              <Text style={ServicesStyles.exploreBtntext} 
+              >Explore More</Text>
+          </View>
       </View>
     </ScrollView>
   )

@@ -3,9 +3,6 @@ import React from 'react'
 
 
 const TalktousModal = ({navigation}) => {
-
-  
-
   return (
     <Modal 
       transparent={true}
@@ -20,7 +17,6 @@ const TalktousModal = ({navigation}) => {
         </View>
       </View>
     </Modal>
-    
   )
 }
 

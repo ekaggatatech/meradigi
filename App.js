@@ -13,8 +13,13 @@ import CelebrityMarketing from './app/shared/CelebrityInfluencerMarketing';
 import RadioAdvertisement from './app/shared/RadioAdvertisement';
 import TalktousModal from './app/screens/TalktousModal';
 import Tabs from './app/screens/navigations/Tabs';
+import WebDesigningPackage from './app/screens/PricingScreens/WebDesignPriceScreens/MainPackageScreens';
+import BasicWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/BasicWebPack';
+import ProfessionalWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/ProfessionalWebPack';
+import EnterpriseWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/EnterpriseWebPack';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -34,6 +39,11 @@ const App = () => {
           <Stack.Screen name='Celebrity/Influencer Marketing' component={CelebrityMarketing}/>
           <Stack.Screen name='Radio Advertisement' component={RadioAdvertisement}/>
           <Stack.Screen name='Talk To Us' component={TalktousModal}/>
+          <Stack.Screen name='Web Designing Package' component={WebDesigningPackage}/>
+          <Stack.Screen name='Basic Package' component={BasicWebPack}/>
+          <Stack.Screen name='Professional Package' component={ProfessionalWebPack}/>
+          <Stack.Screen name='Enterprise Package' component={EnterpriseWebPack}/>
+
         </Stack.Navigator>
       </NavigationContainer>
   );
