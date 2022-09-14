@@ -2,7 +2,7 @@ import { View, Text, Image, Button,ScrollView} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
-const SocialMediaMarketing = () => {
+const SocialMediaMarketing = ({navigation}) => {
   return (
     <ScrollView>
       <View style={ServicesStyles.container}>

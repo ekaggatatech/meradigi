@@ -32,12 +32,14 @@ export default StyleSheet.create({
         backgroundColor:'#00d4ff',
         justifyContent:"center",
         alignItems:'center',
-        borderRadius:30
+        borderRadius:30,
+        
       },
       chooseBtntext:{
         color:'white',
         fontSize:15,
-        fontWeight:'bold'
+        fontWeight:'bold',
+        
       },
       hedingButton:{
         flexDirection:'row',

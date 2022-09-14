@@ -2,7 +2,7 @@ import { View, Text, Image, Button,ScrollView} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
-const ErpSolution = () => {
+const ErpSolution = ({navigation}) => {
   return (
     <ScrollView>
     <View style={ServicesStyles.container}>
@@ -14,7 +14,7 @@ const ErpSolution = () => {
         <Text style={ServicesStyles.webText}>ERP Solution</Text>
         <View  style={ServicesStyles.chooseBtn}>
           <Text style={ServicesStyles.chooseBtntext} 
-          onPress={() => navigation.navigate('ERP Solution')}>Choose a Plan</Text>
+          onPress={() => navigation.navigate('ERP Solution Package')}>Choose a Plan</Text>
         </View>
       </View>
       <View>

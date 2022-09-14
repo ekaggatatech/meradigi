@@ -2,7 +2,7 @@ import { View, Text, Image ,ScrollView, Button} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
-const DigitalMarketing = () => {
+const DigitalMarketing = ({navigation}) => {
   return (
     <ScrollView>
       <View style={ServicesStyles.container}>
@@ -14,7 +14,7 @@ const DigitalMarketing = () => {
           <Text style={ServicesStyles.webText}>Digital Marketing</Text>
           <View  style={ServicesStyles.chooseBtn}>
             <Text style={ServicesStyles.chooseBtntext} 
-            onPress={() => navigation.navigate('Digital Marketing')}>Choose a Plan</Text>
+            onPress={() => navigation.navigate('Digital Marketing Package')}>Choose a Plan</Text>
           </View>
         </View>
         <View>

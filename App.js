@@ -17,6 +17,9 @@ import WebDesigningPackage from './app/screens/PricingScreens/WebDesignPriceScre
 import BasicWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/BasicWebPack';
 import ProfessionalWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/ProfessionalWebPack';
 import EnterpriseWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/EnterpriseWebPack';
+import CelebritySlider from './app/screens/PricingScreens/CelebrityPriceScreens/CelebritySlider';
+import MainPackages from './app/screens/PricingScreens/DigitalMarketPriceScreens/MainPackages';
+import ChoosePrice from './app/screens/PricingScreens/ERPPricingScreens/ChoosePrice';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -43,7 +46,9 @@ const App = () => {
           <Stack.Screen name='Basic Package' component={BasicWebPack}/>
           <Stack.Screen name='Professional Package' component={ProfessionalWebPack}/>
           <Stack.Screen name='Enterprise Package' component={EnterpriseWebPack}/>
-
+          <Stack.Screen name='Celebrity Marketing' component={CelebritySlider}/>
+          <Stack.Screen name='Digital Marketing Package' component={MainPackages}/>
+          <Stack.Screen name='ERP Solution Package' component={ChoosePrice}/>
         </Stack.Navigator>
       </NavigationContainer>
   );
