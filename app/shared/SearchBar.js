@@ -1,12 +1,15 @@
 import {
+    SafeAreaView,
     StyleSheet,
+    ScrollView,
     View,
     Text,
+    StatusBar,
+    FlatList,
     TouchableOpacity,
     TextInput, Image
 } from 'react-native';
 import React, { useState } from 'react'
-import Icon from 'react-native-vector-icons/FontAwesome';
 
 const SearchBar = ({value, updateSearch, style}) => {
 
@@ -57,9 +60,6 @@ const SearchBar = ({value, updateSearch, style}) => {
                     {error}
                 </Text>
             }
-            <View style={styles.login}>
-                <Icon name="user" size={40} color="#00d4ff" style={styles.icon} />
-            </View>
         </View >
     )
 }
@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
         marginTop: '2%',
         width: '89%',
         color: 'white',
+
     },
     vwClear: {
         flex: 0.2,
@@ -92,24 +93,15 @@ const styles = StyleSheet.create({
     searchContainer:
     {
         backgroundColor: 'white',
-        width: '82%',
+        width: '95%',
         height: 40,
-        flexDirection: 'row',
+        flexDirection: 'row'
+
     },
     container: {
         height: 80,
-        alignItems: 'flex-start',
-        paddingLeft:15,
-        flexDirection:'row',
+        alignItems: 'center',
         // height: '100%', width: '100%' 
     },
-    icon:{
-        justifyContent: 'center',
-        alignSelf:"center",
-        alignContent:'center',
-        paddingLeft:33
-        
-    },
-   
 });
 export default SearchBar
