@@ -1,18 +1,17 @@
-import { View, Text, Image ,ScrollView, Button} from 'react-native'
+import { View, Text, Image, Button,ScrollView} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
-
-const WebDev = ({navigation}) => {
+const ContentMarketing = ({navigation}) => {
   return (
     <ScrollView>
       <View style={ServicesStyles.container}>
         <View >
-          <Image style={ServicesStyles.webDevImage} source={require("../assets/webdev.jpg")}/>
+          <Image style={ServicesStyles.webDevImage} source={require("../assets/contentmarketing.jpg")}/>
         </View>
         <View style={ServicesStyles.hedingButton}>
           <View style={ServicesStyles.line}/>
-          <Text style={ServicesStyles.webText}>Web Development</Text>
+          <Text style={ServicesStyles.webText}>Content Marketing</Text>
           <View  style={ServicesStyles.chooseBtn}>
             <Text style={ServicesStyles.chooseBtntext} 
             onPress={() => navigation.navigate('Web Designing Package')}>Choose a Plan</Text>
@@ -51,4 +50,4 @@ const WebDev = ({navigation}) => {
   )
 }
 
-export default WebDev
+export default ContentMarketing
