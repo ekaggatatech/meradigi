@@ -1,41 +1,63 @@
 import { View, Text , Image, StyleSheet} from 'react-native'
 import React from 'react'
+import {useNavigation} from "@react-navigation/native"
 
-class Product extends React.Component{
-    render() {
-        const {name, serviceImage} = this.props.product
-        return (
-            //call image and name hear+
+const Product = (services) => {
+
+const navigation = useNavigation();
+//const {name1, serviceImage1} = this.props.product
+
+  return (
         <View style={styles.imageContainer}>
-          <Image style={styles.imageStyle} source={{uri:serviceImage}}/>
-          <Text style={styles.nameText} >{ name }</Text>
+          <View style={styles.viewimages}>
+            <Image 
+              style={styles.imageStyle} 
+              source={services.product.source}/>
+            <Text 
+              style={styles.nameText} 
+              onPress={() => navigation.navigate(services.product.name)}
+            >{services.product.name}</Text>  
+            
+          </View>
         </View>
-    )
-}
+        
+  )
 }
 
 const styles = StyleSheet.create({
 
     imageContainer:{
-        width:'31%',
+        width:'48%',
         alignItems:'center',
-        borderWidth:0.75,
-        borderColor:'#00d4ff',
+        justifyContent:'center',
+        
         marginHorizontal:'1%',
-        marginVertical:'2%',
-        
-        
+        marginVertical:'2%',   
+         
     },
+    viewimages:{
+      paddingTop:0,
+      alignItems:"flex-start",
+    },
+
     imageStyle:{
         width:90, 
         height:90,
         borderRadius:8,
-        margin:6
+        margin:6,
+        alignContent:'center',
+        alignSelf:'center'
     },
     nameText:{
         fontSize:14,
         fontWeight:'bold',
-        textAlign:"center"
+        textAlign:"center",
+        justifyContent:'center',
+        alignContent:'center',
+        alignItems:'center',
+        alignSelf:'center',
+        
     }
 })
+
 export default Product

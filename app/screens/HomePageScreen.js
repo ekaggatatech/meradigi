@@ -7,7 +7,7 @@ import {
 import SearchBar from '../shared/SearchBar'
 import HomeServices from '../shared/HomeServices';
 
-const homePageScreen = () => {
+const HomePageScreen = ({navigation}) => {
 
 const [value,setValue]=useState()
 function updateSearch(value){
@@ -27,16 +27,11 @@ function updateSearch(value){
         <View style={styles.twoButtons}>
           <Button
               style={styles.serviceButton}
-              title="Services"
-              //onPress={() => navigation.navigate('Home')}
-          />
-          <Button
-              style={styles.serviceButton}
               title="Talk To Us"
-              //onPress={() => navigation.navigate('Home')}
+              onPress={() => navigation.navigate('Talk To Us')}
           />
         </View>
-        <HomeServices />
+        <HomeServices/>
       </View>
     </View>
   )
@@ -55,4 +50,4 @@ const styles = StyleSheet.create({
   
 })
 
-export default homePageScreen
+export default HomePageScreen
