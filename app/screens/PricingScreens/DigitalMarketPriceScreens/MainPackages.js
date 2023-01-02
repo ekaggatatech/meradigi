@@ -5,7 +5,7 @@ import colors from '../../../config/colors';
 const DigitalPackage = ({navigation}) => {
   return (
       <ImageBackground 
-        style={styles.background}
+        style={styles.background}  
         source={require('../../../assets/blue_background.jpg')}> 
         <Text style={styles.welcomeheading}>Choose A Package</Text>
         <View style={[styles.logocontainer,styles.shadowProp]}>
