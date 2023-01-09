@@ -1,10 +1,9 @@
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, Button, FlatList } from 'react-native';
-import React, { useState } from 'react';
-import Product from '../config/Product';
-import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
+import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView, Button, FlatList } from 'react-native'
+import React from 'react'
+/* import Product from '../config/Product' */
 
 //all images
-const Image1= require("../assets/servicesImg/GetMobileApp.png");
+/* const Image1= require("../assets/servicesImg/GetMobileApp.png");
 const Image2= require('../assets/servicesImg/Iwantveryfastwebsite.png'); 
 const Image3= require('../assets/servicesImg/Rankmywebsiteongoogle.png');
 const Image4= require('../assets/servicesImg/Popularonyoutube.png');
@@ -19,10 +18,10 @@ const Image12= require('../assets/servicesImg/makemyproductfamous.png');
 const Image13= require('../assets/servicesImg/DigitalMarketing.png');
 const Image14= require('../assets/servicesImg/Iwantanannualmaintananceplan.png');
 const Image15= require('../assets/servicesImg/Getabesthostingplan.png');
-const Image16= require('../assets/servicesImg/Hireadeveloper.png');
+const Image16= require('../assets/servicesImg/Hireadeveloper.png'); */
 
 //name and  images 
-const services =[
+/* const services =[
         {name:"Get Mobile App", id:"1",source:Image1},
         {name:"I Want A Very Fast Website",id:"2",source: Image2 },
         {name:"Rank My Website On Google", id:"3",source: Image3 },
@@ -39,45 +38,19 @@ const services =[
         {name:"I Want An Annual Maintenance Plan",id:"14", source: Image14},
         {name:"Get A Best Hosting Plan",id:"15", source: Image15 },
         {name:"Hire A Developer",id:"16", source: Image16}
-    ]
+    ] */
 
 //name = new page name have to same then it fetch
 //and all new pages define in App.js 
 //take reference of web Development page 
 
-const HomeServices = () => {
-    const [modalOpen, setModalOpen] = useState(false);
+const AboutUs = (props) => {
     return (
         <ScrollView style={styles.scrollView} nestedScrollEnabled={true} >
             <View>
-                <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
                 <Text style={styles.selectText} >
-                    Select Your Preference
+                  About Us Screen
                 </Text>
-                <View>
-                    <SafeAreaView>
-                        <FlatList 
-                            style={styles.flatlistDesign}
-                            data={services}
-                            numColumns={2}
-                            keyExtractor={(index) => index.id}
-                            renderItem={({item}) => (<Product product={item}/>)}/>
-                    </SafeAreaView>
-                </View>
-                {/* <Text style={styles.confusedText}>
-                   I'm Confused
-                </Text> */}
-                <View>
-                  {/* <Image style={styles.queImage} source={require("../assets/queImage.png")}/> */}
-                  {/* <Text style={styles.confusedText} >
-                    Book A free 15 min Consultation Call
-                   </Text> */}
-                <Button
-                    style={styles.bookButton}
-                    title="Book A Free Consultation Call"
-                    onPress={()=>setModalOpen(true)}
-                />
-                </View>
             </View>
         </ScrollView>  
   )
@@ -128,4 +101,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default HomeServices
+export default AboutUs;

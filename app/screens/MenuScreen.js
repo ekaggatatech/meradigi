@@ -1,47 +1,55 @@
-import { View, Text,Image, StyleSheet, ScrollView} from 'react-native'
+import { View, Text,Image, StyleSheet, ScrollView, Button } from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 import Icon from 'react-native-vector-icons/FontAwesome'
-
+import { useNavigation } from '@react-navigation/native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const MenuScreen = () => {
- 
+  const navigation = useNavigation();
   return (
       <ScrollView>
-        <View>
+        {/* <View>
           <Image style={ServicesStyles.webDevImage} source={require("../assets/team.png")}/>
-        </View>
+        </View> */}
         <View style={styles.iconsView}>
-          <Icon 
+          {/* <Icon 
              style={styles.icons} 
              name='wechat' 
              size={30} 
-             color='#00d4ff'/>
-          <Text style={styles.iconText}>Q & A</Text>
+             color='#00d4ff'/> */}
+          {/* <Text style={styles.iconText}>Q & A</Text> */}
+          <Text style={styles.iconText} onPress={() => navigation.navigate('Home')}>Home</Text>  
         </View>
         <View style={styles.iconsView}>
-          <Icon 
+          {/* <Icon 
              style={styles.icons} 
              name='star' 
              size={30} 
-             color='#00d4ff'/>
-          <Text style={styles.iconText}>Rate App</Text>
+             color='#00d4ff'/> */}
+          {/* <Text style={styles.iconText}>Rate App</Text> */}
+          <Text style={styles.iconText} onPress={() => navigation.navigate('Services')}>Our Services</Text>
         </View>
         <View style={styles.iconsView}>
-          <Icon 
+         {/*  <Icon 
              style={styles.icons} 
              name='share' 
              size={30} 
              color='#00d4ff'/>
-          <Text style={styles.iconText}>Share</Text>
+          <Text style={styles.iconText}>Share</Text> */}
+            <Text style={styles.iconText}>Pricing</Text>
         </View>
         <View style={styles.iconsView}>
-          <Icon 
+          {/* <Icon 
              style={styles.icons} 
              name='check' 
              size={30} 
              color='#00d4ff'/>
-          <Text style={styles.iconText}>Feedback</Text>
+          <Text style={styles.iconText}>Feedback</Text> */}
+          <Text style={styles.iconText} onPress={() => navigation.navigate('AboutUs')}>About Us</Text>
+        </View>
+        <View style={styles.iconsView}>
+          <Text style={styles.iconText} onPress={() => navigation.navigate('Login')}>Log In</Text>
         </View>
       </ScrollView>
   )
@@ -50,8 +58,13 @@ const MenuScreen = () => {
 const styles = StyleSheet.create({
 
   iconsView:{
-    margin:12,
-    paddingTop:10
+    /*margin: 12,*/
+    paddingTop: 18,
+    paddingBottom: 18
+    /* display: 'flex',
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto' */
   },
   icons:{
     paddingLeft:20 

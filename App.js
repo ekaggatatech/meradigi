@@ -1,9 +1,9 @@
 import React from 'react';
-//import { View} from 'react-native';
+// import { View} from 'react-native';
 import WelcomeScreen from './app/screens/WelcomeScreen';
-import HomePageScreen from './app/screens/HomePageScreen';
+// import HomePageScreen from './app/screens/HomePageScreen';
 import MobileApp from './app/shared/MobileApp';
-import FastWebsite from './app/shared/FastWebsite';
+//import FastWebsite from './app/shared/FastWebsite';
 import ErpSolution from './app/shared/ErpSolution';
 import Seo from './app/shared/Seo';
 import Youtube from './app/shared/Youtube';
@@ -31,7 +31,9 @@ import Login from './app/screens/LoginRegister/Login'
 import Register from './app/screens/LoginRegister/Register';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import ServicesScreen from './app/screens/ServicesScreen';
+import AboutUsScreen from './app/screens/AboutUsScreen/AboutUs';
+import ContactUsScreen from './app/screens/ContactUsScreen/ContactUs';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -42,7 +44,7 @@ const App = () => {
           <Stack.Screen name='Welcome' component={WelcomeScreen}/>
           <Stack.Screen name='Home' component={Tabs} options={{ headerShown: false }}/>
           <Stack.Screen name='Get Mobile App' component={MobileApp}/>
-          <Stack.Screen name='I Want A Very Fast Website' component={FastWebsite}/>
+          <Stack.Screen name='I Want A Very Fast Website' component={ServicesScreen}/>
           <Stack.Screen name='I Want Odoo ERP' component={ErpSolution}/>
           <Stack.Screen name='Rank My Website On Google' component={Seo}/>
           <Stack.Screen name='Digital Marketing Plans' component={DigitalMarketing}/>
@@ -67,6 +69,9 @@ const App = () => {
           <Stack.Screen name='ERP Solution Package' component={ChoosePrice}/>
           <Stack.Screen name='Log In' component={Login}/>
           <Stack.Screen name='Register' component={Register}/>
+          <Stack.Screen name='Services' component={ServicesScreen}/>
+          <Stack.Screen name='AboutUs' component={AboutUsScreen} />
+          <Stack.Screen name='Contact Us' component={ContactUsScreen} />
         </Stack.Navigator>
       </NavigationContainer>
   );

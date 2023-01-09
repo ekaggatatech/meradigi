@@ -59,14 +59,14 @@ const SearchBar = ({value, updateSearch, style}) => {
                     {error}
                 </Text>
             }
-            <View style={styles.login}>
+            {/* <View style={styles.login}>
                 <Icon 
                   name="user" 
                   size={40} 
                   color="#00d4ff" 
                   style={styles.icon} 
                   onPress={() => navigation.navigate('Log In')} />
-            </View>
+            </View> */}
         </View >
     )
 }
@@ -99,14 +99,15 @@ const styles = StyleSheet.create({
     searchContainer:
     {
         backgroundColor: 'white',
-        width: '82%',
+        width: '100%',
         height: 40,
         flexDirection: 'row',
     },
     container: {
-        height: 80,
+        height: 46,
         alignItems: 'flex-start',
-        paddingLeft:15,
+        paddingLeft: 10,
+        paddingRight: 10,
         flexDirection:'row',
         // height: '100%', width: '100%' 
     },

@@ -24,11 +24,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.pooja_dhamanekar.myfirstapp"
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
     },
-    "description": ""
+    "description": "",
+    "extra": {
+      "eas": {
+        "projectId": "2b8aa6f5-1954-4e8b-8e54-e5888a6bfbec"
+      }
+    }
   }
 }

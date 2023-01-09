@@ -18,20 +18,27 @@ function updateSearch(value){
 
   return (
     <View style={styles.container}>
-      <View style={{height:'100%', borderRadius:20,}}>  
+      <View style={{height:'100%', borderRadius:20}}>  
         <SearchBar 
           value={value}
           updateSearch={updateSearch}
-          style={{marginTop: '3%'}}
+          style={{marginTop: '2%'}}
         />
-        <View style={styles.twoButtons}>
+        {/* <View style={styles.twoButtons}>
           <Button
               style={styles.serviceButton}
               title="Talk To Us"
               onPress={() => navigation.navigate('Talk To Us')}
           />
-        </View>
+        </View> */}
         <HomeServices/>
+        <View style={styles.twoButtons}>
+          <Button
+              style={styles.serviceButton}
+              title="Contact Us"
+              onPress={() => navigation.navigate('Contact Us')}
+          />
+        </View>
       </View>
     </View>
   )
@@ -50,4 +57,4 @@ const styles = StyleSheet.create({
   
 })
 
-export default HomePageScreen
+export default HomePageScreen;

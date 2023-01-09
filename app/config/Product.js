@@ -1,4 +1,4 @@
-import { View, Text , Image, StyleSheet} from 'react-native'
+import { View, Text , Image, StyleSheet, TouchableOpacity } from 'react-native'
 import React from 'react'
 import {useNavigation} from "@react-navigation/native"
 
@@ -10,14 +10,16 @@ const navigation = useNavigation();
   return (
         <View style={styles.imageContainer}>
           <View style={styles.viewimages}>
+          <TouchableOpacity style={styles.newImageStyle} activeOpacity = { .5 } onPress={() => navigation.navigate(services.product.name)}>
             <Image 
               style={styles.imageStyle} 
-              source={services.product.source}/>
+              source={services.product.source}
+              onPress={() => navigation.navigate(services.product.name)} />
+          </TouchableOpacity>
             <Text 
               style={styles.nameText} 
               onPress={() => navigation.navigate(services.product.name)}
             >{services.product.name}</Text>  
-            
           </View>
         </View>
         
@@ -39,14 +41,16 @@ const styles = StyleSheet.create({
       paddingTop:0,
       alignItems:"flex-start",
     },
-
+    newImageStyle:
+    {
+      margin:6,
+      alignContent:'center',
+      alignSelf:'center'
+    },
     imageStyle:{
-        width:90, 
-        height:90,
+        width:80, 
+        height:80,
         borderRadius:8,
-        margin:6,
-        alignContent:'center',
-        alignSelf:'center'
     },
     nameText:{
         fontSize:14,
