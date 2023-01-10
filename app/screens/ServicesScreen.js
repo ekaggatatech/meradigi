@@ -1,73 +1,111 @@
-import { View, Text, Image ,ScrollView, Button, Pressable, Modal } from 'react-native';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import { View, Text, Image ,ScrollView, Button, Pressable, TouchableOpacity, ImageBackground } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Form, FormItem } from 'react-native-form-component';
+// import { Form } from 'react-native-form-generator';
 import ServicesStyles from '../config/services.styles';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 import ServicesCardViewScreen from '../cards/ServicesCardViewScreen';
 import FeaturesCardViewScreen from '../cards/FeaturesCardViewScreen';
-import Banner from '../assets/banner/pkrnxegurgm-1-240x300.jpg';
+import Banner from '../assets/banner/pkrnxegurgm-1-819x1024.jpg';
 
-// import Video from 'react-native-video';
-// import { Video } from 'expo-av';
-// import videoLink from '../assets/mp4/production-ID_4974883.mp4';
-// import { Video } from 'expo-av';
-// import VideoPlayer from 'expo-video-player';
+const GetInTouchContentData= () => 
+{
+  const firstNameInput = useRef();
+  const lastNameInput = useRef();
+  const emailInput = useRef();
+  return (
+      <>
+        <View id="course" name="course" style={ServicesStyles.getInTouchWithUsContainerView}> 
+          <ImageBackground 
+          source={require('../assets/banner/people-holding-icons-digital-brands.jpg')}
+          resizeMode="stretch" 
+          style={ServicesStyles.getInTouchWithUsBgImage}>
+            <View>
+              <Text style={ServicesStyles.getInTouchWithUsTitleText}>
+                Get in touch with us.
+              </Text>
+            </View>
+            <View style={ServicesStyles.getInTouchWithUsForm}>
+              <LinearGradient 
+                colors={['#FFFFFFE6','#FFFFFF']}
+                start={{x:1,y:0}}
+                end={{x:0,y:0}}>
+                  <Form>
+                    <FormItem
+                      label="First Name"
+                      // isRequired
+                      // value={email}
+                      // onChangeText={(email) => setEmail(email)}
+                      // asterik
+                      ref={firstNameInput}
+                      style={{ display: 'flex', flexDirection: 'row' }}
+                    />
+                    <FormItem
+                      label="Last Name"
+                      ref={lastNameInput}
+                    />
+                    <FormItem
+                      label="Email"
+                      isRequired
+                      // value={email}
+                      // onChangeText={(email) => setEmail(email)}
+                      asterik
+                      ref={emailInput}
+                    />
+                    <FormItem
+                      label="Phone/Mobile"
+                      isRequired
+                      // value={email}
+                      // onChangeText={(email) => setEmail(email)}
+                      asterik
+                      ref={emailInput}
+                    />
+                    <FormItem
+                      label="Company Name"
+                      isRequired
+                      // value={email}
+                      // onChangeText={(email) => setEmail(email)}
+                      asterik
+                      ref={emailInput}
+                    />
+                    <FormItem
+                      label="Industry Type?"
+                      isRequired
+                      // value={email}
+                      // onChangeText={(email) => setEmail(email)}
+                      asterik
+                      ref={emailInput}
+                    />
+                    <FormItem
+                      label="Services you looking for?"
+                      isRequired
+                      // value={email}
+                      // onChangeText={(email) => setEmail(email)}
+                      asterik
+                      ref={emailInput}
+                    />
+                  </Form>
+              </LinearGradient>
+            </View>
+          </ImageBackground>
+        </View>
+      </>
+  )
+}
 
 const ServicesScreen = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
+    <>
     <ScrollView>
-    <View style={ServicesStyles.container}>
-    <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
-    <Text style={ServicesStyles.webText}>Web Development Services</Text>
-    <View style={ServicesStyles.marginStyles}>
-      <Text style={ServicesStyles.newWebText}>Our best-in-class Business solution,</Text>
-      <Text style={ServicesStyles.newWebText}>To le you to grow business higher!</Text>
-    </View>
-    <View style={ServicesStyles.containerOne}>
-        {/* <Image style={ServicesStyles.webDevImage} source={require("../assets/mp4/production-ID_4974883.mp4")}/> */}
-        {/* <Video source={{ uri: "../assets/mp4/production-ID_4974883.mp4" }} // Can be a URL or a localfile.
-              ref={(ref) => {
-                this.player = ref
-              }}                                      // Store reference
-              onBuffer={this.onBuffer}                // Callback when remote video is buffering
-              onEnd={this.onEnd}                      // Callback when playback finishes
-              onError={this.videoError}               // Callback when video cannot be loaded
-              style={ServicesStyles.backgroundVideo} 
-            /> */}
-            {/* <Video  
-            //source={videoLink}                  // the video file
-            source={{ uri: 'https://www.meradigi.com/wp-content/uploads/2022/06/production-ID_4974883.mp4' }} 
-            paused={false}                  // make it start    
-            style={ServicesStyles.backgroundVideo}  // any style you want
-            repeat={true}                   // make it a loop
-            /> */}
-           {/*  <Video
-              source={{
-                uri: 
-                      'https://www.meradigi.com/wp-content/uploads/2022/06/production-ID_4974883.mp4'
-              }}
-              style={ServicesStyles.backgroundVideo}
-            /> */}
-             {/* <Video
-                source={{ uri: 'http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4' }}
-                rate={1.0}
-                volume={1.0}
-                isMuted={false}
-                resizeMode="cover"
-                shouldPlay
-                isLooping
-                style={{ width: 300, height: 300 }}
-                />  */}
-                {/* <VideoPlayer
-                  videoProps={{
-                    shouldPlay: true,
-                    resizeMode: Video.RESIZE_MODE_CONTAIN,
-                    source: {
-                      uri: '{http://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4}',
-                    },
-                  }}
-                  inFullscreen={true}
-                /> */}
+      <View style={ServicesStyles.container}>
+      <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <View style={ServicesStyles.marginStyles}>
+        <Text style={ServicesStyles.newWebText}>Our best-in-class Business solution,</Text>
+        <Text style={ServicesStyles.newWebText}>To le you to grow business higher!</Text>
+      </View>
+      <View style={ServicesStyles.containerOne}>
         <Image style={ServicesStyles.webDevImage} source={require("../assets/webdev.jpg")} />
       </View>
       <View>
@@ -111,14 +149,98 @@ const ServicesScreen = () => {
       <View>
         <FeaturesCardViewScreen />
       </View>
+      <View style={ServicesStyles.imageView}>
+        <View style={{ marginBottom: 10 }}>
+          <Image source={Banner} alt="Why do you want a website ?" title="Why do you want a website ?" style={ServicesStyles.imagePositioning}></Image>
+        </View>
+        <View style={{ marginBottom: 10 }}>
+          <Text style={ServicesStyles.contentText}>
+            Why do you want a website ?
+          </Text>
+        </View>
+        <View>
+          <Text style={ServicesStyles.subContentText}>
+            Having a website <Text style={{ fontWeight: 'bold' }}>makes you look professional and increases trust.</Text>
+          </Text>
+        </View>
+        <View>
+          <Text style={ServicesStyles.subContentText}>
+              Most people don’t trust a business without a good website.
+          </Text>
+        </View>
+        <View style={{ marginBottom: 10 }}>
+          <Text style={ServicesStyles.subContentText}>
+            A clean, modern page that is regularly updated and pops up in search engines is an instant credibility boost.
+          </Text>
+        </View>
+        <View style={ServicesStyles.letsStartButtonView}>
+          <TouchableOpacity 
+          style={ServicesStyles.letsStartButton}
+          alt="Lets Start" 
+          title="Lets Start">
+            <Text style={ServicesStyles.letsStartButtonText}>
+              Lets Start
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={ServicesStyles.ourGlobalStatsView}>
+        <LinearGradient 
+          colors={['#FFAAF2','#A2D7F4']}
+          start={{x:1,y:0}}
+          end={{x:0,y:0}}
+          style={ServicesStyles.ourGlobalStatsLinearGradient}>
+            <View style={{ marginBottom: 10 }}>
+              <Text style={ServicesStyles.ourGlobalStatsTitle}>
+                Our Global Stats
+              </Text>
+            </View>
+            <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ marginBottom: 10 }}>
+                <Text style={ServicesStyles.ourGlobalStatsTitle}>
+                  25+
+                </Text>
+              </View>
+              <View style={{ marginBottom: 10 }}>
+                <Text style={ServicesStyles.ourGlobalStatsSubContent}>
+                  Projects Completed
+                </Text>
+              </View>
+            </View>
+            <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ marginBottom: 10 }}>
+                <Text style={ServicesStyles.ourGlobalStatsTitle}>
+                  100+
+                </Text>
+              </View>
+              <View style={{ marginBottom: 10 }}>
+                <Text style={ServicesStyles.ourGlobalStatsSubContent}>
+                  Happy Clients
+                </Text>
+              </View>
+            </View>
+            <View style={{ marginBottom: 0, justifyContent: 'center', alignItems: 'center' }}>
+              <View style={{ marginBottom: 10 }}>
+                <Text style={ServicesStyles.ourGlobalStatsTitle}>
+                  4
+                </Text>
+              </View>
+              <View style={{ marginBottom: 10 }}>
+                <Text style={ServicesStyles.ourGlobalStatsSubContent}>
+                  Global Clients
+                </Text>
+              </View>
+            </View>
+          </LinearGradient>
+      </View>
       <View>
-        <Image source={Banner} alt="Why do you want a website ?" title="Why do you want a website ?" style={ServicesStyles.imagePositioning}></Image>
+        <GetInTouchContentData/>
       </View>
       <View>
           <Button
-                title="Book A Free Consultation Call"
-                onPress={()=>setModalOpen(true)}
-            />
+            title="Book A Free Consultation Call"
+            onPress={()=>setModalOpen(true)}
+          />
       </View>
         {/* <View>
           <Image style={ServicesStyles.webDevImage} source={require("../assets/digitalMarketing.jpg")}/>
@@ -184,7 +306,7 @@ const ServicesScreen = () => {
         </View>
       </View> */}
   </ScrollView>
+  </>
   )
 }
-
 export default ServicesScreen

@@ -24,7 +24,7 @@ const Image16= require('../assets/servicesImg/Hireadeveloper.png');
 //name and  images 
 const services =[
         {name:"Get Mobile App", id:"1",source:Image1},
-        {name:"I Want A Very Fast Website",id:"2",source: Image2 },
+        {name:"Web Development",id:"2",source: Image2 },
         {name:"Rank My Website On Google", id:"3",source: Image3 },
         {name:"Make Me Popular On Youtube", id:"4", source: Image4},
         {name:"Make My Videos Popular On Facebook", id:"5",source: Image5},
@@ -52,7 +52,7 @@ const HomeServices = () => {
             <View>
                 <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
                 <Text style={styles.selectText} >
-                    Select Your Preference
+                    Select Your Prefer Service
                 </Text>
                 <View>
                     <SafeAreaView>

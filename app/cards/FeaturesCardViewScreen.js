@@ -10,56 +10,56 @@ const featuresData =
         index: 1,
         id: 1,
         cardText:"Responsive Design",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/responsive.png"),
         cardColors: ['#FFDDB2','#FEAFC3']
     },
     {
         index: 2,
         id: 2,
         cardText:"Graphics Designing",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/graphic-design.png"),
         cardColors: ['#E6FFB2','#AFF9FE']
     },
     {
         index: 3,
         id: 3,
         cardText:"Website Content Strategy",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/content-strategy.png"),
         cardColors: ['#BBB2FF','#AFF9FE']
     },
     {
         index: 4,
         id: 4,
         cardText:"Support & Maintenance",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/social-care.png"),
         cardColors: ['#FFB2B2','#AFBDFE']
     },
     {
         index: 5,
         id: 5,
         cardText:"User Experience Design",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/user-experience(1).png"),
         cardColors: ['#B2FFD6','#AFB9FE']
     },
     {
         index: 6,
         id: 6,
         cardText:"SEO Optimized",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/seo.png"),
         cardColors: ['#B2FCFF','#F2B02A']
     },
     {
         index: 7,
         id: 7,
         cardText:"Third Party Intergation",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/data-integration.png"),
         cardColors: ['#BAFFB2','#EDFEAF']
     },    
     {
         index: 8,
         id: 8,
         cardText:"Custom Designs",
-        cardImageSource: require("../assets/includedservices/blog-100x100.png"),
+        cardImageSource: require("../assets/png/customization.png"),
         cardColors: ['#F1B2FF','#085AFF']
     }
 ];

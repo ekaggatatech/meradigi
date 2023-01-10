@@ -1,5 +1,8 @@
-import { LinearGradient } from 'expo-linear-gradient';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
+// import { LinearGradient } from 'expo-linear-gradient';
+
+const screenHeight = Dimensions.get('window').height;
+const screenWidth = Dimensions.get('window').width;
 
 export default StyleSheet.create({
     container:{
@@ -61,6 +64,7 @@ export default StyleSheet.create({
       },
       marginStyles:
       {
+        marginTop: 15,
         marginBottom: 15
       },
       chooseBtn:
@@ -268,12 +272,15 @@ export default StyleSheet.create({
       },
       featureCardImage:
       {
-        resizeMode: 'cover',
+        /* resizeMode: 'cover', */
         display: 'flex',
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginBottom: 20
+        /* marginBottom: 20, */
+        width: 40,
+        height: 40,
+        alignSelf: 'center'
       },
       featutreCardText:
       {
@@ -285,6 +292,12 @@ export default StyleSheet.create({
         alignSelf: 'center',
         textAlign: 'center'
       },
+      imageView:
+      {
+        backgroundColor: '#000000',
+        paddingTop: 20,
+        paddingBottom: 20
+      },
       imagePositioning:
       {
         display: 'flex',
@@ -292,11 +305,142 @@ export default StyleSheet.create({
         marginLeft: 'auto',
         marginRight: 'auto',
         alignItem: 'center',
-        width: '90%',
-        maxWidth: '90%',
+        width: '80%',
+        maxWidth: '80%',
         height: 500,
         borderRadius: 12,
-        elevation: 5
+        elevation: 10,
+        shadowColor: '#55A7FF',
+        shadowOpacity: 0.26,
+        shadowOffset: { width: 0, height: 2},
+        shadowRadius: 10,
+        overflow: "hidden"
+        /* backgroundColor: 'white' */
         //boxShadow: 0 0 10 5 rgb('85 167 255 / 78%')
+      },
+      contentText:
+      {
+        color: '#FFFFFF',
+        // fontSize: 38,
+        fontSize: 28,
+        fontWeight: 'bold',
+        textAlign: 'center'
+      },
+      subContentText:
+      {
+        color: '#FFFFFF',
+        fontSize: 19,
+        textAlign: 'center'
+      },
+      letsStartButtonView:
+      {
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItem: 'center',
+      },
+      letsStartButton:
+      {
+        fontSize: 20,
+        fontWeight: 'bold',
+        backgroundColor: '#0B8CDB',
+        color: '#ffffff',
+        borderRadius: 9,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 25,
+        paddingRight: 25
+        // width: 140,
+        // height: 44, 
+        // backgroundColor: '#027EFF',
+      },
+      letsStartButtonText:
+      {
+        fontSize: 20,
+        fontWeight: 'bold',
+        color: '#ffffff',
+        textAlign: 'center',
+        textAlignVertical: 'center'
+      },
+      /* letsStartButtonHover:
+      {
+        color: '#027EFF',
+        backgroundColor: '#FFFFFF'
+      }, */
+      ourGlobalStatsView:
+      {
+        backgroundColor: 'transparent'
+      },
+      ourGlobalStatsLinearGradient:
+      {
+        backgroundColor: 'transparent',
+        padding: 15,
+        borderStyle: 'solid',
+        borderWidth: 0,
+        borderColor: '#00000000',
+        borderRadius: 0,
+        width: '100%'
+      },
+      ourGlobalStatsTitle:
+      {
+        color: '#000000',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        fontSize: 28
+      },
+      ourGlobalStatsSubContent:
+      {
+        color: '#000000',
+        fontSize: 19
+        // fontSize: 29
+        // fontWeight: 'bold'
+      },
+      getInTouchWithUsContainerView:
+      {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: 'transparent',
+        flexDirection: 'column'
+      },
+      getInTouchWithUsBgImage:
+      {
+        flex: 1,
+        width: screenWidth,
+        height: screenHeight,
+        opacity: 10
+      },
+      getInTouchWithUsTitleText:
+      {
+        color: '#FFFFFF',
+        fontSize: 97,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'top'
+      },
+      getInTouchWithUsForm:
+      {
+        backgroundColor: '#ffffff',
+        margin: 10,
+        padding: 0,
+        borderStyle: 'solid',
+        borderwidth: 2,
+        borderColor: '#FFFFFF',
+        borderRadius: 16,
+        /* width: 160,
+        height: 170, */
+        // color: "#000",
+        // border: 2,
+        // radius: 4,
+        opacity: 0.8,
+        x: 0,
+        y: 4,
+        style: { marginVertical: 4 }
+        // backgroundImage: linearGradient('190deg, #FFFFFFE6 0%, #FFFFFF 100%'),
+        // boxShadow: 0px 0px 10px 0px rgb(0 0 0 / 50%)
       }
 });
