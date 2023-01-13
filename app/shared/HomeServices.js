@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, Button, FlatList } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView, FlatList } from 'react-native';
 import React, { useState } from 'react';
 import Product from '../config/Product';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
@@ -21,10 +21,10 @@ const Image14= require('../assets/servicesImg/Iwantanannualmaintananceplan.png')
 const Image15= require('../assets/servicesImg/Getabesthostingplan.png');
 const Image16= require('../assets/servicesImg/Hireadeveloper.png');
 
-//name and  images 
+//name and images 
 const services =[
         {name:"Get Mobile App", id:"1",source:Image1},
-        {name:"Web Development",id:"2",source: Image2 },
+        {name:"I Want A Very Fast Website",id:"2",source: Image2 },
         {name:"Rank My Website On Google", id:"3",source: Image3 },
         {name:"Make Me Popular On Youtube", id:"4", source: Image4},
         {name:"Make My Videos Popular On Facebook", id:"5",source: Image5},
@@ -48,10 +48,11 @@ const services =[
 const HomeServices = () => {
     const [modalOpen, setModalOpen] = useState(false);
     return (
+        <>
         <ScrollView style={styles.scrollView} nestedScrollEnabled={true} >
             <View>
                 <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
-                <Text style={styles.selectText} >
+                <Text style={styles.selectText}>
                     Select Your Prefer Service
                 </Text>
                 <View>
@@ -66,20 +67,21 @@ const HomeServices = () => {
                 </View>
                 {/* <Text style={styles.confusedText}>
                    I'm Confused
-                </Text> */}
-                <View>
+                </Text>  */}
+                {/* <View> */}
                   {/* <Image style={styles.queImage} source={require("../assets/queImage.png")}/> */}
                   {/* <Text style={styles.confusedText} >
                     Book A free 15 min Consultation Call
                    </Text> */}
-                <Button
+                {/* <Button
                     style={styles.bookButton}
                     title="Book A Free Consultation Call"
                     onPress={()=>setModalOpen(true)}
                 />
-                </View>
+                </View> */}
             </View>
         </ScrollView>  
+        </>
   )
 }
 
@@ -89,9 +91,10 @@ const styles = StyleSheet.create({
 
     },
     selectText:{
-        margin:10,
-        fontSize:20,
-        fontWeight:'bold',
+        marginTop: 10,
+        marginBottom: 0,
+        fontSize: 20,
+        fontWeight: 'bold',
         textAlign: 'center'
     },
     confusedText:{
@@ -128,4 +131,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default HomeServices
+export default HomeServices;

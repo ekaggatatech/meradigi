@@ -1,9 +1,6 @@
 import React from 'react';
-// import { View} from 'react-native';
 import WelcomeScreen from './app/screens/WelcomeScreen';
-// import HomePageScreen from './app/screens/HomePageScreen';
 import MobileApp from './app/shared/MobileApp';
-//import FastWebsite from './app/shared/FastWebsite';
 import ErpSolution from './app/shared/ErpSolution';
 import Seo from './app/shared/Seo';
 import Youtube from './app/shared/Youtube';
@@ -35,16 +32,23 @@ import ServicesScreen from './app/screens/ServicesScreen';
 import AboutUsScreen from './app/screens/AboutUsScreen/AboutUs';
 import ContactUsScreen from './app/screens/ContactUsScreen/ContactUs';
 
+// import GetInTouchWithUsForm from './app/common/footer/GetInTouchWithUsForm';
+// import MainFooter from './app/common/footer/MainFooter';
+// import GetInTouchWithUsForm from './app/common/footer/GetInTouchWithUsForm';
+// import HomePageScreen from './app/screens/HomePageScreen';
+// import FastWebsite from './app/shared/FastWebsite';
+
 const App = () => {
   const Stack = createNativeStackNavigator();
-
   return ( 
+    <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Welcome'>
+        {/* <Stack.Navigator initialRouteName='Welcome'> */}
+        <Stack.Navigator initialRouteName='Home'>
           <Stack.Screen name='Welcome' component={WelcomeScreen}/>
           <Stack.Screen name='Home' component={Tabs} options={{ headerShown: false }}/>
           <Stack.Screen name='Get Mobile App' component={MobileApp}/>
-          <Stack.Screen name='Web Development' component={ServicesScreen}/>
+          <Stack.Screen name='I Want A Very Fast Website' component={ServicesScreen}/>
           <Stack.Screen name='I Want Odoo ERP' component={ErpSolution}/>
           <Stack.Screen name='Rank My Website On Google' component={Seo}/>
           <Stack.Screen name='Digital Marketing Plans' component={DigitalMarketing}/>
@@ -73,14 +77,11 @@ const App = () => {
           <Stack.Screen name='AboutUs' component={AboutUsScreen} />
           <Stack.Screen name='Contact Us' component={ContactUsScreen} />
         </Stack.Navigator>
+        {/* <GetInTouchWithUsForm />
+        <MainFooter /> */}
       </NavigationContainer>
-  );
-};
+    </>
+  )
+}
 
 export default App;
-
-{/* <WelcomeScreen title="Next->" welcomenote="Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-        when an unknown printer took a galley of type and scrambled it to make a type specimen book
-        . It has survived not only five centuries, but also the leap into electronic typesetting, 
-remaining essentially unchanged."/>*/}

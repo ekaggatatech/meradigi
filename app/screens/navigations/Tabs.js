@@ -15,21 +15,24 @@ const Tabs = () => {
           screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, color, size }) => {
             let iconName;
-
-            if (route.name === 'Home') {
+            if (route.name === 'Home') 
+            {
               iconName = focused
                 ? 'home'
                 : 'home';
             }
-            else if (route.name === 'Login') {
+            else if (route.name === 'Login') 
+            {
               iconName = focused ? 'user' : 'user';
             }
-            /* else if (route.name === 'Services') {
+            else if (route.name === 'Services') 
+            {
               iconName = focused ? 'handshake-o' : 'handshake-o';
-            } */ else if (route.name === 'Menu'){
+            }
+            else if (route.name === 'Menu') 
+            {
               iconName = focused ? 'bars' : 'bars';
             }
-
             return <Icon name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: '#00d4ff',
@@ -38,12 +41,10 @@ const Tabs = () => {
         >
             <Tab.Screen name='Home' component={HomePageScreen}/>
             <Tab.Screen name='Login' component={Login}/>
-            {/* <Tab.Screen name='Services' component={ServicesScreen}/> */}
+            {/* <Tab.Screen name='Services' component={ServicesScreen}/>  */}
             <Tab.Screen name='Menu' component={MenuScreen}/>
         </Tab.Navigator>
-
     );
 }
-
 
 export default Tabs;

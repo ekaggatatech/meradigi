@@ -17,15 +17,15 @@ const WelcomeScreen = ({navigation}) => {
                     onPress={() => navigation.navigate('Home')}
                 />
             </View>
-            <Text style={styles.welcomeheading}>WEL-COME</Text>
+            <Text style={styles.welcomeheading}>WELCOME</Text>
             <View style={[styles.logocontainer,styles.shadowProp]}>
                 <View style={styles.welcomebox}>
                     <Image style={styles.logo} source={require("../assets/meradigiresize50.png")}/>
-                    <Text style={styles.welcometext}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                    {/* <Text style={styles.welcometext}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
                         Lorem Ipsum has been the industry's standard dummy 
                         text ever since the 1500s, when an unknown printer 
                         took a galley of type and scrambled it to make a type specimen book. 
-                    </Text>
+                    </Text> */}
                 </View> 
             </View>
             <View>

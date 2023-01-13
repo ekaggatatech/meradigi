@@ -1,98 +1,13 @@
-import React, { useState, useRef } from 'react';
-import { View, Text, Image ,ScrollView, Button, Pressable, TouchableOpacity, ImageBackground } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, Image, ScrollView, Pressable, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { Form, FormItem } from 'react-native-form-component';
-// import { Form } from 'react-native-form-generator';
 import ServicesStyles from '../config/services.styles';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 import ServicesCardViewScreen from '../cards/ServicesCardViewScreen';
 import FeaturesCardViewScreen from '../cards/FeaturesCardViewScreen';
 import Banner from '../assets/banner/pkrnxegurgm-1-819x1024.jpg';
-
-const GetInTouchContentData= () => 
-{
-  const firstNameInput = useRef();
-  const lastNameInput = useRef();
-  const emailInput = useRef();
-  return (
-      <>
-        <View id="course" name="course" style={ServicesStyles.getInTouchWithUsContainerView}> 
-          <ImageBackground 
-          source={require('../assets/banner/people-holding-icons-digital-brands.jpg')}
-          resizeMode="stretch" 
-          style={ServicesStyles.getInTouchWithUsBgImage}>
-            <View>
-              <Text style={ServicesStyles.getInTouchWithUsTitleText}>
-                Get in touch with us.
-              </Text>
-            </View>
-            <View style={ServicesStyles.getInTouchWithUsForm}>
-              <LinearGradient 
-                colors={['#FFFFFFE6','#FFFFFF']}
-                start={{x:1,y:0}}
-                end={{x:0,y:0}}>
-                  <Form>
-                    <FormItem
-                      label="First Name"
-                      // isRequired
-                      // value={email}
-                      // onChangeText={(email) => setEmail(email)}
-                      // asterik
-                      ref={firstNameInput}
-                      style={{ display: 'flex', flexDirection: 'row' }}
-                    />
-                    <FormItem
-                      label="Last Name"
-                      ref={lastNameInput}
-                    />
-                    <FormItem
-                      label="Email"
-                      isRequired
-                      // value={email}
-                      // onChangeText={(email) => setEmail(email)}
-                      asterik
-                      ref={emailInput}
-                    />
-                    <FormItem
-                      label="Phone/Mobile"
-                      isRequired
-                      // value={email}
-                      // onChangeText={(email) => setEmail(email)}
-                      asterik
-                      ref={emailInput}
-                    />
-                    <FormItem
-                      label="Company Name"
-                      isRequired
-                      // value={email}
-                      // onChangeText={(email) => setEmail(email)}
-                      asterik
-                      ref={emailInput}
-                    />
-                    <FormItem
-                      label="Industry Type?"
-                      isRequired
-                      // value={email}
-                      // onChangeText={(email) => setEmail(email)}
-                      asterik
-                      ref={emailInput}
-                    />
-                    <FormItem
-                      label="Services you looking for?"
-                      isRequired
-                      // value={email}
-                      // onChangeText={(email) => setEmail(email)}
-                      asterik
-                      ref={emailInput}
-                    />
-                  </Form>
-              </LinearGradient>
-            </View>
-          </ImageBackground>
-        </View>
-      </>
-  )
-}
+import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
+import MainFooter from '../common/footer/MainFooter';
 
 const ServicesScreen = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -102,12 +17,17 @@ const ServicesScreen = () => {
       <View style={ServicesStyles.container}>
       <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <View style={ServicesStyles.marginStyles}>
+        <Text style={ServicesStyles.webText}>
+          Web Development Services
+        </Text>
+      </View>
+      <View style={ServicesStyles.newMarginStyles}>
         <Text style={ServicesStyles.newWebText}>Our best-in-class Business solution,</Text>
         <Text style={ServicesStyles.newWebText}>To le you to grow business higher!</Text>
       </View>
-      <View style={ServicesStyles.containerOne}>
+      {/* <View style={ServicesStyles.containerOne}>
         <Image style={ServicesStyles.webDevImage} source={require("../assets/webdev.jpg")} />
-      </View>
+      </View> */}
       <View>
         <Image style={ServicesStyles.webDevImage} source={require("../assets/gif/Clip_distance_education_by_Icons8.gif")} />
       </View>
@@ -149,7 +69,8 @@ const ServicesScreen = () => {
       <View>
         <FeaturesCardViewScreen />
       </View>
-      <View style={ServicesStyles.imageView}>
+    </View>
+    <View style={ServicesStyles.imageView}>
         <View style={{ marginBottom: 10 }}>
           <Image source={Banner} alt="Why do you want a website ?" title="Why do you want a website ?" style={ServicesStyles.imagePositioning}></Image>
         </View>
@@ -183,8 +104,8 @@ const ServicesScreen = () => {
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
-      <View style={ServicesStyles.ourGlobalStatsView}>
+    </View>
+    <View style={ServicesStyles.ourGlobalStatsView}>
         <LinearGradient 
           colors={['#FFAAF2','#A2D7F4']}
           start={{x:1,y:0}}
@@ -232,81 +153,15 @@ const ServicesScreen = () => {
               </View>
             </View>
           </LinearGradient>
-      </View>
-      <View>
-        <GetInTouchContentData/>
-      </View>
-      <View>
-          <Button
-            title="Book A Free Consultation Call"
-            onPress={()=>setModalOpen(true)}
-          />
-      </View>
-        {/* <View>
-          <Image style={ServicesStyles.webDevImage} source={require("../assets/digitalMarketing.jpg")}/>
-        </View> */}
-        {/* <View>
-          <Text style={ServicesStyles.webinfoText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            </Text>
-        </View> */}
-      </View>
-{/*       <View style={ServicesStyles.container}>
-      <Text style={ServicesStyles.webText}>ERP Solution</Text>
-        <View>
-          <Image style={ServicesStyles.webDevImage} source={require("../assets/erpsolution.jpg")}/>
-        </View>
-        <View style={ServicesStyles.hedingButton}>
-          <Button
-                title="Book A Free Consultation Call"
-            />
-        </View>
-        <View>
-          <Text style={ServicesStyles.webinfoText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            </Text>
-        </View>
-      </View> */}
+    </View>
+    <View>
+      <GetInTouchWithUsForm/>
+    </View>
+    <View>
+      <MainFooter/>
+    </View>
   </ScrollView>
   </>
   )
 }
-export default ServicesScreen
+export default ServicesScreen;

@@ -16,7 +16,7 @@ import FormField from "./FormField";
 
 export default function RegisterForm() {
   function onSubmitHandler(values) {
-    console.log(values)
+    console.log(values);
     // https://reactnative.dev/docs/alert
     Alert.alert(
       "Register Successfully!",
@@ -36,7 +36,6 @@ export default function RegisterForm() {
 
       <SafeAreaView style={styles.container}>
         
-
         {/* https://github.com/APSL/react-native-keyboard-aware-scroll-view */}
         <KeyboardAwareScrollView
           style={styles.content}

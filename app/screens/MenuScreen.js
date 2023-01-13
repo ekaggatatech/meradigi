@@ -1,4 +1,4 @@
-import { View, Text,Image, StyleSheet, ScrollView, Button } from 'react-native'
+import { View, Text, Image, StyleSheet, ScrollView, Button } from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 import Icon from 'react-native-vector-icons/FontAwesome'

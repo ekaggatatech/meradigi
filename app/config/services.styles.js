@@ -1,6 +1,4 @@
 import { StyleSheet, Dimensions } from 'react-native';
-// import { LinearGradient } from 'expo-linear-gradient';
-
 const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
@@ -8,6 +6,7 @@ export default StyleSheet.create({
     container:{
         flex:1,
         paddingTop:3
+        // backgroundColor: '#FFFFFF'
       },
       webDevImage:{
         width:400,
@@ -44,7 +43,6 @@ export default StyleSheet.create({
       {
         fontSize: 18,
         fontWeight: 'bold',
-        /*paddingRight:70,*/
         marginTop:15,
         textAlign: 'center',
         marginBottom: 15
@@ -64,8 +62,13 @@ export default StyleSheet.create({
       },
       marginStyles:
       {
-        marginTop: 15,
-        marginBottom: 15
+        marginTop: 10,
+        marginBottom: 10
+      },
+      newMarginStyles:
+      {
+        marginTop: 0,
+        marginBottom: 30
       },
       chooseBtn:
       {
@@ -161,10 +164,7 @@ export default StyleSheet.create({
       viewStyleForLine:
       {
         borderColor: "#009EFF", 
-        border: '1px solid #009EFF',
-        /* width: "100%",
-        alignSelf: 'stretch', */
-        /* display: 'block' */
+        border: '1px solid #009EFF'
       },
       modalContent:
       {
@@ -182,7 +182,6 @@ export default StyleSheet.create({
       {
         width: 320,
         height: 80
-        /* resizeMode:'cover' */
       },
       consultNowButton:
       {
@@ -272,12 +271,10 @@ export default StyleSheet.create({
       },
       featureCardImage:
       {
-        /* resizeMode: 'cover', */
         display: 'flex',
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        /* marginBottom: 20, */
         width: 40,
         height: 40,
         alignSelf: 'center'
@@ -315,13 +312,10 @@ export default StyleSheet.create({
         shadowOffset: { width: 0, height: 2},
         shadowRadius: 10,
         overflow: "hidden"
-        /* backgroundColor: 'white' */
-        //boxShadow: 0 0 10 5 rgb('85 167 255 / 78%')
       },
       contentText:
       {
         color: '#FFFFFF',
-        // fontSize: 38,
         fontSize: 28,
         fontWeight: 'bold',
         textAlign: 'center'
@@ -353,9 +347,6 @@ export default StyleSheet.create({
         paddingBottom: 10,
         paddingLeft: 25,
         paddingRight: 25
-        // width: 140,
-        // height: 44, 
-        // backgroundColor: '#027EFF',
       },
       letsStartButtonText:
       {
@@ -365,11 +356,6 @@ export default StyleSheet.create({
         textAlign: 'center',
         textAlignVertical: 'center'
       },
-      /* letsStartButtonHover:
-      {
-        color: '#027EFF',
-        backgroundColor: '#FFFFFF'
-      }, */
       ourGlobalStatsView:
       {
         backgroundColor: 'transparent'
@@ -396,8 +382,6 @@ export default StyleSheet.create({
       {
         color: '#000000',
         fontSize: 19
-        // fontSize: 29
-        // fontWeight: 'bold'
       },
       getInTouchWithUsContainerView:
       {
@@ -411,8 +395,9 @@ export default StyleSheet.create({
       {
         flex: 1,
         width: screenWidth,
-        height: screenHeight,
-        opacity: 10
+        height: 'auto',
+        //height: screenHeight,
+        // opacity: 10
       },
       getInTouchWithUsTitleText:
       {
@@ -424,23 +409,22 @@ export default StyleSheet.create({
       },
       getInTouchWithUsForm:
       {
-        backgroundColor: '#ffffff',
-        margin: 10,
+        backgroundColor: 'transparent',
+        margin: 20,
         padding: 0,
         borderStyle: 'solid',
         borderwidth: 2,
         borderColor: '#FFFFFF',
         borderRadius: 16,
-        /* width: 160,
-        height: 170, */
-        // color: "#000",
-        // border: 2,
-        // radius: 4,
-        opacity: 0.8,
-        x: 0,
-        y: 4,
-        style: { marginVertical: 4 }
-        // backgroundImage: linearGradient('190deg, #FFFFFFE6 0%, #FFFFFF 100%'),
-        // boxShadow: 0px 0px 10px 0px rgb(0 0 0 / 50%)
-      }
+        opacity: 0.928,
+        /* x: 0,
+        y: 4, */
+        /* style: { marginVertical: 4 }, */
+        height: '100%'
+      },
+      /* letsStartButtonHover:
+      {
+        color: '#027EFF',
+        backgroundColor: '#FFFFFF'
+      }, */
 });
