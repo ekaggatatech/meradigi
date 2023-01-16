@@ -389,7 +389,8 @@ export default StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'transparent',
-        flexDirection: 'column'
+        flexDirection: 'column',
+        textAlignVertical: 'center'
       },
       getInTouchWithUsBgImage:
       {
@@ -401,16 +402,16 @@ export default StyleSheet.create({
       },
       getInTouchWithUsTitleText:
       {
-        color: '#FFFFFF',
+        color: '#000000',
         fontSize: 97,
         fontWeight: 'bold',
         textAlign: 'center',
-        textAlignVertical: 'top'
+        textAlignVertical: 'center'
       },
       getInTouchWithUsForm:
       {
         backgroundColor: 'transparent',
-        margin: 20,
+        margin: 0,
         padding: 0,
         borderStyle: 'solid',
         borderwidth: 2,
@@ -420,6 +421,7 @@ export default StyleSheet.create({
         /* x: 0,
         y: 4, */
         /* style: { marginVertical: 4 }, */
+        width: '90%',
         height: '100%'
       },
       /* letsStartButtonHover:

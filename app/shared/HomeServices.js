@@ -48,13 +48,15 @@ const services =[
 const HomeServices = () => {
     const [modalOpen, setModalOpen] = useState(false);
     return (
-        <>
+    <>
         <ScrollView style={styles.scrollView} nestedScrollEnabled={true} >
             <View>
                 <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
-                <Text style={styles.selectText}>
-                    Select Your Prefer Service
-                </Text>
+                <View>
+                    <Text style={styles.selectText}>
+                        Select Your Prefer Service
+                    </Text>
+                </View>
                 <View>
                     <SafeAreaView>
                         <FlatList 
@@ -81,14 +83,12 @@ const HomeServices = () => {
                 </View> */}
             </View>
         </ScrollView>  
-        </>
+    </>
   )
 }
 
 const styles = StyleSheet.create({
-
     flatlistDesign:{
-
     },
     selectText:{
         marginTop: 10,
@@ -103,7 +103,6 @@ const styles = StyleSheet.create({
         fontWeight:'bold',
         alignSelf:'center',
         textAlign:'center'
-
     },
     item:{
         backgroundColor:'grey',
@@ -122,12 +121,8 @@ const styles = StyleSheet.create({
         alignSelf:'center',
     },
     scrollView: {
-        
     },
-      
     bookButton:{
-        
-
     }
 })
 

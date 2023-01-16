@@ -9,12 +9,12 @@ const Footer = () =>
             <View style={styles.footerSubContainer}>
                 <View style={styles.footerMarginBottom}>
                     <Text style={styles.footerContentOne}>
-                        © 2022 Meradigi. All right Reserved
+                        © 2022 meradigi. All right Reserved
                     </Text>
                 </View>
                 <View>
                     <Text style={styles.footerContentTwo}>
-                        Made with ❤ by Meradigi
+                        Made with ❤ by meradigi
                     </Text>
                 </View>
             </View>

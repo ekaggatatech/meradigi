@@ -10,7 +10,7 @@ const MainFooter = () =>
         <View style={styles.mainFooterContainer}> 
             <View style={styles.subFooterContainer}>
                 <View style={styles.positioningOne}>
-                    <Image style={styles.companyLogoImageOne} source={require("../../assets/meradigi.png")} alt="MeraDigi" title="MeraDigi" />
+                    <Image style={styles.companyLogoImageOne} source={require("../../assets/meradigi.png")} alt="meradigi" title="meradigi" />
                 </View>
                 <View>
                     <Text style={styles.mainFooterContentOne}>
@@ -129,8 +129,10 @@ const MainFooter = () =>
                         Follow Us
                    </Text>
                 </View>
-                <View>
-                    
+                <View style={styles.positioningOne}>
+                    <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/png/facebook.png")} alt="Facebook" title="Facebook"></Image>
+                    <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/png/twitter.png")} alt="Twitter" title="Twitter"></Image>
+                    <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/png/youtube.png")} alt="YouTube" title="YouTube"></Image>
                 </View>
                 <View>
                     <Text style={styles.mainFooterContentThree}>
@@ -238,6 +240,11 @@ const styles = StyleSheet.create({
     {
         width: 240,
         height: 80
+    },
+    urlLinkCompanyLogo:
+    {
+        width: 60,
+        height: 60
     },
     marginBottomForImage:
     {

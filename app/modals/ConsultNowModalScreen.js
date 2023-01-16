@@ -9,7 +9,7 @@ return (
     <Modal visible={modalOpen} animationType="slide">
         <View style={ServicesStyles.modalContent}>
           <View style={ServicesStyles.positioning}>
-            <Image style={ServicesStyles.companyLogoImage} source={require("../assets/meradigi.png")} alt="MeraDigi" title="MeraDigi" />
+            <Image style={ServicesStyles.companyLogoImage} source={require("../assets/meradigi.png")} alt="meradigi" title="meradigi" />
           </View>
           {/* <View style={ServicesStyles.positioning}>
             <Pressable style={ServicesStyles.consultNowButton} onPress={()=>setModalOpen(true)}>

@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   },
   marginStyling:
   {
-    matrginBottom: 10,
+    matrginBottom: 0,
     marginTop: 0
   },
   marginTopStyling:

@@ -43,7 +43,6 @@ const App = () => {
   return ( 
     <>
       <NavigationContainer>
-        {/* <Stack.Navigator initialRouteName='Welcome'> */}
         <Stack.Navigator initialRouteName='Home'>
           <Stack.Screen name='Welcome' component={WelcomeScreen}/>
           <Stack.Screen name='Home' component={Tabs} options={{ headerShown: false }}/>
@@ -77,8 +76,6 @@ const App = () => {
           <Stack.Screen name='AboutUs' component={AboutUsScreen} />
           <Stack.Screen name='Contact Us' component={ContactUsScreen} />
         </Stack.Navigator>
-        {/* <GetInTouchWithUsForm />
-        <MainFooter /> */}
       </NavigationContainer>
     </>
   )
