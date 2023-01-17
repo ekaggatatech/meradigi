@@ -129,15 +129,39 @@ const MainFooter = () =>
                         Follow Us
                    </Text>
                 </View>
-                <View style={styles.positioningOne}>
+                <View style={styles.positioningTwo}>
                     <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/png/facebook.png")} alt="Facebook" title="Facebook"></Image>
                     <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/png/twitter.png")} alt="Twitter" title="Twitter"></Image>
                     <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/png/youtube.png")} alt="YouTube" title="YouTube"></Image>
                 </View>
-                <View>
+                <View style={styles.positioningOne}>
                     <Text style={styles.mainFooterContentThree}>
                         100% Secure & Encrypted Payments Guaranteed
                     </Text>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/AmazonPay.png")} alt="AmzaonPay" title="AmzaonPay"></Image>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/ApplePay.png")} alt="ApplePay" title="ApplePay"></Image>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/GooglePay.png")} alt="GooglePay" title="GooglePay"></Image>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/PayPal.png")} alt="PayPal" title="PayPal"></Image>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/QRCode.png")} alt="QRCode" title="QRCode"></Image>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/CreditCard.png")} alt="CreditCard" title="CreditCard"></Image>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/visa.png")} alt="Visa" title="Visa"></Image>
+                </View>
+                <View style={[styles.positioningThree,styles.newMarginBottomStyling]}>
+                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/png/mastercard.png")} alt="MasterCard" title="MasterCard"></Image>
                 </View>
             </View>
         </View>
@@ -189,8 +213,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#545454',
         color: '#ffffff',
         width: 50,
-        padding: 10,
-        /*borderRadius: 14*/
+        padding: 10
     },
     ourAddressViewOne:
     {
@@ -244,10 +267,37 @@ const styles = StyleSheet.create({
     urlLinkCompanyLogo:
     {
         width: 60,
-        height: 60
+        height: 60,
+        marginRight: 15
     },
     marginBottomForImage:
     {
         marginBottom: 10
+    },
+    positioningTwo:
+    {
+      display: 'flex',
+      justifyContent: 'center',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      marginBottom: 20,
+      flexDirection: 'row'
+    },
+    imageDimenmsionsOne:
+    {
+        width: 160,
+        height: 120
+    },
+    positioningThree:
+    {
+      display: 'flex',
+      justifyContent: 'center',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      alignItems: 'center'
+    },
+    newMarginBottomStyling:
+    {
+        marginBottom: 40
     }
 })

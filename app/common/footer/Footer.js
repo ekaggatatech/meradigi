@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 const Footer = () => 
 {
@@ -9,12 +9,12 @@ const Footer = () =>
             <View style={styles.footerSubContainer}>
                 <View style={styles.footerMarginBottom}>
                     <Text style={styles.footerContentOne}>
-                        © 2022 meradigi. All right Reserved
+                        © 2022 Meradigi. All right Reserved
                     </Text>
                 </View>
                 <View>
                     <Text style={styles.footerContentTwo}>
-                        Made with ❤ by meradigi
+                        Made with ❤ by Meradigi
                     </Text>
                 </View>
             </View>

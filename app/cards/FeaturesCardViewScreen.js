@@ -64,12 +64,13 @@ const featuresData =
     }
 ];
 const featuresListItems = featuresData.map(
-(d) =>  
+(d, index) =>  
+(
 <>
 <TouchableOpacity 
 style={ServicesStyles.featureOne}
-key={d.id} 
-index={d.id}>
+key={index}
+id={index}>
         <LinearGradient 
         colors={d.cardColors}
         start={{x:0,y:0}}
@@ -82,6 +83,7 @@ index={d.id}>
         </LinearGradient>
 </TouchableOpacity>
 </>   
+)
 )
 return (
 <>

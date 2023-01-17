@@ -59,12 +59,14 @@ const HomeServices = () => {
                 </View>
                 <View>
                     <SafeAreaView>
-                        <FlatList 
-                            style={styles.flatlistDesign}
-                            data={services}
-                            numColumns={2}
-                            keyExtractor={(index) => index.id}
-                            renderItem={({item}) => (<Product product={item}/>)}/>
+                        <View>
+                            <FlatList 
+                                style={styles.flatlistDesign}
+                                data={services}
+                                numColumns={2}
+                                keyExtractor={(index) => index.id}
+                                renderItem={({item}) => (<Product product={item}/>)} />
+                        </View>
                     </SafeAreaView>
                 </View>
                 {/* <Text style={styles.confusedText}>

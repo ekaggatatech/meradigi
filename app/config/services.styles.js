@@ -1,17 +1,18 @@
 import { StyleSheet, Dimensions } from 'react-native';
-const screenHeight = Dimensions.get('window').height;
+// const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
 
 export default StyleSheet.create({
-    container:{
-        flex:1,
-        paddingTop:3
-        // backgroundColor: '#FFFFFF'
+      container:
+      {
+        flex: 1,
+        paddingTop: 3
       },
-      webDevImage:{
-        width:400,
-        height:300,
-        resizeMode:'cover'
+      webDevImage:
+      {
+        width: 400,
+        height: 300,
+        resizeMode: 'cover'
       },
       containerOne:
       {
@@ -396,9 +397,7 @@ export default StyleSheet.create({
       {
         flex: 1,
         width: screenWidth,
-        height: 'auto',
-        //height: screenHeight,
-        // opacity: 10
+        height: 'auto'
       },
       getInTouchWithUsTitleText:
       {
@@ -418,15 +417,7 @@ export default StyleSheet.create({
         borderColor: '#FFFFFF',
         borderRadius: 16,
         opacity: 0.928,
-        /* x: 0,
-        y: 4, */
-        /* style: { marginVertical: 4 }, */
         width: '90%',
         height: '100%'
-      },
-      /* letsStartButtonHover:
-      {
-        color: '#027EFF',
-        backgroundColor: '#FFFFFF'
-      }, */
+      }
 });

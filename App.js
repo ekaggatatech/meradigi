@@ -32,12 +32,6 @@ import ServicesScreen from './app/screens/ServicesScreen';
 import AboutUsScreen from './app/screens/AboutUsScreen/AboutUs';
 import ContactUsScreen from './app/screens/ContactUsScreen/ContactUs';
 
-// import GetInTouchWithUsForm from './app/common/footer/GetInTouchWithUsForm';
-// import MainFooter from './app/common/footer/MainFooter';
-// import GetInTouchWithUsForm from './app/common/footer/GetInTouchWithUsForm';
-// import HomePageScreen from './app/screens/HomePageScreen';
-// import FastWebsite from './app/shared/FastWebsite';
-
 const App = () => {
   const Stack = createNativeStackNavigator();
   return ( 
@@ -45,7 +39,7 @@ const App = () => {
       <NavigationContainer>
         <Stack.Navigator initialRouteName='Home'>
           <Stack.Screen name='Welcome' component={WelcomeScreen}/>
-          <Stack.Screen name='Home' component={Tabs} options={{ headerShown: false }}/>
+          <Stack.Screen name='Home' component={Tabs} options={{ headerShown: false }} />
           <Stack.Screen name='Get Mobile App' component={MobileApp}/>
           <Stack.Screen name='I Want A Very Fast Website' component={ServicesScreen}/>
           <Stack.Screen name='I Want Odoo ERP' component={ErpSolution}/>
