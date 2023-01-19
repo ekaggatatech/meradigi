@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Alert, Button, TextInput, Text,View, StyleSheet } from 'react-native';
+import { Alert, Button, TextInput, Text,View, StyleSheet, Image } from 'react-native';
+import ServicesStyles from '../../config/services.styles';
 
 
 export default class App extends Component {
@@ -20,6 +21,10 @@ export default class App extends Component {
   
   render() {
     return (
+      <>
+      <View style={[ServicesStyles.positioning,styles.newPaddingTopStyling]}>
+        <Image style={ServicesStyles.companyLogoImage} source={require("../../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+      </View>
       <View style={styles.container}>
         <TextInput
           value={this.state.username}
@@ -48,11 +53,16 @@ export default class App extends Component {
             Register Now.</Text>
         </View>
       </View>
+      </>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  newPaddingTopStyling:
+  {
+    paddingTop: 10
+  },
   container: {
     flex: 1,
     alignItems: 'center',

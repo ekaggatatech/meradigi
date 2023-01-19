@@ -32,9 +32,14 @@ const GetInTouchWithUsForm = () =>
           resizeMode="stretch" 
           style={ServicesStyles.getInTouchWithUsBgImage}> */}
             <View style={ServicesStyles.getInTouchWithUsForm}>
-              <View>
+              <View style={{ marginTop: 20, marginBottom: 10 }}>
+                <Text style={ServicesStyles.getInTouchWithUsFirstTitle}>
+                  Are you confused? Need Consultation
+                </Text>
+              </View>
+              <View style={{ marginTop: 0, marginBottom: 20 }}>
                 <Text style={ServicesStyles.getInTouchWithUsTitleText}>
-                  Get in touch with us.
+                  Get in touch with us!
                 </Text>
               </View>
               <View>

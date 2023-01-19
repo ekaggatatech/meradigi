@@ -1,5 +1,7 @@
-import { View, Text, StyleSheet, SafeAreaView, Image, ScrollView, Button, FlatList } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, Image, ImageBackground } from 'react-native';
+import ServicesStyles from '../../config/services.styles';
+import WhyChooseUs from '../../assets/AboutUs/Why.jpg.webp';
 /* import Product from '../config/Product' */
 
 //all images
@@ -20,7 +22,7 @@ const Image14= require('../assets/servicesImg/Iwantanannualmaintananceplan.png')
 const Image15= require('../assets/servicesImg/Getabesthostingplan.png');
 const Image16= require('../assets/servicesImg/Hireadeveloper.png'); */
 
-//name and  images 
+//name and images 
 /* const services =[
         {name:"Get Mobile App", id:"1",source:Image1},
         {name:"I Want A Very Fast Website",id:"2",source: Image2 },
@@ -44,60 +46,233 @@ const Image16= require('../assets/servicesImg/Hireadeveloper.png'); */
 //and all new pages define in App.js 
 //take reference of web Development page 
 
-const AboutUs = (props) => {
+const AboutUs = () => {
     return (
-        <ScrollView style={styles.scrollView} nestedScrollEnabled={true} >
-            <View>
-                <Text style={styles.selectText} >
-                  About Us Screen
-                </Text>
-            </View>
-        </ScrollView>  
+        <>
+            <ScrollView nestedScrollEnabled={true}>
+            <SafeAreaView>
+                <View style={styles.commonPadding}>
+                   <Image source={require("../../assets/AboutUs/AboutUsBG.jpg.webp")} alt="AboutUs" title="AboutUs" style={styles.aboutUsImageOne}></Image>
+                </View>
+                <View style={styles.commonPadding}>
+                    <Text style={styles.selectText}>
+                        We deliver revenue-generating digital marketing solutions.
+                    </Text>
+                </View>
+                <View style={styles.commonPadding}>
+                    <Text style={styles.aboutUsContent}>
+                        We develop effective content strategies for corporate brands under our proven and tested power process of “ROADMAP” strategy. We have a proven track record in delivering results based digital marketing campaigns.
+                    </Text>
+                </View>
+                <View style={ServicesStyles.imageView}>
+                    <View style={{ marginBottom: 10 }}>
+                        <Image source={WhyChooseUs} alt="Why do you want a website ?" title="Why do you want a website ?" style={styles.whyChooseUsImage}></Image>
+                    </View>
+                    <View style={{ marginBottom: 10 }}>
+                    <Text style={ServicesStyles.contentText}>
+                        We’re A Leader In Tech-Enabled Digital Marketing Solutions
+                    </Text>
+                    </View>
+                    <View>
+                    <Text style={ServicesStyles.subContentText}>
+                        Mera Digi is a tech-enabled digital marketing solutions provider, and we create custom strategies for each of our clients based on their needs and goals.
+                    </Text>
+                    </View>
+                    <View>
+                    <Text style={ServicesStyles.subContentText}>
+                        We plan customized campaigns to meet your organizational requirements and campaign goals.
+                    </Text>
+                    </View>
+                    <View style={{ marginBottom: 10 }}>
+                    <Text style={ServicesStyles.subContentText}>
+                        As a full service digital agency, we deliver solutions across Adwords, Social media marketing, Search engine optimization (SEO), Radio Advertisement, Celebrity Marketing, and Content marketing services.
+                    </Text>
+                    </View>
+                </View>
+                <View style={styles.fullPotentialMarketingView}>
+                    <Text style={styles.fullPotentialMarketingTextTitle}>
+                        This is Full-Potential Marketing.
+                    </Text>
+                </View>
+                <View style={{ backgroundColor: '#ffffff' }}>
+                    <View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Image source={require("../../assets/AboutUs/Setting-100x100.png")} alt="Services" title="Services"></Image>
+                        </View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Text style={styles.fullPotentialMarketingTextTitle}>
+                                Services
+                            </Text>
+                        </View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Text style={styles.aboutUsContent}>
+                                Full Funnel Digital Marketing Services to reach your target audience. We identify gaps in your current marketing strategy, then consult you on what you need & how we'll make it happen - all before the contract is signed.
+                            </Text>
+                        </View>
+                    </View>
+                    <View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Image source={require("../../assets/AboutUs/Link-100x100.png")} alt="Technology" title="Technology"></Image>
+                        </View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Text style={styles.fullPotentialMarketingTextTitle}>
+                                Technology
+                            </Text>
+                        </View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Text style={styles.aboutUsContent}>
+                                Get customized reports for each team member involved, benefit from real-time digital strategy shifts fueled by machine learning, and dominate your space with the power of our proprietary technology platform.
+                            </Text>
+                        </View>
+                    </View>
+                    <View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Image source={require("../../assets/AboutUs/Control-100x100.png")} alt="Difference" title="Difference"></Image>
+                        </View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Text style={styles.fullPotentialMarketingTextTitle}>
+                                Difference
+                            </Text>
+                        </View>
+                        <View style={styles.commonPositionOfElements}>
+                            <Text style={styles.aboutUsContent}>
+                                We're not just a marketing agency. We're an extension of your team that integrates seamlessly with the other arms of your business, driving profound impact on your bottom line without creating more work.
+                            </Text>
+                        </View>
+                    </View>
+                </View>
+                <View style={styles.aboutUsProposalContainer}>
+                    <ImageBackground source={require("../../assets/AboutUs/ProposalBG.jpg")} resizeMode="cover" style={styles.aboutUsProposalBGImage}>
+                        <View style={styles.aboutUsProposalImageContainer}>
+                            <View>
+                                <Text style={styles.aboutUsLetsGetStartedText}>
+                                    LET’S GET STARTED
+                                </Text>
+                            </View>
+                            <View>
+                                <Text style={styles.aboutUsLetsGetStartedSubText}>
+                                    Ready To Make a Real Change? Let’s Build this Thing Together!
+                                </Text>
+                            </View>
+                        </View>
+                    </ImageBackground>
+                </View>
+                <View>
+                    <ImageBackground 
+                    source={require("../../assets/AboutUs/ProposalBG.jpg")} 
+                    style={styles.aboutUsProposalBGImage} 
+                    alt="ProposalBG" 
+                    title="ProposalBG">
+                        {/* <View style={styles.aboutUsProposalImageContainer}>
+
+                        </View> */}
+                    </ImageBackground>
+                </View>
+            </SafeAreaView>
+            </ScrollView> 
+        </> 
   )
 }
 
 const styles = StyleSheet.create({
-
-    flatlistDesign:{
-
-    },
-    selectText:{
-        margin:10,
-        fontSize:20,
+    selectText:
+    {
+        fontSize:28,
         fontWeight:'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: '#000000',
     },
-    confusedText:{
+    aboutUsContent:
+    {
+        fontSize:18,
+        fontWeight: 'normal',
+        textAlign: 'center',
+        color: '#000000',
+        marginBottom: 20
+    },
+    confusedText:
+    {
         margin:20,
-        fontSize:20,
+        fontSize:28,
         fontWeight:'bold',
-        alignSelf:'center',
         textAlign:'center'
-
     },
-    item:{
+    item:
+    {
         backgroundColor:'grey',
         margin:5,
         width:50,
         padding:8,
         color:'white'
     },
-    grid:{
-        display:'flex',
-        alignItems:'center'
+    aboutUsImageOne:
+    {
+        width: '100%',
+        marginBottom: 20
     },
-    queImage:{
-        width:200,
-        height:200,
-        alignSelf:'center',
+    whyChooseUsImage:
+    {
+        margin: 15,
+        width: 'auto'
     },
-    scrollView: {
-        
+    fullPotentialMarketingView:
+    {
+        backgroundColor: '#ffffff',
+        padding: 40
     },
-      
-    bookButton:{
-        
+    fullPotentialMarketingTextTitle:
+    {
+        color: '#000000',
+        fontSize: 28,
+        fontWeight: 'bold',
+        textAlign: 'center'
+    },
+    commonPositionOfElements:
+    {
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center',
+        textAlign: 'center',
+        marginBottom: 20,
+        backgroundColor: '#ffffff'
+    },
+    commonPadding:
+    {
+        padding: 10,
+        backgroundColor: '#ffffff'
+    },
+    aboutUsProposalContainer: 
+    {
+        flex: 1
+    },
+    aboutUsProposalBGImage:
+    {
+        flex: 1,
+        justifyContent: 'center',
+        height: '100%'
+    },
+    aboutUsProposalImageContainer:
+    {
 
+    },
+    aboutUsLetsGetStartedText: 
+    {
+        color: '#ffffff',
+        fontSize: 23,
+        /* lineHeight: 84, */
+        fontWeight: 'bold',
+        textAlign: 'center',
+        backgroundColor: 'transparent'
+    },
+    aboutUsLetsGetStartedSubText:
+    {
+        color: '#ffffff',
+        fontSize: 18,
+        fontWeight: 'normal',
+        textAlign: 'center',
+        backgroundColor: 'transparent'
     }
 })
 

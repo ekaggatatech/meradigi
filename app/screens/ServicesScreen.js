@@ -8,6 +8,7 @@ import FeaturesCardViewScreen from '../cards/FeaturesCardViewScreen';
 import Banner from '../assets/banner/pkrnxegurgm-1-819x1024.jpg';
 import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
 import MainFooter from '../common/footer/MainFooter';
+import Footer from '../common/footer/Footer';
 
 const ServicesScreen = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -16,6 +17,9 @@ const ServicesScreen = () => {
     <ScrollView>
       <View style={ServicesStyles.container}>
       <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <View style={ServicesStyles.positioning}>
+        <Image style={ServicesStyles.companyLogoImage} source={require("../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+      </View>
       <View style={ServicesStyles.marginStyles}>
         <Text style={ServicesStyles.webText}>
           Web Development Services
@@ -159,6 +163,9 @@ const ServicesScreen = () => {
     </View>
     <View>
       <MainFooter/>
+    </View>
+    <View>
+      <Footer/>
     </View>
   </ScrollView>
   </>

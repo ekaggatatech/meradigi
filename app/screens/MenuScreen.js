@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, ScrollView, Button } from 'react-native'
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 import Icon from 'react-native-vector-icons/FontAwesome'
@@ -9,9 +9,13 @@ const MenuScreen = () => {
   const navigation = useNavigation();
   return (
       <ScrollView>
+      <View style={styles.containerBox}>
         {/* <View>
           <Image style={ServicesStyles.webDevImage} source={require("../assets/team.png")}/>
         </View> */}
+        <View style={ServicesStyles.positioning}>
+          <Image style={ServicesStyles.companyLogoImage} source={require("../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+        </View>
         <View style={styles.iconsView}>
           {/* <Icon 
              style={styles.icons} 
@@ -51,6 +55,7 @@ const MenuScreen = () => {
         <View style={styles.iconsView}>
           <Text style={styles.iconText} onPress={() => navigation.navigate('Login')}>Log In</Text>
         </View>
+      </View>
       </ScrollView>
   )
 }
@@ -72,9 +77,17 @@ const styles = StyleSheet.create({
   iconText:{
     fontWeight:'bold',
     fontSize:18,
-    paddingLeft:20
+    /* paddingLeft:20, */
+    textAlign: 'center'
   },
-  
+  containerBox:
+  {
+    paddingTop: 10
+    /* alignItems: 'center',
+    alignContent: 'center',
+    alignSelf: 'center',
+    textAlignVertical: 'center' */
+  }
 })
 
 export default MenuScreen

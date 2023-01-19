@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Button, ScrollView } from 'react-native';
+import { StyleSheet, View, Button, ScrollView, Image } from 'react-native';
 import SearchBar from '../shared/SearchBar';
 import HomeServices from '../shared/HomeServices';
 import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 import MainFooter from '../common/footer/MainFooter';
 import Footer from '../common/footer/Footer';
+import ServicesStyles from '../config/services.styles';
 
 const HomePageScreen = ({navigation}) => 
 {
@@ -22,6 +23,9 @@ return (
   <>
     <ScrollView style={styles.container}>
     <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      <View style={ServicesStyles.positioning}>
+        <Image style={ServicesStyles.companyLogoImage} source={require("../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+      </View>
       <View>
         <SearchBar 
             value={value}
@@ -69,7 +73,8 @@ const styles = StyleSheet.create({
   {
     width: '100%', 
     height: 'auto', 
-    borderRadius: 0
+    borderRadius: 0,
+    paddingTop: 10
   },
   twoButtons:
   {

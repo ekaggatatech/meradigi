@@ -6,7 +6,7 @@ export default StyleSheet.create({
       container:
       {
         flex: 1,
-        paddingTop: 3
+        paddingTop: 10
       },
       webDevImage:
       {
@@ -399,10 +399,18 @@ export default StyleSheet.create({
         width: screenWidth,
         height: 'auto'
       },
-      getInTouchWithUsTitleText:
+      getInTouchWithUsFirstTitle:
       {
         color: '#000000',
-        fontSize: 97,
+        fontSize: 37,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'center'
+      },
+      getInTouchWithUsTitleText:
+      {
+        color: '#DB3833',
+        fontSize: 30,
         fontWeight: 'bold',
         textAlign: 'center',
         textAlignVertical: 'center'
