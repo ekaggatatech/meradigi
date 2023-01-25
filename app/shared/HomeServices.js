@@ -1,9 +1,8 @@
-import { View, Text, StyleSheet, SafeAreaView, ScrollView, FlatList } from 'react-native';
 import React, { useState } from 'react';
+import { ScrollView, View, Text, StyleSheet } from 'react-native';
 import Product from '../config/Product';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 
-//all images
 const Image1= require("../assets/servicesImg/GetMobileApp.png");
 const Image2= require('../assets/servicesImg/Iwantveryfastwebsite.png'); 
 const Image3= require('../assets/servicesImg/Rankmywebsiteongoogle.png');
@@ -21,36 +20,32 @@ const Image14= require('../assets/servicesImg/Iwantanannualmaintananceplan.png')
 const Image15= require('../assets/servicesImg/Getabesthostingplan.png');
 const Image16= require('../assets/servicesImg/Hireadeveloper.png');
 
-//name and images 
-const services =[
-        {name:"Get Mobile App", id:"1",source:Image1},
-        {name:"I Want A Very Fast Website",id:"2",source: Image2 },
-        {name:"Rank My Website On Google", id:"3",source: Image3 },
-        {name:"Make Me Popular On Youtube", id:"4", source: Image4},
-        {name:"Make My Videos Popular On Facebook", id:"5",source: Image5},
-        {name:"Make My Videos Popular On Instagram", id:"6", source: Image6},
-        {name:"Advertise On Radio", id:"7",source: Image7 },
-        {name:"Hire A Celebrity", id:"8",source: Image8 },
-        {name:"I Want Odoo ERP",id:"9", source: Image9 },
-        {name:"I Need Moodle LMS",id:"10", source: Image10 },
-        {name:"Add Audio/Video Feature In My Website",id:"11", source: Image11 },
-        {name:"Make My Product Famous",id:"12", source: Image12 },
-        {name:"Digital Marketing Plans",id:"13", source: Image13},
-        {name:"I Want An Annual Maintenance Plan",id:"14", source: Image14},
-        {name:"Get A Best Hosting Plan",id:"15", source: Image15 },
-        {name:"Hire A Developer",id:"16", source: Image16}
-    ]
-
-//name = new page name have to same then it fetch
-//and all new pages define in App.js 
-//take reference of web Development page 
+const services = [
+        { key:1, name:"Get Mobile App", id:1, source:Image1 },
+        { key:2, name:"I Want A Very Fast Website", id:2,source: Image2 },
+        { key:3, name:"Rank My Website On Google", id:3,source: Image3 },
+        { key:4, name:"Make Me Popular On Youtube", id:4, source: Image4 },
+        { key:5, name:"Make My Videos Popular On Facebook", id:5,source: Image5 },
+        { key:6, name:"Make My Videos Popular On Instagram", id:6, source: Image6 },
+        { key:7, name:"Advertise On Radio", id:7,source: Image7 },
+        { key:8, name:"Hire A Celebrity", id:8,source: Image8 },
+        { key:9, name:"I Want Odoo ERP", id:9, source: Image9 },
+        { key:10, name:"I Need Moodle LMS", id:10, source: Image10 },
+        { key:11, name:"Add Audio/Video Feature In My Website", id:11, source: Image11 },
+        { key:12, name:"Make My Product Famous", id:12, source: Image12 },
+        { key:13, name:"Digital Marketing Plans", id:13, source: Image13 },
+        { key:14, name:"I Want An Annual Maintenance Plan", id:14, source: Image14},
+        { key:15, name:"Get A Best Hosting Plan", id:15, source: Image15 },
+        { key:16, name:"Hire A Developer", id:16, source: Image16 }
+];
 
 const HomeServices = () => {
+
     const [modalOpen, setModalOpen] = useState(false);
+
     return (
     <>
-        <ScrollView style={styles.scrollView} nestedScrollEnabled={true} >
-            <View>
+        <ScrollView style={styles.scrollView} nestedScrollEnabled={true}>
                 <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
                 <View>
                     <Text style={styles.selectText}>
@@ -58,16 +53,17 @@ const HomeServices = () => {
                     </Text>
                 </View>
                 <View>
-                    <SafeAreaView>
-                        <View>
-                            <FlatList 
-                                style={styles.flatlistDesign}
-                                data={services}
-                                numColumns={2}
-                                keyExtractor={(index) => index.id}
-                                renderItem={({item}) => (<Product product={item}/>)} />
+                    {/* <FlatList 
+                        style={styles.flatlistDesign}
+                        data={services}
+                        numColumns={2}
+                        keyExtractor={(index) => index.id}
+                        renderItem={({item}) => (<><Product product={item}/></>)} /> */}
+                    <ScrollView>
+                        <View style={styles.productContainer}>
+                            {services.map(item => <View style={styles.newItem} key={item.id}><Product product={item} /></View>)}
                         </View>
-                    </SafeAreaView>
+                    </ScrollView>
                 </View>
                 {/* <Text style={styles.confusedText}>
                    I'm Confused
@@ -83,49 +79,64 @@ const HomeServices = () => {
                     onPress={()=>setModalOpen(true)}
                 />
                 </View> */}
-            </View>
         </ScrollView>  
     </>
-  )
+  );
 }
 
+export default HomeServices;
+
 const styles = StyleSheet.create({
-    flatlistDesign:{
-    },
-    selectText:{
+    selectText:
+    {
         marginTop: 10,
         marginBottom: 0,
         fontSize: 20,
         fontWeight: 'bold',
         textAlign: 'center'
     },
-    confusedText:{
+    confusedText:
+    {
         margin:20,
         fontSize:20,
         fontWeight:'bold',
         alignSelf:'center',
         textAlign:'center'
     },
-    item:{
+    item:
+    {
         backgroundColor:'grey',
         margin:5,
         width:50,
         padding:8,
         color:'white'
     },
-    grid:{
+    grid:
+    {
         display:'flex',
         alignItems:'center'
     },
-    queImage:{
+    queImage:
+    {
         width:200,
         height:200,
-        alignSelf:'center',
+        alignSelf:'center'
     },
-    scrollView: {
+    productContainer: 
+    {
+        flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        alignItems: 'flex-start'  
     },
-    bookButton:{
+    newItem: 
+    {
+       display: 'flex',
+       justifyContent: 'center',
+       marginLeft: 'auto',
+       marginRight: 'auto',
+       width: '46%',
+       marginBottom: 6,
+       alignItems: 'center'
     }
 })
-
-export default HomeServices;

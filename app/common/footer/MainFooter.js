@@ -1,10 +1,25 @@
 import React from 'react';
-import { StyleSheet, View, Image, Text } from 'react-native';
+import { StyleSheet, View, Image, Text, Linking, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const MainFooter = () => 
 {
   const navigation = useNavigation();
+  const facebookUrl = 'https://www.facebook.com/profile.php?id=100083753137340';
+  facebookLink = () =>
+  {
+    Linking.openURL(facebookUrl);
+  }
+  const twitterUrl = 'https://twitter.com/MeraDigi';
+  twitterLink = () =>
+  {
+    Linking.openURL(twitterUrl);
+  }
+  const youtubeUrl = 'https://www.youtube.com/channel/UCQBUy8f2v4GJVgQeJ0i7YRA';
+  youtubeLink = () => 
+  {
+    Linking.openURL(youtubeUrl);
+  }
   return (
       <>
         <View style={styles.mainFooterContainer}> 
@@ -65,13 +80,23 @@ const MainFooter = () =>
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('PrivacyPolicy')}>
                             PRIVACY POLICY
                         </Text>
                     </View>
                     <View>
                         <Text style={styles.mainFooterContentThree}>
                             REFUND POLICY
+                        </Text>
+                    </View>
+                    <View>
+                        <Text style={styles.mainFooterContentThree}>
+                            TERMS & CONDITION'S
+                        </Text>
+                    </View>
+                    <View>
+                        <Text style={styles.mainFooterContentThree}>
+                            SUPPORT TICKET
                         </Text>
                     </View>
                 </View>
@@ -130,38 +155,32 @@ const MainFooter = () =>
                    </Text>
                 </View>
                 <View style={styles.positioningTwo}>
-                    <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/facebook.png")} alt="Facebook" title="Facebook"></Image>
-                    <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/twitter.png")} alt="Twitter" title="Twitter"></Image>
-                    <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/youtube.png")} alt="YouTube" title="YouTube"></Image>
+                    <TouchableOpacity onPress={()=>this.facebookLink()}>
+                        <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/facebook.png")} alt="Facebook" title="Facebook"></Image>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.twitterLink()}>
+                        <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/twitter.png")} alt="Twitter" title="Twitter"></Image>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.youtubeLink()}>
+                        <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/youtube.png")} alt="YouTube" title="YouTube"></Image>
+                    </TouchableOpacity>
                 </View>
                 <View style={styles.positioningOne}>
                     <Text style={styles.mainFooterContentThree}>
                         100% Secure & Encrypted Payments Guaranteed
                     </Text>
                 </View>
-                <View style={styles.positioningThree}>
+                <View style={[styles.positioningThree,styles.newMarginBottomForImages]}>
                     <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/AmazonPay.png")} alt="AmzaonPay" title="AmzaonPay"></Image>
-                </View>
-                <View style={styles.positioningThree}>
-                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/ApplePay.png")} alt="ApplePay" title="ApplePay"></Image>
-                </View>
-                <View style={[styles.positioningThree,styles.newMarginBottomForImages]}>
-                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/GooglePay.png")} alt="GooglePay" title="GooglePay"></Image>
-                </View>
-                <View style={[styles.positioningThree,styles.newMarginBottomForImages]}>
-                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/PayPal.png")} alt="PayPal" title="PayPal"></Image>
+                    <Image style={[styles.imageDimenmsionsOne,styles.imageSpacing]} source={require("../../assets/footer/icons/png/ApplePay.png")} alt="ApplePay" title="ApplePay"></Image>
+                    <Image style={[styles.imageDimenmsionsOne,styles.imageSpacing]} source={require("../../assets/footer/icons/png/GooglePay.png")} alt="GooglePay" title="GooglePay"></Image>
+                    <Image style={[styles.imageDimenmsionsOne,styles.imageSpacing]} source={require("../../assets/footer/icons/png/PayPal.png")} alt="PayPal" title="PayPal"></Image>
                 </View>
                 <View style={[styles.positioningThree,styles.newMarginBottomForImages]}>
                     <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/QRCode.png")} alt="QRCode" title="QRCode"></Image>
-                </View>
-                <View style={styles.positioningThree}>
-                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/CreditCard.png")} alt="CreditCard" title="CreditCard"></Image>
-                </View>
-                <View style={styles.positioningThree}>
-                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/Visa.png")} alt="Visa" title="Visa"></Image>
-                </View>
-                <View style={styles.positioningThree}>
-                    <Image style={styles.imageDimenmsionsOne} source={require("../../assets/footer/icons/png/mastercard.png")} alt="MasterCard" title="MasterCard"></Image>
+                    <Image style={[styles.imageDimenmsionsOne,styles.imageSpacing]} source={require("../../assets/footer/icons/png/CreditCard.png")} alt="CreditCard" title="CreditCard"></Image>
+                    <Image style={[styles.imageDimenmsionsOne,styles.imageSpacing]} source={require("../../assets/footer/icons/png/Visa.png")} alt="Visa" title="Visa"></Image>
+                    <Image style={[styles.imageDimenmsionsOne,styles.imageSpacing]} source={require("../../assets/footer/icons/png/mastercard.png")} alt="MasterCard" title="MasterCard"></Image>
                 </View>
             </View>
         </View>
@@ -285,16 +304,20 @@ const styles = StyleSheet.create({
     },
     imageDimenmsionsOne:
     {
-        width: 80,
-        height: 80
+        width: 56,
+        height: 56
+    },
+    imageSpacing:
+    {
+        marginLeft: 20
     },
     positioningThree:
     {
       display: 'flex',
       justifyContent: 'center',
       marginLeft: 'auto',
-      marginRight: 'auto'
-      /* alignItems: 'center' */
+      marginRight: 'auto',
+      flexDirection: 'row'
     },
     newMarginBottomForImages:
     {

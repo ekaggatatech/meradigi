@@ -29,9 +29,6 @@ const ServicesScreen = () => {
         <Text style={ServicesStyles.newWebText}>Our best-in-class Business solution,</Text>
         <Text style={ServicesStyles.newWebText}>To le you to grow business higher!</Text>
       </View>
-      {/* <View style={ServicesStyles.containerOne}>
-        <Image style={ServicesStyles.webDevImage} source={require("../assets/webdev.jpg")} />
-      </View> */}
       <View>
         <Image style={ServicesStyles.webDevImage} source={require("../assets/gif/Clip_distance_education_by_Icons8.gif")} />
       </View>

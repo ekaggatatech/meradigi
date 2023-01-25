@@ -56,16 +56,12 @@ const data =
 ];
 const listItems = data.map(
 (d, index) =>  
-(
-<>
 <TouchableOpacity style={ServicesStyles.card} key={index} id={index}>
 <Image style={ServicesStyles.cardImage} source={d.cardImageSource}></Image>
 <Text style={ServicesStyles.cardText}>
   {d.cardText}
 </Text>
 </TouchableOpacity>
-</>   
-)
 )
 return (
 <>

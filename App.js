@@ -31,15 +31,16 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import ServicesScreen from './app/screens/ServicesScreen';
 import AboutUsScreen from './app/screens/AboutUsScreen/AboutUs';
 import ContactUsScreen from './app/screens/ContactUsScreen/ContactUs';
+import PrivacyPolicyScreen from './app/screens/PrivacyPolicyScreen/PrivacyPolicy';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
   return ( 
     <>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName='Home'>
+        <Stack.Navigator initialRouteName='HomePageScreen'>
           <Stack.Screen name='Welcome' component={WelcomeScreen}/>
-          <Stack.Screen name='Home' component={Tabs} options={{ headerShown: false }} />
+          <Stack.Screen name='HomePageScreen' component={Tabs} options={{ headerShown: false }} />
           <Stack.Screen name='Get Mobile App' component={MobileApp}/>
           <Stack.Screen name='I Want A Very Fast Website' component={ServicesScreen}/>
           <Stack.Screen name='I Want Odoo ERP' component={ErpSolution}/>
@@ -69,6 +70,7 @@ const App = () => {
           <Stack.Screen name='Services' component={ServicesScreen}/>
           <Stack.Screen name='AboutUs' component={AboutUsScreen} />
           <Stack.Screen name='Contact Us' component={ContactUsScreen} />
+          <Stack.Screen name='PrivacyPolicy' component={PrivacyPolicyScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

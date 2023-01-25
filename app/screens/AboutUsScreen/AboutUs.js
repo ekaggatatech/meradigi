@@ -1,56 +1,18 @@
-import React from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, Text, Image, ImageBackground } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native';
+import ConsultNowModalScreen from '../../modals/ConsultNowModalScreen';
+import MainFooter from '../../common/footer/MainFooter';
+import Footer from '../../common/footer/Footer';
 import ServicesStyles from '../../config/services.styles';
 import WhyChooseUs from '../../assets/AboutUs/Why.jpg.webp';
-/* import Product from '../config/Product' */
-
-//all images
-/* const Image1= require("../assets/servicesImg/GetMobileApp.png");
-const Image2= require('../assets/servicesImg/Iwantveryfastwebsite.png'); 
-const Image3= require('../assets/servicesImg/Rankmywebsiteongoogle.png');
-const Image4= require('../assets/servicesImg/Popularonyoutube.png');
-const Image5= require('../assets/servicesImg/Facebook.png');
-const Image6= require('../assets/servicesImg/popularonInstagram.png');
-const Image7= require('../assets/servicesImg/AdvertiseonRadio.png');
-const Image8= require('../assets/servicesImg/Hireacelebrity.png');
-const Image9= require('../assets/servicesImg/IwantodooERP.png');
-const Image10= require('../assets/servicesImg/IneedMoodleLMS.png');
-const Image11= require('../assets/servicesImg/AddAduioVideo.png');
-const Image12= require('../assets/servicesImg/makemyproductfamous.png');
-const Image13= require('../assets/servicesImg/DigitalMarketing.png');
-const Image14= require('../assets/servicesImg/Iwantanannualmaintananceplan.png');
-const Image15= require('../assets/servicesImg/Getabesthostingplan.png');
-const Image16= require('../assets/servicesImg/Hireadeveloper.png'); */
-
-//name and images 
-/* const services =[
-        {name:"Get Mobile App", id:"1",source:Image1},
-        {name:"I Want A Very Fast Website",id:"2",source: Image2 },
-        {name:"Rank My Website On Google", id:"3",source: Image3 },
-        {name:"Make Me Popular On Youtube", id:"4", source: Image4},
-        {name:"Make My Videos Popular On Facebook", id:"5",source: Image5},
-        {name:"Make My Videos Popular On Instagram", id:"6", source: Image6},
-        {name:"Advertise On Radio", id:"7",source: Image7 },
-        {name:"Hire A Celebrity", id:"8",source: Image8 },
-        {name:"I Want Odoo ERP",id:"9", source: Image9 },
-        {name:"I Need Moodle LMS",id:"10", source: Image10 },
-        {name:"Add Audio/Video Feature In My Website",id:"11", source: Image11 },
-        {name:"Make My Product Famous",id:"12", source: Image12 },
-        {name:"Digital Marketing Plans",id:"13", source: Image13},
-        {name:"I Want An Annual Maintenance Plan",id:"14", source: Image14},
-        {name:"Get A Best Hosting Plan",id:"15", source: Image15 },
-        {name:"Hire A Developer",id:"16", source: Image16}
-    ] */
-
-//name = new page name have to same then it fetch
-//and all new pages define in App.js 
-//take reference of web Development page 
 
 const AboutUs = () => {
+    const [modalOpen, setModalOpen] = useState(false);
     return (
         <>
             <ScrollView nestedScrollEnabled={true}>
             <SafeAreaView>
+                <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
                 <View style={styles.commonPadding}>
                    <Image source={require("../../assets/AboutUs/AboutUsBG.jpg.webp")} alt="AboutUs" title="AboutUs" style={styles.aboutUsImageOne}></Image>
                 </View>
@@ -142,31 +104,41 @@ const AboutUs = () => {
                     </View>
                 </View>
                 <View style={styles.aboutUsProposalContainer}>
-                    <ImageBackground source={require("../../assets/AboutUs/ProposalBG.jpg")} resizeMode="cover" style={styles.aboutUsProposalBGImage}>
+                    <ImageBackground 
+                        source={require("../../assets/AboutUs/ProposalBG.jpg")} 
+                        resizeMode="cover" 
+                        style={styles.aboutUsProposalBGImage} 
+                        alt="ProposalBG" 
+                        title="ProposalBG">
                         <View style={styles.aboutUsProposalImageContainer}>
-                            <View>
+                            <View style={{ marginBottom: 20 }}>
                                 <Text style={styles.aboutUsLetsGetStartedText}>
                                     LET’S GET STARTED
                                 </Text>
                             </View>
-                            <View>
+                            <View style={{ marginBottom: 20 }}>
                                 <Text style={styles.aboutUsLetsGetStartedSubText}>
-                                    Ready To Make a Real Change? Let’s Build this Thing Together!
+                                    Ready To Make a Real Change? 
                                 </Text>
+                                <Text style={styles.aboutUsLetsGetStartedSubText}>
+                                    Let’s Build this Thing Together!
+                                </Text>
+                            </View>
+                            <View style={styles.aboutUsClickForProposalButtonView}>
+                                <TouchableOpacity style={styles.aboutUsClickForProposalButton} onPress={()=>setModalOpen(true)}>
+                                    <View style={styles.aboutUsClickForProposalButton}>
+                                        <Text style={styles.aboutUsClickForProposalButtonText}>Click for a Proposal!</Text>
+                                    </View>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </ImageBackground>
                 </View>
                 <View>
-                    <ImageBackground 
-                    source={require("../../assets/AboutUs/ProposalBG.jpg")} 
-                    style={styles.aboutUsProposalBGImage} 
-                    alt="ProposalBG" 
-                    title="ProposalBG">
-                        {/* <View style={styles.aboutUsProposalImageContainer}>
-
-                        </View> */}
-                    </ImageBackground>
+                    <MainFooter/>
+                </View>
+                <View>
+                    <Footer/>
                 </View>
             </SafeAreaView>
             </ScrollView> 
@@ -249,22 +221,23 @@ const styles = StyleSheet.create({
     },
     aboutUsProposalBGImage:
     {
-        flex: 1,
-        justifyContent: 'center',
-        height: '100%'
+        /* flex: 1, */
+        /* justifyContent: 'center', */
+        /*height: '100%'*/
     },
     aboutUsProposalImageContainer:
     {
-
+        paddingTop: 180,
+        paddingBottom: 180
     },
     aboutUsLetsGetStartedText: 
     {
         color: '#ffffff',
         fontSize: 23,
-        /* lineHeight: 84, */
         fontWeight: 'bold',
         textAlign: 'center',
         backgroundColor: 'transparent'
+        /* lineHeight: 84 */
     },
     aboutUsLetsGetStartedSubText:
     {
@@ -273,6 +246,33 @@ const styles = StyleSheet.create({
         fontWeight: 'normal',
         textAlign: 'center',
         backgroundColor: 'transparent'
+    },
+    aboutUsClickForProposalButtonView:
+    {
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center',
+        textAlign: 'center',
+        backgroundColor: 'transparent'
+    },
+    aboutUsClickForProposalButton:
+    {
+        color: '#fff',
+        borderColor: '#fff',
+        backgroundColor: 'transparent',
+        textAlign: 'center',
+        borderWidth: 1
+    },
+    aboutUsClickForProposalButtonText:
+    {
+        color: '#fff',
+        borderColor: '#fff',
+        backgroundColor: 'transparent',
+        textAlign: 'center',
+        padding: 12,
+        fontSize: 15
     }
 })
 

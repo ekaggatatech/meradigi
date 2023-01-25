@@ -38,10 +38,6 @@ export const styles = StyleSheet.create({
     color: "#ff7675",
   },
   button: {
-    /* marginTop: 20,
-    backgroundColor: "#409EFF !important",
-    padding: 10,
-    borderRadius: 15, */
     marginTop: 10,
     fontSize: 16,
     fontWeight: 'bold',
@@ -63,4 +59,28 @@ export const styles = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
   },
+
+  dropdown: {
+    margin: 16,
+    height: 50,
+    borderBottomColor: 'gray',
+    borderBottomWidth: 0.5,
+  },
+  icon: {
+    marginRight: 5,
+  },
+  placeholderStyle: {
+    fontSize: 16,
+  },
+  selectedTextStyle: {
+    fontSize: 16,
+  },
+  iconStyle: {
+    width: 20,
+    height: 20,
+  },
+  inputSearchStyle: {
+    height: 40,
+    fontSize: 16,
+  }
 });

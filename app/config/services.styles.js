@@ -302,12 +302,12 @@ export default StyleSheet.create({
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        alignItem: 'center',
+        alignItems: 'center',
         width: '80%',
         maxWidth: '80%',
         height: 500,
         borderRadius: 12,
-        elevation: 10,
+        /* elevation: 10, */
         shadowColor: '#55A7FF',
         shadowOpacity: 0.26,
         shadowOffset: { width: 0, height: 2},
@@ -333,7 +333,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        alignItem: 'center',
+        alignItems: 'center',
       },
       letsStartButton:
       {
