@@ -1,7 +1,7 @@
-import { View, Text, StyleSheet, ScrollView, Image } from 'react-native'
-import React from 'react'
-import ServicesStyles from '../config/services.styles'
-import Icon from 'react-native-vector-icons/FontAwesome'
+import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
+import React from 'react';
+import ServicesStyles from '../config/services.styles';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
@@ -14,7 +14,7 @@ const MenuScreen = () => {
           <Image style={ServicesStyles.webDevImage} source={require("../assets/team.png")}/>
         </View> */}
         <View style={ServicesStyles.positioning}>
-          <Image style={ServicesStyles.companyLogoImage} source={require("../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+          <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
         </View>
         <View style={styles.iconsView}>
           {/* <Icon 

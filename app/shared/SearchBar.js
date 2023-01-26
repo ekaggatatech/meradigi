@@ -10,10 +10,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native'; 
 
 const SearchBar = ({value, updateSearch, style}) => {
+
     const navigation = useNavigation();
 
     const [query, setQuery] = useState();
+
     const [error, setError] = useState()
+
     return (
         <View style={[styles.container, style]}>
             <View style={styles.searchContainer}>
@@ -102,6 +105,9 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 40,
         flexDirection: 'row',
+        borderColor: '#DEDEDE',
+        borderWidth: 1,
+        borderRadius: 9
     },
     container: {
         height: 46,

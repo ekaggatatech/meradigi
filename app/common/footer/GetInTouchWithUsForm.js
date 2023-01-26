@@ -341,7 +341,7 @@ const GetInTouchWithUsForm = () =>
     Alert.alert("Added Successfully!","Form data: " + JSON.stringify(values));
   }
 
-  function isFormValid(isValid, touched) 
+  function isFormValid(isValid,touched) 
   {
     return isValid && Object.keys(touched).length !== 0;
   }
@@ -366,7 +366,7 @@ const GetInTouchWithUsForm = () =>
                   colors={['#FFFFFFE6','#FFFFFF']}
                   start={{x:0,y:0}}
                   end={{x:0,y:0}}
-                  style={{ borderRadius: 16, padding: 20, marginBottom: 20 }}>
+                  style={{ borderRadius: 16, padding: 20, marginBottom: 20, borderWidth: 1, borderColor: '#DEDEDE' }}>
                   <Formik
                       initialValues={{
                       firstName: "",
@@ -395,27 +395,29 @@ const GetInTouchWithUsForm = () =>
                       <>
                           <FormField
                           field="firstName"
-                          label="First Name"
+                          // label="First Name"
                           autoCapitalize="words"
                           values={values}
                           touched={touched}
                           errors={errors}
                           handleChange={handleChange}
                           handleBlur={handleBlur}
+                          placeholder="First Name"
                           />
                           <FormField
                           field="lastName"
-                          label="Last Name"
+                          // label="Last Name"
                           autoCapitalize="words"
                           values={values}
                           touched={touched}
                           errors={errors}
                           handleChange={handleChange}
                           handleBlur={handleBlur}
+                          placeholder="Last Name"
                           />
                           <FormField
                           field="email"
-                          label="Email *"
+                          // label="Email *"
                           values={values}
                           touched={touched}
                           errors={errors}
@@ -423,10 +425,11 @@ const GetInTouchWithUsForm = () =>
                           handleBlur={handleBlur}
                           isRequired
                           asterik
+                          placeholder="E-Mail ID"
                           />
                           <FormField
                           field="phoneormobile"
-                          label="Phone/Mobile *"
+                          // label="Phone/Mobile *"
                           secureTextEntry={true}
                           values={values}
                           touched={touched}
@@ -435,10 +438,11 @@ const GetInTouchWithUsForm = () =>
                           handleBlur={handleBlur}
                           isRequired
                           asterik
+                          placeholder="Phone/Mobile Number"
                           />
                           <FormField
                           field="companyname"
-                          label="Company Name *"
+                          // label="Company Name *"
                           secureTextEntry={true}
                           values={values}
                           touched={touched}
@@ -447,6 +451,7 @@ const GetInTouchWithUsForm = () =>
                           handleBlur={handleBlur}
                           isRequired
                           asterik
+                          placeholder="Company Name"
                           />
                           <Dropdown
                               style={styles.dropdown}

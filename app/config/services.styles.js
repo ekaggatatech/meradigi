@@ -179,11 +179,6 @@ export default StyleSheet.create({
         marginRight: 'auto',
         marginBottom: 15
       },
-      companyLogoImage:
-      {
-        width: 320,
-        height: 80
-      },
       consultNowButton:
       {
         alignItems: 'center',

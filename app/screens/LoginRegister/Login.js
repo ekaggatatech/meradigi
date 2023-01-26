@@ -23,7 +23,7 @@ export default class App extends Component {
     return (
       <>
       <View style={[ServicesStyles.positioning,styles.newPaddingTopStyling]}>
-        <Image style={ServicesStyles.companyLogoImage} source={require("../../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+        <Image source={require("../../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
       </View>
       <View style={styles.container}>
         <TextInput

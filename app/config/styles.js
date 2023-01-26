@@ -25,11 +25,14 @@ export const styles = StyleSheet.create({
   },
   input: {
     height: 50,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     borderRadius: 5,
     borderWidth: 2,
     borderColor: "#e3e3e3",
     backgroundColor: "#fff",
+    // color: '#000000',
+    fontWeight: 'normal',
+    fontSize: 16
   },
   errorContainer: {
     marginVertical: 5,
@@ -40,7 +43,7 @@ export const styles = StyleSheet.create({
   button: {
     marginTop: 10,
     fontSize: 16,
-    fontWeight: 'bold',
+    fontWeight: 'normal',
     backgroundColor: '#409EFF',
     color: '#ffffff',
     borderRadius: 9,
@@ -55,9 +58,10 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#ffffff",
-    fontWeight: "bold",
+    fontWeight: "normal",
     fontSize: 18,
     textAlign: "center",
+    letterSpacing: 0.4
   },
 
   dropdown: {

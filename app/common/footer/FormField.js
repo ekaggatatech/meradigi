@@ -12,7 +12,9 @@ export default function FormField({
   errors,
   handleChange,
   handleBlur,
-}) {
+  placeholder
+}) 
+{
   return (
     <View style={styles.formGroup}>
       <Text style={styles.label}>{label}</Text>
@@ -23,6 +25,7 @@ export default function FormField({
         onBlur={handleBlur(field)}
         secureTextEntry={secureTextEntry}
         autoCapitalize={autoCapitalize || "none"}
+        placeholder={placeholder}
       />
       {touched[field] && errors[field] ? (
         <View style={styles.errorContainer}>

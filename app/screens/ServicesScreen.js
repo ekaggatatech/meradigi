@@ -18,7 +18,7 @@ const ServicesScreen = () => {
       <View style={ServicesStyles.container}>
       <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <View style={ServicesStyles.positioning}>
-        <Image style={ServicesStyles.companyLogoImage} source={require("../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+        <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
       </View>
       <View style={ServicesStyles.marginStyles}>
         <Text style={ServicesStyles.webText}>

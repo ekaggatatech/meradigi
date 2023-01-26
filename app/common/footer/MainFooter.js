@@ -25,7 +25,7 @@ const MainFooter = () =>
         <View style={styles.mainFooterContainer}> 
             <View style={styles.subFooterContainer}>
                 <View style={styles.positioningOne}>
-                    <Image style={styles.companyLogoImageOne} source={require("../../assets/meradigi.png")} alt="meradigi" title="meradigi" />
+                    <Image source={require("../../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
                 </View>
                 <View>
                     <Text style={styles.mainFooterContentOne}>
@@ -260,11 +260,6 @@ const styles = StyleSheet.create({
       marginLeft: 'auto',
       marginRight: 'auto',
       marginBottom: 15
-    },
-    companyLogoImageOne:
-    {
-      width: 320,
-      height: 80
     },
     positionOfElements:
     {
