@@ -5,21 +5,31 @@ import { useNavigation } from '@react-navigation/native';
 const MainFooter = () => 
 {
   const navigation = useNavigation();
+
   const facebookUrl = 'https://www.facebook.com/profile.php?id=100083753137340';
   facebookLink = () =>
   {
     Linking.openURL(facebookUrl);
   }
+
   const twitterUrl = 'https://twitter.com/MeraDigi';
   twitterLink = () =>
   {
     Linking.openURL(twitterUrl);
   }
+
   const youtubeUrl = 'https://www.youtube.com/channel/UCQBUy8f2v4GJVgQeJ0i7YRA';
   youtubeLink = () => 
   {
     Linking.openURL(youtubeUrl);
   }
+  
+  const supportTicketUrl = 'https://www.meradigi.com//ticket';
+  supportTicketUrlLink = () => 
+  {
+    Linking.openURL(supportTicketUrl);
+  }
+
   return (
       <>
         <View style={styles.mainFooterContainer}> 
@@ -34,7 +44,7 @@ const MainFooter = () =>
                 </View>
                 <View>
                     <Text style={styles.mainFooterContentOne}>
-                        We are just a  call away.
+                        We are just a call away.
                     </Text>
                 </View>
             </View>
@@ -52,7 +62,7 @@ const MainFooter = () =>
                     </View>
                     <View>
                         <Text style={styles.mainFooterContentThree}>
-                            DIGITAL DEVELOPMENT
+                            DIGITAL MARKETING
                         </Text>
                     </View>
                     <View>
@@ -75,29 +85,31 @@ const MainFooter = () =>
                 </View>
                 <View>
                     <View>
-                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('AboutUs')}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('About Us')}>
                             ABOUT US
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('PrivacyPolicy')}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Privacy Policy')}>
                             PRIVACY POLICY
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Refund Policy')}>
                             REFUND POLICY
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Terms & Conditions')}>
                             TERMS & CONDITION'S
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
-                            SUPPORT TICKET
-                        </Text>
+                        <TouchableOpacity onPress={()=>this.supportTicketUrlLink()}>
+                            <Text style={styles.mainFooterContentThree}>
+                                SUPPORT TICKET
+                            </Text>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </View>
@@ -185,7 +197,7 @@ const MainFooter = () =>
             </View>
         </View>
       </>
-  )
+  );
 }
 
 export default MainFooter;
@@ -236,8 +248,7 @@ const styles = StyleSheet.create({
     },
     ourAddressViewOne:
     {
-        marginBottom: 10,
-        padding: 10
+        marginBottom: 20
     },
     contentOne:
     {

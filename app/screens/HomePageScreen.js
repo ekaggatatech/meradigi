@@ -47,11 +47,7 @@ return (
           </TouchableOpacity>
       </View>
       <View style={[styles.twoButtons,styles.marginStyling,styles.marginTopStyling]}>
-          {/* <Button
-            title="Contact Us"
-            onPress={() => navigation.navigate('Contact Us')}
-          /> */}
-          <TouchableOpacity onPress={() => navigation.navigate('Contact Us')}>
+          <TouchableOpacity onPress={() => navigation.navigate('Contact Us')} title="Contact Us">
             <View style={styles.contactUsButton}>
               <Text style={styles.contactUsButtonText}>Contact Us</Text>
             </View>

@@ -425,7 +425,7 @@ const GetInTouchWithUsForm = () =>
                           handleBlur={handleBlur}
                           isRequired
                           asterik
-                          placeholder="E-Mail ID"
+                          placeholder="E-Mail ID *"
                           />
                           <FormField
                           field="phoneormobile"
@@ -438,7 +438,7 @@ const GetInTouchWithUsForm = () =>
                           handleBlur={handleBlur}
                           isRequired
                           asterik
-                          placeholder="Phone/Mobile Number"
+                          placeholder="Phone/Mobile Number *"
                           />
                           <FormField
                           field="companyname"
@@ -451,9 +451,18 @@ const GetInTouchWithUsForm = () =>
                           handleBlur={handleBlur}
                           isRequired
                           asterik
-                          placeholder="Company Name"
+                          placeholder="Company Name *"
                           />
                           <Dropdown
+                              field="industrytype"
+                              secureTextEntry={true}
+                              // value={value}
+                              touched={touched}
+                              errors={errors}
+                              handleChange={handleChange}
+                              handleBlur={handleBlur}
+                              isRequired
+                              asterik
                               style={styles.dropdown}
                               placeholderStyle={styles.placeholderStyle}
                               selectedTextStyle={styles.selectedTextStyle}
@@ -466,7 +475,7 @@ const GetInTouchWithUsForm = () =>
                               valueField="value"
                               placeholder="Industry Type *"
                               searchPlaceholder="Search Industry Type"
-                              value={value}
+                              values={values}
                               onChange={item=>{setValue(item.value);}}
                             />
                            <Dropdown
