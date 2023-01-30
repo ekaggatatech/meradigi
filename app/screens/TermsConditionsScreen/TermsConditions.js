@@ -1,13 +1,39 @@
-import React from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, Text, ImageBackground, Image, TouchableOpacity, Dimensions } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, ImageBackground, Image } from 'react-native';
 import MainFooter from '../../common/footer/MainFooter';
 import Footer from '../../common/footer/Footer';
-import PrivacyPolicy from '../PrivacyPolicyScreen/PrivacyPolicy';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-// const screenHeight = Dimensions.get('window').height;
-// const screenWidth = Dimensions.get('window').width;
+const TermsConditions = () => {
 
-const TermsConditions = ({ navigation }) => {
+    const [status, setStatus] = useState(false);
+
+    const [statusOne, setStatusOne] = useState(false);
+
+    function ShowHideTextComponentView()
+    {
+        if(status == true)
+        {
+            setStatus(false);
+        }
+        else
+        {
+            setStatus(true);
+        }
+    }
+
+    function ShowHideTextComponentViewOne()
+    {
+        if(statusOne == true)
+        {
+            setStatusOne(false);
+        }
+        else
+        {
+            setStatusOne(true);
+        }
+    }
+
     return (
         <>
             <ScrollView nestedScrollEnabled={true}>
@@ -109,8 +135,184 @@ const TermsConditions = ({ navigation }) => {
                         {`\u2022 Email is typically used for all interactions and conversations. It is the client’s duty to keep us informed of any relevant email addresses.`}
                     </Text>
                 </View>
-                <View>
-
+                <View style={styles.commonPadding}>
+                    <View style={{ flexDirection: 'row', marginBottom: 10 }}>
+                        <Image 
+                            source={require("../../assets/Terms&Conditions/add.png")}
+                            alt="Add" 
+                            title="Add"
+                            style={{ width: 25, height: 25 }}
+                            onPress={ShowHideTextComponentView}>
+                        </Image>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentView}>
+                            Digital Marketing/Strategy Terms
+                        </Text>
+                    </View>
+                    { 
+                        status && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Package Terms : 
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every digital marketing/strategy package has a minimum duration of 6 months. After that, cancel whenever you want with a clear one-month email notice.
+                                    They are billed on a monthly basis and are due on the first of the month.
+                                    Packages are created with our clients’ needs for digital marketing and strategy in mind. Each month, a certain number of man hours are allotted, and any unused man hours are not carried over to the following month. Both marketing costs and software from third parties are not covered.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours worked can be charged individually. Urgent tasks will incur an additional fee.
+                                    To contact support, send an email to support@meradigi.com.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Each month’s payment is due on the first. We firmly advise all of our clients to set up a direct debit for the same.
+                                    Any late payments or credit card charges that are rejected will result in a $25 administrative fee being applied to the client’s account.
+                                    All fees associated with the digital marketing/strategy package are non-refundable.
+                                    Termination:
+                                    Every digital marketing/strategy package has a minimum duration of 6 months. After that, cancel whenever you want with a clear one-month email notice.
+                                    Meradigi retains the right to end the agreement at any time by giving the client written notice.
+                                </Text>
+                            </View>
+                        </> 
+                    }
+                    <View style={{ flexDirection: 'row', marginBottom: 10 }}>
+                        <TouchableOpacity onPress={ShowHideTextComponentViewOne}>
+                            <Image 
+                                source={require("../../assets/Terms&Conditions/add.png")}
+                                alt="Add" 
+                                title="Add"
+                                style={{ width: 25, height: 25 }}>
+                            </Image>
+                        </TouchableOpacity>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentViewOne}>
+                            Annual Maintenance Terms
+                        </Text>
+                    </View>
+                    { 
+                        statusOne && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Basic Annual Maintenance Package Terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every maintenance package has a minimum duration of 12 months.
+                                    Although maintenance packages are billed annually, they are paid for on the first of each month by direct debit.
+                                    Packages may include basic website hosting, email hosting, and DNS hosting for a period of one year.
+                                    Packages are solely meant to be used for website maintenance chores. The hours cannot be used for tasks like a complete redesign or significant functionality additions.
+                                    excludes any work related to digital strategy, business analysis, solution architecture, SEO, and marketing.
+                                    Blocks of 15 minutes are used to track work hours. Your website is fully backed up once a month during support time. Following that, we update your CMS and plugin versions and make any necessary website adjustments as a result of the updates. You can update the webpage throughout the remaining time. Please approve any additional work hours that are requested.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours used will be charged at a separate rate.
+                                    To contact support, send an email to support@Meradigi.com.
+                                    Urgent tasks will incur an additional fee.
+                                    Each year on the day of its anniversary, the package is automatically renewed.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Monthly maintenance package payments can only be paid with a credit card. For monthly maintenance, no further payments will be accepted.
+                                    The first day of each month, the monthly maintenance package payments will be charged to the client’s credit card on file.
+                                    Any late payments or credit card charges that are rejected will result in an INR 300 administrative fee being applied to the client’s account.
+                                    If there are more than three missing payments in a calendar year, the package may be terminated, and the client will be required to pay the entire balance of the package right away.
+                                    All fees associated with the monthly maintenance package are non-refundable.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Termination:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    If the client needs to stop the automatic annual renewal, they must email us at least one month before the renewal date to let us know.
+                                    Continuous term: If the Client decides to cancel an ongoing maintenance package for any reason, they will be responsible for paying the remaining balance.
+                                    With written notification to the Client, Meradigi reserves the right to revoke annual maintenance at any moment.
+                                </Text>
+                            </View>
+                        </> 
+                    }
+                    <View style={{ flexDirection: 'row', marginBottom: 10  }}>
+                        <Image 
+                            source={require("../../assets/Terms&Conditions/add.png")}
+                            alt="Add" 
+                            title="Add"
+                            style={{ width: 25, height: 25 }}>
+                        </Image>
+                        <Text style={styles.contentTextOne}>
+                            General Approach
+                        </Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', marginBottom: 10  }}>
+                        <Image 
+                            source={require("../../assets/Terms&Conditions/add.png")}
+                            alt="Add" 
+                            title="Add"
+                            style={{ width: 25, height: 25 }}>
+                        </Image>
+                        <Text style={styles.contentTextOne}>
+                            Payments & Refunds
+                        </Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', marginBottom: 10  }}>
+                        <Image 
+                            source={require("../../assets/Terms&Conditions/add.png")}
+                            alt="Add" 
+                            title="Add"
+                            style={{ width: 25, height: 25 }}>
+                        </Image>
+                        <Text style={styles.contentTextOne}>
+                            Disputes, Liability and Indemnity
+                        </Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', marginBottom: 10  }}>
+                        <Image 
+                            source={require("../../assets/Terms&Conditions/add.png")}
+                            alt="Add" 
+                            title="Add"
+                            style={{ width: 25, height: 25 }}>
+                        </Image>
+                        <Text style={styles.contentTextOne}>
+                            Hosting
+                        </Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', marginBottom: 10  }}>
+                        <Image 
+                            source={require("../../assets/Terms&Conditions/add.png")}
+                            alt="Add" 
+                            title="Add"
+                            style={{ width: 25, height: 25 }}>
+                        </Image>
+                        <Text style={styles.contentTextOne}>
+                            Domains
+                        </Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', marginBottom: 10  }}>
+                        <Image 
+                            source={require("../../assets/Terms&Conditions/add.png")}
+                            alt="Add" 
+                            title="Add"
+                            style={{ width: 25, height: 25 }}>
+                        </Image>
+                        <Text style={styles.contentTextOne}>
+                            Intellectual Property
+                        </Text>
+                    </View>
                 </View>
                 <View>
                     <MainFooter/>
@@ -127,18 +329,14 @@ const TermsConditions = ({ navigation }) => {
 const styles = StyleSheet.create({
     viewOne:
     {
-        // backgroundColor: 'rgb(56, 44, 126)',
         backgroundColor: '#382C7E',
         opacity: 0.49,
-        // opacity: 1,
         transition: 0.3, 
         borderRadius: 0.3
         // transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
     },
     privacyPolicyImg: 
     {
-        // width: screenWidth,
-        // height: screenHeight, 
         width: 400,
         height: 200,
         justifyContent: 'center',
@@ -146,7 +344,6 @@ const styles = StyleSheet.create({
     },
     privacyPolicyText:
     {
-        // color: 'rgb(255, 255, 255)',
         color: '#FFFFFF',
         fontWeight: 'bold',
         textAlign: 'center',
@@ -210,8 +407,6 @@ const styles = StyleSheet.create({
     },
     privacyPolicyNewImage: 
     {
-        // width: 'auto',
-        // height: 'auto',
         display: 'flex',
         justifyContent: 'center',
         marginLeft: 'auto',
@@ -234,6 +429,31 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         textAlign: 'center',
         alignItems: 'center'
+    },
+    contentTextOne:
+    {
+        color: '#0B92CB',
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'left'
+    },
+    addContentOne:
+    {
+        color: '#000000',
+        fontSize: 18,
+        fontWeight: 'normal'
+    },
+    addContentTwo:
+    {
+        fontSize: 18, 
+        color: "#000000", 
+        textAlign: 'left', 
+        textDecorationLine: 'underline', 
+        fontWeight: 'bold' 
+    },
+    newMarginBottomOne:
+    {
+        marginBottom: 10
     }
 })
 

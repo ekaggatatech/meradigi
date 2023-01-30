@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, ScrollView, SafeAreaView, View, Text, ImageBackground, Image, TouchableOpacity, Dimensions } from 'react-native';
 import MainFooter from '../../common/footer/MainFooter';
 import Footer from '../../common/footer/Footer';
-import PrivacyPolicy from '../PrivacyPolicyScreen/PrivacyPolicy';
 
 // const screenHeight = Dimensions.get('window').height;
 // const screenWidth = Dimensions.get('window').width;
