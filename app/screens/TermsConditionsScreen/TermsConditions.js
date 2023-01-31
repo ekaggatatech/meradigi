@@ -10,6 +10,18 @@ const TermsConditions = () => {
 
     const [statusOne, setStatusOne] = useState(false);
 
+    const [statusTwo, setStatusTwo] = useState(false);
+
+    const [statusThree, setStatusThree] = useState(false);
+
+    const [statusFour, setStatusFour] = useState(false);
+
+    const [statusFive, setStatusFive] = useState(false);
+
+    const [statusSix, setStatusSix] = useState(false);
+
+    const [statusSeven, setStatusSeven] = useState(false);
+
     function ShowHideTextComponentView()
     {
         if(status == true)
@@ -31,6 +43,78 @@ const TermsConditions = () => {
         else
         {
             setStatusOne(true);
+        }
+    }
+
+    function ShowHideTextComponentViewTwo()
+    {
+        if(statusTwo == true)
+        {
+            setStatusTwo(false);
+        }
+        else
+        {
+            setStatusTwo(true);
+        }
+    }
+
+    function ShowHideTextComponentViewThree()
+    {
+        if(statusThree == true)
+        {
+            setStatusThree(false);
+        }
+        else
+        {
+            setStatusThree(true);
+        }
+    }
+
+    function ShowHideTextComponentViewFour()
+    {
+        if(statusFour == true)
+        {
+            setStatusFour(false);
+        }
+        else
+        {
+            setStatusFour(true);
+        }
+    }
+
+    function ShowHideTextComponentViewFive()
+    {
+        if(statusFive == true)
+        {
+            setStatusFive(false);
+        }
+        else
+        {
+            setStatusFive(true);
+        }
+    }
+
+    function ShowHideTextComponentViewSix()
+    {
+        if(statusSix == true)
+        {
+            setStatusSix(false);
+        }
+        else
+        {
+            setStatusSix(true);
+        }
+    }
+    
+    function ShowHideTextComponentViewSeven()
+    {
+        if(statusSeven == true)
+        {
+            setStatusSeven(false);
+        }
+        else
+        {
+            setStatusSeven(true);
         }
     }
 
@@ -254,10 +338,61 @@ const TermsConditions = () => {
                             title="Add"
                             style={{ width: 25, height: 25 }}>
                         </Image>
-                        <Text style={styles.contentTextOne}>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentViewTwo}>
                             General Approach
                         </Text>
                     </View>
+                    { 
+                        statusTwo && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Basic Annual Maintenance Package Terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every maintenance package has a minimum duration of 12 months.
+                                    Although maintenance packages are billed annually, they are paid for on the first of each month by direct debit.
+                                    Packages may include basic website hosting, email hosting, and DNS hosting for a period of one year.
+                                    Packages are solely meant to be used for website maintenance chores. The hours cannot be used for tasks like a complete redesign or significant functionality additions.
+                                    excludes any work related to digital strategy, business analysis, solution architecture, SEO, and marketing.
+                                    Blocks of 15 minutes are used to track work hours. Your website is fully backed up once a month during support time. Following that, we update your CMS and plugin versions and make any necessary website adjustments as a result of the updates. You can update the webpage throughout the remaining time. Please approve any additional work hours that are requested.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours used will be charged at a separate rate.
+                                    To contact support, send an email to support@Meradigi.com.
+                                    Urgent tasks will incur an additional fee.
+                                    Each year on the day of its anniversary, the package is automatically renewed.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Monthly maintenance package payments can only be paid with a credit card. For monthly maintenance, no further payments will be accepted.
+                                    The first day of each month, the monthly maintenance package payments will be charged to the client’s credit card on file.
+                                    Any late payments or credit card charges that are rejected will result in an INR 300 administrative fee being applied to the client’s account.
+                                    If there are more than three missing payments in a calendar year, the package may be terminated, and the client will be required to pay the entire balance of the package right away.
+                                    All fees associated with the monthly maintenance package are non-refundable.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Termination:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    If the client needs to stop the automatic annual renewal, they must email us at least one month before the renewal date to let us know.
+                                    Continuous term: If the Client decides to cancel an ongoing maintenance package for any reason, they will be responsible for paying the remaining balance.
+                                    With written notification to the Client, Meradigi reserves the right to revoke annual maintenance at any moment.
+                                </Text>
+                            </View>
+                        </> 
+                    }
                     <View style={{ flexDirection: 'row', marginBottom: 10  }}>
                         <Image 
                             source={require("../../assets/Terms&Conditions/add.png")}
@@ -265,10 +400,61 @@ const TermsConditions = () => {
                             title="Add"
                             style={{ width: 25, height: 25 }}>
                         </Image>
-                        <Text style={styles.contentTextOne}>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentViewThree}>
                             Payments & Refunds
                         </Text>
                     </View>
+                    { 
+                        statusThree && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Basic Annual Maintenance Package Terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every maintenance package has a minimum duration of 12 months.
+                                    Although maintenance packages are billed annually, they are paid for on the first of each month by direct debit.
+                                    Packages may include basic website hosting, email hosting, and DNS hosting for a period of one year.
+                                    Packages are solely meant to be used for website maintenance chores. The hours cannot be used for tasks like a complete redesign or significant functionality additions.
+                                    excludes any work related to digital strategy, business analysis, solution architecture, SEO, and marketing.
+                                    Blocks of 15 minutes are used to track work hours. Your website is fully backed up once a month during support time. Following that, we update your CMS and plugin versions and make any necessary website adjustments as a result of the updates. You can update the webpage throughout the remaining time. Please approve any additional work hours that are requested.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours used will be charged at a separate rate.
+                                    To contact support, send an email to support@Meradigi.com.
+                                    Urgent tasks will incur an additional fee.
+                                    Each year on the day of its anniversary, the package is automatically renewed.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Monthly maintenance package payments can only be paid with a credit card. For monthly maintenance, no further payments will be accepted.
+                                    The first day of each month, the monthly maintenance package payments will be charged to the client’s credit card on file.
+                                    Any late payments or credit card charges that are rejected will result in an INR 300 administrative fee being applied to the client’s account.
+                                    If there are more than three missing payments in a calendar year, the package may be terminated, and the client will be required to pay the entire balance of the package right away.
+                                    All fees associated with the monthly maintenance package are non-refundable.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Termination:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    If the client needs to stop the automatic annual renewal, they must email us at least one month before the renewal date to let us know.
+                                    Continuous term: If the Client decides to cancel an ongoing maintenance package for any reason, they will be responsible for paying the remaining balance.
+                                    With written notification to the Client, Meradigi reserves the right to revoke annual maintenance at any moment.
+                                </Text>
+                            </View>
+                        </> 
+                    }
                     <View style={{ flexDirection: 'row', marginBottom: 10  }}>
                         <Image 
                             source={require("../../assets/Terms&Conditions/add.png")}
@@ -276,10 +462,61 @@ const TermsConditions = () => {
                             title="Add"
                             style={{ width: 25, height: 25 }}>
                         </Image>
-                        <Text style={styles.contentTextOne}>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentViewFour}>
                             Disputes, Liability and Indemnity
                         </Text>
                     </View>
+                    { 
+                        statusFour && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Basic Annual Maintenance Package Terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every maintenance package has a minimum duration of 12 months.
+                                    Although maintenance packages are billed annually, they are paid for on the first of each month by direct debit.
+                                    Packages may include basic website hosting, email hosting, and DNS hosting for a period of one year.
+                                    Packages are solely meant to be used for website maintenance chores. The hours cannot be used for tasks like a complete redesign or significant functionality additions.
+                                    excludes any work related to digital strategy, business analysis, solution architecture, SEO, and marketing.
+                                    Blocks of 15 minutes are used to track work hours. Your website is fully backed up once a month during support time. Following that, we update your CMS and plugin versions and make any necessary website adjustments as a result of the updates. You can update the webpage throughout the remaining time. Please approve any additional work hours that are requested.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours used will be charged at a separate rate.
+                                    To contact support, send an email to support@Meradigi.com.
+                                    Urgent tasks will incur an additional fee.
+                                    Each year on the day of its anniversary, the package is automatically renewed.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Monthly maintenance package payments can only be paid with a credit card. For monthly maintenance, no further payments will be accepted.
+                                    The first day of each month, the monthly maintenance package payments will be charged to the client’s credit card on file.
+                                    Any late payments or credit card charges that are rejected will result in an INR 300 administrative fee being applied to the client’s account.
+                                    If there are more than three missing payments in a calendar year, the package may be terminated, and the client will be required to pay the entire balance of the package right away.
+                                    All fees associated with the monthly maintenance package are non-refundable.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Termination:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    If the client needs to stop the automatic annual renewal, they must email us at least one month before the renewal date to let us know.
+                                    Continuous term: If the Client decides to cancel an ongoing maintenance package for any reason, they will be responsible for paying the remaining balance.
+                                    With written notification to the Client, Meradigi reserves the right to revoke annual maintenance at any moment.
+                                </Text>
+                            </View>
+                        </> 
+                    }
                     <View style={{ flexDirection: 'row', marginBottom: 10  }}>
                         <Image 
                             source={require("../../assets/Terms&Conditions/add.png")}
@@ -287,10 +524,61 @@ const TermsConditions = () => {
                             title="Add"
                             style={{ width: 25, height: 25 }}>
                         </Image>
-                        <Text style={styles.contentTextOne}>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentViewFive}>
                             Hosting
                         </Text>
                     </View>
+                    { 
+                        statusFive && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Basic Annual Maintenance Package Terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every maintenance package has a minimum duration of 12 months.
+                                    Although maintenance packages are billed annually, they are paid for on the first of each month by direct debit.
+                                    Packages may include basic website hosting, email hosting, and DNS hosting for a period of one year.
+                                    Packages are solely meant to be used for website maintenance chores. The hours cannot be used for tasks like a complete redesign or significant functionality additions.
+                                    excludes any work related to digital strategy, business analysis, solution architecture, SEO, and marketing.
+                                    Blocks of 15 minutes are used to track work hours. Your website is fully backed up once a month during support time. Following that, we update your CMS and plugin versions and make any necessary website adjustments as a result of the updates. You can update the webpage throughout the remaining time. Please approve any additional work hours that are requested.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours used will be charged at a separate rate.
+                                    To contact support, send an email to support@Meradigi.com.
+                                    Urgent tasks will incur an additional fee.
+                                    Each year on the day of its anniversary, the package is automatically renewed.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Monthly maintenance package payments can only be paid with a credit card. For monthly maintenance, no further payments will be accepted.
+                                    The first day of each month, the monthly maintenance package payments will be charged to the client’s credit card on file.
+                                    Any late payments or credit card charges that are rejected will result in an INR 300 administrative fee being applied to the client’s account.
+                                    If there are more than three missing payments in a calendar year, the package may be terminated, and the client will be required to pay the entire balance of the package right away.
+                                    All fees associated with the monthly maintenance package are non-refundable.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Termination:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    If the client needs to stop the automatic annual renewal, they must email us at least one month before the renewal date to let us know.
+                                    Continuous term: If the Client decides to cancel an ongoing maintenance package for any reason, they will be responsible for paying the remaining balance.
+                                    With written notification to the Client, Meradigi reserves the right to revoke annual maintenance at any moment.
+                                </Text>
+                            </View>
+                        </> 
+                    }
                     <View style={{ flexDirection: 'row', marginBottom: 10  }}>
                         <Image 
                             source={require("../../assets/Terms&Conditions/add.png")}
@@ -298,10 +586,61 @@ const TermsConditions = () => {
                             title="Add"
                             style={{ width: 25, height: 25 }}>
                         </Image>
-                        <Text style={styles.contentTextOne}>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentViewSix}>
                             Domains
                         </Text>
                     </View>
+                    { 
+                        statusSix && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Basic Annual Maintenance Package Terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every maintenance package has a minimum duration of 12 months.
+                                    Although maintenance packages are billed annually, they are paid for on the first of each month by direct debit.
+                                    Packages may include basic website hosting, email hosting, and DNS hosting for a period of one year.
+                                    Packages are solely meant to be used for website maintenance chores. The hours cannot be used for tasks like a complete redesign or significant functionality additions.
+                                    excludes any work related to digital strategy, business analysis, solution architecture, SEO, and marketing.
+                                    Blocks of 15 minutes are used to track work hours. Your website is fully backed up once a month during support time. Following that, we update your CMS and plugin versions and make any necessary website adjustments as a result of the updates. You can update the webpage throughout the remaining time. Please approve any additional work hours that are requested.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours used will be charged at a separate rate.
+                                    To contact support, send an email to support@Meradigi.com.
+                                    Urgent tasks will incur an additional fee.
+                                    Each year on the day of its anniversary, the package is automatically renewed.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Monthly maintenance package payments can only be paid with a credit card. For monthly maintenance, no further payments will be accepted.
+                                    The first day of each month, the monthly maintenance package payments will be charged to the client’s credit card on file.
+                                    Any late payments or credit card charges that are rejected will result in an INR 300 administrative fee being applied to the client’s account.
+                                    If there are more than three missing payments in a calendar year, the package may be terminated, and the client will be required to pay the entire balance of the package right away.
+                                    All fees associated with the monthly maintenance package are non-refundable.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Termination:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    If the client needs to stop the automatic annual renewal, they must email us at least one month before the renewal date to let us know.
+                                    Continuous term: If the Client decides to cancel an ongoing maintenance package for any reason, they will be responsible for paying the remaining balance.
+                                    With written notification to the Client, Meradigi reserves the right to revoke annual maintenance at any moment.
+                                </Text>
+                            </View>
+                        </> 
+                    }
                     <View style={{ flexDirection: 'row', marginBottom: 10  }}>
                         <Image 
                             source={require("../../assets/Terms&Conditions/add.png")}
@@ -309,10 +648,61 @@ const TermsConditions = () => {
                             title="Add"
                             style={{ width: 25, height: 25 }}>
                         </Image>
-                        <Text style={styles.contentTextOne}>
+                        <Text style={styles.contentTextOne} onPress={ShowHideTextComponentViewSeven}>
                             Intellectual Property
                         </Text>
                     </View>
+                    { 
+                        statusSeven && 
+                        <>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Basic Annual Maintenance Package Terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Every maintenance package has a minimum duration of 12 months.
+                                    Although maintenance packages are billed annually, they are paid for on the first of each month by direct debit.
+                                    Packages may include basic website hosting, email hosting, and DNS hosting for a period of one year.
+                                    Packages are solely meant to be used for website maintenance chores. The hours cannot be used for tasks like a complete redesign or significant functionality additions.
+                                    excludes any work related to digital strategy, business analysis, solution architecture, SEO, and marketing.
+                                    Blocks of 15 minutes are used to track work hours. Your website is fully backed up once a month during support time. Following that, we update your CMS and plugin versions and make any necessary website adjustments as a result of the updates. You can update the webpage throughout the remaining time. Please approve any additional work hours that are requested.
+                                    Meradigi follows a fair usage philosophy, which means that although though we don’t formally accrue unused man-hours or transfer any unused time over to the following month, we do recognise that your needs could change from month to month and occasionally offer flexibility in good faith.
+                                    Any additional hours used will be charged at a separate rate.
+                                    To contact support, send an email to support@Meradigi.com.
+                                    Urgent tasks will incur an additional fee.
+                                    Each year on the day of its anniversary, the package is automatically renewed.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Payment terms:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    Monthly maintenance package payments can only be paid with a credit card. For monthly maintenance, no further payments will be accepted.
+                                    The first day of each month, the monthly maintenance package payments will be charged to the client’s credit card on file.
+                                    Any late payments or credit card charges that are rejected will result in an INR 300 administrative fee being applied to the client’s account.
+                                    If there are more than three missing payments in a calendar year, the package may be terminated, and the client will be required to pay the entire balance of the package right away.
+                                    All fees associated with the monthly maintenance package are non-refundable.
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentTwo}>
+                                    Termination:
+                                </Text>
+                            </View>
+                            <View style={styles.newMarginBottomOne}>
+                                <Text style={styles.addContentOne}>
+                                    If the client needs to stop the automatic annual renewal, they must email us at least one month before the renewal date to let us know.
+                                    Continuous term: If the Client decides to cancel an ongoing maintenance package for any reason, they will be responsible for paying the remaining balance.
+                                    With written notification to the Client, Meradigi reserves the right to revoke annual maintenance at any moment.
+                                </Text>
+                            </View>
+                        </> 
+                    }
                 </View>
                 <View>
                     <MainFooter/>
