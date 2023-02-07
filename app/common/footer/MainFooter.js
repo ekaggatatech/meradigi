@@ -30,6 +30,12 @@ const MainFooter = () =>
     Linking.openURL(supportTicketUrl);
   }
 
+  const itConsultingUrl = 'https://ekaggata.com/';
+  itConsultingUrlLink = () =>
+  {
+    Linking.openURL(itConsultingUrl);
+  }
+
   return (
       <>
         <View style={styles.mainFooterContainer}> 
@@ -121,12 +127,12 @@ const MainFooter = () =>
                 </View>
                 <View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Home')}>
                             BLOG
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>this.itConsultingUrlLink()}>
                             IT CONSULTING
                         </Text>
                     </View>
