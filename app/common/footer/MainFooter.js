@@ -67,7 +67,7 @@ const MainFooter = () =>
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Digital Marketing')}>
                             DIGITAL MARKETING
                         </Text>
                     </View>

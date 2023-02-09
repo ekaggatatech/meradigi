@@ -6,12 +6,14 @@ export default StyleSheet.create({
       container:
       {
         flex: 1,
-        paddingTop: 10
+        paddingTop: 10,
+        backgroundColor: '#FFFFFF',
+        background: '#FFFFFF'
       },
       webDevImage:
       {
-        width: 400,
-        height: 300,
+        width: '100%',
+        height: 200,
         resizeMode: 'cover'
       },
       containerOne:
@@ -35,18 +37,21 @@ export default StyleSheet.create({
         width:25,
         height:2,
         backgroundColor:'#00d4ff',
-        marginBottom:5,
-        marginRight:3,
-        marginTop:25
-
+        marginBottom:20,
+        /* marginRight:3, */
+        /*marginTop:10,*/
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto'
       },
       webText:
       {
         fontSize: 18,
         fontWeight: 'bold',
-        marginTop:15,
-        textAlign: 'center',
-        marginBottom: 15
+        /*marginTop:15,*/
+        textAlign: 'center'
+        /*marginBottom: 15*/
       },
       newWebText:
       {
@@ -76,7 +81,10 @@ export default StyleSheet.create({
         width:135,
         height:50,
         backgroundColor:'#00d4ff',
+        display: 'flex',
         justifyContent:"center",
+        marginLeft: 'auto',
+        marginRight: 'auto',
         alignItems:'center',
         borderRadius:30,
         
@@ -90,8 +98,9 @@ export default StyleSheet.create({
       },
       hedingButton:
       {
-        flexDirection:'row',
-        paddingTop:20,
+        // flexDirection:'row',
+        flexDirection:'column',
+        /*paddingTop:20,*/
         display: 'flex',
         justifyContent: 'center'
       },

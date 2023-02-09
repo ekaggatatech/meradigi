@@ -14,7 +14,7 @@ const Facebook = ({navigation}) => {
           <Text style={ServicesStyles.webText}>Popular On Facebook</Text>
           <View  style={ServicesStyles.chooseBtn}>
             <Text style={ServicesStyles.chooseBtntext} 
-            onPress={() => navigation.navigate('Web Designing Package')}>Choose a Plan</Text>
+            onPress={() => navigation.navigate('Pricing Plans')}>Choose a Plan</Text>
           </View>
         </View>
         <View>

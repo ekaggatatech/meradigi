@@ -33,7 +33,7 @@ const services = [
         { key:10, name:"I Need Moodle LMS", id:10, source: Image10 },
         { key:11, name:"Add Audio/Video Feature In My Website", id:11, source: Image11 },
         { key:12, name:"Make My Product Famous", id:12, source: Image12 },
-        { key:13, name:"Digital Marketing Plans", id:13, source: Image13 },
+        { key:13, name:"Digital Marketing", id:13, source: Image13 },
         { key:14, name:"I Want An Annual Maintenance Plan", id:14, source: Image14},
         { key:15, name:"Get A Best Hosting Plan", id:15, source: Image15 },
         { key:16, name:"Hire A Developer", id:16, source: Image16 }

@@ -34,6 +34,9 @@ import ContactUsScreen from './app/screens/ContactUsScreen/ContactUs';
 import PrivacyPolicyScreen from './app/screens/PrivacyPolicyScreen/PrivacyPolicy';
 import RefundPolicyScreen from './app/screens/RefundPolicyScreen/RefundPolicy';
 import TermsConditionsScreen from './app/screens/TermsConditionsScreen/TermsConditions';
+import ContentMarketing from './app/screens/ContentMarketing/ContentMarketing';
+import SocialMediaMarketing from './app/screens/SocialMediaMarketing/SocialMediaMarketing';
+import GraphicsDesigning from './app/screens/GraphicsDesigning/GraphicsDesigning';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -47,7 +50,7 @@ const App = () => {
           <Stack.Screen name='I Want A Very Fast Website' component={ServicesScreen} />
           <Stack.Screen name='I Want Odoo ERP' component={ErpSolution} />
           <Stack.Screen name='Rank My Website On Google' component={Seo} />
-          <Stack.Screen name='Digital Marketing Plans' component={DigitalMarketing} />
+          <Stack.Screen name='Digital Marketing' component={DigitalMarketing} />
           <Stack.Screen name='Make Me Popular On Youtube' component={Youtube} />
           <Stack.Screen name='Make My Videos Popular On Facebook' component={Facebook} />
           <Stack.Screen name='Make My Videos Popular On Instagram' component={Instagram} />
@@ -60,7 +63,7 @@ const App = () => {
           <Stack.Screen name='Hire A Celebrity' component={CelebrityMarketing} />
           <Stack.Screen name='Advertise On Radio' component={RadioAdvertisement} />
           <Stack.Screen name='Talk To Us' component={TalktousModal} />
-          <Stack.Screen name='Web Designing Package' component={WebDesigningPackage} />
+          <Stack.Screen name='Pricing Plans' component={WebDesigningPackage} />
           <Stack.Screen name='Basic Package' component={BasicWebPack} />
           <Stack.Screen name='Professional Package' component={ProfessionalWebPack} />
           <Stack.Screen name='Enterprise Package' component={EnterpriseWebPack} />
@@ -75,6 +78,9 @@ const App = () => {
           <Stack.Screen name='Privacy Policy' component={PrivacyPolicyScreen} />
           <Stack.Screen name='Refund Policy' component={RefundPolicyScreen} />
           <Stack.Screen name='Terms & Conditions' component={TermsConditionsScreen} />
+          <Stack.Screen name='Content Generation & Marketing' component={ContentMarketing} />
+          <Stack.Screen name='Social Media Ads & Marketing' component={SocialMediaMarketing} />
+          <Stack.Screen name='Graphics Designing' component={GraphicsDesigning} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
