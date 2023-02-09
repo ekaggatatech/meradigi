@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, Text, ImageBackground, Dimensions } from 'react-native';
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, ImageBackground } from 'react-native';
 import MainFooter from '../../common/footer/MainFooter';
 import Footer from '../../common/footer/Footer';
 

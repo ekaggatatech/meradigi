@@ -37,6 +37,9 @@ import TermsConditionsScreen from './app/screens/TermsConditionsScreen/TermsCond
 import ContentMarketing from './app/screens/ContentMarketing/ContentMarketing';
 import SocialMediaMarketing from './app/screens/SocialMediaMarketing/SocialMediaMarketing';
 import GraphicsDesigning from './app/screens/GraphicsDesigning/GraphicsDesigning';
+import DigitalMarketingPricingPlansScreen from './app/screens/PricingScreens/DigitalMarketingPricingPlansScreen/DigitalMarketingPricingPlansScreen';
+import OdooPricingPlansScreen from './app/screens/PricingScreens/OdooPricingPlansScreen/OdooPricingPlansScreen';
+import WebDevelopmentPricingPlansScreen from './app/screens/PricingScreens/WebDevelopmentPricingPlansScreen/WebDevelopmentPricingPlansScreen';
 
 const App = () => {
   const Stack = createNativeStackNavigator();
@@ -81,6 +84,9 @@ const App = () => {
           <Stack.Screen name='Content Generation & Marketing' component={ContentMarketing} />
           <Stack.Screen name='Social Media Ads & Marketing' component={SocialMediaMarketing} />
           <Stack.Screen name='Graphics Designing' component={GraphicsDesigning} />
+          <Stack.Screen name='DIGITAL MARKETING' component={DigitalMarketingPricingPlansScreen} />
+          <Stack.Screen name='ODOO' component={OdooPricingPlansScreen} />
+          <Stack.Screen name='WEB DEVELOPMENT' component={WebDevelopmentPricingPlansScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </>

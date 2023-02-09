@@ -41,7 +41,7 @@ const MenuScreen = () => {
              size={30} 
              color='#00d4ff'/>
           <Text style={styles.iconText}>Share</Text> */}
-            <Text style={styles.iconText}>Pricing</Text>
+            <Text style={styles.iconText} onPress={() => navigation.navigate('Pricing Plans')}>Pricing</Text>
         </View>
         <View style={styles.iconsView}>
           {/* <Icon 
