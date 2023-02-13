@@ -1,14 +1,21 @@
 import React from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
 import DigitalMarketingBannerData from '../../../shared/DigitalMarketingBannerData';
+import { NavigationContainer } from '@react-navigation/native';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+// import { StatusBar } from 'react-native';
 
-const DigitalMarketingPricingPlansScreen = () => {
+const Tab = createMaterialTopTabNavigator();
+
+function Basic()
+{
   return (
     <>
-      <ScrollView nestedScrollEnabled={true} style={styles.mainBackground}>
-        <SafeAreaView> 
+      {/* <ScrollView nestedScrollEnabled={true} style={styles.mainBackground}> */}
+        <SafeAreaView style={styles.mainBackground}> 
           <DigitalMarketingBannerData />
           <View style={styles.container}>
+          <ScrollView nestedScrollEnabled={true}>
             <View style={styles.line}>
               <Text style={styles.textOne}>
                 BASIC
@@ -17,7 +24,7 @@ const DigitalMarketingPricingPlansScreen = () => {
                 Package
               </Text>
               <Text style={styles.textThree}>
-                ₹5999 <Text style={styles.textFour}>/ Month</Text>
+                ₹5,999 <Text style={styles.textFour}>/ Month</Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -26,154 +33,154 @@ const DigitalMarketingPricingPlansScreen = () => {
               </Text>
             </View>
             <View style={styles.line}>
+                <Text style={styles.textSix}>
+                  <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Facebook Marketing
+                </Text>
+            </View>
+            <View style={styles.line}>
               <Text style={styles.textSix}>
-                Facebook Marketing
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Instagram Marketing
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Instagram Marketing
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Twitter Marketing
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Twitter Marketing
-              </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                LinkedIn Marketing
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>LinkedIn Marketing
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textFive}>
-                Video Marketing
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Video Marketing
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                YouTube Marketing
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>YouTube Marketing
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Instagram Reels
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Instagram Reels
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Facebook Reels
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Facebook Reels
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Other Short Video Platform
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Other Short Video Platform
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textFive}>
-                Adwords/PPC
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Adwords/PPC
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Google Ads
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Google Ads
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Bing Ads
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Bing Ads
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Facebook Advert
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Facebook Advert
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Youtube Advert
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Youtube Advert
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                E-commerce/Shopping Ads
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>E-commerce/Shopping Ads
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textFive}>
-                SEO and Lead Generation
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>SEO and Lead Generation
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                **On-Page SEO
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>**On-Page SEO
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Website Audit
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Website Audit
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Technical Audit
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Technical Audit
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Keyword Research
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Keyword Research
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Keyword Target (10)
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Keyword Target (10)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Content Customization
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Content Customization
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                On-page Optimization 👇
-                > Meta Title and Description
-                > H1-H2 Tag
-                > Internal Link Structure
-                > Image Alt tag
-                > XML sitemap and submission
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>On-page Optimization 👇
+                - Meta Title and Description
+                - H1-H2 Tag
+                - Internal Link Structure
+                - Image Alt tag
+                - XML sitemap and submission
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Schema Markup
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Schema Markup
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Site speed Optimization
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Site speed Optimization
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Google Analytics Setup
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Google Analytics Setup
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Tag Manager Setup
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Tag Manager Setup
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Search Console Setup
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Search Console Setup
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                **Off-Page SEO
-                > Social Bookmarking (40)
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>**Off-Page SEO
+                - Social Bookmarking (40)
               </Text>
             </View>
             <View style={styles.line}>
@@ -183,71 +190,83 @@ const DigitalMarketingPricingPlansScreen = () => {
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Directory Submission (20)
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Directory Submission (20)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Classified Ads (15)
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Classified Ads (15)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Article Submission
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Article Submission
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Guest Blog Posting
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Guest Blog Posting
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Infographics Creation & Posting (3)
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Infographics Creation & Posting (3)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-               - Web 2.0 Submission
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Web 2.0 Submission
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Website Submission
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Website Submission
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Local site Directory (10)
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Local Site Directory (10)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Back link Analysis
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Back Link Analysis
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Broken Links fix
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Broken Links fix
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                Reports
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Reports
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
-              <TouchableOpacity 
-                style={styles.choosePlanButton}
-                >
+              <TouchableOpacity style={styles.choosePlanButton}>
                   <Text style={styles.choosePlanButtonText}>
                     CHOOSE PLAN
                   </Text>
               </TouchableOpacity>
             </View>
+            </ScrollView>
           </View>
+        </SafeAreaView>
+        {/* </ScrollView>  */}
+    </>
+  );
+}
+
+function Professional()
+{
+  return (
+    <>
+        <SafeAreaView style={styles.mainBackground}> 
+          <DigitalMarketingBannerData />
           <View style={styles.container}>
-            <View style={styles.line}>
+          <ScrollView nestedScrollEnabled={true}>
+          <View style={styles.line}>
               <Text style={styles.profText}>
                 PROFESSIONAL
               </Text>
@@ -255,7 +274,7 @@ const DigitalMarketingPricingPlansScreen = () => {
                 Package
               </Text>
               <Text style={styles.profTextOne}>
-                ₹7999 <Text style={styles.textFour}>/ Month</Text>
+                ₹7,999 <Text style={styles.textFour}>/ Month</Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -365,7 +384,7 @@ const DigitalMarketingPricingPlansScreen = () => {
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Keyword Target (10)
+                - Keyword Target (20)
               </Text>
             </View>
             <View style={styles.line}>
@@ -376,11 +395,11 @@ const DigitalMarketingPricingPlansScreen = () => {
             <View style={styles.line}>
               <Text style={styles.textSix}>
                 On-page Optimization 👇
-                > Meta Title and Description
-                > H1-H2 Tag
-                > Internal Link Structure
-                > Image Alt tag
-                > XML sitemap and submission
+                - Meta Title and Description
+                - H1-H2 Tag
+                - Internal Link Structure
+                - Image Alt tag
+                - XML sitemap and submission
               </Text>
             </View>
             <View style={styles.line}>
@@ -411,7 +430,7 @@ const DigitalMarketingPricingPlansScreen = () => {
             <View style={styles.line}>
               <Text style={styles.textSix}>
                 **Off-Page SEO
-                > Social Bookmarking (40)
+                - Social Bookmarking (60)
               </Text>
             </View>
             <View style={styles.line}>
@@ -421,47 +440,47 @@ const DigitalMarketingPricingPlansScreen = () => {
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Directory Submission (20)
+                - Directory Submission (40)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Classified Ads (15)
+                - Classified Ads (25)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Article Submission
+                - Article Submission (3)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Guest Blog Posting
+                - Guest Blog Posting (5)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Infographics Creation & Posting (3)
+                - Infographics Creation & Posting (7)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-               - Web 2.0 Submission
+               - Web 2.0 Submission (7)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Website Submission
+                - Website Submission (15)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Local site Directory (10)
+                - Local Site Directory (25)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Back link Analysis
+                - Back Link Analysis
               </Text>
             </View>
             <View style={styles.line}>
@@ -475,17 +494,28 @@ const DigitalMarketingPricingPlansScreen = () => {
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
-              <TouchableOpacity 
-                style={styles.choosePlanButton}
-                >
+              <TouchableOpacity style={styles.choosePlanButton}>
                   <Text style={styles.choosePlanButtonText}>
                     CHOOSE PLAN
                   </Text>
               </TouchableOpacity>
             </View>
+          </ScrollView>
           </View>
+        </SafeAreaView>
+    </>
+  );
+}
+
+function Enterprise()
+{
+  return (
+    <>
+        <SafeAreaView style={styles.mainBackground}> 
+          <DigitalMarketingBannerData />
           <View style={styles.container}>
-            <View style={styles.line}>
+          <ScrollView nestedScrollEnabled={true}>
+          <View style={styles.line}>
               <Text style={styles.enterpriseText}>
                 ENTERPRISE
               </Text>
@@ -493,7 +523,7 @@ const DigitalMarketingPricingPlansScreen = () => {
                 Package
               </Text>
               <Text style={styles.enterpriseTextOne}>
-                ₹9999 <Text style={styles.textFour}>/ Month</Text>
+                ₹9,999 <Text style={styles.textFour}>/ Month</Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -603,7 +633,7 @@ const DigitalMarketingPricingPlansScreen = () => {
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Keyword Target (10)
+                - Keyword Target (30)
               </Text>
             </View>
             <View style={styles.line}>
@@ -614,11 +644,11 @@ const DigitalMarketingPricingPlansScreen = () => {
             <View style={styles.line}>
               <Text style={styles.textSix}>
                 On-page Optimization 👇
-                > Meta Title and Description
-                > H1-H2 Tag
-                > Internal Link Structure
-                > Image Alt tag
-                > XML sitemap and submission
+                - Meta Title and Description
+                - H1-H2 Tag
+                - Internal Link Structure
+                - Image Alt tag
+                - XML sitemap and submission
               </Text>
             </View>
             <View style={styles.line}>
@@ -649,7 +679,7 @@ const DigitalMarketingPricingPlansScreen = () => {
             <View style={styles.line}>
               <Text style={styles.textSix}>
                 **Off-Page SEO
-                > Social Bookmarking (40)
+                - Social Bookmarking (80)
               </Text>
             </View>
             <View style={styles.line}>
@@ -659,47 +689,47 @@ const DigitalMarketingPricingPlansScreen = () => {
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Directory Submission (20)
+                - Directory Submission (60)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Classified Ads (15)
+                - Classified Ads (35)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Article Submission
+                - Article Submission (5)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Guest Blog Posting
+                - Guest Blog Posting (7)
+              </Text> 
+            </View>
+            <View style={styles.line}>
+              <Text style={styles.textSix}>
+                - Infographics Creation & Posting (11)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Infographics Creation & Posting (3)
+               - Web 2.0 Submission (11)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-               - Web 2.0 Submission
+                - Website Submission (20)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Website Submission
+                - Local Site Directory (30)
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textSix}>
-                - Local site Directory (10)
-              </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Back link Analysis
+                - Back Link Analysis
               </Text>
             </View>
             <View style={styles.line}>
@@ -713,17 +743,44 @@ const DigitalMarketingPricingPlansScreen = () => {
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
-              <TouchableOpacity 
-                style={styles.choosePlanButton}
-                >
+              <TouchableOpacity style={styles.choosePlanButton}>
                   <Text style={styles.choosePlanButtonText}>
                     CHOOSE PLAN
                   </Text>
               </TouchableOpacity>
             </View>
+          </ScrollView>
           </View>
         </SafeAreaView>
-      </ScrollView>
+    </>
+  );
+}
+
+const DigitalMarketingPricingPlansScreen = () => {
+  return (
+    <>
+      <NavigationContainer independent={true}>
+        <Tab.Navigator /* style={{ paddingTop: StatusBar.currentHeight }} */ 
+          screenOptions={() => ({ 
+            headerShown: false, 
+            tabBarLabelStyle: 
+            {
+              fontWeight: "600",
+              fontSize: 12,
+              textAlignVertical: 'center',
+              textAlign: 'center',
+              letterSpacing: 0.4
+            },
+            tabBarIconStyle: { display: "none" },
+            tabBarActiveTintColor: '#0275d8',
+            tabBarInactiveTintColor: '#000000'
+          })}>
+          <Tab.Screen component={Basic} name='Basic' />
+          <Tab.Screen component={Professional} name='Professional' />
+          <Tab.Screen component={Enterprise} name='Enterprise' />
+          {/* <Tab.Screen options={{ title: ({ color, focused }) => ( <Ionicons size={25} name={focused ? 'person' : 'person-outline'} color={focused ? 'blue' : '#272727'} /> ) }} component={Profile} name='Profile' /> */}
+        </Tab.Navigator>
+      </NavigationContainer>
     </>
   );
 }
@@ -736,8 +793,8 @@ const styles = StyleSheet.create(
   },
   container:
   {
-    width: '90%',
-    height: 'auto',
+    width: '80%',
+    height: '54%',
     boxSizing: 'border-box',
     borderRadius: 0,
     shadowOffset: { width: 10, height: 2 },  
@@ -764,9 +821,7 @@ const styles = StyleSheet.create(
     color: '#FF0024',
     fontSize: 31,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 0
+    textAlign: 'center'
   },
   textTwo:
   {
@@ -814,7 +869,8 @@ const styles = StyleSheet.create(
     justifyContent: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom: 20
+    marginBottom: 20,
+    textAlign: 'center'
   },
   choosePlanButton:
   {
@@ -831,8 +887,7 @@ const styles = StyleSheet.create(
     webkitTransition: '.3s',
     oTransition: '.3s',
     transition: '.3s',
-    textDecoration: 'none',
-    // marginBottom: 17
+    textDecoration: 'none'
   },
   choosePlanButtonText:
   {
