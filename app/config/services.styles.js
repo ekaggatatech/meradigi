@@ -20,8 +20,7 @@ export default StyleSheet.create({
         backgroundColor: 'transparent',
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 20
+        justifyContent: 'center'
       },
       backgroundVideo:
       {
@@ -46,7 +45,7 @@ export default StyleSheet.create({
       },
       webText:
       {
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: 'bold',
         /*marginTop:15,*/
         textAlign: 'center'
@@ -63,7 +62,8 @@ export default StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: 15
+        marginBottom: 15,
+        marginTop: 15
       },
       marginStyles:
       {
@@ -73,7 +73,7 @@ export default StyleSheet.create({
       newMarginStyles:
       {
         marginTop: 0,
-        marginBottom: 30
+        marginBottom: 0
       },
       chooseBtn:
       {
@@ -95,13 +95,12 @@ export default StyleSheet.create({
         fontWeight:'bold',
         
       },
-      hedingButton:
+      headingButton:
       {
-        // flexDirection:'row',
-        flexDirection:'column',
-        /*paddingTop:20,*/
         display: 'flex',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto'
       },
       webinfoText:
       {
@@ -133,7 +132,7 @@ export default StyleSheet.create({
         fontWeight: 'bold',
         color: '#000000',
         textAlign: 'center',
-        marginTop: 20,
+        marginTop: 10,
         fontSize: 20,
       },
       appButtonContainer: 
@@ -173,11 +172,8 @@ export default StyleSheet.create({
       viewStyleForLine:
       {
         borderColor: "#009EFF", 
-        border: '1px solid #009EFF'
-      },
-      modalContent:
-      {
-
+        border: '1px solid #009EFF',
+        marginBottom: 20
       },
       positioning:
       {
@@ -226,8 +222,7 @@ export default StyleSheet.create({
       card:
       {
         backgroundColor: '#ffffff',
-        marginBottom: 20,
-        width: '80%',
+        width: '100%',
         shadowColor: '#000000',
         shadowOpacity: 1,
         shadowOffset: {
@@ -450,5 +445,159 @@ export default StyleSheet.create({
         justifyContent: 'flex-end',
         marginLeft: 'auto',
         marginRight: 10
+      },
+      newTitleOne:
+      {
+        fontWeight: 'bold',
+        color: '#000000',
+        textAlign: 'center',
+        fontSize: 20,
+        marginLeft: 20
+      },
+      newUnderLine:
+      {
+        width: '90%',
+        height: 2,
+        backgroundColor: '#097AFC',
+        marginBottom: 10,
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 20,
+        marginRight: 20
+      },
+      erpSolutionsText:
+      {
+        textAlign: 'justify',
+        marginLeft: 20,
+        marginRight: 20,
+        fontSize: 18,
+        marginBottom: 0
+      },
+      erpSolutionsImageContainer:
+      {
+        marginBottom: 10, 
+        alignItems: 'center',
+        display: 'flex', 
+        justifyContent: 'center', 
+        marginLeft: 20, 
+        marginRight: 20,
+        resizeMode: 'stretch',
+        borderRadius: 15,
+        width: '90%',
+        height: 460,
+        shadowColor: '#000032',
+        shadowOffset: {width: 2, height: 4},
+        shadowOpacity: 0,
+        shadowRadius: 4,
+        // boxShadow: 14px 9px 10px 0 rgb(0 0 0 / 50%)
+      },
+      servicesCardMainViewOne:
+      {
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 20,
+        marginRight: 20
+      },
+      servicesCard:
+      {
+        width: '100%',
+        padding: 15,
+        shadowColor: '#000032',
+        shadowOffset: {width: 4, height: 4},
+        shadowOpacity: 0.4,
+        shadowRadius: 4,
+        // boxShadow: 0 0 10px -4px rgb(0 0 0 / 50%)
+        borderStyle: 'solid',
+        borderWidth: 1,
+        // borderColor: '#f5f5f5',
+        borderColor: '#0488F7',
+        borderRadius: 4,
+        marginBottom: 10 
+      },
+      servicesText:
+      {
+        margin: 0,
+        padding: 0,
+        color: '#0291FF',
+        fontSize: 19,
+        fontWeight: 'bold',
+        textAlign: 'center'
+      },
+      erpContentText:
+      {
+        color: '#0488F7',
+        fontSize: 28,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textShadowColor: 'rgba(0, 0, 0, 0.30)',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 10
+      },
+      erpSubContentText:
+      {
+        color: '#000',
+        fontSize: 18,
+        textAlign: 'justify',
+        marginLeft: 20,
+        marginRight: 20
+      },
+      mainMarginBottomProp:
+      {
+        marginBottom: 10
+      },
+      erpWebText:
+      {
+        fontSize: 28,
+        fontWeight: 'bold',
+        textAlign: 'center'
+      },
+      odooIndustriesContainer:
+      {
+        backgroundColor: '#4766FF',
+        padding: 10,
+        alignItems: 'center'
+      },
+      odooIndustriesView:
+      {
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center',
+        marginBottom: 20
+      },
+      odooIndustriesText:
+      {
+        textAlign: 'center',
+        color: '#FFFFFF',
+        fontSize: 28,
+        fontWeight: '500'
+      },
+      odooIndustriesSubView:
+      {
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        padding: 15,
+        shadowColor: '#000032',
+        shadowOffset: {width: 4, height: 4},
+        shadowOpacity: 0.4,
+        shadowRadius: 4,
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: '#0488F7',
+        borderRadius: 24,
+        marginBottom: 10
+      },
+      odooIndustriesSubText:
+      {
+        textAlign: 'center',
+        color: '#000000',
+        fontSize: 14,
+        fontWeight: '700'
       }
+
 });

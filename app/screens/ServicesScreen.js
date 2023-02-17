@@ -10,7 +10,8 @@ import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
 import MainFooter from '../common/footer/MainFooter';
 import Footer from '../common/footer/Footer';
 
-const ServicesScreen = () => {
+const ServicesScreen = () => 
+{
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
@@ -40,36 +41,33 @@ const ServicesScreen = () => {
           More than a portfolio or showcase of your wares and services, a truly focussed business website should be your highest performing sales person. They’re your virtual shopfront, customer support and sales team rolled into one. Done right, a business website builds rapport and trust with potential customers before they even get on the phone—or gets straight to making the sale.
         </Text>
       </View>
-      <View style = {ServicesStyles.viewStyleForLine}></View>
-      <View style={ServicesStyles.hedingButton}>
-          <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
-            <Text style={ServicesStyles.text}>Book A Free Consultation Call</Text>
-          </Pressable>
+      <View style={ServicesStyles.viewStyleForLine}></View>
+      <View style={ServicesStyles.headingButton}>
+        <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
+          <Text style={ServicesStyles.text}>Free Consult</Text>
+        </Pressable>
       </View>
-      <View>
-          <Text style={ServicesStyles.newTitle}>
-            Speak to us to see if it's a fit for you
-           </Text>
+      <View style={{ marginBottom: 20 }}>
+        <Text style={ServicesStyles.newTitle}>
+          Speak to us to see if it's a fit for you
+        </Text>
       </View> 
-      <View>
-          <Text style={ServicesStyles.newTitle}>
-            +91-9988776655
-           </Text>
+      <View style={{ flexDirection: 'row', textAlign: 'center', display: 'flex', justifyContent: 'center' }}>
+        <Image source={require("../assets/phoneCall.png")} alt="PhoneCall" title="PhoneCall"></Image>
+        <Text style={ServicesStyles.newTitleOne}>
+          +91-9988776655
+        </Text>
       </View>
     </View>
     <View style={ServicesStyles.container}>
-      <View>
+      <View style={{ marginTop: 20, marginBottom: 10 }}>
         <Text style={ServicesStyles.webText}>Our Web Development Services Include</Text>
       </View>
-      <View>
         <ServicesCardViewScreen />
-      </View>
       <View>
         <Text style={ServicesStyles.featuresWebText}>Check The Features</Text>
       </View>
-      <View>
         <FeaturesCardViewScreen />
-      </View>
     </View>
     <View style={ServicesStyles.imageView}>
         <View style={{ marginBottom: 10 }}>
@@ -99,7 +97,8 @@ const ServicesScreen = () => {
           <TouchableOpacity 
           style={ServicesStyles.letsStartButton}
           alt="Lets Start" 
-          title="Lets Start">
+          title="Lets Start"
+          onPress={()=>setModalOpen(true)}>
             <Text style={ServicesStyles.letsStartButtonText}>
               Lets Start
             </Text>
@@ -166,7 +165,7 @@ const ServicesScreen = () => {
     </View>
   </ScrollView>
   </>
-  )
+  );
 }
 
 export default ServicesScreen;
