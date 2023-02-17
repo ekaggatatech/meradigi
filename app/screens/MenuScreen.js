@@ -1,9 +1,9 @@
 import { View, Text, StyleSheet, ScrollView, Image } from 'react-native';
 import React from 'react';
 import ServicesStyles from '../config/services.styles';
-import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 import { useNavigation } from '@react-navigation/native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+// import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const MenuScreen = () => {
   const navigation = useNavigation();
@@ -41,7 +41,7 @@ const MenuScreen = () => {
              size={30} 
              color='#00d4ff'/>
           <Text style={styles.iconText}>Share</Text> */}
-            <Text style={styles.iconText} onPress={() => navigation.navigate('Pricing Plans')}>Pricing</Text>
+            <Text style={styles.iconText} onPress={() => navigation.navigate('Pricing Plans')}>Pricing Plans</Text>
         </View>
         <View style={styles.iconsView}>
           {/* <Icon 
@@ -50,7 +50,7 @@ const MenuScreen = () => {
              size={30} 
              color='#00d4ff'/>
           <Text style={styles.iconText}>Feedback</Text> */}
-          <Text style={styles.iconText} onPress={() => navigation.navigate('AboutUs')}>About Us</Text>
+          <Text style={styles.iconText} onPress={() => navigation.navigate('About Us')}>About Us</Text>
         </View>
         <View style={styles.iconsView}>
           <Text style={styles.iconText} onPress={() => navigation.navigate('Login')}>Log In</Text>

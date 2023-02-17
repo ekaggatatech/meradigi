@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, Text, TouchableOpacity, Image } from "react-native";
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, TouchableOpacity, Image, Button } from "react-native";
 import DigitalMarketingBannerData from '../../../shared/DigitalMarketingBannerData';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -16,7 +16,7 @@ function Basic()
           <DigitalMarketingBannerData />
           <View style={styles.container}>
           <ScrollView nestedScrollEnabled={true}>
-            <View style={styles.line}>
+            <View style={styles.newLine}>
               <Text style={styles.textOne}>
                 BASIC
               </Text>
@@ -33,154 +33,232 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
                 <Text style={styles.textSix}>
-                  <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Facebook Marketing
+                  Facebook Marketing
                 </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Instagram Marketing
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Twitter Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Instagram Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>LinkedIn Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Twitter Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textFive}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Video Marketing
-              </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>YouTube Marketing
-              </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Instagram Reels
-              </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Facebook Reels
-              </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Other Short Video Platform
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  LinkedIn Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textFive}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Adwords/PPC
+                Video Marketing
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Google Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  YouTube Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Bing Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Instagram Reels
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Facebook Advert
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Reels
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Youtube Advert
-              </Text>
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>E-commerce/Shopping Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Other Short Video Platform
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
               <Text style={styles.textFive}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>SEO and Lead Generation
+                Adwords/PPC
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>**On-Page SEO
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Google Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Website Audit
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Bing Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Technical Audit
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Advert
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Keyword Research
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Youtube Advert
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Keyword Target (10)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  E-commerce/Shopping Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Content Customization
+              <Text style={styles.textFive}>
+                SEO and Lead Generation
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>On-page Optimization 👇
-                - Meta Title and Description
-                - H1-H2 Tag
-                - Internal Link Structure
-                - Image Alt tag
-                - XML sitemap and submission
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  **On-Page SEO
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Schema Markup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Website Audit
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Site speed Optimization
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Technical Audit
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Google Analytics Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Keyword Research
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Tag Manager Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Keyword Target (10)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Search Console Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Content Customization
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>**Off-Page SEO
-                - Social Bookmarking (40)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                    On-page Optimization 👇
+                    {'\n'} - Meta Title and Description
+                    {'\n'} - H1-H2 Tag
+                    {'\n'} - Internal Link Structure
+                    {'\n'} - Image Alt tag
+                    {'\n'} - XML sitemap and submission
+                </Text>
+              </Text>
+            </View>
+            <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Schema Markup
+                </Text>
+              </Text>
+            </View>
+            <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Site speed Optimization
+                </Text>
+              </Text>
+            </View>
+            <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Google Analytics Setup
+                </Text>
+              </Text>
+            </View>
+            <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Tag Manager Setup
+                </Text>
+              </Text>
+            </View>
+            <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Search Console Setup
+                </Text>
+              </Text>
+            </View>
+            <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  **Off-Page SEO
+                  {'\n'} - Social Bookmarking (40)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -189,58 +267,91 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Directory Submission (20)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Directory Submission (20)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Classified Ads (15)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Classified Ads (15)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Article Submission
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Article Submission
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Guest Blog Posting
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Guest Blog Posting
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Infographics Creation & Posting (3)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Infographics Creation & Posting (3)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Web 2.0 Submission
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Web 2.0 Submission
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Website Submission
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Website Submission
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Local Site Directory (10)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Local Site Directory (10)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Back Link Analysis
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Back Link Analysis
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>- Broken Links fix
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/cancel.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Broken Links fix
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>Reports
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Reports
+                </Text>
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
@@ -253,7 +364,6 @@ function Basic()
             </ScrollView>
           </View>
         </SafeAreaView>
-        {/* </ScrollView>  */}
     </>
   );
 }
@@ -266,7 +376,7 @@ function Professional()
           <DigitalMarketingBannerData />
           <View style={styles.container}>
           <ScrollView nestedScrollEnabled={true}>
-          <View style={styles.line}>
+            <View style={styles.newLine}>
               <Text style={styles.profText}>
                 PROFESSIONAL
               </Text>
@@ -283,23 +393,35 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Facebook Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Instagram Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Instagram Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Twitter Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/closeOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Twitter Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                LinkedIn Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  LinkedIn Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -308,23 +430,35 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                YouTube Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/closeOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  YouTube Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Instagram Reels
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Instagram Reels
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Facebook Reels
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Reels
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Other Short Video Platform
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Other Short Video Platform
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -333,28 +467,43 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Google Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Google Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Bing Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Bing Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Facebook Advert
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Advert
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Youtube Advert
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/closeOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Youtube Advert
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                E-commerce/Shopping Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/closeOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  E-commerce/Shopping Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -363,74 +512,113 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                **On-Page SEO
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  **On-Page SEO
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Website Audit
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Website Audit
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Technical Audit
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Technical Audit
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Keyword Research
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Keyword Research
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Keyword Target (20)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Keyword Target (20)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Content Customization
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Content Customization
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                On-page Optimization 👇
-                - Meta Title and Description
-                - H1-H2 Tag
-                - Internal Link Structure
-                - Image Alt tag
-                - XML sitemap and submission
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  On-page Optimization 👇
+                  {'\n'} - Meta Title and Description
+                  {'\n'} - H1-H2 Tag
+                  {'\n'} - Internal Link Structure
+                  {'\n'} - Image Alt tag
+                  {'\n'} - XML sitemap and submission
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Schema Markup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Schema Markup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Site speed Optimization
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Site speed Optimization
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Google Analytics Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Google Analytics Setup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Tag Manager Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Tag Manager Setup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Search Console Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Search Console Setup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                **Off-Page SEO
-                - Social Bookmarking (60)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  **Off-Page SEO
+                  {"\n"} - Social Bookmarking (60)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -439,58 +627,91 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Directory Submission (40)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Directory Submission (40)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Classified Ads (25)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Classified Ads (25)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Article Submission (3)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Article Submission (3)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Guest Blog Posting (5)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Guest Blog Posting (5)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Infographics Creation & Posting (7)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Infographics Creation & Posting (7)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-               - Web 2.0 Submission (7)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                - Web 2.0 Submission (7)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Website Submission (15)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Website Submission (15)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Local Site Directory (25)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Local Site Directory (25)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Back Link Analysis
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Back Link Analysis
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Broken Links fix
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/closeOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Broken Links fix
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Reports
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Reports
+                </Text>
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
@@ -515,7 +736,7 @@ function Enterprise()
           <DigitalMarketingBannerData />
           <View style={styles.container}>
           <ScrollView nestedScrollEnabled={true}>
-          <View style={styles.line}>
+            <View style={styles.newLine}>
               <Text style={styles.enterpriseText}>
                 ENTERPRISE
               </Text>
@@ -532,23 +753,35 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Facebook Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Instagram Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Instagram Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Twitter Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Twitter Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                LinkedIn Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  LinkedIn Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -557,23 +790,35 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                YouTube Marketing
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  YouTube Marketing
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Instagram Reels
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Instagram Reels
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Facebook Reels
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Reels
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Other Short Video Platform
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Other Short Video Platform
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -582,28 +827,43 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Google Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Google Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Bing Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Bing Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Facebook Advert
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Facebook Advert
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Youtube Advert
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Youtube Advert
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                E-commerce/Shopping Ads
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  E-commerce/Shopping Ads
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -612,74 +872,113 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                **On-Page SEO
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  **On-Page SEO
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Website Audit
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Website Audit
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Technical Audit
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Technical Audit
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Keyword Research
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Keyword Research
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Keyword Target (30)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Keyword Target (30)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Content Customization
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Content Customization
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                On-page Optimization 👇
-                - Meta Title and Description
-                - H1-H2 Tag
-                - Internal Link Structure
-                - Image Alt tag
-                - XML sitemap and submission
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  On-page Optimization 👇
+                  {'\n'} - Meta Title and Description
+                  {'\n'} - H1-H2 Tag
+                  {'\n'} - Internal Link Structure
+                  {'\n'} - Image Alt tag
+                  {'\n'} - XML sitemap and submission
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Schema Markup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Schema Markup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Site speed Optimization
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Site speed Optimization
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Google Analytics Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Google Analytics Setup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Tag Manager Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Tag Manager Setup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Search Console Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Search Console Setup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                **Off-Page SEO
-                - Social Bookmarking (80)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  **Off-Page SEO
+                  {'\n'} - Social Bookmarking (80)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -688,58 +987,91 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Directory Submission (60)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Directory Submission (60)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Classified Ads (35)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Classified Ads (35)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Article Submission (5)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Article Submission (5)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Guest Blog Posting (7)
-              </Text> 
-            </View>
-            <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Infographics Creation & Posting (11)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Guest Blog Posting (7)
+                </Text> 
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-               - Web 2.0 Submission (11)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Infographics Creation & Posting (11)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Website Submission (20)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                - Web 2.0 Submission (11)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Local Site Directory (30)
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Website Submission (20)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Back Link Analysis
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Local Site Directory (30)
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                - Broken Links fix
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Back Link Analysis
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Reports
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  - Broken Links fix
+                </Text>
+              </Text>
+            </View>
+            <View style={styles.line}>
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Reports
+                </Text>
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
@@ -756,24 +1088,25 @@ function Enterprise()
   );
 }
 
-const DigitalMarketingPricingPlansScreen = () => {
+const DigitalMarketingPricingPlansScreen = ({navigation}) => {
   return (
     <>
-      <NavigationContainer independent={true}>
+      <NavigationContainer independent={true} style={{ backgroundColor: '#FFFFFF', background: '#FFFFFF' }}>
         <Tab.Navigator /* style={{ paddingTop: StatusBar.currentHeight }} */ 
           screenOptions={() => ({ 
             headerShown: false, 
             tabBarLabelStyle: 
             {
-              fontWeight: "600",
+              fontWeight: "bold",
               fontSize: 12,
               textAlignVertical: 'center',
               textAlign: 'center',
               letterSpacing: 0.4
             },
             tabBarIconStyle: { display: "none" },
-            tabBarActiveTintColor: '#0275d8',
-            tabBarInactiveTintColor: '#000000'
+            tabBarActiveTintColor: '#FE0629',
+            tabBarInactiveTintColor: '#060606',
+            tabBarIndicatorStyle: { backgroundColor: '#FE0629' }
           })}>
           <Tab.Screen component={Basic} name='Basic' />
           <Tab.Screen component={Professional} name='Professional' />
@@ -781,6 +1114,9 @@ const DigitalMarketingPricingPlansScreen = () => {
           {/* <Tab.Screen options={{ title: ({ color, focused }) => ( <Ionicons size={25} name={focused ? 'person' : 'person-outline'} color={focused ? 'blue' : '#272727'} /> ) }} component={Profile} name='Profile' /> */}
         </Tab.Navigator>
       </NavigationContainer>
+      <View style={styles.goBackToHomeButtonView}>
+        <Button title="Go Back To Home" onPress={() => navigation.navigate('Home')} />
+      </View>
     </>
   );
 }
@@ -794,7 +1130,7 @@ const styles = StyleSheet.create(
   container:
   {
     width: '80%',
-    height: '54%',
+    height: '51%',
     boxSizing: 'border-box',
     borderRadius: 0,
     shadowOffset: { width: 10, height: 2 },  
@@ -808,13 +1144,22 @@ const styles = StyleSheet.create(
     borderColor: '#000009',
     backgroundColor: '#FFF',
     elevation: 5,
-    marginBottom: 20
+    marginBottom: 20,
+    padding: 0
+  },
+  newLine:
+  {
+    borderBottomColor: '#999',
+    borderBottomWidth: 0.5,
+    paddingTop: 6,
+    paddingBottom: 6
   },
   line:
   {
     borderBottomColor: '#999',
     borderBottomWidth: 0.5,
-    marginBottom: 20
+    paddingTop: 10,
+    paddingBottom: 10
   },
   textOne:
   {
@@ -828,40 +1173,35 @@ const styles = StyleSheet.create(
     color: '#605E5E',
     fontSize: 18,
     fontWeight: 'normal',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   textThree:
   {
     fontSize: 25,
     fontWeight: '500',
     color: '#FF0027',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   textFour:
   {
     fontSize: 18,
     fontWeight: 'normal',
     color: '#999',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   textFive:
   {
     fontSize: 15,
     color: '#585858',
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 20
+    textAlign: 'center'
   },
   textSix:
   {
     fontSize: 15,
     color: '#585858',
     fontWeight: 'normal',
-    textAlign: 'center',
-    marginBottom: 20
+    textAlign: 'center'
   },
   choosePlanButtonView:
   {
@@ -869,17 +1209,16 @@ const styles = StyleSheet.create(
     justifyContent: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom: 20,
+    marginTop: 10,
+    marginBottom: 10,
     textAlign: 'center'
   },
   choosePlanButton:
   {
     backgroundColor: '#000',
-    paddingTop: 15,
-    paddingRight: 12,
-    paddingBottom: 15,
-    paddingLeft: 12,
+    padding: 10,
     marginTop: 0,
+    marginBottom: 0,
     marginRight: 0,
     marginLeft: 0,
     borderRadius: 4,
@@ -903,34 +1242,37 @@ const styles = StyleSheet.create(
     color: '#007DFF',
     fontSize: 31,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 0
+    textAlign: 'center'
   },
   profTextOne:
   {
     fontSize: 25,
     fontWeight: '500',
     color: '#007DFF',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   enterpriseText:
   {
     color: '#FF8F00',
     fontSize: 31,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 0
+    textAlign: 'center'
   },
   enterpriseTextOne:
   {
     fontSize: 25,
     fontWeight: '500',
     color: '#FF8F00',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
+  },
+  goBackToHomeButtonView:
+  {
+    display: 'flex',
+    justifyContent: 'center',
+    marginLeft: 0,
+    marginRight: 0,
+    backgroundColor: '#FFFFFF',
+    background: '#FFFFFF'
   }
   /* choosePlanButtonHover:
   {

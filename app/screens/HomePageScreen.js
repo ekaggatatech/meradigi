@@ -24,14 +24,20 @@ return (
   <>
     <ScrollView style={styles.container}>
     <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      {/* <View style={ServicesStyles.positioning}>
+        <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
+      </View>  */}
+      <View style={ServicesStyles.positioningOfElementsTwo}>
+        <Image source={require("../assets/Home/userProfile.png")} alt="UserProfile" title="UserProfile" />
+      </View> 
       <View style={ServicesStyles.positioning}>
         <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
-      </View>
+       </View> 
       <View>
         <SearchBar 
             value={value}
             updateSearch={updateSearch}
-            style={{ marginTop: '2%',marginBottom: '2%' }}
+            style={{ marginBottom: '2%' }}
           />
       </View>
       <View style={[styles.twoButtons,styles.marginStyling]}>

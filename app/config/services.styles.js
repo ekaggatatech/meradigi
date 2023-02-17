@@ -6,7 +6,6 @@ export default StyleSheet.create({
       container:
       {
         flex: 1,
-        paddingTop: 10,
         backgroundColor: '#FFFFFF',
         background: '#FFFFFF'
       },
@@ -431,5 +430,25 @@ export default StyleSheet.create({
         opacity: 0.928,
         width: '90%',
         height: '100%'
+      },
+      newPositioning:
+      {
+        flexDirection: 'row',
+        padding: 0,
+        margin: 0
+      },
+      positioningOfElementsOne:
+      {
+        display: 'flex',
+        justifyContent: 'flex-start',
+        marginLeft: 10,
+        marginRight: 'auto'
+      },
+      positioningOfElementsTwo:
+      {
+        display: 'flex',
+        justifyContent: 'flex-end',
+        marginLeft: 'auto',
+        marginRight: 10
       }
 });

@@ -2,7 +2,6 @@ import React from 'react';
 import {Text,View,Image, TextInput} from 'react-native';
 import Icon from '@expo/vector-icons/AntDesign';
 
-
 const Register = () => {
   return (
     <View style={{backgroundColor:"#FFF",height:"100%"}}>

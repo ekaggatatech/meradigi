@@ -31,8 +31,8 @@ const Tabs = () => {
             }
             return <Icon name={iconName} size={size} color={color} />;
           },
-          tabBarActiveTintColor: '#00d4ff',
-          tabBarInactiveTintColor: 'black'
+          tabBarActiveTintColor: '#FE0629',
+          tabBarInactiveTintColor: '#060606'
         })}
         >
             <Tab.Screen name='Home' component={HomePageScreen}/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, TouchableOpacity, Button, Image } from "react-native";
 import DigitalMarketingBannerData from '../../../shared/DigitalMarketingBannerData';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
@@ -14,7 +14,7 @@ function Basic()
           <DigitalMarketingBannerData />
           <View style={styles.container}>
           <ScrollView nestedScrollEnabled={true}>
-          <View style={styles.line}>
+            <View style={styles.newLine}>
               <Text style={styles.textOne}>
                 BASIC
               </Text>
@@ -31,28 +31,43 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Odoo Configuration & Server Setup
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Odoo Configuration & Server Setup
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Ngnix configuration with domain redirection
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Ngnix configuration with domain redirection
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Periodic database backup on cloud
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Periodic database backup on cloud
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                User and Permission Set Up
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  User and Permission Set Up
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Apps like sale, purchase, inventory, manufacturing, POS with out of box functionality
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Apps like sale, purchase, inventory, manufacturing, POS with out of box functionality
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -61,23 +76,35 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Xero Accouting
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Xero Accouting
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Quickbooks
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Quickbooks
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Salesforce
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Salesforce
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                3pl
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  3pl
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -86,33 +113,51 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Promotions
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Promotions
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Credit Sales
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Credit Sales
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Coupons and Vouchers
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Coupons and Vouchers
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Loyalty
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Loyalty
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Linkly Integration
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Linkly Integration
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Offline Restoration
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Offline Restoration
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -121,18 +166,27 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Sale Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Sale Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Contact Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Contact Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Delivery & Shipping
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Delivery & Shipping
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -141,18 +195,27 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Warehouse & Location Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Warehouse & Location Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Delivery & Shipping
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Delivery & Shipping
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Transfers
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Transfers
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -161,28 +224,43 @@ function Basic()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Fleet Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Fleet Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Hotel & Restaurant
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Hotel & Restaurant
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Odoo Rental Management System
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Odoo Rental Management System
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Odoo Manufacturing Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Odoo Manufacturing Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Pharmacy & Hospital
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/check.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Pharmacy & Hospital
+                </Text>
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
@@ -208,7 +286,7 @@ function Professional()
           <DigitalMarketingBannerData />
           <View style={styles.container}>
           <ScrollView nestedScrollEnabled={true}>
-          <View style={styles.line}>
+            <View style={styles.newLine}>
               <Text style={styles.profText}>
                 PROFESSIONAL
               </Text>
@@ -225,28 +303,43 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Configuration, Server Setup +30% Customization
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Configuration, Server Setup +30% Customization
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Ngnix configuration with domain redirection and reverse proxy
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Ngnix configuration with domain redirection and reverse proxy
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Periodic database backup on cloud
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Periodic database backup on cloud
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                User and Permission set up with security groups
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  User and Permission set up with security groups
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Customization in sales, purchase, Inventory, manufacturing and Point of Sale
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Customization in sales, purchase, Inventory, manufacturing and Point of Sale
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -255,23 +348,35 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Xero Accouting
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Xero Accouting
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Quickbooks
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Quickbooks
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Salesforce
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Salesforce
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                3pl
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  3pl
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -280,33 +385,51 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Promotions
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Promotions
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Credit Sales
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Credit Sales
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Coupons and vouchers
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Coupons and vouchers
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Loyalty
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Loyalty
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Linkly Integration
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Linkly Integration
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Offline Restoration
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Offline Restoration
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -315,18 +438,27 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Sale Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Sale Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Contact Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Contact Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Delivery & Shipping
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Delivery & Shipping
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -335,18 +467,27 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Warehouse & location Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Warehouse & location Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Delivery & Shipping
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Delivery & Shipping
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Transfers
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Transfers
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -355,37 +496,50 @@ function Professional()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Fleet management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Fleet management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Hotel & Restaurant
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Hotel & Restaurant
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Odoo Rental Management System
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Odoo Rental Management System
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Odoo Manufacturing Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Odoo Manufacturing Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Pharmacy & Hospital
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkOne.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Pharmacy & Hospital
+                </Text>
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
-              <TouchableOpacity 
-                style={styles.choosePlanButton}
-                >
-                  <Text style={styles.choosePlanButtonText}>
-                    CHOOSE PLAN
-                  </Text>
+              <TouchableOpacity style={styles.choosePlanButton}>
+                <Text style={styles.choosePlanButtonText}>
+                  CHOOSE PLAN
+                </Text>
               </TouchableOpacity>
             </View>
           </ScrollView>
@@ -403,7 +557,7 @@ function Enterprise()
           <DigitalMarketingBannerData />
           <View style={styles.container}>
           <ScrollView nestedScrollEnabled={true}>
-          <View style={styles.line}>
+            <View style={styles.newLine}>
               <Text style={styles.enterpriseText}>
                 ENTERPRISE
               </Text>
@@ -420,28 +574,43 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Existing Out of Box features with complete Customization and Server set up
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Existing Out of Box features with complete Customization and Server set up
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Ngnix configuration with domain redirection and reverse proxy
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Ngnix configuration with domain redirection and reverse proxy
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Periodic databasePeriodic database backup on cloud and automatic restoration backup on cloud
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Periodic databasePeriodic database backup on cloud and automatic restoration backup on cloud
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                User and permission set up with security groups
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  User and permission set up with security groups
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Complete Customization in sales , purchase,Inventory , manufacturing and Point of Sale
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Complete Customization in sales , purchase,Inventory , manufacturing and Point of Sale
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -450,23 +619,35 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Xero Accouting
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Xero Accouting
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Quickbooks
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Quickbooks
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Salesforce
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Salesforce
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                3pl
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  3pl
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -475,33 +656,51 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Promotions
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Promotions
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Credit Sales
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Credit Sales
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Coupons and vouchers
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Coupons and vouchers
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Loyalty
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Loyalty
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Linkly Integration
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Linkly Integration
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Offline Restoration
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Offline Restoration
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -510,18 +709,27 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Sale Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Sale Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Contact Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Contact Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Delivery & Shipping
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Delivery & Shipping
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -530,18 +738,27 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Warehouse & location Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Warehouse & location Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Delivery & Shipping
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Delivery & Shipping
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Transfers
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Transfers
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
@@ -550,28 +767,43 @@ function Enterprise()
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Fleet Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Fleet Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Hotel & Restaurant
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Hotel & Restaurant
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Odoo Rental Management System
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Odoo Rental Management System
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Odoo Manufacturing Management
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Odoo Manufacturing Management
+                </Text>
               </Text>
             </View>
             <View style={styles.line}>
-              <Text style={styles.textSix}>
-                Pharmacy & Hospital
+              <Text style={{ textAlign: 'center' }}>
+                <Image source={require("../../../assets/PricingPlans/checkThree.png")} style={{ width: 20, height: 20 }}></Image>
+                <Text style={styles.textSix}>
+                  Pharmacy & Hospital
+                </Text>
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
@@ -589,30 +821,34 @@ function Enterprise()
   );
 }
 
-const OdooPricingPlansScreen = () => {
+const OdooPricingPlansScreen = ({navigation}) => {
   return (
     <>
-      <NavigationContainer independent={true}>
+      <NavigationContainer independent={true} style={{ backgroundColor: '#FFFFFF', background: '#FFFFFF' }}>
         <Tab.Navigator           
           screenOptions={() => ({ 
             headerShown: false, 
             tabBarLabelStyle: 
             {
-              fontWeight: "600",
+              fontWeight: "bold",
               fontSize: 12,
               textAlignVertical: 'center',
               textAlign: 'center',
               letterSpacing: 0.4
             },
             tabBarIconStyle: { display: "none" },
-            tabBarActiveTintColor: '#0275d8',
-            tabBarInactiveTintColor: '#000000'
+            tabBarActiveTintColor: '#FE0629',
+            tabBarInactiveTintColor: '#060606',
+            tabBarIndicatorStyle: { backgroundColor: '#FE0629' }
           })}>
           <Tab.Screen component={Basic} name='Basic' />
           <Tab.Screen component={Professional} name='Professional' />
           <Tab.Screen component={Enterprise} name='Enterprise' />
         </Tab.Navigator>
       </NavigationContainer>
+      <View style={styles.goBackToHomeButtonView}>
+        <Button title="Go Back To Home" onPress={() => navigation.navigate('Home')} />
+      </View>
     </>
   );
 }
@@ -626,7 +862,7 @@ const styles = StyleSheet.create(
   container:
   {
     width: '80%',
-    height: '54%',
+    height: '51%',
     boxSizing: 'border-box',
     borderRadius: 0,
     shadowOffset: { width: 10, height: 2 },  
@@ -640,62 +876,64 @@ const styles = StyleSheet.create(
     borderColor: '#000009',
     backgroundColor: '#FFF',
     elevation: 5,
-    marginBottom: 20
+    marginBottom: 20,
+    padding: 0
+  },
+  newLine:
+  {
+    borderBottomColor: '#999',
+    borderBottomWidth: 0.5,
+    paddingTop: 6,
+    paddingBottom: 6
   },
   line:
   {
     borderBottomColor: '#999',
     borderBottomWidth: 0.5,
-    marginBottom: 20
+    paddingTop: 10,
+    paddingBottom: 10
   },
   textOne:
   {
     color: '#FF0024',
     fontSize: 31,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 0
+    textAlign: 'center'
   },
   textTwo:
   {
     color: '#605E5E',
     fontSize: 18,
     fontWeight: 'normal',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   textThree:
   {
     fontSize: 25,
     fontWeight: '500',
     color: '#FF0027',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   textFour:
   {
     fontSize: 18,
     fontWeight: 'normal',
     color: '#999',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   textFive:
   {
     fontSize: 15,
     color: '#585858',
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginBottom: 20
+    textAlign: 'center'
   },
   textSix:
   {
     fontSize: 15,
     color: '#585858',
     fontWeight: 'normal',
-    textAlign: 'center',
-    marginBottom: 20
+    textAlign: 'center'
   },
   choosePlanButtonView:
   {
@@ -703,16 +941,15 @@ const styles = StyleSheet.create(
     justifyContent: 'center',
     marginLeft: 'auto',
     marginRight: 'auto',
-    marginBottom: 20
+    marginTop: 10,
+    marginBottom: 10
   },
   choosePlanButton:
   {
     backgroundColor: '#000',
-    paddingTop: 15,
-    paddingRight: 12,
-    paddingBottom: 15,
-    paddingLeft: 12,
+    padding: 10,
     marginTop: 0,
+    marginBottom: 0,
     marginRight: 0,
     marginLeft: 0,
     borderRadius: 4,
@@ -720,8 +957,7 @@ const styles = StyleSheet.create(
     webkitTransition: '.3s',
     oTransition: '.3s',
     transition: '.3s',
-    textDecoration: 'none',
-    // marginBottom: 17
+    textDecoration: 'none'
   },
   choosePlanButtonText:
   {
@@ -737,43 +973,38 @@ const styles = StyleSheet.create(
     color: '#007DFF',
     fontSize: 31,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 0
+    textAlign: 'center'
   },
   profTextOne:
   {
     fontSize: 25,
     fontWeight: '500',
     color: '#007DFF',
-    textAlign: 'center',
-    marginBottom: 10
+    textAlign: 'center'
   },
   enterpriseText:
   {
     color: '#FF8F00',
     fontSize: 31,
     fontWeight: 'bold',
-    textAlign: 'center',
-    marginTop: 10,
-    marginBottom: 0
+    textAlign: 'center'
   },
   enterpriseTextOne:
   {
     fontSize: 25,
     fontWeight: '500',
     color: '#FF8F00',
-    textAlign: 'center',
-    marginBottom: 10
-  }
-  /* choosePlanButtonHover:
-  {
-    backgroundColor: '#e22658'
+    textAlign: 'center'
   },
-  choosePlanButtonActive:
+  goBackToHomeButtonView:
   {
-    backgroundColor: '#e22658'
-  } */
+    display: 'flex',
+    justifyContent: 'center',
+    marginLeft: 0,
+    marginRight: 0,
+    backgroundColor: '#FFFFFF',
+    background: '#FFFFFF'
+  }
 }
 );
 
