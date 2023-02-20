@@ -4,10 +4,10 @@
     "slug": "meradigi",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./app/assets/meradigi.png",
+    "icon": "./app/assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./app/assets/meradigi.png",
+      "image": "./app/assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -23,7 +23,7 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./app/assets/meradigi.png",
+        "foregroundImage": "./app/assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
       "package": "com.pooja_dhamanekar.meradigi"

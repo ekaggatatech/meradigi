@@ -1,4 +1,4 @@
-import { View, Text, Image ,ScrollView, Button} from 'react-native'
+import { View, Text, Image ,ScrollView } from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
@@ -9,7 +9,7 @@ const FastWebsite = ({navigation}) => {
         <View >
           <Image style={ServicesStyles.webDevImage} source={require("../assets/digitalMarketing.jpg")}/>
         </View>
-        <View style={ServicesStyles.hedingButton}>
+        <View style={ServicesStyles.headingButton}>
           <View style={ServicesStyles.line}/>
           <Text style={ServicesStyles.webText}>Fast Website</Text>
           <View  style={ServicesStyles.chooseBtn}>

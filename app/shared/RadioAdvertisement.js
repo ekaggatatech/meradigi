@@ -1,4 +1,4 @@
-import { View, Text, Image, Button,ScrollView} from 'react-native'
+import { View, Text, Image, ScrollView} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
@@ -7,9 +7,9 @@ const RadioAdvertisement = ({navigation}) => {
     <ScrollView>
       <View style={ServicesStyles.container}>
         <View >
-          <Image style={ServicesStyles.webDevImage} source={require("../assets/Radio Advertisement.jpg")}/>
+          <Image style={ServicesStyles.webDevImage} source={require("../assets/RadioAdvertisement.jpg")}/>
         </View>
-        <View style={ServicesStyles.hedingButton}>
+        <View style={ServicesStyles.headingButton}>
           <View style={ServicesStyles.line}/>
           <Text style={ServicesStyles.webText}>Radio Advertisement</Text>
           <View  style={ServicesStyles.chooseBtn}>

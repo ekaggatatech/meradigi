@@ -1,4 +1,4 @@
-import { View, Text, Image ,ScrollView, Button,StyleSheet} from 'react-native'
+import { View, Text, Image ,ScrollView, StyleSheet} from 'react-native'
 import React from 'react'
 import ServicesStyles from '../config/services.styles'
 
@@ -10,7 +10,7 @@ const MobileApp = ({navigation}) => {
         <View >
           <Image style={styles.mobileappImage} source={require('../assets/mobileApp/app_5.png')}/>
         </View>
-        <View style={ServicesStyles.hedingButton}>
+        <View style={ServicesStyles.headingButton}>
           <View style={ServicesStyles.line}/>
           <Text style={ServicesStyles.webText}>Mobile App Development</Text>
         </View>

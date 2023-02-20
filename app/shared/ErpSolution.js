@@ -11,6 +11,7 @@ const ErpSolution = () =>
 {
   const [modalOpen, setModalOpen] = useState(false);
   return (
+    <>
     <ScrollView>
     <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
     <View style={ServicesStyles.container}>
@@ -18,25 +19,20 @@ const ErpSolution = () =>
         <Image style={ServicesStyles.webDevImage} source={require("../assets/OdooERPImplementation/erpsolution.jpg")} />
       </View>
       <View style={{ marginBottom: 10 }}>
-        <Text style={ServicesStyles.webText}>Odoo ERP Implementation</Text>
+        <Text style={ServicesStyles.erpWebText}>Odoo ERP Implementation</Text>
       </View>
       <View style={{ marginBottom: 10 }}>
         <Text style={ServicesStyles.webText}>Our best-in-class Business solution, {'\n'}To le you to grow business higher!</Text>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      {/* <View style={{ marginBottom: 10 }}>
         <Text style={ServicesStyles.erpWebText}>
           Odoo ERP {'\n'}Implementation
         </Text>
-      </View>
+      </View> */}
       <View style={{ marginBottom: 10 }}>
         <Text style={ServicesStyles.erpSolutionsText}>
-        <Text style={{ fontWeight: 'bold' }}>Odoo Implementation</Text> is the service of implementing the <Text style={{ fontWeight: 'bold' }}>Odoo modules</Text> (formerly known as OpenERP and before that, TinyERP) and <Text style={{ fontWeight: 'bold' }}>Odoo Apps</Text>, which is a suite of open-source enterprise management applications.Targeting companies of all sizes, the application suite includes <Text style={{ fontWeight: 'bold' }}>odoo modules</Text> and <Text style={{ fontWeight: 'bold' }}>Odoo Apps</Text> like <Text style={{ fontWeight: 'bold' }}>Sales-Purchase Management, Accounting, Bills of materials, Warehouses Management </Text>and almost all running operations.
+          <Text style={{ fontWeight: 'bold' }}>Odoo Implementation</Text> is the service of implementing the <Text style={{ fontWeight: 'bold' }}>Odoo modules</Text> (formerly known as OpenERP and before that, TinyERP) and <Text style={{ fontWeight: 'bold' }}>Odoo Apps</Text>, which is a suite of open-source enterprise management applications.Targeting companies of all sizes, the application suite includes <Text style={{ fontWeight: 'bold' }}>odoo modules</Text> and <Text style={{ fontWeight: 'bold' }}>Odoo Apps</Text> like <Text style={{ fontWeight: 'bold' }}>Sales-Purchase Management, Accounting, Bills of materials, Warehouses Management </Text>and almost all running operations.
         </Text>
-        {/* <Text style={ServicesStyles.erpSolutionsText}>
-          <Text style={{ fontWeight: 'bold' }}>Odoo ERP Implementation</Text> is no doubt the best complete open-source ERP implementation software services available in the market today.
-          {'\n'}With more than 2 million users already using the services and 3000 Odoo Apps and various different Odoo Modules it has been as rightly being said the fastest growing ERP software.
-          {'\n'}Odoo’s amazing 3000 apps serves all your business purposes. We provide seamless customizations, custom development as well as integration to various popular business services with odoo.
-        </Text> */}
       </View>
       <View style={ServicesStyles.newUnderLine} />
       <View style={ServicesStyles.headingButton}>
@@ -116,23 +112,8 @@ const ErpSolution = () =>
         title="WhyOdooERP?">
         </Image>
       </View>
-        {/* <View style={{ marginBottom: 10 }}>
-          <Text style={ServicesStyles.erpContentText}>
-            Why Odoo ERP?
-          </Text>
-        </View>
-        <View style={{ marginBottom: 10 }}>
-          <Text style={ServicesStyles.erpSubContentText} numberOfLines={20}>
-            Odoo ERP is an incorporated and complete set-up of business the board applications and modules. 
-            It can consistently oversee bookkeeping, charging, HR, finance, and client relationship. 
-            This large number of modules really assist you with maintaining your business easily too to helpfully convey your administrations more. 
-            In light of everything, Odoo has every one of the functionalities, elements, and qualities that an oversaw administrations area needs. 
-            Execution of Odoo ERP brings about better efficiency, quality as well as administration consistency. 
-            Get a savvy and financial plan well disposed ERP framework to further develop your business execution..
-          </Text>
-        </View> */}
-        <View style={[ServicesStyles.letsStartButtonView,ServicesStyles.mainMarginBottomProp]}>
-          <TouchableOpacity 
+      <View style={[ServicesStyles.letsStartButtonView,ServicesStyles.mainMarginBottomProp]}>
+        <TouchableOpacity 
           style={ServicesStyles.letsStartButton}
           alt="Lets Start" 
           title="Lets Start"
@@ -140,100 +121,8 @@ const ErpSolution = () =>
             <Text style={ServicesStyles.letsStartButtonText}>
               Lets Start
             </Text>
-          </TouchableOpacity>
-        </View>
-        {/* <View style={ServicesStyles.odooIndustriesContainer}>
-          <View style={ServicesStyles.odooIndustriesView}>
-            <Text style={ServicesStyles.odooIndustriesText}>
-              Odoo ERP {'\n'}in Various Industries
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Digital Marketing & Advertising
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Transportation & Hospitality
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Wholesale Distribution
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Steel & Metal
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Non-Profit Sector
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Education
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Construction
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Plastic Industry
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Manufacturing
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              IT Services
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Apparel and Textiles
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Consumer ERP
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Health Care
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Financial Services
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Public Sector
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Retail Industry
-            </Text>
-          </View>
-          <View style={ServicesStyles.odooIndustriesSubView}>
-            <Text style={ServicesStyles.odooIndustriesSubText}>
-              Energy
-            </Text>
-          </View>
-        </View> */}
+        </TouchableOpacity>
+      </View>
     </View>
     <View style={ServicesStyles.ourGlobalStatsView}>
         <LinearGradient 
@@ -294,6 +183,7 @@ const ErpSolution = () =>
       <Footer/>
     </View>
   </ScrollView>
+  </>
   );
 }
 

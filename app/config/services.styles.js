@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
-// const screenHeight = Dimensions.get('window').height;
 const screenWidth = Dimensions.get('window').width;
+// const screenHeight = Dimensions.get('window').height;
 
 export default StyleSheet.create({
       container:
@@ -36,8 +36,6 @@ export default StyleSheet.create({
         height:2,
         backgroundColor:'#00d4ff',
         marginBottom:20,
-        /* marginRight:3, */
-        /*marginTop:10,*/
         display: 'flex',
         justifyContent: 'center',
         marginLeft: 'auto',
@@ -47,9 +45,7 @@ export default StyleSheet.create({
       {
         fontSize: 20,
         fontWeight: 'bold',
-        /*marginTop:15,*/
         textAlign: 'center'
-        /*marginBottom: 15*/
       },
       newWebText:
       {
@@ -92,8 +88,7 @@ export default StyleSheet.create({
       {
         color:'white',
         fontSize:15,
-        fontWeight:'bold',
-        
+        fontWeight:'bold'
       },
       headingButton:
       {
@@ -152,7 +147,8 @@ export default StyleSheet.create({
         fill: '#000000',
         color: '#000000'
       },
-      button: {
+      button: 
+      {
         alignItems: 'center',
         justifyContent: 'center',
         paddingVertical: 14, 
@@ -181,7 +177,7 @@ export default StyleSheet.create({
         justifyContent: 'center',
         marginLeft: 'auto',
         marginRight: 'auto',
-        marginBottom: 15
+        marginBottom: 10
       },
       consultNowButton:
       {
@@ -201,20 +197,24 @@ export default StyleSheet.create({
         letterSpacing: 0.25,
         color: '#ffffff'
       },
-      root: {
+      root: 
+      {
         flex: 1,
         flexDirection: "column",
       },
-      rowContainer: {
+      rowContainer: 
+      {
         flex: 1, 
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center"
       },
-      newText: {
+      newText: 
+      {
         flex: 1
       },
-      textInput: {
+      textInput: 
+      {
         flex: 1,
         backgroundColor: 'white', 
         borderColor: 'black',
@@ -305,7 +305,6 @@ export default StyleSheet.create({
         maxWidth: '80%',
         height: 500,
         borderRadius: 12,
-        /* elevation: 10, */
         shadowColor: '#55A7FF',
         shadowOpacity: 0.26,
         shadowOffset: { width: 0, height: 2},
@@ -444,7 +443,10 @@ export default StyleSheet.create({
         display: 'flex',
         justifyContent: 'flex-end',
         marginLeft: 'auto',
-        marginRight: 10
+        marginRight: 10,
+        marginTop: 0,
+        marginBottom: 0,
+        padding: 0
       },
       newTitleOne:
       {
@@ -486,10 +488,9 @@ export default StyleSheet.create({
         width: '90%',
         height: 460,
         shadowColor: '#000032',
-        shadowOffset: {width: 2, height: 4},
+        shadowOffset: { width: 2, height: 4 },
         shadowOpacity: 0,
-        shadowRadius: 4,
-        // boxShadow: 14px 9px 10px 0 rgb(0 0 0 / 50%)
+        shadowRadius: 4
       },
       servicesCardMainViewOne:
       {
@@ -503,13 +504,11 @@ export default StyleSheet.create({
         width: '100%',
         padding: 15,
         shadowColor: '#000032',
-        shadowOffset: {width: 4, height: 4},
+        shadowOffset: { width: 4, height: 4 },
         shadowOpacity: 0.4,
         shadowRadius: 4,
-        // boxShadow: 0 0 10px -4px rgb(0 0 0 / 50%)
         borderStyle: 'solid',
         borderWidth: 1,
-        // borderColor: '#f5f5f5',
         borderColor: '#0488F7',
         borderRadius: 4,
         marginBottom: 10 
@@ -583,7 +582,7 @@ export default StyleSheet.create({
         backgroundColor: '#FFFFFF',
         padding: 15,
         shadowColor: '#000032',
-        shadowOffset: {width: 4, height: 4},
+        shadowOffset: { width: 4, height: 4 },
         shadowOpacity: 0.4,
         shadowRadius: 4,
         borderStyle: 'solid',
@@ -599,5 +598,4 @@ export default StyleSheet.create({
         fontSize: 14,
         fontWeight: '700'
       }
-
 });

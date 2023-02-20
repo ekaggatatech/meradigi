@@ -17,7 +17,7 @@ const DigitalMarketing = ({ navigation }) => {
         <View style={{ marginBottom: 20 }}>
           <Image style={ServicesStyles.webDevImage} source={require("../assets/DigitalMarketing/socialmedia.jpg")}/>
         </View>
-        <View style={ServicesStyles.hedingButton}>
+        <View style={ServicesStyles.headingButton}>
           <View style={{ marginBottom: 10 }}>
             <Text style={ServicesStyles.webText}>Digital Marketing Solutions</Text>
           </View>

@@ -53,13 +53,13 @@ const App = () => {
             <Stack.Screen name='HomePageScreen' component={Tabs} options={{ headerShown: false }} />
             <Stack.Screen name='Get Mobile App' component={MobileApp} />
             <Stack.Screen name='I Want A Very Fast Website' component={ServicesScreen} />
-            <Stack.Screen name='I Want Odoo ERP' component={ErpSolution} />
+            <Stack.Screen name='Odoo ERP Implementation' component={ErpSolution} />
             <Stack.Screen name='Rank My Website On Google' component={Seo} />
             <Stack.Screen name='Digital Marketing' component={DigitalMarketing} />
             <Stack.Screen name='Make Me Popular On Youtube' component={Youtube} />
             <Stack.Screen name='Make My Videos Popular On Facebook' component={Facebook} />
             <Stack.Screen name='Make My Videos Popular On Instagram' component={Instagram} />
-            <Stack.Screen name='I Need Moodle LMS' component={MoodleLMS} />
+            <Stack.Screen name='Moodle LMS Development' component={MoodleLMS} />
             <Stack.Screen name='Add Audio/Video Feature In My Website' component={AudioVideoOnWebsite} />
             <Stack.Screen name='Make My Product Famous' component={ProductFamous} />
             <Stack.Screen name='I Want An Annual Maintenance Plan' component={AnnualMaintenance} />
