@@ -597,5 +597,16 @@ export default StyleSheet.create({
         color: '#000000',
         fontSize: 14,
         fontWeight: '700'
-      }
+      },
+      moodleLmsTextOne:
+      {
+        color: '#4F80FF',
+        fontSize: 14,
+        fontWeight: 500,
+        textTransform: 'uppercase',
+        lineHeight: '1.3em',
+        letterSpacing: 3.5,
+        textAlign: 'center'
+      },
+      
 });

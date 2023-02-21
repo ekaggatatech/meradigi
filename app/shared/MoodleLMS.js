@@ -53,13 +53,24 @@ const MoodleLMS = () =>
       </View>
       <View>
         <Image
-        source={require("../assets/MoodleDevelopmentImplementation/moodleDevelopmentImplementation.jpg")}
-        style={ServicesStyles.erpSolutionsImageContainer}
-        alt="OdooERPImplementation"
-        title="OdooERPImplementation">
-      </Image>
+          source={require("../assets/MoodleDevelopmentImplementation/moodleDevelopmentImplementation.jpg")}
+          style={ServicesStyles.erpSolutionsImageContainer}
+          alt="OdooERPImplementation"
+          title="OdooERPImplementation">
+        </Image>
       </View>
       <View style={{ marginBottom: 10 }}>
+        <Text style={ServicesStyles.moodleLmsTextOne}>WHAT WE DO</Text>
+      </View>
+      <View style={{ marginBottom: 10 }}>
+        <Text style={ServicesStyles.erpWebText}>Our Moodle Development Includes</Text>
+      </View>
+      <View style={{ marginBottom: 10 }}>
+        <Text style={ServicesStyles.erpWebText}>
+          The best services we provide for our clients include our integrity to work for them and the dedication we show towards our individual projects.
+        </Text>
+      </View>
+      {/* <View style={{ marginBottom: 10 }}>
         <Text style={ServicesStyles.erpWebText}>Services We Offer</Text>
       </View>
       <View style={ServicesStyles.servicesCardMainViewOne}>
@@ -122,7 +133,7 @@ const MoodleLMS = () =>
               Lets Start
             </Text>
         </TouchableOpacity>
-      </View>
+      </View> */}
     </View>
     <View style={ServicesStyles.ourGlobalStatsView}>
         <LinearGradient 
