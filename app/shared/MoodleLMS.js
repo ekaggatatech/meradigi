@@ -36,9 +36,6 @@ const MoodleLMS = () =>
       </View>
       <View style={ServicesStyles.newUnderLine} />
       <View style={ServicesStyles.headingButton}>
-        {/* <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
-          <Text style={ServicesStyles.text}>Free Consult</Text>
-        </Pressable> */}
         <TouchableOpacity onPress={()=>setModalOpen(true)}>
           <LinearGradient 
             colors={['#0070FF','#29F2EA']}
@@ -46,7 +43,9 @@ const MoodleLMS = () =>
             end={{x:0,y:0}}
             style={ServicesStyles.bookFreeConsultationCallButton}
             title="Book A Free Consultation Call">
-              <Text style={ServicesStyles.bookFreeConsultationCallButtonText}>Book A Free Consultation Call</Text>
+              <Text style={ServicesStyles.bookFreeConsultationCallButtonText}>
+                Book A Free Consultation Call
+              </Text>
           </LinearGradient>
         </TouchableOpacity>
       </View>
@@ -128,56 +127,6 @@ const MoodleLMS = () =>
           LMS Mobile App {"\n"}Development
         </Text>
       </View>
-
-    </View>
-    <View style={ServicesStyles.ourGlobalStatsView}>
-        <LinearGradient 
-          colors={['#FFAAF2','#A2D7F4']}
-          start={{x:1,y:0}}
-          end={{x:0,y:0}}
-          style={ServicesStyles.ourGlobalStatsLinearGradient}>
-            <View style={{ marginBottom: 10 }}>
-              <Text style={ServicesStyles.ourGlobalStatsTitle}>
-                Our Global Stats
-              </Text>
-            </View>
-            <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
-              <View style={{ marginBottom: 10 }}>
-                <Text style={ServicesStyles.ourGlobalStatsTitle}>
-                  25+
-                </Text>
-              </View>
-              <View style={{ marginBottom: 10 }}>
-                <Text style={ServicesStyles.ourGlobalStatsSubContent}>
-                  Projects Completed
-                </Text>
-              </View>
-            </View>
-            <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
-              <View style={{ marginBottom: 10 }}>
-                <Text style={ServicesStyles.ourGlobalStatsTitle}>
-                  100+
-                </Text>
-              </View>
-              <View style={{ marginBottom: 10 }}>
-                <Text style={ServicesStyles.ourGlobalStatsSubContent}>
-                  Happy Clients
-                </Text>
-              </View>
-            </View>
-            <View style={{ marginBottom: 0, justifyContent: 'center', alignItems: 'center' }}>
-              <View style={{ marginBottom: 10 }}>
-                <Text style={ServicesStyles.ourGlobalStatsTitle}>
-                  4
-                </Text>
-              </View>
-              <View style={{ marginBottom: 10 }}>
-                <Text style={ServicesStyles.ourGlobalStatsSubContent}>
-                  Global Clients
-                </Text>
-              </View>
-            </View>
-          </LinearGradient>
     </View>
     <View>
       <GetInTouchWithUsForm/>

@@ -45,14 +45,18 @@ return (
               end={{x:0,y:0}}
               style={styles.bookFreeConsultationCallButton}
               title="Book A Free Consultation Call">
-                <Text style={styles.bookFreeConsultationCallButtonText}>Book A Free Consultation Call</Text>
+                <Text style={styles.bookFreeConsultationCallButtonText}>
+                  Book A Free Consultation Call
+                </Text>
             </LinearGradient>
           </TouchableOpacity>
       </View>
       <View style={[styles.twoButtons,styles.marginStyling,styles.marginTopStyling]}>
-          <TouchableOpacity onPress={() => navigation.navigate('Contact Us')} title="Contact Us">
+          <TouchableOpacity onPress={()=>setModalOpen(true)} title="Contact Us">
             <View style={styles.contactUsButton}>
-              <Text style={styles.contactUsButtonText}>Contact Us</Text>
+              <Text style={styles.contactUsButtonText}>
+                Contact Us
+              </Text>
             </View>
           </TouchableOpacity>
       </View>
