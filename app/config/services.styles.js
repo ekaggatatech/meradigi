@@ -598,15 +598,87 @@ export default StyleSheet.create({
         fontSize: 14,
         fontWeight: '700'
       },
+      bookFreeConsultationCallButton:
+      {
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingVertical: 14, 
+        paddingHorizontal: 24,
+        backgroundColor: 'transparent',
+        borderRadius: 9
+      },
+      bookFreeConsultationCallButtonText:
+      {
+        fontSize: 16,
+        fontWeight: 600,
+        fontWeight: 'normal',
+        letterSpacing: 0.25,
+        color: '#ffffff',
+        backgroundColor: 'transparent',
+        textAlign: 'center'
+      },
       moodleLmsTextOne:
       {
         color: '#4F80FF',
         fontSize: 14,
-        fontWeight: 500,
+        fontWeight: 'bold',
         textTransform: 'uppercase',
-        lineHeight: '1.3em',
         letterSpacing: 3.5,
         textAlign: 'center'
       },
-      
+      moodleLmsTextTwo:
+      {
+        color: '#343F5A',
+        fontSize: 23,
+        fontWeight: 'bold',
+        textAlign: 'center'
+      },
+      moodleLmsTextThree:
+      {
+        color: '#5C6680',
+        fontSize: 14,
+        fontWeight: 'bold',
+        textAlign: 'center'
+      },
+      moodleLmsViewOne:
+      {
+        marginBottom: 10, 
+        flexDirection: 'row', 
+        display: 'flex', 
+        justifyContent: 'center',
+        marginLeft: 20,
+        marginRight: 20,
+        borderColor: '#097AFC',
+        borderWidth: 2,
+        borderRadius: 16,
+        width: 'auto',
+        height: 80,
+        padding: 10
+      },
+      moodleLmsImageOne:
+      {
+          alignItems: 'center',
+          /* display: 'flex', 
+          justifyContent: 'center', 
+          marginLeft: 20, 
+          marginRight: 20, */
+          /* resizeMode: 'stretch', */
+          /* borderRadius: 15, */
+          width: 60,
+          height: 60,
+          shadowColor: '#000032',
+          shadowOffset: { width: 2, height: 4 },
+          shadowOpacity: 0,
+          shadowRadius: 4,
+          flexDirection: 'row'
+      },
+      moodleLmsTextFour:
+      {
+        color: '#343F5A',
+        fontSize: 18,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        marginLeft: 10
+      }
 });

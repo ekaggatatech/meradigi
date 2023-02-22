@@ -2,6 +2,8 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+// import 'expo-dev-client';
+
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import MobileApp from './app/shared/MobileApp';
 import ErpSolution from './app/shared/ErpSolution';

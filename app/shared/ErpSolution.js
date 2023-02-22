@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, ScrollView, Pressable, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import ServicesStyles from '../config/services.styles';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
@@ -36,9 +36,19 @@ const ErpSolution = () =>
       </View>
       <View style={ServicesStyles.newUnderLine} />
       <View style={ServicesStyles.headingButton}>
-        <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
+        {/* <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
           <Text style={ServicesStyles.text}>Free Consult</Text>
-        </Pressable>
+        </Pressable> */}
+        <TouchableOpacity onPress={()=>setModalOpen(true)}>
+          <LinearGradient 
+            colors={['#0070FF','#29F2EA']}
+            start={{x:1,y:0}}
+            end={{x:0,y:0}}
+            style={ServicesStyles.bookFreeConsultationCallButton}
+            title="Book A Free Consultation Call">
+              <Text style={ServicesStyles.bookFreeConsultationCallButtonText}>Book A Free Consultation Call</Text>
+          </LinearGradient>
+        </TouchableOpacity>
       </View>
       <View style={{ marginBottom: 10 }}>
         <Text style={ServicesStyles.newTitle}>

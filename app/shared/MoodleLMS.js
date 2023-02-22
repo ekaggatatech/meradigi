@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Image, ScrollView, Pressable, TouchableOpacity } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import ServicesStyles from '../config/services.styles';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
@@ -36,16 +36,26 @@ const MoodleLMS = () =>
       </View>
       <View style={ServicesStyles.newUnderLine} />
       <View style={ServicesStyles.headingButton}>
-        <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
+        {/* <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
           <Text style={ServicesStyles.text}>Free Consult</Text>
-        </Pressable>
+        </Pressable> */}
+        <TouchableOpacity onPress={()=>setModalOpen(true)}>
+          <LinearGradient 
+            colors={['#0070FF','#29F2EA']}
+            start={{x:1,y:0}}
+            end={{x:0,y:0}}
+            style={ServicesStyles.bookFreeConsultationCallButton}
+            title="Book A Free Consultation Call">
+              <Text style={ServicesStyles.bookFreeConsultationCallButtonText}>Book A Free Consultation Call</Text>
+          </LinearGradient>
+        </TouchableOpacity>
       </View>
       <View style={{ marginBottom: 10 }}>
         <Text style={ServicesStyles.newTitle}>
           Speak to us to see if it's a fit for you
         </Text>
       </View> 
-      <View style={{ flexDirection: 'row', textAlign: 'center', display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
+      <View style={{ flexDirection: 'row', textAlign: 'center', display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
         <Image source={require("../assets/phoneCall.png")} alt="PhoneCall" title="PhoneCall"></Image>
         <Text style={ServicesStyles.newTitleOne}>
           +91-9988776655
@@ -55,85 +65,70 @@ const MoodleLMS = () =>
         <Image
           source={require("../assets/MoodleDevelopmentImplementation/moodleDevelopmentImplementation.jpg")}
           style={ServicesStyles.erpSolutionsImageContainer}
-          alt="OdooERPImplementation"
-          title="OdooERPImplementation">
+          alt="MoodleLMSImplementation&Development"
+          title="MoodleLMSImplementation&Development">
         </Image>
       </View>
       <View style={{ marginBottom: 10 }}>
-        <Text style={ServicesStyles.moodleLmsTextOne}>WHAT WE DO</Text>
+        <Text style={ServicesStyles.moodleLmsTextOne}>
+          WHAT WE DO
+        </Text>
       </View>
       <View style={{ marginBottom: 10 }}>
-        <Text style={ServicesStyles.erpWebText}>Our Moodle Development Includes</Text>
+        <Text style={ServicesStyles.moodleLmsTextTwo}>
+          Our Moodle Development Includes
+        </Text>
       </View>
       <View style={{ marginBottom: 10 }}>
-        <Text style={ServicesStyles.erpWebText}>
+        <Text style={ServicesStyles.moodleLmsTextThree}>
           The best services we provide for our clients include our integrity to work for them and the dedication we show towards our individual projects.
         </Text>
       </View>
-      {/* <View style={{ marginBottom: 10 }}>
-        <Text style={ServicesStyles.erpWebText}>Services We Offer</Text>
-      </View>
-      <View style={ServicesStyles.servicesCardMainViewOne}>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            CRM
-          </Text>
-        </View>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            Sales Management
-          </Text>
-        </View>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            Invoicing
-          </Text>
-        </View>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            Recruitment Management
-          </Text>
-        </View>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            Event Marketing
-          </Text>
-        </View>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            Manufacturing Apps
-          </Text>
-        </View>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            Warehouse Management
-          </Text>
-        </View>
-        <View style={ServicesStyles.servicesCard}>
-          <Text style={ServicesStyles.servicesText}>
-            Project Management
-          </Text>
-        </View>
-      </View>
-      <View>
+      <View style={ServicesStyles.moodleLmsViewOne}>
         <Image
-        source={require("../assets/OdooERPImplementation/odooERPStructure.png")}
-        style={ServicesStyles.erpSolutionsImageContainer}
-        alt="WhyOdooERP?"
-        title="WhyOdooERP?">
+          source={require("../assets/MoodleDevelopmentImplementation/consultant.png")}
+          style={ServicesStyles.moodleLmsImageOne}
+          alt="ConsultationServices"
+          title="ConsultationServices">
         </Image>
+        <Text style={ServicesStyles.moodleLmsTextFour}>
+          Consultation Services
+        </Text>
       </View>
-      <View style={[ServicesStyles.letsStartButtonView,ServicesStyles.mainMarginBottomProp]}>
-        <TouchableOpacity 
-          style={ServicesStyles.letsStartButton}
-          alt="Lets Start" 
-          title="Lets Start"
-          onPress={()=>setModalOpen(true)}>
-            <Text style={ServicesStyles.letsStartButtonText}>
-              Lets Start
-            </Text>
-        </TouchableOpacity>
-      </View> */}
+      <View style={ServicesStyles.moodleLmsViewOne}>
+        <Image
+          source={require("../assets/MoodleDevelopmentImplementation/online-lesson.png")}
+          style={ServicesStyles.moodleLmsImageOne}
+          alt="LMSCustomizations"
+          title="LMSCustomizations">
+        </Image>
+        <Text style={ServicesStyles.moodleLmsTextFour}>
+          LMS Customizations
+        </Text>
+      </View>
+      <View style={ServicesStyles.moodleLmsViewOne}>
+        <Image
+          source={require("../assets/MoodleDevelopmentImplementation/file-sharing.png")}
+          style={ServicesStyles.moodleLmsImageOne}
+          alt="LMSMigration&Integration"
+          title="LMSMigration&Integration">
+        </Image>
+        <Text style={ServicesStyles.moodleLmsTextFour}>
+          LMS Migration & {"\n"}Integration
+        </Text>
+      </View>
+      <View style={ServicesStyles.moodleLmsViewOne}>
+        <Image
+          source={require("../assets/MoodleDevelopmentImplementation/booking.png")}
+          style={ServicesStyles.moodleLmsImageOne}
+          alt="LMSMobileAppDevelopment"
+          title="LMSMobileAppDevelopment">
+        </Image>
+        <Text style={ServicesStyles.moodleLmsTextFour}>
+          LMS Mobile App {"\n"}Development
+        </Text>
+      </View>
+
     </View>
     <View style={ServicesStyles.ourGlobalStatsView}>
         <LinearGradient 
