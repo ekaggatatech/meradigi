@@ -15,31 +15,28 @@ const ErpSolution = () =>
     <ScrollView>
     <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
     <View style={ServicesStyles.container}>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Image style={ServicesStyles.webDevImage} source={require("../assets/OdooERPImplementation/erpsolution.jpg")} />
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.erpWebText}>Odoo ERP Implementation</Text>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.webText}>Our best-in-class Business solution, {'\n'}To le you to grow business higher!</Text>
       </View>
-      {/* <View style={{ marginBottom: 10 }}>
+      {/* <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.erpWebText}>
           Odoo ERP {'\n'}Implementation
         </Text>
       </View> */}
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.erpSolutionsText}>
           <Text style={{ fontWeight: 'bold' }}>Odoo Implementation</Text> is the service of implementing the <Text style={{ fontWeight: 'bold' }}>Odoo modules</Text> (formerly known as OpenERP and before that, TinyERP) and <Text style={{ fontWeight: 'bold' }}>Odoo Apps</Text>, which is a suite of open-source enterprise management applications.Targeting companies of all sizes, the application suite includes <Text style={{ fontWeight: 'bold' }}>odoo modules</Text> and <Text style={{ fontWeight: 'bold' }}>Odoo Apps</Text> like <Text style={{ fontWeight: 'bold' }}>Sales-Purchase Management, Accounting, Bills of materials, Warehouses Management </Text>and almost all running operations.
         </Text>
       </View>
       <View style={ServicesStyles.newUnderLine} />
       <View style={ServicesStyles.headingButton}>
-        {/* <Pressable style={ServicesStyles.button} onPress={()=>setModalOpen(true)}>
-          <Text style={ServicesStyles.text}>Free Consult</Text>
-        </Pressable> */}
-        <TouchableOpacity onPress={()=>setModalOpen(true)}>
+        <TouchableOpacity>
           <LinearGradient 
             colors={['#0070FF','#29F2EA']}
             start={{x:1,y:0}}
@@ -50,12 +47,12 @@ const ErpSolution = () =>
           </LinearGradient>
         </TouchableOpacity>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.newTitle}>
           Speak to us to see if it's a fit for you
         </Text>
       </View> 
-      <View style={{ flexDirection: 'row', textAlign: 'center', display: 'flex', justifyContent: 'center', marginBottom: 20 }}>
+      <View style={ServicesStyles.mobileNumberPosition}>
         <Image source={require("../assets/phoneCall.png")} alt="PhoneCall" title="PhoneCall"></Image>
         <Text style={ServicesStyles.newTitleOne}>
           +91-9988776655
@@ -69,7 +66,7 @@ const ErpSolution = () =>
         title="OdooERPImplementation">
       </Image>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.erpWebText}>Services We Offer</Text>
       </View>
       <View style={ServicesStyles.servicesCardMainViewOne}>
@@ -140,42 +137,42 @@ const ErpSolution = () =>
           start={{x:1,y:0}}
           end={{x:0,y:0}}
           style={ServicesStyles.ourGlobalStatsLinearGradient}>
-            <View style={{ marginBottom: 10 }}>
+            <View style={ServicesStyles.mainMarginBottomProp}>
               <Text style={ServicesStyles.ourGlobalStatsTitle}>
                 Our Global Stats
               </Text>
             </View>
             <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
-              <View style={{ marginBottom: 10 }}>
+              <View style={ServicesStyles.mainMarginBottomProp}>
                 <Text style={ServicesStyles.ourGlobalStatsTitle}>
                   25+
                 </Text>
               </View>
-              <View style={{ marginBottom: 10 }}>
+              <View style={ServicesStyles.mainMarginBottomProp}>
                 <Text style={ServicesStyles.ourGlobalStatsSubContent}>
                   Projects Completed
                 </Text>
               </View>
             </View>
             <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
-              <View style={{ marginBottom: 10 }}>
+              <View style={ServicesStyles.mainMarginBottomProp}>
                 <Text style={ServicesStyles.ourGlobalStatsTitle}>
                   100+
                 </Text>
               </View>
-              <View style={{ marginBottom: 10 }}>
+              <View style={ServicesStyles.mainMarginBottomProp}>
                 <Text style={ServicesStyles.ourGlobalStatsSubContent}>
                   Happy Clients
                 </Text>
               </View>
             </View>
             <View style={{ marginBottom: 0, justifyContent: 'center', alignItems: 'center' }}>
-              <View style={{ marginBottom: 10 }}>
+              <View style={ServicesStyles.mainMarginBottomProp}>
                 <Text style={ServicesStyles.ourGlobalStatsTitle}>
                   4
                 </Text>
               </View>
-              <View style={{ marginBottom: 10 }}>
+              <View style={ServicesStyles.mainMarginBottomProp}>
                 <Text style={ServicesStyles.ourGlobalStatsSubContent}>
                   Global Clients
                 </Text>

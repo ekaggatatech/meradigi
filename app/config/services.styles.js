@@ -160,7 +160,6 @@ export default StyleSheet.create({
       {
         fontSize: 19,
         fontWeight: 700,
-        lineHeight: 21,
         fontWeight: 'bold',
         letterSpacing: 0.25,
         color: '#000000'
@@ -192,7 +191,6 @@ export default StyleSheet.create({
       {
         fontSize: 20,
         fontWeight: 600,
-        lineHeight: 21,
         fontWeight: 'bold',
         letterSpacing: 0.25,
         color: '#ffffff'
@@ -473,7 +471,8 @@ export default StyleSheet.create({
         marginLeft: 20,
         marginRight: 20,
         fontSize: 18,
-        marginBottom: 0
+        marginBottom: 0,
+        letterSpacing: 0
       },
       erpSolutionsImageContainer:
       {
@@ -658,12 +657,6 @@ export default StyleSheet.create({
       moodleLmsImageOne:
       {
           alignItems: 'center',
-          /* display: 'flex', 
-          justifyContent: 'center', 
-          marginLeft: 20, 
-          marginRight: 20, */
-          /* resizeMode: 'stretch', */
-          /* borderRadius: 15, */
           width: 60,
           height: 60,
           shadowColor: '#000032',
@@ -680,5 +673,255 @@ export default StyleSheet.create({
         textAlign: 'center',
         textAlignVertical: 'center',
         marginLeft: 10
+      },
+      mobileNumberPosition:
+      {
+        flexDirection: 'row', 
+        textAlign: 'center', 
+        display: 'flex', 
+        justifyContent: 'center', 
+        marginBottom: 10
+      },
+      mobileAppText:
+      {
+        width: '98%',
+        textAlign: 'left',
+        fontSize: 14,
+        marginBottom: 0,
+        letterSpacing: 0,
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 10,
+        marginRight: 10
+      },
+      mobileAppTextOne:
+      {
+        color: '#000',
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center'
+      },
+      mobileAppTextTwo:
+      {        
+        fontSize: 26,
+        fontWeight: 'bold',
+        fontStyle: 'italic',
+        textAlignVertical: 'top',
+        color: '#fa346e'
+      },
+      containerTwo:
+      {
+        flex: 1,
+        backgroundColor: '#f7f9fb',
+        background: '#f7f9fb'
+      },
+      mobileAppDevelopmentCard:
+      {
+        backgroundColor: '#383838',
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: '#f5f5f5',
+        borderRadius: 12,
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center',
+        marginBottom: 10,
+        width: 360,
+        padding: 15,
+        flexDirection: 'row'
+      },
+      mobileAppDevelopmentCardImage:
+      {
+        alignSelf: 'center',
+        marginRight: 10
+      },
+      mobileAppDevelopmentCardText:
+      {
+        color: '#FFFFFF',
+        fontSize: 20,
+        fontWeight: 'normal',
+        alignSelf: 'center',
+        textAlign: 'center',
+        textAlignVertical: 'center'
+      },
+      twoButtons:
+      {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent:'center'
+      },
+      marginStyling:
+      {
+        matrginBottom: 10,
+        marginTop: 0
+      },
+      marginTopStyling:
+      {
+        marginTop: 10
+      },
+      contactUsButton: 
+      {
+        fontSize: 16,
+        fontWeight: 'normal',
+        backgroundColor: '#409EFF',
+        color: '#ffffff',
+        borderRadius: 9,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        paddingVertical: 10, 
+        paddingHorizontal: 10,
+      },
+      contactUsButtonText: 
+      {
+        color: "#ffffff",
+        fontWeight: "normal",
+        fontSize: 16,
+        textAlign: "center",
+        letterSpacing: 0.4
+      },
+      mobileAppDevelopmentNewBg:
+      {
+        backgroundColor: '#fa346e',
+        opacity: .85,
+        padding: 10,
+        borderStyle: 'solid',
+        borderWidth: 0,
+        borderColor: '#fa346e',
+        borderRadius: 0,
+        width: '100%'
+      },
+      mobileAppDevelopmentTitle:
+      {
+        color: '#FFFFFF',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        fontSize: 28
+      },
+      mobileAppDevelopmentSubContent:
+      {
+        color: '#FFFFFF',
+        fontSize: 19,
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        fontWeight: 'normal'
+      },
+      mobileAppDevelopmentOurSpecialFaturesTitleText:
+      {
+        color: '#000',
+        fontSize: 26,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        alignItems: 'center'
+      },
+      mobileAppDevelopmentOurSpecialFaturesSubTitleText:
+      {
+        color: '#565656',
+        fontSize: 16,
+        fontWeight: '400',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        alignItems: 'center'
+      },
+      mobileAppDevelopmentImageContainer:
+      {
+        marginBottom: 10, 
+        alignItems: 'center',
+        display: 'flex', 
+        justifyContent: 'center', 
+        marginLeft: 0, 
+        marginRight: 0,
+        resizeMode: 'stretch',
+        borderRadius: 15,
+        width: '100%',
+        height: 200,
+        shadowColor: '#000032',
+        shadowOffset: { width: 2, height: 4 },
+        shadowOpacity: 0,
+        shadowRadius: 4
+      },
+      mobileAppDevelopmentFeaturesCard:
+      {
+        backgroundColor: 'transparent',
+        borderStyle: 'solid',
+        borderWidth: 0,
+        borderColor: '#383838',
+        borderRadius: 12,
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center',
+        marginBottom: 10,
+        width: 360,
+        padding: 10,
+        flexDirection: 'row'
+      },
+      mobileAppDevelopmentFeaturesCardImageView:
+      {
+        backgroundColor: '#FFFFFF',
+        borderRadius: 40,
+        marginRight: 10,
+        padding: 12
+      },
+      mobileAppDevelopmentFeaturesCardImage:
+      {
+        alignSelf: 'center',
+        alignItems: 'center',
+        width: 40,
+        height: 40    
+      },
+      mobileAppDevelopmentFeaturesCardText:
+      {
+        color: '#383838',
+        fontSize: 20,
+        fontWeight: 'bold',
+        alignSelf: 'center',
+        textAlign: 'center',
+        textAlignVertical: 'center'
+      },
+      mobileAppDevelopmentNewTextOne:
+      {
+        color: '#fff',
+        fontSize: 32,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        alignItems: 'center'
+      },
+      mobileAppDevelopmentNewTextTwo:
+      {
+        color: '#fd9ab7',
+        fontSize: 15,
+        fontWeight: 'bold',
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        alignItems: 'center'
+      },
+      mobileAppDevelopmentButtonImages:
+      {
+        boxShadow: '0 20px 60px 0 rgb(0 0 0 / 15%)',
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center'
+      },
+      mobileAppDevelopmentDownloadAppImage:
+      {
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 0,
+        marginRight: 0,
+        alignItems: 'center',
+        width: '100%',
+        height: 400
       }
 });

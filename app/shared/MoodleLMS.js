@@ -15,21 +15,26 @@ const MoodleLMS = () =>
     <ScrollView>
     <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
     <View style={ServicesStyles.container}>
-      <View style={{ marginBottom: 10 }}>
-        <Image style={ServicesStyles.webDevImage} source={require("../assets/MoodleDevelopmentImplementation/seo.jpg")} />
+      <View style={ServicesStyles.mainMarginBottomProp}>
+        <Image 
+          style={ServicesStyles.webDevImage} 
+          source={require("../assets/MoodleDevelopmentImplementation/seo.jpg")} 
+          alt="MoodleDevelopmentImplementation" 
+          title="MoodleDevelopmentImplementation">
+        </Image>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.erpWebText}>Moodle Development & Implementation</Text>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.webText}>Our best-in-class Business solution, {'\n'}To le you to grow business higher!</Text>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.erpWebText}>
           Moodle Development
         </Text>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.erpSolutionsText}>
           We have a group of professional MOODLE builders having core understanding and significant trip in MOODLE development. As a MOODLE improvement company, we have assembled extremely good options corresponding to the customer’s particulars. MOODLE route customization is our strength, no longer simply the net however we have additionally tailor-made customized plugins or modules as per your enterprise specifications, alongside with the sturdy cell presence. We make certain to grant whole help to the customers with the aid of having fluent conversation at some point of the challenge and through rendering put up guide services.
         </Text>
@@ -49,12 +54,12 @@ const MoodleLMS = () =>
           </LinearGradient>
         </TouchableOpacity>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.newTitle}>
           Speak to us to see if it's a fit for you
         </Text>
       </View> 
-      <View style={{ flexDirection: 'row', textAlign: 'center', display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+      <View style={ServicesStyles.mobileNumberPosition}>
         <Image source={require("../assets/phoneCall.png")} alt="PhoneCall" title="PhoneCall"></Image>
         <Text style={ServicesStyles.newTitleOne}>
           +91-9988776655
@@ -68,17 +73,17 @@ const MoodleLMS = () =>
           title="MoodleLMSImplementation&Development">
         </Image>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.moodleLmsTextOne}>
           WHAT WE DO
         </Text>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.moodleLmsTextTwo}>
           Our Moodle Development Includes
         </Text>
       </View>
-      <View style={{ marginBottom: 10 }}>
+      <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.moodleLmsTextThree}>
           The best services we provide for our clients include our integrity to work for them and the dedication we show towards our individual projects.
         </Text>

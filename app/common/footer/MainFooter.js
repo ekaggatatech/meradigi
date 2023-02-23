@@ -72,7 +72,7 @@ const MainFooter = () =>
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Odoo ERP Implementation')}>
                             ERP IMPLEMENTATION
                         </Text>
                     </View>

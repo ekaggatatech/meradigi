@@ -1,109 +1,189 @@
-import { View, Text, Image ,ScrollView, StyleSheet} from 'react-native'
-import React from 'react'
-import ServicesStyles from '../config/services.styles'
+import React, { useState } from 'react';
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { BackgroundImage } from '../assets/MobileAppDevelopment/bgImg.png';
+import ServicesStyles from '../config/services.styles';
+import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
+import MobileAppDevelopmentCards from '../cards/MobileAppDevelopmentCards';
+import MobileAppDevelopmentSpecialFeaturesCards from '../cards/MobileAppDevelopmentSpecialFeaturesCards';
+import MainFooter from '../common/footer/MainFooter';
+import Footer from '../common/footer/Footer';
 
-
-const MobileApp = ({navigation}) => {
+const MobileApp = () => 
+{
+  const [modalOpen, setModalOpen] = useState(false);
+  const [colour, setColour] = useState({ color: '#fa346e' });
+  const GetColor = () => 
+  {
+    setColour({
+      color: '#000000'
+    });
+  };
   return (
+  <>
     <ScrollView>
+    <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <View style={ServicesStyles.container}>
-        <View >
-          <Image style={styles.mobileappImage} source={require('../assets/mobileApp/app_5.png')}/>
+        <View style={ServicesStyles.mainMarginBottomProp}>
+          <Image 
+            style={ServicesStyles.webDevImage} 
+            source={require('../assets/mobileApp/app_5.png')}
+            alt="MobileAppDevelopment"
+            title="MobileAppDevelopment">
+          </Image>
         </View>
-        <View style={ServicesStyles.headingButton}>
-          <View style={ServicesStyles.line}/>
-          <Text style={ServicesStyles.webText}>Mobile App Development</Text>
-        </View>
-        <View>
-          <Text style={ServicesStyles.webinfoText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a and typesetting industry. 
-            </Text>
-        </View>
-        <View>
-          <Image style={styles.mobileappImage} source={require('../assets/mobileApp/app_1.png')}/>
-        </View>
-        <Text style={ServicesStyles.webinfoText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        </Text>
-        <View>
-          <Image style={styles.mobileappImage} source={require('../assets/mobileApp/app_3.png')}/>
-        </View>
-        <Text style={ServicesStyles.webinfoText}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy 
-            text ever since the 1500s, when an unknown printer 
-            took a galley of type and scrambled it to make a type specimen book.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-        </Text>
-        <View>
-          <Text style={styles.baseText}>
-            How It's
-          <Text style={styles.innerText}> Work?</Text>
+        <View style={ServicesStyles.mainMarginBottomProp}>
+          <Text style={ServicesStyles.erpWebText}>
+            Mobile App Development
+          </Text>
+          <Text style={ServicesStyles.webText}>
+            # Amazing Feature For
+          </Text>
+          <Text style={ServicesStyles.erpWebText}>
+            Mobile App for your Business
           </Text>
         </View>
-        <View style={styles.workmode}>
-          <Text>1</Text>
+        <View style={ServicesStyles.mainMarginBottomProp}>
+          <Text style={ServicesStyles.mobileAppText}>
+            At Meradigi, we provide full-cycle mobile app development services,which include planning,developing,integrating,and managing. 
+            {"\n"}We offer end-to-end mobile application development solutions across many sectors,whether it be a customer-oriented or enterprise-level application.
+            {"\n"}Create an easy-to-use app for tablets,smartphones,or both to accelerate the growth of your company. 
+            By creating B2B,B2C,and C2C applications,we assist you in streamlining the difficulties of doing business.
+          </Text>
         </View>
-        <View style={styles.workmode}>
-          <Text>2</Text>
+        <View style={ServicesStyles.mainMarginBottomProp}>
+          <Image
+            style={ServicesStyles.mobileAppDevelopmentImageContainer}
+            source={require('../assets/MobileAppDevelopment/landing-app-layout-vector.png')}
+            alt="MobileAppforyourBusiness"
+            title="MobileAppforyourBusiness">
+          </Image>
         </View>
-        <View style={styles.workmode}>
-          <Text>3</Text>
+        <View style={{ flexDirection: 'row', display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+          <Text style={ServicesStyles.mobileAppTextOne}>
+            Our Mobile
+            <Text 
+              style={[ServicesStyles.mobileAppTextTwo, colour]} 
+              onPress={GetColor}> 
+                &nbsp;App&nbsp;
+            </Text> 
+            Development Services
+          </Text>
         </View>
-        <View style={ServicesStyles.exploreBtn}>
-            <Text style={ServicesStyles.exploreBtntext} 
-            >Choose Plan</Text>
+        <MobileAppDevelopmentCards/>
+        <View style={[ServicesStyles.twoButtons,ServicesStyles.marginStyling]}>
+          <TouchableOpacity onPress={()=>setModalOpen(true)} title="Contact Us" style={{ marginBottom: 10 }}>
+            <View style={ServicesStyles.contactUsButton}>
+              <Text style={ServicesStyles.contactUsButtonText}>
+                Contact Us
+              </Text>
+            </View>
+          </TouchableOpacity>
         </View>
+        <View style={ServicesStyles.mobileAppDevelopmentNewBg}>
+          <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={ServicesStyles.mainMarginBottomProp}>
+                    <Text style={ServicesStyles.mobileAppDevelopmentTitle}>
+                      165+
+                    </Text>
+                    <Text style={ServicesStyles.mobileAppDevelopmentSubContent}>
+                      Support Given
+                    </Text>
+                  </View>
+          </View>
+          <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={ServicesStyles.mainMarginBottomProp}>
+                    <Text style={ServicesStyles.mobileAppDevelopmentTitle}>
+                      254+
+                    </Text>
+                    <Text style={ServicesStyles.mobileAppDevelopmentSubContent}>
+                      Clients Rating
+                    </Text>
+                  </View>
+          </View>
+          <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
+                  <View style={ServicesStyles.mainMarginBottomProp}>
+                    <Text style={ServicesStyles.mobileAppDevelopmentTitle}>
+                      2 M+
+                    </Text>
+                    <Text style={ServicesStyles.mobileAppDevelopmentSubContent}>
+                      Money Saved
+                    </Text>
+                  </View>
+          </View>
+          <View style={{ marginBottom: 10, justifyContent: 'center', alignItems: 'center' }}>
+                  <View>
+                    <Text style={ServicesStyles.mobileAppDevelopmentTitle}>
+                      145+
+                    </Text>
+                    <Text style={ServicesStyles.mobileAppDevelopmentSubContent}>
+                      Happy Clients
+                    </Text>
+                  </View>
+          </View>
+        </View>
+        <View style={{ backgroundColor: '#F7F9FB', paddingTop: 10 }}>
+          <View style={ServicesStyles.mainMarginBottomProp}>
+            <Text style={ServicesStyles.mobileAppDevelopmentOurSpecialFaturesTitleText}>
+              Our Special 
+              <Text 
+              style={[ServicesStyles.mobileAppTextTwo, colour]} 
+              onPress={GetColor}> 
+                &nbsp;Features&nbsp;
+              </Text>
+            </Text>
+            <Text style={ServicesStyles.mobileAppDevelopmentOurSpecialFaturesSubTitleText}>
+              A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradise.
+            </Text>
+          </View>
+          <MobileAppDevelopmentSpecialFeaturesCards />
+          <View 
+            style={{ 
+              backgroundColor: '#fa346e', 
+              paddingTop: 10, 
+              paddingBottom: 10, 
+              backgroundImage: `url(${BackgroundImage})`,
+              backgroundPosition: 'bottom left',
+              backgroundRepeat: 'no-repeat',
+              backgroundSize: 'cover'
+            }}>
+              <View style={ServicesStyles.mainMarginBottomProp}>
+                <Text style={ServicesStyles.mobileAppDevelopmentNewTextOne}>
+                  Download Meradigi App!
+                </Text>
+                <Text style={ServicesStyles.mobileAppDevelopmentNewTextTwo}>
+                  Download our App to know more about our services. Download it from above links  
+                </Text>
+              </View>
+              <View>
+                <Image 
+                  style={[ServicesStyles.mobileAppDevelopmentButtonImages,ServicesStyles.mainMarginBottomProp]}
+                  source={require('../assets/MobileAppDevelopment/Google-play.png')}
+                  alt="GooglePlayStore"
+                  title="GooglePlayStore">
+                </Image>
+                <Image 
+                  style={ServicesStyles.mobileAppDevelopmentButtonImages}
+                  source={require('../assets/MobileAppDevelopment/App-store-Button.png')}
+                  alt="AppStore"
+                  title="AppStore">
+                </Image>
+              </View>
+              <View style={ServicesStyles.mainMarginBottomProp}>
+                <Image 
+                  style={ServicesStyles.mobileAppDevelopmentDownloadAppImage}
+                  source={require('../assets/MobileAppDevelopment/Download_img.png')}
+                  alt="DownloadMeradigiApp"
+                  title="DownloadMeradigiApp">
+                </Image>
+              </View>
+          </View>
+        </View>
+        <MainFooter/>
+        <Footer/>
       </View>
     </ScrollView>
-  )
+  </>
+  );
 }
 
-const styles = StyleSheet.create({
-  mobileappImage:{
-    width:400,
-    height:400,
-    resizeMode:'cover',
-  },
-  baseText: {
-    fontWeight: 'bold',
-    fontSize:25,
-    marginLeft:10
-  },
-  innerText: {
-    color: '#00d4ff'
-  },
-  workmode:{
-    margin:30,
-    width:350,
-    height:80,
-    backgroundColor:'#b0c4de',
-    justifyContent:'center',
-    alignSelf:'center',
-    borderRadius:8,
-  }
-})
-
-export default MobileApp
+export default MobileApp;

@@ -21,7 +21,7 @@ const Image15= require('../assets/servicesImg/Getabesthostingplan.png');
 const Image16= require('../assets/servicesImg/Hireadeveloper.png');
 
 const services = [
-        { key:1, name:"Get Mobile App", id:1, source:Image1 },
+        { key:1, name:"Get A Mobile App", id:1, source:Image1 },
         { key:2, name:"I Want A Very Fast Website", id:2,source: Image2 },
         { key:3, name:"Rank My Website On Google", id:3,source: Image3 },
         { key:4, name:"Make Me Popular On Youtube", id:4, source: Image4 },
@@ -53,32 +53,12 @@ const HomeServices = () => {
                     </Text>
                 </View>
                 <View>
-                    {/* <FlatList 
-                        style={styles.flatlistDesign}
-                        data={services}
-                        numColumns={2}
-                        keyExtractor={(index) => index.id}
-                        renderItem={({item}) => (<><Product product={item}/></>)} /> */}
                     <ScrollView>
                         <View style={styles.productContainer}>
                             {services.map(item => <View style={styles.newItem} key={item.id}><Product product={item} /></View>)}
                         </View>
                     </ScrollView>
                 </View>
-                {/* <Text style={styles.confusedText}>
-                   I'm Confused
-                </Text>  */}
-                {/* <View> */}
-                  {/* <Image style={styles.queImage} source={require("../assets/queImage.png")}/> */}
-                  {/* <Text style={styles.confusedText} >
-                    Book A free 15 min Consultation Call
-                   </Text> */}
-                {/* <Button
-                    style={styles.bookButton}
-                    title="Book A Free Consultation Call"
-                    onPress={()=>setModalOpen(true)}
-                />
-                </View> */}
         </ScrollView>  
     </>
   );

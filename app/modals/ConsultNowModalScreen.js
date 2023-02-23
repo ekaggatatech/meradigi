@@ -347,30 +347,31 @@ const ConsultNowModalScreen = ({modalOpen, setModalOpen}) =>
 
 return (
 <>
-  <ScrollView>
+  {/* <ScrollView> */}
     <Modal visible={modalOpen} animationType="slide">
-    <ScrollView>
-          <View style={ServicesStyles.positioning}>
+    {/* <ScrollView> */}
+          {/* <View style={ServicesStyles.positioning}>
             <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
-          </View>
+          </View> */}
           <View style={ServicesStyles.getInTouchWithUsContainerView}> 
             <View style={ServicesStyles.getInTouchWithUsForm}>
-              <View style={{ marginTop: 20, marginBottom: 10 }}>
+              {/* <View style={{ marginTop: 0, marginBottom: 0 }}>
                 <Text style={ServicesStyles.getInTouchWithUsFirstTitle}>
                   Are you confused? Need Consultation
                 </Text>
-              </View>
-              <View style={{ marginTop: 0, marginBottom: 20 }}>
+              </View> */}
+              <View style={{ marginTop: 20, marginBottom: 10 }}>
                 <Text style={ServicesStyles.getInTouchWithUsTitleText}>
                   Get in touch with us!
                 </Text>
               </View>
               <View>
+                <ScrollView>
                 <LinearGradient 
                   colors={['#FFFFFFE6','#FFFFFF']}
                   start={{x:0,y:0}}
                   end={{x:0,y:0}}
-                  style={{ borderRadius: 16, padding: 20, marginBottom: 20, borderWidth: 1, borderColor: '#DEDEDE' }}>
+                  style={{ borderRadius: 16, paddingLeft: 10, paddingRight: 10, paddingBottom: 10, paddingTop: 0, marginBottom: 10, borderWidth: 1, borderColor: '#DEDEDE' }}>                                    
                   <Formik
                       initialValues={{
                       firstName: "",
@@ -573,12 +574,13 @@ return (
                       )}
                   </Formik>
                 </LinearGradient>
+                </ScrollView>
               </View>
             </View>
         </View>
-        </ScrollView>
+        {/* </ScrollView> */}
       </Modal>
-  </ScrollView>
+  {/* </ScrollView> */}
 </>
 );
 }

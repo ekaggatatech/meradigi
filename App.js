@@ -53,7 +53,7 @@ const App = () => {
           <Stack.Navigator initialRouteName='HomePageScreen'>
             <Stack.Screen name='Welcome' component={WelcomeScreen} />
             <Stack.Screen name='HomePageScreen' component={Tabs} options={{ headerShown: false }} />
-            <Stack.Screen name='Get Mobile App' component={MobileApp} />
+            <Stack.Screen name='Get A Mobile App' component={MobileApp} />
             <Stack.Screen name='I Want A Very Fast Website' component={ServicesScreen} />
             <Stack.Screen name='Odoo ERP Implementation' component={ErpSolution} />
             <Stack.Screen name='Rank My Website On Google' component={Seo} />

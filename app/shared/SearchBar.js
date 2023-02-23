@@ -62,14 +62,6 @@ const SearchBar = ({value, updateSearch, style}) => {
                     {error}
                 </Text>
             }
-            {/* <View style={styles.login}>
-                <Icon 
-                  name="user" 
-                  size={40} 
-                  color="#00d4ff" 
-                  style={styles.icon} 
-                  onPress={() => navigation.navigate('Log In')} />
-            </View> */}
         </View >
     )
 }
@@ -85,7 +77,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     textInput: {
-        // backgroundColor: 'green',
         flex: 1,
     },
 

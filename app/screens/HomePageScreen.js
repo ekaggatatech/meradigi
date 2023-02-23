@@ -38,7 +38,7 @@ return (
           />
       </View>
       <View style={[styles.twoButtons,styles.marginStyling]}>
-           <TouchableOpacity onPress={()=>setModalOpen(true)}>
+           <TouchableOpacity>
             <LinearGradient 
               colors={['#0070FF','#29F2EA']}
               start={{x:1,y:0}}
