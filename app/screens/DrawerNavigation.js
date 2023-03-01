@@ -1,88 +1,10 @@
-import React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React from "react";
 import Icon from '@expo/vector-icons/AntDesign';
 
-import CustomDrawer from './app/components/CustomDrawer';
-import MyHeaderRight from './app/screens/MyHeaderRight';
-import Tabs from './app/screens/navigations/Tabs';
-import Login from './app/screens/LoginRegister/Login';
-import Register from './app/screens/LoginRegister/Register';
-import AboutUsScreen from './app/screens/AboutUsScreen/AboutUs';
-import WebDesigningPackage from './app/screens/PricingScreens/WebDesignPriceScreens/MainPackageScreens';
-import MobileApp from './app/shared/MobileApp';
-import ErpSolution from './app/shared/ErpSolution';
-import Seo from './app/shared/Seo';
-import Youtube from './app/shared/Youtube';
-import Facebook from './app/shared/Facebook';
-import Instagram from './app/shared/Instagram';
-import MoodleLMS from './app/shared/MoodleLMS';
-import AudioVideoOnWebsite from './app/shared/AudioVideoOnWebsite';
-import ProductFamous from './app/shared/ProductFamous';
-import DigitalMarketing from './app/shared/DigitalMarketing';
-import AnnualMaintenance from './app/shared/AnnualMaintenance';
-import HireDeveloper from './app/shared/HireDeveloper';
-import HostingPlan from './app/shared/HostingPlan';
-import CelebrityMarketing from './app/shared/CelebrityInfluencerMarketing';
-import RadioAdvertisement from './app/shared/RadioAdvertisement';
-import CelebritySlider from './app/screens/PricingScreens/CelebrityPriceScreens/CelebritySlider';
-import ServicesScreen from './app/screens/ServicesScreen';
-import PrivacyPolicyScreen from './app/screens/PrivacyPolicyScreen/PrivacyPolicy';
-import RefundPolicyScreen from './app/screens/RefundPolicyScreen/RefundPolicy';
-import TermsConditionsScreen from './app/screens/TermsConditionsScreen/TermsConditions';
-import ContentMarketing from './app/screens/ContentMarketing/ContentMarketing';
-import SocialMediaMarketing from './app/screens/SocialMediaMarketing/SocialMediaMarketing';
-import GraphicsDesigning from './app/screens/GraphicsDesigning/GraphicsDesigning';
-
-import MainPackages from './app/screens/PricingScreens/DigitalMarketPriceScreens/MainPackages';
-import ChoosePrice from './app/screens/PricingScreens/ERPPricingScreens/ChoosePrice';
-import TalktousModal from './app/screens/ConsultationForm/TalktousModal';
-import BasicWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/BasicWebPack';
-import ProfessionalWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/ProfessionalWebPack';
-import EnterpriseWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/EnterpriseWebPack';
-import DigitalMarketingPricingPlansScreen from './app/screens/PricingScreens/DigitalMarketingPricingPlansScreen/DigitalMarketingPricingPlansScreen';
-import OdooPricingPlansScreen from './app/screens/PricingScreens/OdooPricingPlansScreen/OdooPricingPlansScreen';
-import WebDevelopmentPricingPlansScreen from './app/screens/PricingScreens/WebDevelopmentPricingPlansScreen/WebDevelopmentPricingPlansScreen';
-import WelcomeScreen from './app/screens/WelcomeScreen';
-import ContactUsScreen from './app/screens/ContactUsScreen/ContactUs';
-
-// import Icon from '@expo/vector-icons/AntDesign';
-// import Ionicons from "react-native-vector-icons/Ionicons";
-// import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
-// import FontAwesome5 from "@expo/vector-icons";
-// import DrawerNavigation from './app/screens/DrawerNavigation';
-
-/* const HomeStack = createNativeStackNavigator();
-const GetAMobileAppStack = createNativeStackNavigator();
-const HomeStackScreen = () => {
-  return ( 
-    <>
-          <HomeStack.Navigator initialRouteName='HomePage'>
-            <HomeStack.Screen name='HomePage' component={Tabs} options={{ headerShown: false }} />
-          </HomeStack.Navigator>
-    </>
-  );
-}*/
-
-const RegisterStack = createNativeStackNavigator();
-const RegisterStackScreen = () => {
-  return ( 
-    <>
-          <RegisterStack.Navigator initialRouteName='HomePage'>
-            <RegisterStack.Screen name='Register' component={Register} options={{ headerShown: false }} />
-          </RegisterStack.Navigator>
-    </>
-  );
-}
-
-const Drawer = createDrawerNavigator();
-
-const App = () => {
-  return ( 
-    <>
-      <NavigationContainer>
-          <Drawer.Navigator 
+const DrawerNavigation = () => {
+  return (
+   <>
+        <Drawer.Navigator 
             initialRouteName='HomePage'
             drawerContent={ props => <CustomDrawer {...props} /> }
             screenOptions={{ 
@@ -141,13 +63,10 @@ const App = () => {
             <Drawer.Screen name='Pricing Plans' component={WebDesigningPackage} options={{ drawerLabel: 'Pricing Plans', title: false, drawerIcon: ({color}) => ( <Icon name='tago' size={22} color={color} /> ) }} />
             <Drawer.Screen name='About Us' component={AboutUsScreen} options={{ drawerLabel: 'About Us', title: false, drawerIcon: ({color}) => ( <Icon name='info' size={22} color={color} /> ) }} />
             <Drawer.Screen name='Log In' component={Login} options={{ drawerLabel: 'Log In', title: false, drawerIcon: ({color}) => ( <Icon name='user' size={22} color={color} /> ) }} />
-            <Drawer.Screen name='Register' component={RegisterStackScreen} options={{ drawerLabel: 'Register', title: false, drawerIcon: ({color}) => ( <Icon name='user' size={22} color={color} /> ) }}
-              // options={{ drawerLabel:()=>null, title:()=>null, drawerIcon:()=>null }} 
-            />
-          </Drawer.Navigator>
-      </NavigationContainer>
-    </>
-  );
-}
+            <Drawer.Screen name='Register' component={RegisterStackScreen} options={{ drawerLabel:()=>null, title:()=>null, drawerIcon:()=>null }} />
+        </Drawer.Navigator>
+   </>
+  )
+};
 
-export default App; 
+export default DrawerNavigation;

@@ -2,11 +2,11 @@ import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import React from 'react';
 import digitalMarketing from '../config/digitalMarketing.styles';
 import { LinearGradient } from 'expo-linear-gradient';
-import { useNavigation } from '@react-navigation/native';
+// import { useNavigation } from '@react-navigation/native';
 
-const DigitalMarketingCardViewScreen = () => {
+const DigitalMarketingCardViewScreen = ({ navigation }) => {
 
-const navigation = useNavigation();
+// const navigation = useNavigation();
 
 const digitalMarketingData = 
 [
@@ -44,19 +44,19 @@ const digitalMarketingData =
     }
 ];
 
-const digitalMarketingListItems = digitalMarketingData.map((d, index) =>  
-<TouchableOpacity style={digitalMarketing.digitalMarketingCardOne} key={d.id} id={d.id} onPress={d.urlLink}>
-        <LinearGradient 
-        colors={d.cardColors}
-        start={{x:0,y:0}}
-        end={{x:1,y:0}}
-        style={digitalMarketing.digitalMarketingCard}>
-            <View style={digitalMarketing.digitalMarketingView}>
-                <Image style={digitalMarketing.digitalMarketingCardImage} source={d.cardImageSource}></Image>
-                <Text style={digitalMarketing.digitalMarketingCardText}>{d.cardText}</Text>
-            </View>
-        </LinearGradient>
-</TouchableOpacity>
+const digitalMarketingListItems = digitalMarketingData.map((d) =>  
+    <TouchableOpacity style={digitalMarketing.digitalMarketingCardOne} key={d.id} id={d.id} onPress={d.urlLink}>
+            <LinearGradient 
+            colors={d.cardColors}
+            start={{x:0,y:0}}
+            end={{x:1,y:0}}
+            style={digitalMarketing.digitalMarketingCard}>
+                <View style={digitalMarketing.digitalMarketingView}>
+                    <Image style={digitalMarketing.digitalMarketingCardImage} source={d.cardImageSource}></Image>
+                    <Text style={digitalMarketing.digitalMarketingCardText}>{d.cardText}</Text>
+                </View>
+            </LinearGradient>
+    </TouchableOpacity>
 );
 
 return (

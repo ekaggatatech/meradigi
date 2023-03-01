@@ -64,7 +64,7 @@ const featuresData =
     }
 ];
 const featuresListItems = featuresData.map(
-(d, index) =>  
+(d) =>  
 <TouchableOpacity style={ServicesStyles.featureOne} key={d.id} id={d.id}>
         <LinearGradient 
         colors={d.cardColors}
@@ -81,9 +81,9 @@ const featuresListItems = featuresData.map(
 return (
 <>
     <ScrollView>
-    <View style={ServicesStyles.containerOne}>
-        { featuresListItems }
-    </View>
+        <View style={ServicesStyles.containerOne}>
+            { featuresListItems }
+        </View>
     </ScrollView>
 </>
 )

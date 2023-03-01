@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
 import ServicesStyles from '../config/services.styles';
 import buttonStyling from '../config/buttonStyling';
 import digitalMarketing from '../config/digitalMarketing.styles';
@@ -8,16 +9,15 @@ import DigitalMarketingDataCard from '../cards/DigitalMarketingDataCard';
 import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
 import MainFooter from '../common/footer/MainFooter';
 import Footer from '../common/footer/Footer';
-import { LinearGradient } from 'expo-linear-gradient';
 
 const DigitalMarketing = ({ navigation }) => {
   return (
+    <>
     <ScrollView>
       <View style={ServicesStyles.container}>
         <View style={{ marginBottom: 20 }}>
           <Image style={ServicesStyles.webDevImage} source={require("../assets/DigitalMarketing/socialmedia.jpg")}/>
         </View>
-        <View style={ServicesStyles.headingButton}>
           <View style={{ marginBottom: 10 }}>
             <Text style={ServicesStyles.webText}>Digital Marketing Solutions</Text>
           </View>
@@ -54,9 +54,7 @@ const DigitalMarketing = ({ navigation }) => {
               </LinearGradient>
             </TouchableOpacity>
           </View>
-          <View>
-            <DigitalMarketingCardViewScreen />
-          </View>
+          <DigitalMarketingCardViewScreen />
           <View style={{ marginBottom: 10, display: 'flex', justifyContent: 'center', marginLeft: 'auto', marginRight: 'auto' }}>
             <Text style={digitalMarketing.digitalMarketingOurServicesText}>
               Our Services
@@ -85,7 +83,6 @@ const DigitalMarketing = ({ navigation }) => {
               </View>
             </TouchableOpacity>
           </View>
-        </View>
       </View>
       <View>
         <GetInTouchWithUsForm/>
@@ -97,6 +94,7 @@ const DigitalMarketing = ({ navigation }) => {
         <Footer/>
       </View>
     </ScrollView>
+    </>
   );
 }
 

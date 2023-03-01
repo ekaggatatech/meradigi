@@ -14,7 +14,7 @@ const WelcomeScreen = ({navigation}) => {
                 <Button
                     style={styles.button}
                     title="Next"
-                    onPress={() => navigation.navigate('Home')}
+                    onPress={() => navigation.navigate('HomePage')}
                 />
             </View>
             <Text style={styles.welcomeheading}>WELCOME</Text>

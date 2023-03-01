@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, ImageBackground, StyleSheet, View, Text, Button} from "react-native";
+import { ImageBackground, StyleSheet, View, Text } from "react-native";
 import colors from '../../../config/colors';
 
 const DigitalPackage = ({navigation}) => {

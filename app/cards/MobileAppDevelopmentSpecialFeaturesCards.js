@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
 import ServicesStyles from '../config/services.styles';
 
 const MobileAppDevelopmentSpecialFeaturesCards = () => 
 {
-const digitalMarketingData = 
+const mobileAppDevelopmentSpecialFeaturesCardsData = 
 [
     {
         index: 1,
@@ -44,18 +44,18 @@ const digitalMarketingData =
     }
 ];
 
-const digitalMarketingListItems = digitalMarketingData.map((d) =>  
-    <View key={d.id} id={d.id} style={ServicesStyles.mobileAppDevelopmentFeaturesCard}>
+const mobileAppDevelopmentSpecialFeaturesCardsMainData = mobileAppDevelopmentSpecialFeaturesCardsData.map((d, index) =>  
+    <TouchableOpacity key={index} id={index} style={ServicesStyles.mobileAppDevelopmentFeaturesCard}>
         <View style={ServicesStyles.mobileAppDevelopmentFeaturesCardImageView}>
             <Image style={ServicesStyles.mobileAppDevelopmentFeaturesCardImage} source={d.cardImageSource}></Image>
         </View>
         <Text style={ServicesStyles.mobileAppDevelopmentFeaturesCardText}>{d.cardText}</Text>
-    </View>
+    </TouchableOpacity>
 );
 
 return (
     <>
-    { digitalMarketingListItems }
+        { mobileAppDevelopmentSpecialFeaturesCardsMainData }
     </>
 );
 }

@@ -1,13 +1,13 @@
 import React, { Component, useState, setState, useEffect } from 'react';
-import { Alert, Button, TextInput, Text,View, StyleSheet, Image, Parse } from 'react-native';
+import { Alert, Button, TextInput, Text, View, StyleSheet, Image, SafeAreaView, Parse } from 'react-native';
 // import Parse from 'parse/react-native';
 import ServicesStyles from '../../config/services.styles';
-
 import Spinner from 'react-native-loading-spinner-overlay';
 import {AuthContext} from '../../context/AuthContext';
+import { ScrollView } from 'react-native-gesture-handler';
 
 // export default class App extends Component {
-const Login = () => 
+function Login({navigation})
 {
   const [username, setUsername] = useState(null);
   const [password, setPassword] = useState(null);
@@ -81,49 +81,51 @@ const Login = () =>
     return (
       <>
         {/* <Spinner visible={isLoading} /> */}
-        <View style={[ServicesStyles.positioning,styles.newPaddingTopStyling]}>
-          <Image source={require("../../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
-        </View>
-        <View style={styles.container}>
-          <View style={{ marginBottom: 20 }}>
-            <TextInput
-              //value={this.state.username}
-              value={username}
-              // onChangeText={(username) => this.setState({ username })}
-              onChangeText={(text) => setUsername(text)}
-              placeholder={'Email-ID'}
-              style={styles.input}
-              autoCapitalize="none"
-              autoCorrect={false}
-            />
-            <TextInput
-              //value={this.state.password}
-              value={password}
-              // onChangeText={(password) => this.setState({ password })}
-              onChangeText={(text) => setPassword(text)}
-              placeholder={'Password'}
-              secureTextEntry={true}
-              style={styles.input}
-              autoCapitalize="none"
-              autoCorrect={false}
-            />
-            <Button
-              title={'Login'}
-              style={styles.input}
-              // onPress={this.onLogin.bind(this)}
-              // onPress={() => doUserLogIn()}
-              onPress={() => { login(email, password); }}
-            />
+
+          <View style={styles.container}>
+            <View style={[ServicesStyles.positioning,styles.newPaddingTopStyling]}>
+              <Image source={require("../../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
+            </View>
+            <View style={{ marginBottom: 20 }}>
+              <TextInput
+                //value={this.state.username}
+                value={username}
+                // onChangeText={(username) => this.setState({ username })}
+                onChangeText={(text) => setUsername(text)}
+                placeholder={'Email-ID'}
+                style={styles.input}
+                autoCapitalize="none"
+                autoCorrect={false}
+              />
+              <TextInput
+                //value={this.state.password}
+                value={password}
+                // onChangeText={(password) => this.setState({ password })}
+                onChangeText={(text) => setPassword(text)}
+                placeholder={'Password'}
+                secureTextEntry={true}
+                style={styles.input}
+                autoCapitalize="none"
+                autoCorrect={false}
+              />
+              <Button
+                title={'Login'}
+                style={styles.input}
+                // onPress={this.onLogin.bind(this)}
+                // onPress={() => doUserLogIn()}
+                onPress={() => { login(email,password); }}
+              />
+            </View>
+            <View>
+              <Text>Not a member yet?</Text>
+              <Text
+                style={styles.registerText} 
+                onPress={() => navigation.navigate('Register')}
+                >
+                  Register
+              </Text>
+            </View>
           </View>
-          <View>
-            <Text>Not a member yet?</Text>
-            <Text
-              style={styles.registerText} 
-              onPress={() => this.props.navigation.navigate('Register')}>
-              Register Now
-            </Text>
-          </View>
-        </View>
       </>
     );
   //}
@@ -134,13 +136,15 @@ export default Login;
 const styles = StyleSheet.create({
   newPaddingTopStyling:
   {
-    paddingTop: 10
+    marginBottom: 30
+    // paddingTop: 10
   },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
+    backgroundColor: '#FFFFFF'
+    // backgroundColor: '#ecf0f1',
   },
   input: {
     width: 200,

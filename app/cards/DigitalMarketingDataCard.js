@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, TouchableOpacity } from 'react-native';
 import digitalMarketing from '../config/digitalMarketing.styles';
 
 const DigitalMarketingDataCard = () => {
@@ -45,25 +45,25 @@ const digitalMarketingData =
 ];
 
 const digitalMarketingListItems = digitalMarketingData.map((d) =>  
-    <View style={digitalMarketing.digitalMarketingCardOne} key={d.id} id={d.id}>
+    <TouchableOpacity style={digitalMarketing.digitalMarketingCardOne} key={d.id} id={d.id}>
         <View style={digitalMarketing.digitalMarketingDataCard}>
             <View style={digitalMarketing.digitalMarketingView}>
                 <Image style={digitalMarketing.digitalMarketingCardImage} source={d.cardImageSource}></Image>
                 <Text style={digitalMarketing.digitalMarketingDataCardText}>{d.cardText}</Text>
             </View>
         </View>
-    </View>
+    </TouchableOpacity>
 );
 
 return (
     <>
         <ScrollView>
-        <View style={digitalMarketing.digitalMarketingContainerOne}>
-            { digitalMarketingListItems }
-        </View>
+            <View style={digitalMarketing.digitalMarketingContainerOne}>
+                { digitalMarketingListItems }
+            </View>
         </ScrollView>
     </>
-)
+);
 }
 
 export default DigitalMarketingDataCard;

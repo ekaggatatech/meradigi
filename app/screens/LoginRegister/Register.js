@@ -1,8 +1,7 @@
 import React from 'react';
-import {Text,View,Image, TextInput} from 'react-native';
-import Icon from '@expo/vector-icons/AntDesign';
+import { Text, View, Image, TextInput } from 'react-native';
 
-const Register = () => {
+const Register = ({ navigation }) => {
   return (
     <View style={{backgroundColor:"#FFF",height:"100%"}}>
                 <Image source ={require('../../assets/digitalMarketing.jpg')}

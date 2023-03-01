@@ -127,7 +127,7 @@ const MainFooter = () =>
                 </View>
                 <View>
                     <View>
-                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Home')}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('HomePage')}>
                             BLOG
                         </Text>
                     </View>

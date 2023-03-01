@@ -9,8 +9,8 @@ import Footer from '../common/footer/Footer';
 import ServicesStyles from '../config/services.styles';
 import { LinearGradient } from 'expo-linear-gradient';
 
-const HomePageScreen = ({navigation}) => 
-{
+const HomePage = () => {
+
   const [modalOpen, setModalOpen] = useState(false);
 
   const [value, setValue] = useState();
@@ -24,9 +24,6 @@ return (
   <>
     <ScrollView style={styles.container}>
     <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <View style={ServicesStyles.positioningOfElementsTwo}>
-        <Image source={require("../assets/userProfile.png")} alt="UserProfile" title="UserProfile" />
-      </View> 
       <View style={ServicesStyles.positioning}>
         <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
        </View> 
@@ -77,7 +74,8 @@ return (
   )
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create(
+{
   container:
   {
     width: '100%', 
@@ -119,8 +117,6 @@ const styles = StyleSheet.create({
     color: '#ffffff',
     backgroundColor: 'transparent',
     textAlign: 'center'
-    // lineHeight: 21,
-    // textShadow: '0 0 10 rgb(0 0 0 / 30%)'
   },
   contactUsButton: 
   {
@@ -146,6 +142,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     letterSpacing: 0.4
   }
-})
+}
+);
 
-export default HomePageScreen;
+export default HomePage;

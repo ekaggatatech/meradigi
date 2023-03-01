@@ -1,14 +1,18 @@
 import React from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from '@expo/vector-icons/AntDesign';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import HomePageScreen from '../HomePageScreen';
-import MenuScreen from '../MenuScreen';
+import HomePage from '../HomePage';
 import Login from '../LoginRegister/Login';
+
+// import MenuScreen from '../MenuScreen';
+// import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Tab = createBottomTabNavigator();
 
-const Tabs = () => {
+const Tabs = () => 
+{
     return(
+      <>
         <Tab.Navigator 
           screenOptions={ 
           ({ route }) => ({
@@ -25,20 +29,21 @@ const Tabs = () => {
             {
               iconName = focused ? 'user' : 'user';
             }
-            else if (route.name === 'Menu') 
+            /* else if (route.name === 'Menu') 
             {
               iconName = focused ? 'bars' : 'bars';
-            }
+            } */
             return <Icon name={iconName} size={size} color={color} />;
           },
           tabBarActiveTintColor: '#FE0629',
           tabBarInactiveTintColor: '#060606'
         })}
         >
-            <Tab.Screen name='Home' component={HomePageScreen}/>
-            <Tab.Screen name='Login' component={Login}/>
-            <Tab.Screen name='Menu' component={MenuScreen}/>
+          <Tab.Screen name='Home' component={HomePage}/>
+          <Tab.Screen name='Login' component={Login} />
+          {/* <Tab.Screen name='Menu' component={MenuScreen} /> */}
         </Tab.Navigator>
+      </>
     );
 }
 

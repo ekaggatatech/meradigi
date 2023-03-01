@@ -907,7 +907,6 @@ export default StyleSheet.create({
       },
       mobileAppDevelopmentButtonImages:
       {
-        boxShadow: '0 20px 60px 0 rgb(0 0 0 / 15%)',
         display: 'flex',
         justifyContent: 'center',
         marginLeft: 'auto',

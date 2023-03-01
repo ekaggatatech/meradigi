@@ -847,7 +847,7 @@ const OdooPricingPlansScreen = ({navigation}) => {
         </Tab.Navigator>
       </NavigationContainer>
       <View style={styles.goBackToHomeButtonView}>
-        <Button title="Go Back To Home" onPress={() => navigation.navigate('Home')} />
+        <Button title="Go Back To Home" onPress={() => navigation.navigate('HomePage')} />
       </View>
     </>
   );

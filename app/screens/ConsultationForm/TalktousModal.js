@@ -43,7 +43,7 @@ export default function RegisterForm() {
           keyboardShouldPersistTaps="handled"
           extraScrollHeight={150}
         >
-          {/* https://formik.org/docs/overview */}
+          {/* https://formik.org/docs/HomePage */}
           <Formik
             initialValues={{
               firstName: "",

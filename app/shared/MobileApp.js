@@ -8,15 +8,12 @@ import MobileAppDevelopmentSpecialFeaturesCards from '../cards/MobileAppDevelopm
 import MainFooter from '../common/footer/MainFooter';
 import Footer from '../common/footer/Footer';
 
-const MobileApp = () => 
-{
+const MobileApp = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [colour, setColour] = useState({ color: '#fa346e' });
-  const GetColor = () => 
+  function GetColor()
   {
-    setColour({
-      color: '#000000'
-    });
+    setColour({ color: '#000000' });
   };
   return (
   <>
@@ -64,12 +61,12 @@ const MobileApp = () =>
             <Text 
               style={[ServicesStyles.mobileAppTextTwo, colour]} 
               onPress={GetColor}> 
-                &nbsp;App&nbsp;
+                App
             </Text> 
             Development Services
           </Text>
         </View>
-        <MobileAppDevelopmentCards/>
+        <MobileAppDevelopmentCards />
         <View style={[ServicesStyles.twoButtons,ServicesStyles.marginStyling]}>
           <TouchableOpacity onPress={()=>setModalOpen(true)} title="Contact Us" style={{ marginBottom: 10 }}>
             <View style={ServicesStyles.contactUsButton}>
@@ -128,7 +125,7 @@ const MobileApp = () =>
               <Text 
               style={[ServicesStyles.mobileAppTextTwo, colour]} 
               onPress={GetColor}> 
-                &nbsp;Features&nbsp;
+                Features
               </Text>
             </Text>
             <Text style={ServicesStyles.mobileAppDevelopmentOurSpecialFaturesSubTitleText}>
@@ -178,9 +175,9 @@ const MobileApp = () =>
               </View>
           </View>
         </View>
-        <MainFooter/>
-        <Footer/>
       </View>
+      <MainFooter/>
+      <Footer/>
     </ScrollView>
   </>
   );
