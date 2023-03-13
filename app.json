@@ -19,17 +19,27 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "n"
+      "bundleIdentifier": "n",
+      "splash": {
+        "image": "./app/assets/mdlogo.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./app/assets/mdlogo.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.pooja_dhamanekar.meradigi"
+      "package": "com.pooja_dhamanekar.meradigi",
+      "splash": {
+        "image": "./app/assets/mdlogo.png",
+        "resizeMode": "contain",
+        "backgroundColor": "#ffffff"
+      }
     },
     "web": {
-      "favicon": "./app/assets/mdlogo.png"
+      "favicon": "./app/assets/md.png"
     },
     "description": "",
     "extra": {

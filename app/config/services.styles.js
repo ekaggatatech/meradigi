@@ -319,7 +319,7 @@ export default StyleSheet.create({
       subContentText:
       {
         color: '#FFFFFF',
-        fontSize: 19,
+        fontSize: 18,
         textAlign: 'center'
       },
       letsStartButtonView:

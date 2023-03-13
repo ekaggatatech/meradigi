@@ -46,15 +46,15 @@ const HomeServices = () => {
 
     return (
     <>
-        <ScrollView style={styles.scrollView} nestedScrollEnabled={true}>
+        <ScrollView nestedScrollEnabled={true}>
                 <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
                 <View>
-                    <Text style={styles.selectText}>
-                        Select Your Prefer Service
-                    </Text>
-                </View>
-                <View>
                     <ScrollView>
+                        <View>
+                            <Text style={styles.selectText}>
+                                Select Your Prefer Service
+                            </Text>
+                        </View>
                         <View style={styles.productContainer}>
                             {services.map(item=> <View style={styles.newItem} key={item.id}><Product product={item} /></View>)}
                         </View>

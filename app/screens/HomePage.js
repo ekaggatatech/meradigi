@@ -3,27 +3,27 @@ import { StyleSheet, View, Text, ScrollView, Image, TouchableOpacity } from 'rea
 import SearchBar from '../shared/SearchBar';
 import HomeServices from '../shared/HomeServices';
 import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
-import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 import MainFooter from '../common/footer/MainFooter';
 import Footer from '../common/footer/Footer';
 import ServicesStyles from '../config/services.styles';
 import { LinearGradient } from 'expo-linear-gradient';
+// import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 
-const HomePage = () => {
-
-  const [modalOpen, setModalOpen] = useState(false);
-
-  const [value, setValue] = useState();
-
-  function updateSearch(value) 
-  {
-    console.log(value);
-  }
-
+const HomePage = () => 
+{
+const [value, setValue] = useState();
+function updateSearch(value) 
+{
+  console.log(value);
+}
+// const [modalOpen, setModalOpen] = useState(false);
 return (
   <>
+    {/* <View style={{ justifyContent: 'center', backgroundColor: '#FFFFFF' }}>
+      <ActivityIndicator size={"large"} color={"#ff0000"}></ActivityIndicator>
+    </View> */}
     <ScrollView style={styles.container}>
-    <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
+      {/* <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} /> */}
       <View style={ServicesStyles.positioning}>
         <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
        </View> 
@@ -48,15 +48,6 @@ return (
             </LinearGradient>
           </TouchableOpacity>
       </View>
-      <View style={[styles.twoButtons,styles.marginStyling,styles.marginTopStyling]}>
-          <TouchableOpacity onPress={()=>setModalOpen(true)} title="Contact Us">
-            <View style={styles.contactUsButton}>
-              <Text style={styles.contactUsButtonText}>
-                Contact Us
-              </Text>
-            </View>
-          </TouchableOpacity>
-      </View>
       <View style={styles.marginStyling}>
         <HomeServices/>
       </View>
@@ -69,6 +60,15 @@ return (
       <View style={styles.marginStyling}>
         <Footer/>
       </View>
+      {/* <View style={[styles.twoButtons,styles.marginStyling,styles.marginTopStyling]}>
+          <TouchableOpacity onPress={()=>setModalOpen(true)} title="Contact Us">
+            <View style={styles.contactUsButton}>
+              <Text style={styles.contactUsButtonText}>
+                Contact Us
+              </Text>
+            </View>
+          </TouchableOpacity>
+      </View> */}
     </ScrollView>
   </>
   )
@@ -88,7 +88,9 @@ const styles = StyleSheet.create(
   {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    justifyContent:'center'
+    justifyContent:'center',
+    backgroundColor: '#FFFFFF',
+    padding: 0
   },
   marginStyling:
   {
@@ -133,6 +135,7 @@ const styles = StyleSheet.create(
     marginRight: 'auto',
     paddingVertical: 10, 
     paddingHorizontal: 10,
+    marginBottom: 20
   },
   contactUsButtonText: 
   {

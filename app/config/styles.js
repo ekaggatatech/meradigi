@@ -12,11 +12,11 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    padding: 20,
+    padding: 10,
     backgroundColor: CONTENT_BACKGROUND,
   },
   formGroup: {
-    marginBottom: 10,
+    marginBottom: 0,
   },
   label: {
     color: "#7d7e79",
@@ -66,7 +66,7 @@ export const styles = StyleSheet.create({
 
   dropdown: {
     margin: 10,
-    height: 30,
+    height: 36,
     borderBottomColor: 'gray',
     borderBottomWidth: 0.5,
   },

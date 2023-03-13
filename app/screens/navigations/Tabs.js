@@ -3,7 +3,6 @@ import Icon from '@expo/vector-icons/AntDesign';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomePage from '../HomePage';
 import Login from '../LoginRegister/Login';
-
 // import MenuScreen from '../MenuScreen';
 // import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -37,7 +36,8 @@ const Tabs = () =>
           },
           tabBarActiveTintColor: '#FE0629',
           tabBarInactiveTintColor: '#060606'
-        })}
+          })
+          }
         >
           <Tab.Screen name='Home' component={HomePage}/>
           <Tab.Screen name='Login' component={Login} />
