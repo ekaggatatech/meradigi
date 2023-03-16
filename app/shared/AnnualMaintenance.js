@@ -1,12 +1,16 @@
-import { View, Text, Image, ScrollView} from 'react-native'
-import React from 'react'
-import ServicesStyles from '../config/services.styles'
+import React from 'react';
+import { View, Text, Image, ScrollView, SafeAreaView } from 'react-native';
+
+import ServicesStyles from '../config/services.styles';
 
 const AnnualMaintenance = ({navigation}) => {
   return (
-    <ScrollView>
+    <ScrollView nestedScrollEnabled={true} style={styles.container}>
+      <SafeAreaView style={{ backgroundColor: '#FFFFFF' }}>
+
+      </SafeAreaView>
       <View style={ServicesStyles.container}>
-        <View >
+        <View>
           <Image style={ServicesStyles.webDevImage} source={require("../assets/contentmarketing.jpg")}/>
         </View>
         <View style={ServicesStyles.headingButton}>

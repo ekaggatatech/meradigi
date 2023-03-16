@@ -37,6 +37,8 @@ import SocialMediaMarketing from './app/screens/SocialMediaMarketing/SocialMedia
 import GraphicsDesigning from './app/screens/GraphicsDesigning/GraphicsDesigning';
 import ServicesScreen from './app/screens/ServicesScreen';
 import SearchEngineOptimization from './app/screens/SearchEngineOptimization/SearchEngineOptimization';
+import GoogleAds from './app/screens/GoogleAds/GoogleAds';
+import SocialMediaAds from './app/screens/SocialMediaAds/SocialMediaAds';
 
 /* import Tabs from './app/screens/navigations/Tabs'; */
 /* import DigitalMarketingPricingPlansScreen from './app/screens/PricingScreens/DigitalMarketingPricingPlansScreen/DigitalMarketingPricingPlansScreen';
@@ -95,8 +97,7 @@ const App = () => {
                               drawerStyle: { backgroundColor: '#FFFFFF', width: 240 },
                               headerTintColor: '#cb202d',
                               headerStyle: { elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.8, shadowRadius: 1 }
-                              // {{ fontFamily: "LemonLove", fontSize: 30 }}
-                              // activeTintColor: '#cb202d', drawerItemstyle:{ borderRadius:0, marginVertical: 0, borderBottomWidth: 1, borderBottomColor:'#cb202d' } drawerActiveTintColor: '#cb202d', drawerInactiveTintColor: '#060606', drawerActiveBackgroundColor: '#cb202d', drawerInActiveBackgroundColor: '#060606'
+                              // {{ fontFamily: "LemonLove", fontSize: 30 }} activeTintColor: '#cb202d', drawerItemstyle:{ borderRadius:0, marginVertical: 0, borderBottomWidth: 1, borderBottomColor:'#cb202d' } drawerActiveTintColor: '#cb202d', drawerInactiveTintColor: '#060606', drawerActiveBackgroundColor: '#cb202d', drawerInActiveBackgroundColor: '#060606'
             }}
           > 
             <Drawer.Screen name='HomePage' component={HomePage} 
@@ -143,6 +144,8 @@ const App = () => {
             <Drawer.Screen name='Log In' component={Login} options={{ drawerLabel: 'Log In', title: false, drawerIcon: ({color}) => ( <Icon name='user' size={20} color={color} /> ) }} />
             <Drawer.Screen name='Register' component={Register} options={{ drawerLabel: 'Register', title: false, drawerIcon: ({color}) => ( <Icon name='user' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
             <Drawer.Screen name='Search Engine Optimization' component={SearchEngineOptimization} options={{ drawerLabel: 'Search Engine Optimization', title: false, drawerIcon: ({color}) => ( <Icon name='search' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
+            <Drawer.Screen name='Google Ads' component={GoogleAds} options={{ drawerLabel: 'Google Ads', title: false, drawerIcon: ({color}) => ( <Icon name='search' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
+            <Drawer.Screen name='Social Media Ads' component={SocialMediaAds} options={{ drawerLabel: 'Social Media Ads', title: false, drawerIcon: ({color}) => ( <Icon name='search' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
           </Drawer.Navigator>
       </NavigationContainer>
     </>

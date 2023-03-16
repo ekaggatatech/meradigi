@@ -79,10 +79,9 @@ const CustomDrawer = ({props}) =>
                                 <Ionicons name="open-outline" color={'#cb202d'} size={22} />
                             )}
                             label={
-                                ({ focused, color })=>
-                                <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                                    <Text 
-                                    //style={{color}}
+                                ({focused,color})=>
+                                <View style={{flexDirection: 'row',justifyContent: 'space-between'}}>
+                                    <Text
                                     style={{ color: '#cb202d' }}>Our Services</Text>
                                     { nestedDrawerItem == true &&
                                         (<AntDesign name="up" color={'#cb202d'} size={14} style={{ alignItems: 'center', marginLeft: 50 }} />)
@@ -92,11 +91,8 @@ const CustomDrawer = ({props}) =>
                                     }
                                 </View>
                             }
-                            onPress={()=>{
-                                setFocus(1);
-                                NestedDrawerItemFun();
-                            }}
-                            style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0 }}
+                            onPress={()=>{setFocus(1);NestedDrawerItemFun();}}
+                            style={{backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0}}
                         />
                         {
                             nestedDrawerItem == true &&
@@ -173,6 +169,12 @@ const CustomDrawer = ({props}) =>
                                     onPress={()=>navigation.navigate('Make My Product Famous')}
                                     style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
                                 />
+                                {/* <DrawerItem 
+                                    icon={({ color, size, focused }) => ( <FontAwesome5 name="digital-ocean" color={'#cb202d'} size={22} /> )} 
+                                    label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Digital Marketing</Text>} 
+                                    onPress={()=>navigation.navigate('Digital Marketing')}
+                                    style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
+                                /> */}
                                 <DrawerItem 
                                     icon={({ color, size, focused }) => ( <FontAwesome5 name="digital-ocean" color={'#cb202d'} size={22} /> )} 
                                     // label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Digital Marketing</Text>} 
@@ -181,7 +183,7 @@ const CustomDrawer = ({props}) =>
                                         <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                                             <Text 
                                             //style={{color}}
-                                            style={{ color: '#cb202d' }}>Digital Marketing</Text>
+                                            style={{ color: '#cb202d', fontSize: 14 }}>Digital Marketing</Text>
                                             { 
                                                 nestedDrawerItemOne == true &&
                                                 (<AntDesign name="up" color={'#cb202d'} size={14} style={{ alignItems: 'center', marginLeft: 25 }} />)
@@ -193,11 +195,11 @@ const CustomDrawer = ({props}) =>
                                         </View>
                                     }
                                     onPress={()=> {
-                                        navigation.navigate('Digital Marketing');
                                         setFocus(1);
                                         NestedDrawerItemOneFun();
+                                        navigation.navigate('Digital Marketing');
                                     }}
-                                    style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
+                                    style={{backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0}}
                                 />
                                 {
                                     nestedDrawerItemOne == true &&
@@ -211,31 +213,37 @@ const CustomDrawer = ({props}) =>
                                         <DrawerItem 
                                             icon={({ color, size, focused }) => ( <MaterialCommunityIcons name="google-ads" color={'#cb202d'} size={22} /> )} 
                                             label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Google Ads</Text>} 
-                                            onPress={()=>navigation.navigate('I Want An Annual Maintenance Plan')}
+                                            onPress={()=>navigation.navigate('Google Ads')}
                                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
                                         />
                                         <DrawerItem 
                                             icon={({ color, size, focused }) => ( <MaterialCommunityIcons name="advertisements" color={'#cb202d'} size={22} /> )} 
                                             label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Social Media Ads</Text>} 
-                                            onPress={()=>navigation.navigate('I Want An Annual Maintenance Plan')}
+                                            onPress={()=>navigation.navigate('Social Media Ads')}
                                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
                                         />
                                         <DrawerItem 
                                             icon={({ color, size, focused }) => ( <Feather name="radio" color={'#cb202d'} size={22} /> )} 
                                             label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Radio Advertisement</Text>} 
-                                            onPress={()=>navigation.navigate('I Want An Annual Maintenance Plan')}
+                                            onPress={()=>navigation.navigate('Advertise On Radio')}
                                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
                                         />
-                                        <DrawerItem 
+                                        {/* <DrawerItem 
                                             icon={({ color, size, focused }) => ( <Ionicons name="person-outline" color={'#cb202d'} size={22} /> )} 
                                             label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Celebrity Marketing</Text>} 
-                                            onPress={()=>navigation.navigate('I Want An Annual Maintenance Plan')}
+                                            onPress={()=>navigation.navigate('Hire A Celebrity')}
+                                            style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
+                                        /> */}
+                                        <DrawerItem 
+                                            icon={({ color, size, focused }) => ( <MaterialIcons name="content-copy" color={'#cb202d'} size={22} /> )} 
+                                            label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Content Generation & Marketing</Text>} 
+                                            onPress={()=>navigation.navigate('Content Generation & Marketing')}
                                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
                                         />
                                         <DrawerItem 
                                             icon={({ color, size, focused }) => ( <MaterialIcons name="content-copy" color={'#cb202d'} size={22} /> )} 
-                                            label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Content Generation & Marketing</Text>} 
-                                            onPress={()=>navigation.navigate('I Want An Annual Maintenance Plan')}
+                                            label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Bring Your Business Online</Text>} 
+                                            // onPress={()=>navigation.navigate('Content Generation & Marketing')}
                                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0  }}
                                         />
                                     </>

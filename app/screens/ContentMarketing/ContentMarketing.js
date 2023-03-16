@@ -1,155 +1,159 @@
-import React from 'react';
-import { StyleSheet, ScrollView, SafeAreaView, View, Text, ImageBackground, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, ScrollView, SafeAreaView, View, Text, Image, TouchableOpacity } from 'react-native';
+import { LinearGradient } from 'expo-linear-gradient';
+import { Ionicons } from '@expo/vector-icons';
+import ContentMarketingImageOne from '../../assets/ContentGeneration&Marketing/social-media-3.jpg';
+import ContentMarketingImageTwo from '../../assets/ContentGeneration&Marketing/content-marketing-2-2.jpg';
+import ContentMarketingImageThree from '../../assets/ContentGeneration&Marketing/content-marketing-2-1.jpg';
+import ConsultNowModalScreen from '../../modals/ConsultNowModalScreen';
 import MainFooter from '../../common/footer/MainFooter';
 import Footer from '../../common/footer/Footer';
+import ServicesStyles from '../../config/services.styles';
 
-const ContentMarketing = ({ navigation }) => {
+const ContentMarketing = () => {
+    const [buttonText, setButtonText] = useState('Contact Us');
+    const [modalOpen, setModalOpen] = useState(false);
     return (
         <>
-            <ScrollView nestedScrollEnabled={true}>
-            <SafeAreaView>
-                <View style={styles.viewOne}>
-                    <ImageBackground
-                        source={require("../../assets/RefundPolicy/RefundPolicyBGImage.jpg")}
-                        alt="RefundPolicy" 
-                        title="RefundPolicy" 
-                        style={styles.privacyPolicyImg}>
-                            <Text style={styles.privacyPolicyText}>
-                                Return and Refund Policy
+            <ScrollView nestedScrollEnabled={true} style={styles.container}>
+            <SafeAreaView style={{ backgroundColor: '#FFFFFF' }}>
+                <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
+                <View style={ServicesStyles.positioning}>
+                    <Image source={ContentMarketingImageOne} alt="Radio Advertising" title="Radio Advertising" style={styles.socialMediaAdsImage}></Image>
+                    <Text style={{ color: '#083041', fontSize: 22, fontWeight: 'bold', textTransform: 'capitalize', textAlign: 'center', marginBottom: 10 }}>
+                        Content Generation & Marketing
+                    </Text>
+                    <Text style={{ color: '#083041', fontSize: 13, fontWeight: 'normal', textAlign: 'center', marginBottom: 10 }}>
+                        Grab The Attention With Powerful Visuals And Strong Content!
+                    </Text>
+                    <View style={[styles.twoButtons,styles.marginStyling]}>
+                        <TouchableOpacity style={{ marginBottom: 10 }} onPress={()=>setModalOpen(true)}>
+                        <LinearGradient 
+                            colors={['#00B2FF','#f2295b']}
+                            start={{x:1,y:0}}
+                            end={{x:0,y:0}}
+                            style={styles.bookFreeConsultationCallButton}
+                            title="Request For SEO Proposal">
+                                <Text style={styles.bookFreeConsultationCallButtonText}>
+                                    Consult Now
+                                </Text>
+                        </LinearGradient>
+                        </TouchableOpacity>
+                    </View>
+                </View> 
+                <View style={ServicesStyles.imageView}>
+                  <View style={{ marginBottom: 10 }}>
+                    <Text style={styles.radioAdvertContentText}>
+                      We are a Digital Agency dedicated to the generation of strategically optimized and quality content. 
+                    </Text>
+                  </View>
+                  <View style={{ marginBottom: 10 }}>
+                    <Text style={styles.radioAdvertSubContentText}>
+                      We have developed and perfected a series of techniques and tools that allow us to create clear, precise and concise content and that, above all, is based on keywords (keywords) strategically selected according to the market study we carry out for each of our clients, ensuring that 100% of them are completely satisfied with the results.
+                    </Text>
+                  </View>
+                  <View style={{ marginBottom: 10 }}>
+                    <Text style={styles.radioAdvertSubContentText}>
+                      Mera Digi invite you to contact our Creativity & Design team, who will be happy to guide you in the creation of your content focusing on the main digital strategies.
+                    </Text>
+                  </View>
+                  <View style={{ marginBottom: 10, paddingBottom: 20, borderBottomWidth: 1, borderBottomColor: '#FFFFFF' }}>
+                    <Text style={styles.radioAdvertSubContentText}>
+                      Our intention is to work with your brand transparently and to corroborate our work with tangible results, thus protecting your investment and you as a consumer.
+                    </Text>
+                  </View>
+                  <View style={{ marginBottom: 10, borderColor: '#FFFFFF', padding: 10 }}>
+                    <Image source={ContentMarketingImageTwo} alt="Content Marketing" title="Content Marketing" style={styles.serviceProviderImage}></Image>
+                  </View>
+                  <View style={{ marginBottom: 10 }}>
+                    <Text style={styles.radioAdvertContentText}>
+                      What Is Digital Content Generation?
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={styles.radioAdvertSubContentText}>
+                      The generation of digital content, as the name implies, consists of creating content. That includes text, images, video and other graphics. Moreover, your content needs to ‘cut through the noise’ and effectively convey a message in order to convert a website visit into a conversion. Additionally, you need to align your content with your digital strategy. For instance, creating content for Google Ads may be different to creating content to rank organically.
+                    </Text>
+                  </View>
+                </View>
+                <View style={{ backgroundColor: '#FFFFFF' }}>
+                  <View style={{ marginBottom: 10, borderColor: '#FFFFFF', margin: 10, padding: 10, elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.8, shadowRadius: 1 }}>
+                    <Image source={ContentMarketingImageOne} alt="Content Marketing" title="Content Marketing" style={styles.serviceProviderImage}></Image>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'bold', textAlign: 'center', marginBottom: 10 }}>
+                      What does Digital Content Generation involve?
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'center', marginBottom: 10 }}>
+                      Steps to create successful Digital Content
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'left', marginBottom: 10, paddingLeft: 10 }}>
+                      When creating any type of digital content, the experts at Mera Digi focus on carefully following the success process implemented by our Marketing and Creativity & Design experts in the following steps:
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'left', marginBottom: 10, paddingLeft: 10 }}>
+                      <Text style={{ fontWeight: 'bold' }}>1. Market study:</Text> In this stage of the process, our creative writers work together with the Marketing area to thoroughly and thoroughly analyse the target audience and competitors of each of our clients.
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'left', marginBottom: 10, paddingLeft: 10 }}>
+                      <Text style={{ fontWeight: 'bold' }}>2. Selection of keywords:</Text> Based on the market research conducted, our experts select strategically certain keywords (keywords) that will help your company to position itself in the first search results when your potential customers require your products and/or services.
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'left', marginBottom: 10, paddingLeft: 10 }}>
+                      <Text style={{ fontWeight: 'bold' }}>3. Generation of ideas:</Text> Every creative idea that our clients transmit to us is important and taken into account, and that is why in this part of the process our experts in digital content generation apply all their techniques and experience acquired over the years to generate and select ideas that really guarantee the results our customers are looking for.
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'left', marginBottom: 10, paddingLeft: 10 }}>
+                      <Text style={{ fontWeight: 'bold' }}>4. Content Creation:</Text> In this stage, our editors are responsible for expressing their ideas in really unique and attractive content for the target audience of each of our clients. It is worth mentioning that this digital content not only includes informative texts but also images, videos, forms, etc. that have been strategically selected to impact its users.
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'left', marginBottom: 10, paddingLeft: 10 }}>
+                      <Text style={{ fontWeight: 'bold' }}>5. Organisation and publication of content :</Text> Finally, our designers and programmers are responsible for strategically organising the digital content according to the requirements of our client and also taking into account fundamental aspects of design to ensure an attractive appearance and navigation experience. nice for the users.
+                    </Text>
+                  </View>
+                  <View>
+                    <Text style={{ color: '#083041', fontSize: 16, fontWeight: 'normal', textAlign: 'left', marginBottom: 0, paddingLeft: 10 }}>
+                      <Text style={{ fontWeight: 'bold' }}>6. Analysis of results:</Text> After publishing the content, and as part of our process and optimisation strategy, our experts in Marketing and Analysis will be in charge of reviewing the impact of this content periodically to analyse if it is necessary to include or update any keyword or content in general.
+                    </Text>
+                  </View>
+                  <View style={{ marginBottom: 20, borderColor: '#FFFFFF', margin: 10, padding: 20, elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.8, shadowRadius: 1 }}>
+                    <Image source={ContentMarketingImageThree} alt="Content Marketing" title="Content Marketing" style={styles.newServiceProviderImage}></Image>
+                  </View>
+                  <View style={ServicesStyles.imageView}>
+                    <View>
+                      <Text style={{ color: '#FFFFFF', fontSize: 28, fontWeight: 'bold', textAlign: 'center' }}>
+                        Tell us about your Project
+                      </Text>
+                    </View>
+                    <View style={{ margin: 20, borderWidth: 1, borderColor: '#FFFFFF', padding: 10 }}>
+                      <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'normal', textAlign: 'center' }}>
+                        Talk to us and find everything you need to improve your brand image, grow your business and achieve results using digital techniques and strategies that we will design especially for you!
+                      </Text>
+                    </View>
+                    <View style={[styles.twoButtons,styles.marginStyling]}>
+                        <TouchableOpacity onPress={()=>{setModalOpen(true),setButtonText('Get A Quote')}}>
+                          <View style={{ color: '#fff', backgroundColor: '#A62929', width: 160, padding: 10 }}>
+                            <Text style={{ color: '#FFFFFF', fontSize: 18, fontWeight: 'bold', textAlign: 'center', alignItems: 'center', verticalAlign: 'middle', textAlignVertical: 'center' }}>
+                              <Ionicons name="mail" color={'#FFF'} size={18} /> {buttonText}
                             </Text>
-                    </ImageBackground>
+                          </View>
+                        </TouchableOpacity>
+                    </View>
+                  </View>
                 </View>
-                <View style={styles.commonPadding}>
-                    <Text style={[styles.marginTopOne,styles.marginBottomOne]}>
-                        <Text style={styles.newTitleFontThree}>Please note: </Text>
-                    </Text>
-                    <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                        We put our customers first and will do everything we can to help you work out any issue. Our customers are never on their own and we pride ourselves in a 5-star support service. We’ll do our best to solve any problems with our products, services or your needs in general.
-                    </Text>
-                    <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                        We do encourage all customers to contact Meradigi support via Live chat, tech ticket or at support@Meradigi.com, for any assistance, clarification, feedback, issues, challenges, or help.
-                    </Text>
-                    <Text style={styles.contentOne}>
-                        We will work things out and make sure you’re 100% satisfied and happy with our service.
-                    </Text>
+                <View style={styles.marginStyling}>
+                    <MainFooter />
                 </View>
-                <View style={styles.commonPadding}>
-                        <Text style={[styles.newTitleFontThree,styles.marginBottomOne]}>
-                            Refunds:
-                        </Text>
-                        <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                            Before a refund is granted, you’d have to allow us to try and help. Contact our support via chat, tech ticket or at support@Meradigi.com and please allow 24-72 hours for our Support Team to get back to you. We do our best to answer your requests a lot faster.
-                        </Text>
-                        <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                            The nature of digital media (software) that can be downloaded instantly makes it non-returnable. There is no “trial” or “grace period” after purchasing any product which means all sales are final. Once you have purchased the software or a service, there is no way to “return” it. As such, refunds can not be provided.
-                        </Text>
-                        <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                            We can process a refund if you haven’t downloaded the product or if the product you downloaded from the website was completely unusable, damaged or non-functioning, or doesn’t do what it promises to.
-                        </Text>
-                        <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                            Refunds will not be granted if you simply decide not to use the purchased products. We stand behind our products and will assist you in solving any problem you have, but we also expect you to adequately understand what you are purchasing and why.
-                        </Text>
-                        <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                            In addition to the above, no refunds are provided for:
-                        </Text>
-                        <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                            Meradigi Subscriptions, as it is a complete set of products at a very convenient price, which you can cancel at any time. We discourage you from purchasing Membership for testing purposes.
-                        </Text>
-                        <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                            Renewals are strictly non-refundable.
-                        </Text>
-                        <Text style={styles.contentOne}> 
-                            Offers and discounts are valid for future orders only and can’t be used to ask for refunds or partial refunds of existing purchases.
-                        </Text>
-                </View>
-                <View style={styles.commonPadding}>
-                    <Text style={[styles.newTitleFontThree,styles.marginBottomOne]}>
-                        To summarize and clarify: No returns/refunds will be offered for digital products except cases in which the product you’ve purchased is:
-                    </Text>
-                    <Text style={styles.newTitleFontThree}>
-                        Completely non-functional
-                    </Text>
-                </View>
-                <View style={styles.commonPadding}>
-                    <Text style={[styles.contentOne,styles.marginBottomOne]}> 
-                        Product main description was misleading or the product doesn’t perform the promised function.
-                    </Text>
-                    <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                        You didn’t download the product.
-                    </Text>
-                    <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                        We do consider refunds on a case-by-case basis.
-                    </Text>
-                    <Text style={styles.contentOne}>
-                        Based on EU law, you may withdraw the purchase and receive a refund for any digital content (or service) purchased on the site during 14 days, only if you did not download the content and did not install it on the site and only if we did not start working on the requested development project (including but not limited to: SEO Services, Hosting services, Site speed-up service, Web development, Odoo Development.). Once a digital product has been downloaded and/or a purchased service has commenced, customers immediately lose their right of withdrawal.
-                    </Text>
-                </View>
-                <View style={styles.commonPadding}>
-                    <Text style={styles.newTitleFontTwo}>
-                        We also reserve the right to refuse a refund in following situations:
-                    </Text>
-                </View>
-                <View style={styles.commonPadding}>
-                    <Text style={styles.bulletList}>
-                        {`\u2043 You have changed your mind about an item/subscription.`}
-                    </Text>
-                    <Text style={styles.bulletList}> 
-                        {`\u2043 You bought an item by mistake and the product(s) was sent/already downloaded by you.`}
-                    </Text>
-                    <Text style={styles.bulletList}> 
-                        {`\u2043 The product was bought by your employee or associate through your PayPal account which he/she had legal access to.`}
-                    </Text>
-                    <Text style={styles.bulletList}> 
-                        {`\u2043 You can not install the downloaded product (we’ll help you do that).`}
-                    </Text>
-                    <Text style={styles.bulletList}> 
-                        {`\u2043 The product does not function as you wanted it to.`}
-                    </Text>
-                    <Text style={styles.bulletList}> 
-                        {`\u2043 The product displays a message about the need to enter a license key or activation (but has full functionality).`}
-                    </Text>
-                    <Text style={styles.bulletList}> 
-                        {`\u2043 You broke your website when installing the product.`}
-                    </Text>
-                    <Text style={styles.bulletList}>
-                        {`\u2043 You did not receive technical support on Meradigi 10 minutes after contacting.`}
-                    </Text>
-                    <Text style={styles.bulletList}>
-                        {`\u2043 You refused to provide our support staff access to your web-site to investigate the product you are having an issue with.`}
-                    </Text>
-                </View>
-                <View style={styles.commonPadding}>
-                    <Text style={[styles.newTitleFontTwo,styles.marginBottomOne]}>
-                        Please also note that:
-                    </Text>
-                    <Text style={[styles.contentOne,styles.marginBottomOne]}>
-                        You may cancel your subscription at any time, however, there are no refunds for cancellation.
-                    </Text>
-                    <Text style={styles.contentOne}>
-                        Regardless of the above, we put our customers first and will work to help you with any issue, with our products, services or your needs in general. We do encourage all customers to contact Meradigi support via Live chat, tech ticket or at support@Meradigi.com, for any assistance, clarification, feedback, issues, challenges, or help. We will work things out and make sure you’re 100% satisfied and happy with our service.
-                    </Text>
-                </View>
-                <View style={styles.commonPadding}>
-                    <TouchableOpacity style={styles.marginBottomOne} onPress={() => navigation.navigate('Privacy Policy')}>
-                        <Image 
-                            source={require("../../assets/RefundPolicy/info.png")}
-                            alt="PrivacyPolicy" 
-                            title="PrivacyPolicy" 
-                            resizeMode="stretch"
-                            style={styles.privacyPolicyNewImage}>
-                        </Image>
-                        <Text style={styles.alsoReadText}>
-                            Also Read
-                        </Text>
-                        <Text style={styles.privacyPolicyNewText}>
-                            Privacy Policy
-                        </Text>
-                    </TouchableOpacity>
-                </View>
-                <View>
-                    <MainFooter/>
-                </View>
-                <View>
+                <View style={styles.marginStyling}>
                     <Footer/>
                 </View>
             </SafeAreaView>
@@ -158,114 +162,330 @@ const ContentMarketing = ({ navigation }) => {
   );
 }
 
-const styles = StyleSheet.create({
-    viewOne:
+const styles = StyleSheet.create(
+{
+    container:
     {
-        backgroundColor: '#272727',
-        // opacity: 0.68,
-        opacity: 1,
-        transition: 0.3, 
-        borderRadius: 0.3
-        // transition: background 0.3s, border-radius 0.3s, opacity 0.3s;
+      width: '100%', 
+      height: 'auto', 
+      borderRadius: 0,
+      paddingTop: 10,
+      backgroundColor: '#FFFFFF'
     },
-    privacyPolicyImg: 
+    twoButtons:
     {
-        // width: screenWidth,
-        // height: screenHeight, 
-        width: 400,
-        height: 200,
-        justifyContent: 'center',
-        alignItems: 'center'
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent:'center',
+      backgroundColor: 'transparent',
+      padding: 0
     },
-    privacyPolicyText:
+    marginStyling:
     {
-        color: '#FFFFFF',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        fontSize: 48,
-        opacity: 0.98
+      matrginBottom: 10,
+      marginTop: 0
     },
-    commonPadding:
+    googleAdsBgImg:
     {
-        padding: 10,
-        backgroundColor: '#ffffff'
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      backgroundSize: 'cover'
     },
-    marginTopOne:
+    marginTopStyling:
     {
-        marginTop: 20
+      marginTop: 10
     },
-    marginBottomOne:
+    bookFreeConsultationCallButton:
     {
-        marginBottom: 18
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: 14, 
+      paddingHorizontal: 24,
+      backgroundColor: 'transparent',
+      borderRadius: 9
     },
-    contentOne:
+    bookFreeConsultationCallButtonText:
     {
-        fontSize: 19,
-        textAlign: 'left',
-        color: '#000000',
-        fontWeight: 'normal'
+      fontSize: 16,
+      fontWeight: 600,
+      fontWeight: 'normal',
+      letterSpacing: 0.25,
+      color: '#FFFFFF',
+      backgroundColor: 'transparent',
+      textAlign: 'center'
     },
-    consentFont:
+    contactUsButton: 
     {
-        fontSize: 32,
-        color: '#000000',
-        fontWeight: 'bold',
-        textAlign: 'left'
+      fontSize: 16,
+      fontWeight: 'normal',
+      backgroundColor: '#409EFF',
+      color: '#ffffff',
+      borderRadius: 9,
+      textAlign: 'center',
+      textAlignVertical: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      paddingVertical: 10, 
+      paddingHorizontal: 10,
+      marginBottom: 20
     },
-    newTitleFontOne:
+    contactUsButtonText: 
     {
-        fontSize: 32,
-        color: '#000000',
-        fontWeight: 'normal',
-        textAlign: 'center'
+      color: "#ffffff",
+      fontWeight: "normal",
+      fontSize: 16,
+      textAlign: "center",
+      letterSpacing: 0.4
     },
-    newTitleFontTwo:
+    serviceProviderImage:
     {
-        fontSize: 18,
-        color: '#000000',
-        fontWeight: 'bold',
-        textAlign: 'left'
+      width: '100%',
+      height: 400,
+      borderRadius: 8,
+      objectFit: 'fill'
     },
-    newTitleFontThree:
+    newServiceProviderImage:
     {
-        fontSize: 19,
-        color: '#000000',
-        fontWeight: 'bold',
-        textAlign: 'left' 
+      width: '100%',
+      height: 400,
+      objectFit: 'fill'
     },
-    bulletList:
+    seoImagePadding:
     {
-        fontSize: 18, 
-        textAlign: 'left', 
-        marginBottom: 10 
+      padding: 10,
+      marginBottom: 10
     },
-    privacyPolicyNewImage: 
+    seoServicesTitleText:
     {
-        // width: 'auto',
-        // height: 'auto',
-        display: 'flex',
-        justifyContent: 'center',
-        marginLeft: 'auto',
-        marginRight: 'auto',
-        alignItems: 'center'
+      color: '#083041',
+      fontSize: 20,
+      fontWeight: 'bold',
+      textTransform: 'capitalize',
+      textAlign: 'center',
+      letterSpacing: 0
     },
-    alsoReadText:
+    googleAdsContainer:
     {
-        marginBottom: 3,
-        color: '#00B5FF',
-        fontSize: 19,
-        fontWeight: 'normal',
-        textAlign: 'center',
-        alignItems: 'center'
+      padding: 10,
+      borderStyle: 'solid',
+      borderWidth: 0,
+      borderColor: '#E6EAEC'
     },
-    privacyPolicyNewText:
+    googleAdsImageOne:
     {
-        color: '#e22658',
-        fontSize: 24,
-        fontWeight: 'bold',
-        textAlign: 'center',
-        alignItems: 'center'
+      objectFit: 'fill',
+      display: 'flex',
+      justifyContent: 'flex-start',
+      marginLeft: 30,
+      marginRight: 60,
+      marginBottom: 5,
+      width: 60,
+      height: 60
+    },
+    seoServiceContainerText:
+    {
+      color: '#083041',
+      fontSize: 20,
+      fontWeight: 'bold',
+      textTransform: 'capitalize',
+      textAlign: 'left',
+      letterSpacing: 0,
+      marginBottom: 10
+    },
+    seoServicesContentOne:
+    {
+      color: '#083041',
+      fontSize: 18,
+      textAlign: 'left'
+    },
+    seoMarginBottom:
+    {
+      marginBottom: 10
+    },
+    googleAdsSubContentText:
+    {
+      color: '#FFFFFF',
+      fontSize: 18,
+      textAlign: 'center'
+    },
+    radioAdvertContentText:
+    {
+      color: '#FFFFFF',
+      fontSize: 28,
+      fontWeight: 'bold',
+      textAlign: 'left',
+      paddingLeft: 20
+    },
+    radioAdvertSubContentText:
+    {
+      color: '#FFFFFF',
+      fontSize: 18,
+      textAlign: 'left',
+      paddingLeft: 20
+    },
+    seoWhatWeDoText:
+    {
+      color: '#FFF',
+      fontWeight: 'bold',
+      textAlign: 'center',
+      fontWeight: 'bold',
+      fontSize: 20,
+      textAlign: 'left'
+    },
+    googleAdsContentText:
+    {
+      color: '#FFFFFF',
+      fontSize: 28,
+      fontWeight: 'bold',
+      textAlign: 'center'
+    },
+    googleAdsContainerText:
+    {
+      color: '#096991',
+      fontSize: 20,
+      fontWeight: 'bold',
+      letterSpacing: 0,
+      marginBottom: 0,
+      verticalAlign: 'middle',
+      textAlignVertical: 'center',
+      textAlign: 'left'
+    },
+    googleAdsContentOne:
+    {
+      color: '#083041',
+      fontSize: 20,
+      textAlign: 'center'
+    },
+    seoServiceContainer:
+    {
+      margin: 20,
+      marginBottom: 0,
+      padding: 10,
+      borderStyle: 'solid',
+      borderWidth: 1,
+      borderColor: '#E6EAEC'
+    },
+    serviceProviderImageOne:
+    {
+      width: 80,
+      height: 80,
+      objectFit: 'fill',
+      display: 'flex',
+      justifyContent: 'flex-start',
+      marginLeft: 0,
+      marginRight: 'auto',
+      marginBottom: 10
+    },
+    googleAdsContainerTextWithDifferentColor:
+    {
+      color: '#000',
+      fontSize: 22,
+      fontWeight: 'bold',
+      textTransform: 'capitalize',
+      textAlign: 'center',
+      letterSpacing: 0,
+      marginBottom: 0
+    },
+    googleAdsMarginBottom:
+    {
+      marginBottom: 20
+    },
+    googleAdsContentTwo:
+    {
+      color: '#FFFFFF',
+      fontSize: 20,
+      textAlign: 'center'
+    },
+    googleAdsContactUsButtonOne:
+    {
+      alignItems: 'center',
+      display: 'flex',
+      justifyContent: 'center',
+      marginLeft: 'auto',
+      marginRight: 'auto',
+      paddingVertical: 14, 
+      paddingHorizontal: 7,
+      backgroundColor: '#7AA5FF',
+      borderRadius: 9,
+      borderColor: '#FFF',
+      borderWidth: 1,
+      width: 160
+    },
+    googleAdsContactUsButtonTextOne:
+    {
+      fontSize: 16,
+      fontWeight: 600,
+      fontWeight: 'normal',
+      letterSpacing: 0.25,
+      color: '#0C0101',
+      backgroundColor: 'transparent',
+      textAlign: 'center'
+    },
+    containerBorders:
+    {
+      borderWidth: 1,
+      borderColor: '#FFFFFF',
+      margin: 6,
+      padding: 10
+    },
+    seoSubContentText:
+    {
+      color: '#FFFFFF',
+      fontSize: 18,
+      textAlign: 'left',
+      fontWeight: 'bold'
+    },
+    googleAdsNewButton:
+    {
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: 14, 
+      paddingHorizontal: 24,
+      backgroundColor: 'transparent',
+      borderRadius: 9,
+      width: 263,
+      display: 'flex',
+      justifyContent: 'center',
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    },
+    googleAdsNewButtonText:
+    {
+      fontSize: 16,
+      fontWeight: 600,
+      fontWeight: 'normal',
+      letterSpacing: 0.25,
+      color: '#FFFFFF',
+      backgroundColor: 'transparent',
+      textAlign: 'center'
+    },
+    socialMediaAdsImage:
+    {
+      width: 400,
+      height: 300,
+      objectFit: 'contain'
+    },
+    newSmaProp:
+    {
+      flexDirection: 'row'
+    },
+    radioAdvertisingTextOne:
+    {
+      color: '#F8F8F8',
+      fontSize: 30,
+      fontWeight: 'bold',
+      textAlign: 'center'
+    },
+    radioAdvertisingTextTwo:
+    {
+      color: '#FFF',
+      fontSize: 16,
+      fontWeight: 'bold',
+      textAlign: 'center'
     }
-})
+}
+);
 
 export default ContentMarketing;

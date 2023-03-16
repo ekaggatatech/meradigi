@@ -24,7 +24,25 @@ const MainFooter = () =>
     Linking.openURL(youtubeUrl);
   }
   
-  const supportTicketUrl = 'https://www.meradigi.com//ticket';
+  const pinterestUrl = 'https://in.pinterest.com/mailmeradigi/';
+  pinterestLink = () =>
+  {
+    Linking.openURL(pinterestUrl);
+  }
+
+  const tumblrUrl = 'https://www.tumblr.com/blog/mera-digi';
+  tumblrLink = () =>
+  {
+    Linking.openURL(tumblrUrl);
+  }
+
+  const linkedinUrl = 'https://www.linkedin.com/in/mera-digi-771058246/';
+  linkedinLink = () =>
+  {
+    Linking.openURL(linkedinUrl);
+  }
+
+  const supportTicketUrl = 'https://www.meradigi.com/ticket';
   supportTicketUrlLink = () => 
   {
     Linking.openURL(supportTicketUrl);
@@ -62,7 +80,7 @@ const MainFooter = () =>
                 </View>
                 <View>
                     <View>
-                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Services')}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('I Want A Very Fast Website')}>
                             WEB DEVELOPMENT
                         </Text>
                     </View>
@@ -77,7 +95,7 @@ const MainFooter = () =>
                         </Text>
                     </View>
                     <View>
-                        <Text style={styles.mainFooterContentThree}>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Content Generation & Marketing')}>
                             CONTENT CREATION
                         </Text>
                     </View>
@@ -181,6 +199,17 @@ const MainFooter = () =>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={()=>this.youtubeLink()}>
                         <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/youtube.png")} alt="YouTube" title="YouTube"></Image>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.positioningTwo}>
+                    <TouchableOpacity onPress={()=>this.pinterestLink()}>
+                        <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/pinterest.png")} alt="Pinterest" title="Pinterest"></Image>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.tumblrLink()}>
+                        <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/tumblr.png")} alt="Tumblr" title="Tumblr"></Image>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={()=>this.linkedinLink()}>
+                        <Image style={styles.urlLinkCompanyLogo} source={require("../../assets/footer/icons/png/linkedin.png")} alt="Linkedin" title="Linkedin"></Image>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.positioningOne}>

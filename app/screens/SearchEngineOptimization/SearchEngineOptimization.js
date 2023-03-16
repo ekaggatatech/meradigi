@@ -161,7 +161,6 @@ const SearchEngineOptimization = () => {
 
 export default SearchEngineOptimization;
 
-
 const styles = StyleSheet.create(
     {
       container:
