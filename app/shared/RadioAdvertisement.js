@@ -13,7 +13,7 @@ import ServicesStyles from '../config/services.styles';
 const RadioAdvertisement = () => {
   const [modalOpen, setModalOpen] = useState(false);
   return (
-    <ScrollView style={styles.container}>
+    <ScrollView nestedScrollEnabled={true} style={styles.container}>
       <SafeAreaView style={{ backgroundColor: '#FFFFFF' }}>
       <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
       <View style={ServicesStyles.positioning}>

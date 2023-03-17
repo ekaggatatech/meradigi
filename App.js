@@ -26,7 +26,7 @@ import DigitalMarketing from './app/shared/DigitalMarketing';
 import AnnualMaintenance from './app/shared/AnnualMaintenance';
 import HireDeveloper from './app/shared/HireDeveloper';
 import HostingPlan from './app/shared/HostingPlan';
-import CelebrityMarketing from './app/shared/CelebrityInfluencerMarketing';
+import CelebrityMarketing from './app/shared/CelebrityMarketing';
 import RadioAdvertisement from './app/shared/RadioAdvertisement';
 import CelebritySlider from './app/screens/PricingScreens/CelebrityPriceScreens/CelebritySlider';
 import PrivacyPolicyScreen from './app/screens/PrivacyPolicyScreen/PrivacyPolicy';
@@ -96,7 +96,9 @@ const App = () => {
                               drawerLabelStyle: { marginLeft: 0, paddingLeft: 0, fontWeight: 'bold', fontSize: 12, letterSpacing: 0 },
                               drawerStyle: { backgroundColor: '#FFFFFF', width: 240 },
                               headerTintColor: '#cb202d',
-                              headerStyle: { elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.8, shadowRadius: 1 }
+                              headerStyle: { elevation: 5, shadowColor: '#000', shadowOffset: { width: 0, height: 1 }, shadowOpacity: 0.8, shadowRadius: 1 },
+                              marginBottom: 0, 
+                              paddingBottom: 0 
                               // {{ fontFamily: "LemonLove", fontSize: 30 }} activeTintColor: '#cb202d', drawerItemstyle:{ borderRadius:0, marginVertical: 0, borderBottomWidth: 1, borderBottomColor:'#cb202d' } drawerActiveTintColor: '#cb202d', drawerInactiveTintColor: '#060606', drawerActiveBackgroundColor: '#cb202d', drawerInActiveBackgroundColor: '#060606'
             }}
           > 

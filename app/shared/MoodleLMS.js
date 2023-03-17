@@ -12,7 +12,7 @@ const MoodleLMS = () =>
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
-    <ScrollView>
+    <ScrollView nestedScrollEnabled={true}>
     <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
     <View style={ServicesStyles.container}>
       <View style={ServicesStyles.mainMarginBottomProp}>

@@ -13,9 +13,9 @@ import Footer from '../common/footer/Footer';
 const DigitalMarketing = ({ navigation }) => {
   return (
     <>
-    <ScrollView>
-      <View style={ServicesStyles.container}>
-        <View style={{ marginBottom: 20 }}>
+    <ScrollView nestedScrollEnabled={true}>
+      <View style={[ServicesStyles.container,ServicesStyles.marginStylings]}>
+        <View style={{ marginBottom: 10 }}>
           <Image style={ServicesStyles.webDevImage} source={require("../assets/DigitalMarketing/socialmedia.jpg")}/>
         </View>
           <View style={{ marginBottom: 10 }}>

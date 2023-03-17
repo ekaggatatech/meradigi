@@ -65,7 +65,7 @@ const listItems = data.map(
 )
 return (
 <>
-    <ScrollView>
+    <ScrollView nestedScrollEnabled={true}>
     <View style={ServicesStyles.containerOne}>
         { listItems }
     </View>

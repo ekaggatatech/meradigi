@@ -15,12 +15,12 @@ const ServicesScreen = () =>
   const [modalOpen, setModalOpen] = useState(false);
   return (
     <>
-    <ScrollView>
+    <ScrollView nestedScrollEnabled={true}>
       <View style={ServicesStyles.container}>
       <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
-      <View style={ServicesStyles.positioning}>
+      {/* <View style={ServicesStyles.positioning}>
         <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
-      </View>
+      </View> */}
       <View style={ServicesStyles.marginStyles}>
         <Text style={ServicesStyles.webText}>
           Web Development Services

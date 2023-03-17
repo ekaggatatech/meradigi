@@ -57,7 +57,7 @@ const digitalMarketingListItems = digitalMarketingData.map((d) =>
 
 return (
     <>
-        <ScrollView>
+        <ScrollView nestedScrollEnabled={true}>
             <View style={digitalMarketing.digitalMarketingContainerOne}>
                 { digitalMarketingListItems }
             </View>

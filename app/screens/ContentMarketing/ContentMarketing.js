@@ -169,7 +169,7 @@ const styles = StyleSheet.create(
       width: '100%', 
       height: 'auto', 
       borderRadius: 0,
-      paddingTop: 10,
+      paddingTop: 0,
       backgroundColor: '#FFFFFF'
     },
     twoButtons:

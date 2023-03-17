@@ -49,7 +49,7 @@ const HomeServices = () => {
         <ScrollView nestedScrollEnabled={true}>
                 <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
                 <View>
-                    <ScrollView>
+                    <ScrollView nestedScrollEnabled={true}>
                         <View>
                             <Text style={styles.selectText}>
                                 Select Your Prefer Service

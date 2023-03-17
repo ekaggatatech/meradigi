@@ -22,7 +22,7 @@ return (
     {/* <View style={{ justifyContent: 'center', backgroundColor: '#FFFFFF' }}>
       <ActivityIndicator size={"large"} color={"#ff0000"}></ActivityIndicator>
     </View> */}
-    <ScrollView style={styles.container}>
+    <ScrollView nestedScrollEnabled={true} style={styles.container}>
       {/* <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} /> */}
       <View style={ServicesStyles.positioning}>
         <Image source={require("../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />

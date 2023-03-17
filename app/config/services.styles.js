@@ -12,7 +12,7 @@ export default StyleSheet.create({
       webDevImage:
       {
         width: '100%',
-        height: 200,
+        height: 300,
         resizeMode: 'cover'
       },
       containerOne:
@@ -922,5 +922,9 @@ export default StyleSheet.create({
         alignItems: 'center',
         width: '100%',
         height: 400
+      },
+      marginStylings:
+      {
+        paddingTop: 0
       }
 });

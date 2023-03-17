@@ -366,7 +366,7 @@ return (
                 </Text>
               </View>
               <View>
-                <ScrollView>
+                <ScrollView nestedScrollEnabled={true}>
                 <LinearGradient 
                   colors={['#FFFFFFE6','#FFFFFF']}
                   start={{x:0,y:0}}

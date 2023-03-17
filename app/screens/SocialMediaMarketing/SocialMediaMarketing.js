@@ -6,8 +6,8 @@ import Footer from '../../common/footer/Footer';
 const SocialMediaMarketing = ({ navigation }) => {
     return (
         <>
-            <ScrollView nestedScrollEnabled={true}>
-            <SafeAreaView>
+            <ScrollView nestedScrollEnabled={true} style={styles.container}>
+            <SafeAreaView style={{ backgroundColor: '#FFFFFF' }}>
                 <View style={styles.viewOne}>
                     <ImageBackground
                         source={require("../../assets/RefundPolicy/RefundPolicyBGImage.jpg")}
@@ -159,6 +159,14 @@ const SocialMediaMarketing = ({ navigation }) => {
 }
 
 const styles = StyleSheet.create({
+    container:
+    {
+      width: '100%', 
+      height: 'auto', 
+      borderRadius: 0,
+      paddingTop: 0,
+      backgroundColor: '#FFFFFF'
+    },
     viewOne:
     {
         backgroundColor: '#272727',

@@ -4,7 +4,7 @@ import ServicesStyles from '../config/services.styles'
 
 const FastWebsite = ({navigation}) => {
   return (
-    <ScrollView>
+    <ScrollView nestedScrollEnabled={true}>
       <View style={ServicesStyles.container}>
         <View >
           <Image style={ServicesStyles.webDevImage} source={require("../assets/digitalMarketing.jpg")}/>

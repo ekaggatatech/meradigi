@@ -80,7 +80,7 @@ const featuresListItems = featuresData.map(
 )
 return (
 <>
-    <ScrollView>
+    <ScrollView nestedScrollEnabled={true}>
         <View style={ServicesStyles.containerOne}>
             { featuresListItems }
         </View>
