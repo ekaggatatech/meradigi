@@ -262,8 +262,8 @@ const CustomDrawer = ({props}) =>
                                 />
                                 <DrawerItem 
                                     icon={({ color, size, focused }) => ( <Entypo name="code" color={'#cb202d'} size={22} /> )} 
-                                    label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Hire A Developer</Text>} 
-                                    onPress={()=>navigation.navigate('Hire A Developer')}
+                                    label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Hire A Freelancer</Text>} 
+                                    onPress={()=>navigation.navigate('Hire A Freelancer')}
                                     style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0 }}
                                 />
                             </>
