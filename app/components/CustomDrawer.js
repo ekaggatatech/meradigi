@@ -48,7 +48,7 @@ const CustomDrawer = ({props}) =>
                     <View style={{ flexDirection: 'row', padding: 20 }}>
                         <Image source={require('../assets/Home/user.png')} style={{ width: 60, height: 60, borderRadius: 40 }}></Image>
                         <Text style={{ color: '#cb202d', fontSize: 14, fontWeight: 'bold', letterSpacing: 0.1, textAlignVertical: 'bottom', paddingBottom: 5, paddingLeft: 5 }}>
-                            Profile Name
+                            User/Profile Name
                         </Text>
                     </View>
                 </View>
