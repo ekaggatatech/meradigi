@@ -11,7 +11,7 @@ const ourTeamData =
         teamName: "Pooja Dhamanekar",
         teamImageSource: require("../assets/OurTeam/PoojaDhamanekar.jpeg"),
         teamPosition: "Full-stack web & android Developer",
-        teamSkills: ["\u2B24"+".net, Codeigniter, laravel, MVC"+"\n"+"\u2B24"+"javascript are babylon js, React js, next js, react native"+"\n"+"\u2B24"+"Ajax, jquery, PHP, and other frameworks of PHP and in Bootstrap, CSS & sass"]
+        teamSkills: ["\u2B24"+" "+".net, Codeigniter, laravel, MVC"+"\n"+"\u2B24"+" "+"javascript are babylon js, React js, next js, react native"+"\n"+"\u2B24"+" "+"Ajax, jquery, PHP, and other frameworks of PHP and in Bootstrap, CSS & sass"]
     },
     {
         index: 2,
@@ -20,7 +20,7 @@ const ourTeamData =
         teamName: "Shubham Srivastava",
         teamImageSource: require("../assets/OurTeam/ShubhamSrivastava.jpg"),
         teamPosition: "SEO Specialist",
-        teamSkills: ["\u2B24"+"On-Page and Off-Page"+"\n"+"\u2B24"+"Local SEO"+"\n"+"\u2B24"+"Analysis Competitors"+"\n"+"\u2B24"+"Links Building"+"\n"+"\u2B24"+"Content customization"+"\n"+"\u2B24"+"Monitored Website traffic, and Performance"+"\n"+"\u2B24"+"CMS Platforms"]
+        teamSkills: ["\u2B24"+" "+"On-Page and Off-Page"+"\n"+"\u2B24"+" "+"Local SEO"+"\n"+"\u2B24"+" "+"Analysis Competitors"+"\n"+"\u2B24"+" "+"Links Building"+"\n"+"\u2B24"+" "+"Content customization"+"\n"+"\u2B24"+" "+"Monitored Website traffic, and Performance"+"\n"+"\u2B24"+" "+"CMS Platforms"]
      },
     {
         index: 3,
@@ -29,7 +29,7 @@ const ourTeamData =
         teamName: "Aniket",
         teamImageSource: require("../assets/OurTeam/Aniket.jpeg"),
         teamPosition: "Full-Stack Developer",
-        teamSkills: ["\u2B24"+"Microsoft Power BI"+"\n"+"\u2B24"+"React JS"+"\n"+"\u2B24"+"Headless CMS platforms such as Prismic"+"\n"+"\u2B24"+"3d animation in Krito"+"\n"+"\u2B24"+"Canva"]
+        teamSkills: ["\u2B24"+" "+"Microsoft Power BI"+"\n"+"\u2B24"+" "+"React JS"+"\n"+"\u2B24"+" "+"Headless CMS platforms such as Prismic"+"\n"+"\u2B24"+" "+"3d animation in Krito"+"\n"+"\u2B24"+" "+"Canva"]
     },
     {
         index: 4,
@@ -38,7 +38,7 @@ const ourTeamData =
         teamName: "Lubna.S",
         teamImageSource: require("../assets/OurTeam/LubnaS.jpg"),
         teamPosition: "The Marketing Expert",
-        teamSkills: ["\u2B24"+"End To End Marketing Solution"+"\n"+"\u2B24"+"Copywriting & Story writing"+"\n"+"\u2B24"+"SEO & SEM"+"\n"+"\u2B24"+"WordPress Development"+"\n"+"\u2B24"+"Social media content creation & Video Making"]
+        teamSkills: ["\u2B24"+" "+"End To End Marketing Solution"+"\n"+"\u2B24"+" "+"Copywriting & Story writing"+"\n"+"\u2B24"+" "+"SEO & SEM"+"\n"+"\u2B24"+" "+"WordPress Development"+"\n"+"\u2B24"+" "+"Social media content creation & Video Making"]
     },
     {
         index: 5,
@@ -47,7 +47,7 @@ const ourTeamData =
         teamName: "Darshan. R",
         teamImageSource: require("../assets/OurTeam/DarshanR.jpeg"),
         teamPosition: "Social Media Specialist",
-        teamSkills: ["\u2B24"+"Social Media Marketing"+"\n"+"\u2B24"+"Content Creation"+"\n"+"\u2B24"+"SEO & SEM"+"\n"+"\u2B24"+"Social Campaign Management"+"\n"+"\u2B24"+"Canva"]
+        teamSkills: ["\u2B24"+" "+"Social Media Marketing"+"\n"+"\u2B24"+" "+"Content Creation"+"\n"+"\u2B24"+" "+"SEO & SEM"+"\n"+"\u2B24"+" "+"Social Campaign Management"+"\n"+"\u2B24"+" "+"Canva"]
     },
     {
         index: 6,
@@ -56,7 +56,7 @@ const ourTeamData =
         teamName: "Neeraj Punta",
         teamImageSource: require("../assets/OurTeam/NeerajPunta.png"),
         teamPosition: "Web Developer",
-        teamSkills: ["\u2B24"+"WordPress"+"\n"+"\u2B24"+"HTML"+"\n"+"\u2B24"+"Odoo"+"\n"+"\u2B24"+"Data base Optimize"+"\n"+"\u2B24"+"Security Profesional"+"\n"+"\u2B24"+"Sever Engineer"]
+        teamSkills: ["\u2B24"+" "+"WordPress"+"\n"+"\u2B24"+" "+"HTML"+"\n"+"\u2B24"+" "+"Odoo"+"\n"+"\u2B24"+" "+"Data base Optimize"+"\n"+"\u2B24"+" "+"Security Profesional"+"\n"+"\u2B24"+" "+"Sever Engineer"]
     },
     {
         index: 7,
@@ -65,7 +65,7 @@ const ourTeamData =
         teamName: "Uzair Rashid",
         teamImageSource: require("../assets/OurTeam/UzairRashid.jpeg"),
         teamPosition: "Full-Stack Web Developer",
-        teamSkills: ["\u2B24"+"Html"+"\n"+"\u2B24"+"CSS3 & JS"+"\n"+"\u2B24"+"bootstrap"+"\n"+"\u2B24"+"Python"+"\n"+"\u2B24"+"Flask"+"\n"+"\u2B24"+"Odoo"]
+        teamSkills: ["\u2B24"+" "+"Html"+"\n"+"\u2B24"+" "+"CSS3 & JS"+"\n"+"\u2B24"+" "+"bootstrap"+"\n"+"\u2B24"+" "+"Python"+"\n"+"\u2B24"+" "+"Flask"+"\n"+"\u2B24"+" "+"Odoo"]
     },
     {
         index: 8,
@@ -74,11 +74,11 @@ const ourTeamData =
         teamName: "Mudasir Dar",
         teamImageSource: require("../assets/OurTeam/MudasirDar.jpeg"),
         teamPosition: "Python and ERP Developer",
-        teamSkills: ["\u2B24"+"OdooERP functional and technical"+"\n"+"\u2B24"+"Various database integrations and other Python-based frameworks"+"\n"+"\u2B24"+"Setting up servers on Linux and AWS"]
+        teamSkills: ["\u2B24"+" "+"OdooERP functional and technical"+"\n"+"\u2B24"+" "+"Various database integrations and other Python-based frameworks"+"\n"+"\u2B24"+" "+"Setting up servers on Linux and AWS"]
     }
 ];
 
-const hireDeveloperOurTeamListItems = ourTeamData.map((data, index)=> 
+const hireDeveloperOurTeamListItems = ourTeamData.map((data, index) => 
             <ScrollView style={{ marginBottom: 20 }} key={index} id={index}>
               <View style={{ marginBottom: 5, display: 'flex', justifyContent: 'center', marginLeft: 20, marginRight: 20 }}>
                 <Image source={data.teamImageSource} style={{ width: 'auto', height: 400 }}></Image>

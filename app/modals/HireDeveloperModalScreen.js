@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, Pressable, Modal, ScrollView, Platform } from 'react-native';
+import { View, Text, TouchableOpacity, Modal, ScrollView } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Formik } from "formik";
 import FormField from "./FormField";
@@ -7,9 +7,12 @@ import { validationSchema } from "./validation";
 import { styles } from "../config/styles";
 import ServicesStyles from '../config/services.styles';
 import { Dropdown } from 'react-native-element-dropdown';
-import DateTimePicker from '@react-native-community/datetimepicker';
 import { TextInput } from 'react-native-paper';
+import DatePicker from 'react-native-modern-datepicker';
+import { getToday, getFormatedDate } from 'react-native-modern-datepicker';
+// import DateTimePicker from '@react-native-community/datetimepicker';
 // import CalendarPicker from 'react-native-calendar-picker';
+// import { DateTimePickerAndroid } from '@react-native-community/datetimepicker';
 
 const countryData = [
       {
@@ -1611,7 +1614,7 @@ const developerExperienceRangeData = [
       }
 ];
 
-const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) => 
+const HireDeveloperModalScreen = ({modalOpen,setModalOpen}) => 
 {
   const [value, setValue] = useState(null);
 
@@ -1630,27 +1633,13 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
     return isValid && Object.keys(touched).length !== 0;
   }
 
-  const [dateOfBirth, setDateOfBirth] = useState("");
-  const [date, setDate] = useState(new Date());
-  const [showPicker, setShowPicker] = useState(false);
-  const toggleDatePicker = () => {
-    setShowPicker(!showPicker);
-  }
-  const onChange = ({type}, selectedDate) => {
-    if(type=="set")
-    {
-        const currentDate = selectedDate;
-        setDate(currentDate);
-        if(Platform.OS==="android")
-        {   
-            toggleDatePicker();
-            setDateOfBirth(currentDate.toDateString());
-        }
-    }
-    else
-    {
-        toggleDatePicker();
-    }
+  // Date Picker 
+  const today = new Date();
+  const [date, setDate] = useState('20/06/2023');
+  const startDate = getFormatedDate(today.setDate(today.getDate()+1,'YYYY/MM/DD'));
+  function handleChangeOne(propDate)
+  {
+    setDate(propDate);
   }
 
   return (
@@ -1671,6 +1660,7 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
                       lastName: "",
                       email: "",
                       phoneormobile: "",
+                      country: "",
                       companyname: "",
                       industrytype: ""
                       }}
@@ -1752,7 +1742,7 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
                               iconStyle={styles.iconStyle}
                               data={countryData}
                               search
-                              maxHeight={300}
+                              maxHeight={160}
                               labelField="label"
                               valueField="value"
                               placeholder="Select Country *"
@@ -1790,7 +1780,7 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
                                 iconStyle={styles.iconStyle}
                                 data={industryTypeData}
                                 search
-                                maxHeight={300}
+                                maxHeight={160}
                                 labelField="label"
                                 valueField="value"
                                 placeholder="Industry Type *"
@@ -1814,7 +1804,7 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
                                 inputSearchStyle={styles.inputSearchStyle}
                                 iconStyle={styles.iconStyle}
                                 data={developerTimePeriodData}
-                                maxHeight={300}
+                                maxHeight={160}
                                 labelField="label"
                                 valueField="value"
                                 placeholder="Select how long you want developer *"
@@ -1838,7 +1828,7 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
                                 iconStyle={styles.iconStyle}
                                 data={developerSkillLookingForData}
                                 search
-                                maxHeight={300}
+                                maxHeight={160}
                                 labelField="label"
                                 valueField="value"
                                 placeholder="Select skill you are looking for *"
@@ -1846,30 +1836,8 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
                                 values={values}
                                 onChange={item=>{setValue(item.value);}}
                             />
-                            <View>
-                                <Text style={{ marginBottom: 10 }}>
-                                    When you want ? *
-                                </Text>
-                                {showPicker && (
-                                    <>
-                                        <DateTimePicker mode="date" display="spinner" value={date} onChange={onChange} />
-                                    </>
-                                )}
-                                {!showPicker && (
-                                    <>
-                                        <Pressable onPress={toggleDatePicker}>
-                                            <TextInput 
-                                                placeholder='19-06-2023'
-                                                value={dateOfBirth}
-                                                onChangeText={setDateOfBirth}
-                                                placeholderTextColor="#333333"
-                                                editable={false}
-                                                style={{ backgroundColor: "#FFFFFF", borderRadius: 6, borderColor: 'lightgray', borderWidth: 1, borderBottomWidth: 0, borderBottomColor: 'lightgray' }}
-                                            />
-                                        </Pressable>
-                                    </>
-                                )}
-                            </View>
+                            <Text style={{ marginBottom: 10, marginLeft: 10, marginTop: 10, fontSize: 16 }}>When you want ? *</Text>
+                            <DatePicker mode="calendar" minimumDate={startDate} selected={date} onDateChanged={handleChangeOne} style={{ marginBottom: 0, paddingBottom: 0 }} />
                             <Dropdown
                                 field="developerExperienceRange"
                                 secureTextEntry={true}
@@ -1886,32 +1854,24 @@ const HireDeveloperModalScreen = ({modalOpen, setModalOpen}) =>
                                 inputSearchStyle={styles.inputSearchStyle}
                                 iconStyle={styles.iconStyle}
                                 data={developerExperienceRangeData}
-                                maxHeight={300}
+                                maxHeight={160}
                                 labelField="label"
                                 valueField="value"
                                 placeholder="Select Experience Range *"
                                 values={values}
                                 onChange={item=>{setValue(item.value);}}
                             />
-                            {/* <View>
-                                <Text style={{ marginBottom: 10 }}>
-                                    Any Query
-                                </Text> */}
-                                <TextInput
-                                    multiline={true}
-                                    numberOfLines={6}
-                                    // onChangeText={(text) => this.setState({text})}
-                                    // value={this.state.text}
-                                    values={values}
-                                    onChange={item=>{setValue(item.value);}}
-                                    editable={true}
-                                    placeholder="Any Query"
-                                    style={{ backgroundColor: "#FFFFFF", borderRadius: 6, borderColor: 'lightgray', borderWidth: 1, borderBottomWidth: 0, borderBottomColor: 'lightgray' }}
-                                />
-                            {/* </View> */}
-                           {/*  <CalendarPicker
-                                onDateChange={this.onDateChange}
-                            /> */}
+                            <TextInput
+                              multiline={true}
+                              numberOfLines={4}
+                              // onChangeText={(text) => this.setState({text})}
+                              // value={this.state.text}
+                              values={values}
+                              onChange={item=>{setValue(item.value);}}
+                              editable={true}
+                              placeholder="Any Query"
+                              style={{ marginTop: 10, marginBottom: 20, backgroundColor: "#FFFFFF", borderRadius: 6, borderColor: 'lightgray', borderWidth: 1, borderBottomWidth: 0, borderBottomColor: 'lightgray' }}
+                            />
                         <View style={{ flexDirection: 'row', display: 'flex', justifyContent: 'center' }}>
                           <TouchableOpacity onPress={handleSubmit}>
                             <View style={styles.button}>

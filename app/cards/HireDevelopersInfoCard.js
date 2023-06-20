@@ -235,7 +235,7 @@ return (
                               iconStyle={styles.iconStyle}
                               data={hireDevelopersInfoCardData}
                               search
-                              maxHeight={300}
+                              maxHeight={160}
                               labelField="label"
                               valueField="value"
                               placeholder="Select skill category"
