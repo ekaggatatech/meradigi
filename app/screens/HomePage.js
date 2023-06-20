@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, Image, TouchableOpacity, TouchableHighlight } from 'react-native';
 import SearchBar from '../shared/SearchBar';
 import HomeServices from '../shared/HomeServices';
 import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
@@ -31,22 +31,28 @@ return (
         <SearchBar 
             value={value}
             updateSearch={updateSearch}
-            style={{ marginBottom: '2%' }}
+            style={{ marginBottom: '0%' }}
           />
       </View>
       <View style={[styles.twoButtons,styles.marginStyling]}>
-           <TouchableOpacity>
+           {/* <TouchableOpacity style={styles.bookFreeConsultationCallButton}
+              title="Free Consultation">
+                <Text style={styles.bookFreeConsultationCallButtonText}>
+                  Free Consultation
+                </Text>
+            </TouchableOpacity> */}
+            <TouchableOpacity>
             <LinearGradient 
               colors={['#0070FF','#29F2EA']}
               start={{x:1,y:0}}
               end={{x:0,y:0}}
               style={styles.bookFreeConsultationCallButton}
-              title="Book A Free Consultation Call">
+              title="Book a Free Consultation">
                 <Text style={styles.bookFreeConsultationCallButtonText}>
-                  Book A Free Consultation Call
+                  Book a Free Consultation
                 </Text>
             </LinearGradient>
-          </TouchableOpacity>
+            </TouchableOpacity>
       </View>
       <View style={styles.marginStyling}>
         <HomeServices/>
@@ -105,18 +111,22 @@ const styles = StyleSheet.create(
   {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 14, 
-    paddingHorizontal: 24,
+    paddingVertical: 10, 
+    paddingHorizontal: 90,
     backgroundColor: 'transparent',
-    borderRadius: 9
+    //borderColor: '#cb202d',
+    borderRadius: 9,
+    //borderWidth: 1
   },
   bookFreeConsultationCallButtonText:
   {
     fontSize: 16,
     fontWeight: 600,
-    fontWeight: 'normal',
+    //fontWeight: 'normal',
+    fontWeight: 'bold',
     letterSpacing: 0.25,
     color: '#ffffff',
+    // color: 'black',
     backgroundColor: 'transparent',
     textAlign: 'center'
   },

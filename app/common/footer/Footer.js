@@ -14,7 +14,7 @@ const Footer = () =>
                 </View>
                 <View>
                     <Text style={styles.footerContentTwo}>
-                        Made with ❤ by Meradigi
+                        <Text style={{ color: '#ffffff' }}>Made with <Text style={{ color: '#ffffff' }}>❤</Text> by</Text> <Text style={{ color: '#e22658' }}>Meradigi</Text>
                     </Text>
                 </View>
             </View>

@@ -273,7 +273,7 @@ const CustomDrawer = ({props}) =>
                             icon={({ color, size, focused }) => (
                                 <AntDesign name="tago" color={'#cb202d'} size={22} />
                             )}
-                            label={({focused,color})=><Text style={{ color: '#cb202d' }}>Pricing Plans</Text>}
+                            label={({focused,color})=><Text style={{ color: '#cb202d' }}>Pricing</Text>}
                             onPress={()=>{
                                 setFocus(1);
                                 navigation.navigate('Pricing Plans');
@@ -292,7 +292,7 @@ const CustomDrawer = ({props}) =>
                             }}
                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0 }}
                         />
-                        <DrawerItem 
+                        {/* <DrawerItem 
                             focused={focus == 1 ? true : false}
                             icon={({ color, size, focused }) => (
                                 <AntDesign name="phone" color={'#cb202d'} size={22} />
@@ -301,6 +301,18 @@ const CustomDrawer = ({props}) =>
                             onPress={()=>{
                                 setFocus(1);
                                 navigation.navigate('Contact Us');
+                            }}
+                            style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0 }}
+                        /> */}
+                        <DrawerItem 
+                            focused={focus == 1 ? true : false}
+                            icon={({ color, size, focused }) => (
+                                <AntDesign name="phone" color={'#cb202d'} size={22} />
+                            )}
+                            label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Free Consultation</Text>}
+                            onPress={()=>{
+                                setFocus(1);
+                                navigation.navigate('Log In');
                             }}
                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0 }}
                         />

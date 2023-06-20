@@ -40,20 +40,20 @@ const MoodleLMS = () =>
         </Text>
       </View>
       <View style={ServicesStyles.newUnderLine} />
-      <View style={ServicesStyles.headingButton}>
+     {/*  <View style={ServicesStyles.headingButton}>
         <TouchableOpacity onPress={()=>setModalOpen(true)}>
           <LinearGradient 
             colors={['#0070FF','#29F2EA']}
             start={{x:1,y:0}}
             end={{x:0,y:0}}
             style={ServicesStyles.bookFreeConsultationCallButton}
-            title="Book A Free Consultation Call">
+            title="Free Consultation">
               <Text style={ServicesStyles.bookFreeConsultationCallButtonText}>
-                Book A Free Consultation Call
+                Free Consultation
               </Text>
           </LinearGradient>
         </TouchableOpacity>
-      </View>
+      </View> */}
       <View style={ServicesStyles.mainMarginBottomProp}>
         <Text style={ServicesStyles.newTitle}>
           Speak to us to see if it's a fit for you

@@ -63,13 +63,19 @@ const MainFooter = () =>
                 </View>
                 <View>
                     <Text style={styles.mainFooterContentOne}>
-                        Meradigi bring Digital Technology to your doorstep. We offer pre-designed digital products to our customers and also design the products of their choice.
-                    </Text>
-                </View>
-                <View>
-                    <Text style={styles.mainFooterContentOne}>
+                        Meradigi bring Digital Technology to your doorstep. 
+                        {"\n"}
+                        We offer pre-designed digital products to our customers and also design the products of their choice.
+                        {"\n"}
                         We are just a call away.
                     </Text>
+                </View>
+                <View style={[styles.twoButtons,styles.marginStyling]}>
+                    <TouchableOpacity style={styles.bookFreeConsultationCallButton} title="Free Consultation">
+                        <Text style={styles.bookFreeConsultationCallButtonText}>
+                            Free Consultation
+                        </Text>
+                    </TouchableOpacity>
                 </View>
             </View>
             <View style={styles.subFooterContainer}>
@@ -94,11 +100,26 @@ const MainFooter = () =>
                             ERP IMPLEMENTATION
                         </Text>
                     </View>
-                    <View>
+                    {/* <View>
                         <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Content Generation & Marketing')}>
                             CONTENT CREATION
                         </Text>
-                    </View>
+                    </View> */}
+                    <View>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Moodle LMS Development')}>
+                            LMS DEVELOPMENT
+                        </Text>
+                    </View> 
+                    <View>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Get A Mobile App')}>
+                            APP DEVELOPMENT
+                        </Text>
+                    </View> 
+                    <View>
+                        <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('Hire A Freelancer')}>
+                            HIRE A DEVELOPER
+                        </Text>
+                    </View> 
                 </View>
             </View>
             <View style={styles.subFooterContainer}>
@@ -144,11 +165,11 @@ const MainFooter = () =>
                    </Text>
                 </View>
                 <View>
-                    <View>
+                    {/* <View>
                         <Text style={styles.mainFooterContentThree} onPress={()=>navigation.navigate('HomePage')}>
                             BLOG
                         </Text>
-                    </View>
+                    </View> */}
                     <View>
                         <Text style={styles.mainFooterContentThree} onPress={()=>this.itConsultingUrlLink()}>
                             IT CONSULTING
@@ -250,8 +271,9 @@ const styles = StyleSheet.create({
     {
         textAlign: 'center',  
         color: '#040404',
-        fontSize: 18,
-        fontWeight: 'normal'
+        fontSize: 16,
+        fontWeight: 'normal',
+        letterSpacing: 0.1
     },
     mainFooterContentTwo:
     {
@@ -363,5 +385,41 @@ const styles = StyleSheet.create({
     newMarginBottomForImages:
     {
         marginBottom: 20
-    }
+    },
+    twoButtons:
+    {
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      justifyContent:'center',
+      backgroundColor: 'transparent',
+      padding: 0
+    },
+    marginStyling:
+    {
+      matrginBottom: 10,
+      marginTop: 20
+    },
+    bookFreeConsultationCallButton:
+    {
+      alignItems: 'center',
+      justifyContent: 'center',
+      paddingVertical: 10, 
+      paddingHorizontal: 118,
+      backgroundColor: 'transparent',
+      borderColor: '#cb202d',
+      borderRadius: 9,
+      borderWidth: 1
+    },
+    bookFreeConsultationCallButtonText:
+    {
+      fontSize: 16,
+      fontWeight: 600,
+      //fontWeight: 'normal',
+      fontWeight: 'bold',
+      letterSpacing: 0.1,
+      //color: '#ffffff',
+      color: 'black',
+      backgroundColor: 'transparent',
+      textAlign: 'center'
+    },
 })

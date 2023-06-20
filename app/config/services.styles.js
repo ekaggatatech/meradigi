@@ -926,5 +926,66 @@ export default StyleSheet.create({
       marginStylings:
       {
         paddingTop: 0
+      },
+      hireDeveloperCard:
+      {
+        backgroundColor: '#3D3B3B',
+        borderStyle: 'solid',
+        borderWidth: 1,
+        borderColor: '#f5f5f5',
+        borderRadius: 12,
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        alignItems: 'center',
+        marginBottom: 10,
+        width: 360,
+        padding: 15,
+        flexDirection: 'column'
+      },
+      hireDeveloperCardImage:
+      {
+        alignSelf: 'center',
+        marginRight: 10
+      },
+      hireDeveloperCardText:
+      {
+        color: '#FFFFFF',
+        fontSize: 20,
+        fontWeight: 'normal',
+        alignSelf: 'center',
+        textAlign: 'center',
+        textAlignVertical: 'center'
+      },
+      whyOurDeveloperCard:
+      {
+        //padding: 50px 30px 50px 30px,
+        borderStyle: 'solid',
+        borderWidth: 0,
+        borderColor: '#f5f5f5',
+        borderRadius: 5,
+        marginBottom: 20,
+        //padding: 60px 40px,
+        webkitTransition: 'all .4s ease',
+        transition: 'all .4s ease',
+        backgroundColor: '#fff',
+        position: 'relative',
+        overflow: 'hidden',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        display: 'flex',
+        justifyContent: 'center',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+      },
+      whyDeveloperCardText:
+      {
+        padding: 0,
+        color: '#58468c',
+        fontSize: 22,
+        fontWeight: 400,
+        textAlign: 'center'
       }
 });

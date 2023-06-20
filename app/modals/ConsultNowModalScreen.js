@@ -1,4 +1,4 @@
-import { View, Text, Image ,ScrollView, Pressable, Modal, TouchableOpacity } from 'react-native';
+import { View, Text, ScrollView, Modal, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import ServicesStyles from '../config/services.styles';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -360,7 +360,7 @@ return (
                   Are you confused? Need Consultation
                 </Text>
               </View> */}
-              <View style={{ marginTop: 20, marginBottom: 10 }}>
+              <View style={{ marginTop: 30, marginBottom: 30 }}>
                 <Text style={ServicesStyles.getInTouchWithUsTitleText}>
                   Get in touch with us!
                 </Text>
