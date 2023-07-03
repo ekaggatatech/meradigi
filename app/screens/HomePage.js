@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, ScrollView, Image, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { StyleSheet, View, Text, ScrollView, Image, TouchableOpacity } from 'react-native';
+import { Button, Overlay } from 'react-native-elements';
 import SearchBar from '../shared/SearchBar';
 import HomeServices from '../shared/HomeServices';
 import GetInTouchWithUsForm from '../common/footer/GetInTouchWithUsForm';
@@ -7,6 +8,7 @@ import MainFooter from '../common/footer/MainFooter';
 import Footer from '../common/footer/Footer';
 import ServicesStyles from '../config/services.styles';
 import { LinearGradient } from 'expo-linear-gradient';
+import ChatBot from '../ChatBot';
 // import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 
 const HomePage = () => 
@@ -17,6 +19,11 @@ function updateSearch(value)
   console.log(value);
 }
 // const [modalOpen, setModalOpen] = useState(false);
+const [visible, setVisible] = useState(false);
+const toggleOverlay = () => 
+{
+  setVisible(!visible);
+};
 return (
   <>
     {/* <View style={{ justifyContent: 'center', backgroundColor: '#FFFFFF' }}>
@@ -66,6 +73,14 @@ return (
       <View style={styles.marginStyling}>
         <Footer/>
       </View>
+      <View style={styles.marginStyling}>
+        <View style={{ paddingTop: 10, paddingBottom: 20, paddingLeft: 10, paddingRight: 10 }}>
+          <Button title="Let's Chat" onPress={toggleOverlay} />
+          <Overlay isVisible={visible} onBackdropPress={toggleOverlay}>
+            <ChatBot />
+          </Overlay>
+        </View>
+      </View>
       {/* <View style={[styles.twoButtons,styles.marginStyling,styles.marginTopStyling]}>
           <TouchableOpacity onPress={()=>setModalOpen(true)} title="Contact Us">
             <View style={styles.contactUsButton}>
@@ -77,7 +92,7 @@ return (
       </View> */}
     </ScrollView>
   </>
-  )
+  );
 }
 
 const styles = StyleSheet.create(

@@ -40,6 +40,8 @@ import SearchEngineOptimization from './app/screens/SearchEngineOptimization/Sea
 import GoogleAds from './app/screens/GoogleAds/GoogleAds';
 import SocialMediaAds from './app/screens/SocialMediaAds/SocialMediaAds';
 
+// import ChatBot from './app/ChatBot';
+
 /* import Tabs from './app/screens/navigations/Tabs'; */
 /* import DigitalMarketingPricingPlansScreen from './app/screens/PricingScreens/DigitalMarketingPricingPlansScreen/DigitalMarketingPricingPlansScreen';
 import OdooPricingPlansScreen from './app/screens/PricingScreens/OdooPricingPlansScreen/OdooPricingPlansScreen';
@@ -83,6 +85,7 @@ const App = () => {
   {
     SplashScreen.hideAsync();
   }
+  
   return ( 
     <>
       <NavigationContainer>
