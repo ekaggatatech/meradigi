@@ -1,5 +1,4 @@
-import { StyleSheet, Platform } from "react-native";
-import Constants from "expo-constants";
+import { StyleSheet } from "react-native";
 
 const HEADER_BACKGROUND = "#3498db";
 const CONTENT_BACKGROUND = "#f9f9f9";
@@ -63,12 +62,16 @@ export const styles = StyleSheet.create({
     textAlign: "center",
     letterSpacing: 0.4
   },
-
   dropdown: {
-    margin: 10,
+    marginTop: 10,
     height: 36,
-    borderBottomColor: 'gray',
-    borderBottomWidth: 0.5,
+    borderColor: '#DEDEDE',
+    borderWidth: 2,
+    paddingHorizontal: 10,
+    paddingVertical: 24,
+    color: "#DEDEDE",
+    borderRadius: 6,
+    width: 330
   },
   icon: {
     marginRight: 5,
@@ -86,5 +89,85 @@ export const styles = StyleSheet.create({
   inputSearchStyle: {
     height: 40,
     fontSize: 16,
+  },
+  requestApptButton: {
+    marginTop: 0,
+    fontSize: 16,
+    fontWeight: 'normal',
+    backgroundColor: '#409EFF',
+    color: '#ffffff',
+    borderRadius: 9,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    width: 330,
+    height: 40,
+    display: 'flex',
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  requestApptButtonText: {
+    color: "#ffffff",
+    fontWeight: "bold",
+    fontSize: 16,
+    textAlign: "center",
+    letterSpacing: 0.4
+  },
+  requestApptCancelButton: {
+    marginTop: 0,
+    fontSize: 16,
+    fontWeight: 'normal',
+    backgroundColor: '#EEEEEE',
+    color: '#333333',
+    borderRadius: 9,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    width: 330,
+    height: 40,
+    display: 'flex',
+    justifyContent: 'center',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
+  requestApptCancelButtonText: {
+    color: "#333333",
+    fontWeight: "bold",
+    fontSize: 16,
+    textAlign: "center",
+    letterSpacing: 0.4
+  },
+  newBookingAppointmentTextInputBox:
+  {
+    marginTop: 10,
+    height: 50,
+    borderColor: '#DEDEDE',
+    borderWidth: 2,
+    color: "#333333",
+    borderRadius: 6,
+    width: 330,
+    textAlign: 'left', 
+    fontSize: 16, 
+    color: 'black', 
+    paddingLeft: 10,
+    backgroundColor: '#DEDEDE',
+    fontWeight: 'bold',
+    letterSpacing: 0.4
+  },
+  newBookingAppointmentTextInputBoxOne:
+  {
+    marginTop: 10,
+    height: 50,
+    borderColor: '#DEDEDE',
+    borderWidth: 2,
+    color: "#333333",
+    borderRadius: 6,
+    width: 330,
+    textAlign: 'left', 
+    fontSize: 16, 
+    color: 'black', 
+    paddingLeft: 10,
+    backgroundColor: '#FFFFFF',
+    fontWeight: 'bold',
+    letterSpacing: 0.4
   }
 });

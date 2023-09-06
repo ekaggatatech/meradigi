@@ -3,12 +3,21 @@ import { StyleSheet, ScrollView, SafeAreaView, View, Text, TouchableOpacity, Ima
 import DigitalMarketingBannerData from '../../../shared/DigitalMarketingBannerData';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import DigitalMarketingBasicPlanData from '../DigitalMarketingPricingPlansScreen/DigitalMarketingBasicPlanData';
 // import { StatusBar } from 'react-native';
 
 const Tab = createMaterialTopTabNavigator();
 
 function Basic()
 {
+  function displayProductsList()
+  {
+    return (
+      <>
+        <DigitalMarketingBasicPlanData />
+      </>
+    );
+  }
   return (
     <>
       {/* <ScrollView nestedScrollEnabled={true} style={styles.mainBackground}> */}
@@ -355,7 +364,7 @@ function Basic()
               </Text>
             </View>
             <View style={styles.choosePlanButtonView}>
-              <TouchableOpacity style={styles.choosePlanButton}>
+              <TouchableOpacity style={styles.choosePlanButton} onPress={displayProductsList}>
                   <Text style={styles.choosePlanButtonText}>
                     CHOOSE PLAN
                   </Text>

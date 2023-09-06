@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 import Product from '../config/Product';
 import ConsultNowModalScreen from '../modals/ConsultNowModalScreen';
 
-const Image1= require("../assets/servicesImg/GetMobileApp.png");
+/* const Image1= require("../assets/servicesImg/GetMobileApp.png");
 const Image2= require('../assets/servicesImg/Iwantveryfastwebsite.png'); 
 const Image3= require('../assets/servicesImg/Rankmywebsiteongoogle.png');
 const Image4= require('../assets/servicesImg/Popularonyoutube.png');
@@ -38,29 +38,56 @@ const services =
         { key:14, name:"I Want An Annual Maintenance Plan", id:14, source: Image14},
         { key:15, name:"Get A Best Hosting Plan", id:15, source: Image15 },
         { key:16, name:"Hire A Freelancer", id:16, source: Image16 }
-];
+]; */
 
-const HomeServices = () => {
+const HomeServices = ({data,value}) => {
 
     const [modalOpen, setModalOpen] = useState(false);
 
     return (
     <>
-        <ScrollView nestedScrollEnabled={true}>
-                <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
-                <View>
-                    <ScrollView nestedScrollEnabled={true}>
-                        <View>
-                            <Text style={styles.selectText}>
-                                Select Your Prefer Service
-                            </Text>
-                        </View>
-                        <View style={styles.productContainer}>
-                            {services.map(item=> <View style={styles.newItem} key={item.id}><Product product={item} /></View>)}
-                        </View>
-                    </ScrollView>
-                </View>
-        </ScrollView>  
+        <ScrollView style={{flexGrow: 1}} nestedScrollEnabled={true}>
+             <View>
+                <SafeAreaView>
+                    <ConsultNowModalScreen modalOpen={modalOpen} setModalOpen={setModalOpen} />
+                    <View>
+                    <View>
+                        <Text style={styles.selectText}>
+                            Select Your Prefer Service
+                        </Text>
+                    </View>
+                    <View style={styles.productContainer}>
+                        {
+                            data.length > 0 ? 
+                                data.map(
+                                (item)=>
+                                {
+                                    if(value==="")
+                                    {
+                                        return (
+                                            <View style={styles.newItem} key={item.id}><Product product={item} /></View>
+                                        );
+                                    }
+                                    if((value !== "") && (item.name.toLowerCase().includes(value.toLowerCase())))
+                                    {
+                                        return (
+                                            <View style={styles.newItem} key={item.id}><Product product={item} /></View>
+                                        );
+                                    }
+                                }
+                                )
+                                :
+                                <>
+                                    <View>
+                                        <Text>No Service Found!</Text>
+                                    </View>
+                                </> 
+                        }
+                    </View>
+                    </View>
+                </SafeAreaView>
+            </View>
+        </ScrollView>
     </>
   );
 }
@@ -109,7 +136,7 @@ const styles = StyleSheet.create(
         flex: 1,
         flexDirection: 'row',
         flexWrap: 'wrap',
-        alignItems: 'flex-start'  
+        alignItems: 'flex-start'
     },
     newItem: 
     {

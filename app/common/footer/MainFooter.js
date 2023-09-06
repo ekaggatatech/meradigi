@@ -71,7 +71,7 @@ const MainFooter = () =>
                     </Text>
                 </View>
                 <View style={[styles.twoButtons,styles.marginStyling]}>
-                    <TouchableOpacity style={styles.bookFreeConsultationCallButton} title="Free Consultation">
+                    <TouchableOpacity style={styles.bookFreeConsultationCallButton} title="Free Consultation" onPress={()=>navigation.navigate('Free Consultation')}>
                         <Text style={styles.bookFreeConsultationCallButtonText}>
                             Free Consultation
                         </Text>

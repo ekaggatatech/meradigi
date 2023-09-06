@@ -39,34 +39,14 @@ import ServicesScreen from './app/screens/ServicesScreen';
 import SearchEngineOptimization from './app/screens/SearchEngineOptimization/SearchEngineOptimization';
 import GoogleAds from './app/screens/GoogleAds/GoogleAds';
 import SocialMediaAds from './app/screens/SocialMediaAds/SocialMediaAds';
-
-// import ChatBot from './app/ChatBot';
-
-/* import Tabs from './app/screens/navigations/Tabs'; */
-/* import DigitalMarketingPricingPlansScreen from './app/screens/PricingScreens/DigitalMarketingPricingPlansScreen/DigitalMarketingPricingPlansScreen';
-import OdooPricingPlansScreen from './app/screens/PricingScreens/OdooPricingPlansScreen/OdooPricingPlansScreen';
-import WebDevelopmentPricingPlansScreen from './app/screens/PricingScreens/WebDevelopmentPricingPlansScreen/WebDevelopmentPricingPlansScreen'; */
-/* import WelcomeScreen from './app/screens/WelcomeScreen';
-import TalktousModal from './app/screens/ConsultationForm/TalktousModal';
-import ChoosePrice from './app/screens/PricingScreens/ERPPricingScreens/ChoosePrice';
-import MainPackages from './app/screens/PricingScreens/DigitalMarketPriceScreens/MainPackages';
-import BasicWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/BasicWebPack';
-import ProfessionalWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/ProfessionalWebPack';
-import EnterpriseWebPack from './app/screens/PricingScreens/WebDesignPriceScreens/EnterpriseWebPack'; */
-// import { createNativeStackNavigator } from '@react-navigation/native-stack';
-/* const RegisterStack = createNativeStackNavigator();
-const RegisterStackScreen = () => {
-  return ( 
-    <>
-          <RegisterStack.Navigator initialRouteName='HomePage'>
-            <RegisterStack.Screen name='Register' component={Register} options={{ headerShown: false }} />
-          </RegisterStack.Navigator>
-    </>
-  );
-} */
+import FreeConsultation from './app/screens/FreeConsultationScreen/FreeConsultation';
+import DigitalMarketingBasicPlanData from './app/screens/PricingScreens/DigitalMarketingPricingPlansScreen/DigitalMarketingBasicPlanData';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
+// import database from '@react-native-firebase/database';
 
 const Drawer = createDrawerNavigator();
-const App = () => {
+const App = () => 
+{
   const [ fontsLoaded ] = useFonts({
     "LemonLove": require("./app/assets/fonts/Lemonlove.otf")
   });
@@ -151,6 +131,8 @@ const App = () => {
             <Drawer.Screen name='Search Engine Optimization' component={SearchEngineOptimization} options={{ drawerLabel: 'Search Engine Optimization', title: false, drawerIcon: ({color}) => ( <Icon name='search' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
             <Drawer.Screen name='Google Ads' component={GoogleAds} options={{ drawerLabel: 'Google Ads', title: false, drawerIcon: ({color}) => ( <Icon name='search' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
             <Drawer.Screen name='Social Media Ads' component={SocialMediaAds} options={{ drawerLabel: 'Social Media Ads', title: false, drawerIcon: ({color}) => ( <Icon name='search' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
+            <Drawer.Screen name='Free Consultation' component={FreeConsultation} options={{ drawerLabel: 'Free Consultation', title: false, drawerIcon: ({color}) => ( <Icon name='phone' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
+            <Drawer.Screen name='DigitalMarketingBasicPlanData' component={DigitalMarketingBasicPlanData} options={{ drawerLabel: 'Free Consultation', title: false, drawerIcon: ({color}) => ( <Icon name='phone' size={20} color={color} /> ), drawerItemStyle: { height: 0 } }} />
           </Drawer.Navigator>
       </NavigationContainer>
     </>

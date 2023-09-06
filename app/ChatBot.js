@@ -18,7 +18,7 @@ const ChatBot = () =>
         {
           const botMessage = {
             _id: new Date().getTime()+1,
-            text: "I am your Meradigi Chat Bot, Ask me anything related Digital Marketing Services",
+            text: "I am your Meradigi Chat Bot, Ask me anything related Information Technology Services",
             createdAt: new Date(),
             user:
             {

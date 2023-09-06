@@ -312,7 +312,7 @@ const CustomDrawer = ({props}) =>
                             label={({ focused, color })=><Text style={{ color: '#cb202d' }}>Free Consultation</Text>}
                             onPress={()=>{
                                 setFocus(1);
-                                navigation.navigate('Log In');
+                                navigation.navigate('Free Consultation');
                             }}
                             style={{ backgroundColor: '#FFFFFF', borderColor: '#cb202d', borderWidth: 0, borderRadius: 8, marginBottom: 0 }}
                         />

@@ -1,49 +1,103 @@
-import {
-    StyleSheet,
-    View,
-    Text,
-    TouchableOpacity,
-    TextInput, Image
-} from 'react-native';
-import React, { useState } from 'react'
-import Icon from 'react-native-vector-icons/FontAwesome';
-import { useNavigation } from '@react-navigation/native'; 
+import { StyleSheet, View, TextInput, Image } from 'react-native';
+import React from 'react';
+// import { useNavigation } from '@react-navigation/native'; 
+// import Icon from 'react-native-vector-icons/FontAwesome';
 
-const SearchBar = ({value, updateSearch, style}) => {
-
-    const navigation = useNavigation();
-
-    const [query, setQuery] = useState();
-
-    const [error, setError] = useState()
-
+const SearchBar = ({ value, setValue, style }) => 
+{
+    // const navigation = useNavigation();
+    /* const [query, setQuery] = useState("");
+    const [error, setError] = useState(null); */
+    /* const API_ENDPOINT = `https://randomuser.me/api/?results=30`;
+    const [isLoading, setIsLoading] = useState(false);
+    const [data, setData] = useState([]);
+    const [fullData, setFullData] = useState([]);
+    useEffect(()=>{
+        setIsLoading(true);
+        fetchData(API_ENDPOINT);
+    },[]);
+    const fetchData = async(url)=>{
+        try
+        {
+            const response = await fetch(url);
+            const json = await response.json();
+            setData(json.results);
+            console.log(json.results);
+            setIsLoading(false);
+        }
+        catch(error)
+        {
+            setError(error);
+            console.log(error);
+            // setIsLoading(false);
+        }
+    }
+    const handleSearch = (value) => 
+    {
+      setQuery(value);
+    }
+    if(isLoading)
+    {
+        return (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <ActivityIndicator size={"large"} color="red" />
+            </View>
+        );
+    }
+    if(error)
+    {
+        return (
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <Text>
+                    Error in fetching data...Please check your internet connection!
+                </Text>
+            </View>
+        );
+    } */
     return (
-        <View style={[styles.container, style]}>
+    <>
+        <View style={[styles.container,style]}>
             <View style={styles.searchContainer}>
                 <View style={styles.vwSearch}>
                     <Image
                         style={styles.icSearch}
                         source={require('../assets/ic_search.png')} />
                 </View>
-
                 <TextInput
-                    value={query}
-                    placeholder="Search"
+                    // value={query}
+                    value={value}
+                    onChangeText={(text)=>setValue(text)}
+                    placeholder="Search What You Want"
+                    clearButtonMode="always"
+                    autoCapitalize="none"
+                    autoCorrect={false}
                     style={styles.textInput}
-                    onChangeText={(text) => {
-                        var letters = /^$|^[a-zA-Z._\b ]+$/;
-                        if (text.length > 12)
-                            setError("Query too long.")
-                        else if (text.match(letters)) {
+                    /* onChangeText={(text) => 
+                    // setValue(text)
+                    {
+                            var letters = /^$|^[a-zA-Z._\b ]+$/;
+                            if (text.length > 12)
+                            {
+                                setError("Query too long.")
+                            }
+                            else if(text.match(letters)) 
+                            {
                                 setQuery(text)
                                 updateSearch(text)
-                            if (error)
-                                setError(false)
-                        }
-                        else setError("Please only enter alphabets")
-                    }}
+                                if (error)
+                                {
+                                    setError(false)
+                                }
+                            }
+                            else 
+                            {
+                                setError("Please only enter alphabets");
+                            } 
+                    }
+                    } */
+                // onChangeText={(value)=>handleSearch(value)}
                 />
-                {
+                {/* {
                     query ?
                         <TouchableOpacity
                             onPress={() => setQuery('')}
@@ -52,19 +106,21 @@ const SearchBar = ({value, updateSearch, style}) => {
                                 style={styles.icClear}
                                 source={require('../assets/ic_clear.png')} />
                         </TouchableOpacity>
-                        : <View style={styles.vwClear} />
-                }
-
+                        : 
+                        <View style={styles.vwClear} />
+                } */}
             </View>
-            {
+            {/* {
                 error &&
                 <Text style={styles.txtError}>
                     {error}
                 </Text>
-            }
-        </View >
-    )
+            } */}
+        </View>
+    </>
+);
 }
+
 const styles = StyleSheet.create({
     txtError: {
         marginTop: '2%',
@@ -108,13 +164,13 @@ const styles = StyleSheet.create({
         flexDirection:'row',
         // height: '100%', width: '100%' 
     },
-    icon:{
+    icon:
+    {
         justifyContent: 'center',
         alignSelf:"center",
         alignContent:'center',
         paddingLeft:33
-        
-    },
-   
+    }
 });
-export default SearchBar
+
+export default SearchBar;

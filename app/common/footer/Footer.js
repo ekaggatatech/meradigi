@@ -12,9 +12,16 @@ const Footer = () =>
                         © 2022 Meradigi. All right Reserved
                     </Text>
                 </View>
-                <View>
+                <View style={styles.footerMarginBottom}>
                     <Text style={styles.footerContentTwo}>
                         <Text style={{ color: '#ffffff' }}>Made with <Text style={{ color: '#ffffff' }}>❤</Text> by</Text> <Text style={{ color: '#e22658' }}>Meradigi</Text>
+                    </Text>
+                </View>
+                <View>
+                    <Text style={styles.footerContentTwo}>
+                        <Text style={{ color: '#ffffff', textAlign: 'center' }}>
+                            <Text style={{ color: '#ffffff' }}>An</Text><Text style={{ color: '#e22658' }}> Ekaggata</Text><Text style={{ color: '#ffffff' }}> Product</Text>
+                        </Text>
                     </Text>
                 </View>
             </View>

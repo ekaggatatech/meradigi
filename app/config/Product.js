@@ -1,35 +1,28 @@
 import { Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
-import {useNavigation} from "@react-navigation/native";
+import { useNavigation } from '@react-navigation/native';
 
-const Product = (services) => {
-
+// const Product = (services) => {
+function Product(services) 
+{
 const navigation = useNavigation();
 // const {name1, serviceImage1} = this.props.product;
-
 return (
       <>
         {/* <View style={styles.imageContainer}> */}
           {/* <View style={styles.viewimages}> */}
-            <TouchableOpacity style={styles.newImageStyle} activeOpacity = { .5 } onPress={() => navigation.navigate(services.product.name)}>
-              <Image 
-                style={styles.imageStyle} 
-                source={services.product.source}
-                onPress={() => navigation.navigate(services.product.name)} />
+            <TouchableOpacity style={styles.newImageStyle} activeOpacity = {.5} onPress={()=>navigation.navigate(services.product.name)}>
+              <Image style={styles.imageStyle} source={services.product.source} onPress={() => navigation.navigate(services.product.name)} />
             </TouchableOpacity>
-            <Text 
-                style={styles.nameText} 
-                onPress={() => navigation.navigate(services.product.name)}
-            >
-              {services.product.name}
-            </Text>  
+            <Text style={styles.nameText} onPress={() => navigation.navigate(services.product.name)}>{services.product.name}</Text>  
           {/* </View> */}
        {/*  </View> */}
       </>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create(
+{
     imageContainer:
     {
         width:'48%',
@@ -67,6 +60,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         alignSelf: 'center'
     }
-})
+}
+)
 
-export default Product
+export default Product;

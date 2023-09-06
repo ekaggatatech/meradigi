@@ -1,162 +1,146 @@
-import React, { Component, useState, setState, useEffect } from 'react';
-import { Alert, Button, TextInput, Text, View, StyleSheet, Image, SafeAreaView, Parse } from 'react-native';
-// import Parse from 'parse/react-native';
+import React, { useState } from 'react';
+import { TextInput, Text, View, StyleSheet, Image, Alert, TouchableOpacity } from 'react-native';
 import ServicesStyles from '../../config/services.styles';
-import Spinner from 'react-native-loading-spinner-overlay';
-import {AuthContext} from '../../context/AuthContext';
-import { ScrollView } from 'react-native-gesture-handler';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../../../database/firestore';
 
-// export default class App extends Component {
-function Login({navigation})
+const Login = ({navigation}) =>
 {
-  const [username, setUsername] = useState(null);
-  const [password, setPassword] = useState(null);
+  const [user_mail_id, setUserMailId] = useState('');
+  const [user_password, setUserPassword] = useState('');
 
-  // const [email, setEmail] = useState(null);
-  // const [password, setPassword] = useState(null);
-  
-  // const {isLoading, login} = useContext(AuthContext);
-
-  const [myUserData, setMyUserData] = useState();
-  const [isLoaded, setIsLoaded] = useState(true);
-
-/*   const getUserData = async () => {
-    try
+  const handleLogin = async () => 
+  {
+    try 
     {
-      const response = await fetch(
-        "https://github.com/poojaEkaggata/glowing-journey/blob/codespace-poojaekaggata-glowing-journey-jjj766qggqghqrv6/userData/users.json"
-      );
-      const myData = await response.json();
-      setMyUserData(myData);
-      setIsLoaded(false);
-      console.log(myData);
-    }
-    catch(error)
+      const loginCollectionRef = collection(db, 'users');
+      const q = query(loginCollectionRef, where('user_mail_id', '==', user_mail_id));
+      const querySnapshot = await getDocs(q);
+
+      if(!querySnapshot.empty) 
+      {
+        const userData = querySnapshot.docs[0].data();
+        if(userData.user_password === user_password) 
+        {
+          Alert.alert('Success.', 'You have signed in successfully.');
+          setUserMailId('');
+          setUserPassword('');
+          navigation.navigate('HomePage');
+        } 
+        else 
+        {
+          Alert.alert('Login Error!', 'Invalid Credentials!');
+          setUserMailId('');
+          setUserPassword('');
+          navigation.navigate('Log In');
+        }
+      } 
+      else 
+      {
+        Alert.alert('Login Failed!', 'Please Fill E-Mail ID & Password Field Properly!');
+        setUserMailId('');
+        setUserPassword('');
+        navigation.navigate('Log In');
+      }
+    } 
+    catch (error) 
     {
-      console.log(error);
+      console.error('Error during login:', error);
+      setUserMailId('');
+      setUserPassword('');
+      navigation.navigate('Log In');
     }
   };
 
-  useEffect(() => { getUserData(); }, []); */
-
-  /* constructor(props) 
-  {
-    super(props);
-    this.state = 
-    {
-      username: '',
-      password: '',
-    };
-  } */
-  /* function onLogin() 
-  {
-    const { username, password } = this.state;
-    // Alert.alert('Credentials', `${username} + ${password}`);
-  } */
-
-  /* const doUserLogIn = async function () 
-  {
-    const usernameValue = username;
-    const passwordValue = password;
-    return await Parse.User.logIn(usernameValue, passwordValue)
-      .then(async (loggedInUser) => {
-        // logIn returns the corresponding ParseUser object
-        Alert.alert(
-          'Success!',
-          `User ${loggedInUser.get('username')} has successfully signed in!`,
-        );
-        // To verify that this is in fact the current user, currentAsync can be used
-        const currentUser = await Parse.User.currentAsync();
-        console.log(loggedInUser === currentUser);
-        return true;
-      })
-      .catch((error) => {
-        // Error can be caused by wrong parameters or lack of Internet connection
-        Alert.alert('Error!', error.message);
-        return false;
-      });
-  }; */
-
-  //render() {
     return (
       <>
-        {/* <Spinner visible={isLoading} /> */}
-
           <View style={styles.container}>
             <View style={[ServicesStyles.positioning,styles.newPaddingTopStyling]}>
               <Image source={require("../../assets/meradigiresize2.png")} alt="meradigi" title="meradigi" />
             </View>
             <View style={{ marginBottom: 20 }}>
               <TextInput
-                //value={this.state.username}
-                value={username}
-                // onChangeText={(username) => this.setState({ username })}
-                onChangeText={(text) => setUsername(text)}
+                value={user_mail_id}
+                onChangeText={text => setUserMailId(text)}
                 placeholder={'Email-ID'}
                 style={styles.input}
                 autoCapitalize="none"
                 autoCorrect={false}
+                keyboardType="email-address"
               />
               <TextInput
-                //value={this.state.password}
-                value={password}
-                // onChangeText={(password) => this.setState({ password })}
-                onChangeText={(text) => setPassword(text)}
+                value={user_password}
+                onChangeText={text => setUserPassword(text)}
                 placeholder={'Password'}
                 secureTextEntry={true}
                 style={styles.input}
                 autoCapitalize="none"
                 autoCorrect={false}
               />
-              <Button
-                title={'Login'}
-                style={styles.input}
-                // onPress={this.onLogin.bind(this)}
-                // onPress={() => doUserLogIn()}
-                onPress={() => { login(email,password); }}
-              />
+              {/* <Button title={'Login'} onPress={handleLogin} style={styles.loginButton} /> */}
+              <View style={{
+                    marginHorizontal: 5,
+                    alignItems:"center",
+                    justifyContent:"center",
+                    marginTop: 10,
+                    backgroundColor:"#3497FF",
+                    paddingVertical:12,
+                    borderRadius:23
+                }}>
+                    <TouchableOpacity onPress={handleLogin} title="Log In">
+                        <Text style={{ color: "white" }}>Log In</Text>
+                    </TouchableOpacity>
+                </View>
             </View>
             <View>
-              <Text>Not a member yet?</Text>
-              <Text
-                style={styles.registerText} 
-                onPress={() => navigation.navigate('Register')}
-                >
-                  Register
-              </Text>
+              <Text style={{ textAlign: 'center' }}>Not a member yet?</Text>
+              <View style={{
+                      marginHorizontal: 5,
+                      alignItems:"center",
+                      justifyContent:"center",
+                      marginTop: 20,
+                      backgroundColor:"#3497FF",
+                      paddingVertical:12,
+                      borderRadius:23,
+                      paddingHorizontal: 60
+                    }}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Register')} title="Register">
+                            <Text style={{ color: "white" }}>Register</Text>
+                        </TouchableOpacity>
+              </View>
             </View>
           </View>
       </>
     );
-  //}
 }
-
-export default Login;
 
 const styles = StyleSheet.create({
   newPaddingTopStyling:
   {
     marginBottom: 30
-    // paddingTop: 10
   },
-  container: {
+  container: 
+  {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#FFFFFF'
-    // backgroundColor: '#ecf0f1',
   },
-  input: {
+  input: 
+  {
     width: 200,
     height: 44,
     padding: 10,
     borderWidth: 1,
     borderColor: 'black',
-    marginBottom: 10,
+    marginBottom: 10
   },
-  registerText:{
+  registerText:
+  {
     color:'red',
     fontSize:18,
     textAlign:'center'
   }
 });
+
+export default Login;
